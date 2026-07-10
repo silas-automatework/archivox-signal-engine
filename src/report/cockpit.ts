@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { estimateCostUsd } from "../config.js";
 import { renderEmail } from "../pipeline/emailTemplate.js";
+import { redactPerson } from "../redact.js";
 import type { Store } from "../store.js";
 import type { Brief } from "../pipeline/brief.js";
 
@@ -30,7 +31,7 @@ export function writeCockpit(store: Store, outPath?: string): string {
         postings?: { title: string; url: string; postedAt: string | null }[];
       };
       const brief: Brief | null = r.brief_json ? JSON.parse(r.brief_json) : null;
-      const contacts = store.contactsForCompany(r.company_key);
+      const contacts = store.contactsForCompany(r.company_key).map(redactPerson);
       contactsTotal += contacts.length;
       const pct = Math.round(r.strength * 100);
       const email = brief ? renderEmail(brief.email_slots, { recipient: contacts[0] ?? null }) : null;
@@ -38,10 +39,12 @@ export function writeCockpit(store: Store, outPath?: string): string {
 
       const contactsHtml = contacts.length
         ? `<ul class="contacts">${contacts
-            .map(
-              (c) =>
-                `<li><a href="${esc(c.linkedin_url)}" target="_blank" rel="noopener">${esc(c.name)}</a><span class="c-role">${esc(c.role)}</span><span class="c-conf">${Math.round(c.confidence * 100)}%</span></li>`
-            )
+            .map((c) => {
+              const label = c.linkedin_url
+                ? `<a href="${esc(c.linkedin_url)}" target="_blank" rel="noopener">${esc(c.name)}</a>`
+                : `<strong>${esc(c.name)}</strong>`;
+              return `<li>${label}<span class="c-role">${esc(c.role)}</span><span class="c-conf">${Math.round(c.confidence * 100)}%</span></li>`;
+            })
             .join("")}</ul>`
         : `<p class="none">Noch keine belastbaren Personen-Hypothesen.</p>`;
 
@@ -64,7 +67,7 @@ export function writeCockpit(store: Store, outPath?: string): string {
               .join("")}</ul>
             ${
               r.magnet_path
-                ? `<a class="akte-link" href="${esc(r.magnet_path.replace(/^runs\/[^/]+\//, ""))}" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>`
+                ? `<a class="akte-link" href="${esc(outPath ? r.magnet_path : r.magnet_path.replace(/^runs\/[^/]+\//, ""))}" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>`
                 : ""
             }
             ${

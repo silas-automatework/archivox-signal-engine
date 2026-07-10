@@ -1,0 +1,64 @@
+name: Daily Signal Watch
+
+# The engine runs as a monitor: every morning it watches the German job market
+# for S1 (ERP/S4 transformation) signals, classifies, briefs, generates the
+# lead magnets and commits the day's artifacts. The commit history of runs/
+# is the proof that this is a running system, not a screenshot.
+#
+# Stateless by design in CI: each run starts from a fresh database with a
+# 2-day lookback window (dedupe works within the run; production uses a
+# persistent Postgres, see docs/decisions.md). Committed artifacts are
+# person-redacted (REDACT_PEOPLE=1).
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # 06:00 CET
+  workflow_dispatch:
+
+concurrency:
+  group: daily-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      EXA_AI_API_KEY: ${{ secrets.EXA_AI_API_KEY }}
+      REDACT_PEOPLE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Watch job boards (2-day window)
+        run: npx tsx src/cli.ts watch --days 2 --max-items 25
+      - name: Classify signals
+        run: npx tsx src/cli.ts classify --max 120
+      - name: Generate briefs (top signals)
+        run: npx tsx src/cli.ts brief --max 15
+      - name: Generate lead magnets
+        run: npx tsx src/cli.ts magnet --max 15
+      - name: Export signals (json + csv)
+        run: npx tsx src/cli.ts export
+      - name: Render cockpit (repo + GitHub Pages)
+        run: |
+          npx tsx src/cli.ts cockpit
+          npx tsx src/cli.ts cockpit --out docs/index.html
+          DAY=$(date -u +%F)
+          mkdir -p docs/runs
+          rm -rf "docs/runs/$DAY"
+          cp -r "runs/$DAY" "docs/runs/$DAY"
+      - name: Commit the day's artifacts
+        run: |
+          git config user.name "archivox-signal-engine"
+          git config user.email "actions@users.noreply.github.com"
+          git add runs/ docs/
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "Daily watch: $(date -u +%F)"
+          git push

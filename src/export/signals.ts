@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { renderEmail } from "../pipeline/emailTemplate.js";
 import { openerVariant } from "../pipeline/brief.js";
+import { redactPerson } from "../redact.js";
 import type { Store } from "../store.js";
 import type { Brief } from "../pipeline/brief.js";
 
@@ -20,7 +21,7 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
   const full = rows.map((r) => {
     const evidence = JSON.parse(r.evidence_json);
     const brief: Brief | null = r.brief_json ? JSON.parse(r.brief_json) : null;
-    const contacts = store.contactsForCompany(r.company_key);
+    const contacts = store.contactsForCompany(r.company_key).map(redactPerson);
     const email = brief ? renderEmail(brief.email_slots, { recipient: contacts[0] ?? null }) : null;
     return {
       signal_id: r.signal_id,

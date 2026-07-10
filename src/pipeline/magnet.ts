@@ -128,18 +128,22 @@ export async function generateMagnet(
     reasoningEffort: "low",
   });
 
+  return { magnet: res.data, usages: [res.usage], problems: validateMagnet(res.data) };
+}
+
+/** Evidence-contract checks for the magnet document. */
+export function validateMagnet(m: Magnet): string[] {
   const problems: string[] = [];
-  const text = JSON.stringify(res.data);
+  const text = JSON.stringify(m);
   if (/—/.test(text)) problems.push("magnet contains em dashes");
   if (/https?:\/\//.test(text)) problems.push("magnet contains URLs");
-  if (/beobachtbar|Stellenanzeige|öffentlich einsehbar/i.test(res.data.situation_de)) {
+  if (/beobachtbar|Stellenanzeige|öffentlich einsehbar/i.test(m.situation_de)) {
     problems.push("situation_de uses surveillance-sounding language");
   }
-  if (/\d{3,}|€|EUR|Prozent|%/.test(JSON.stringify(res.data.hebel))) {
+  if (/\d{3,}|€|EUR|Prozent|%/.test(JSON.stringify(m.hebel))) {
     problems.push("hebel contains numbers; numbers are computed in code");
   }
-
-  return { magnet: res.data, usages: [res.usage], problems };
+  return problems;
 }
 
 const esc = (s: string): string =>
