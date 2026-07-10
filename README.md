@@ -7,6 +7,8 @@ LLM under a strictly enforced evidence contract, finds the right people,
 drafts the outreach, generates a personalized one-page lead magnet per
 account, and routes everything into HubSpot as ready-to-work SDR tasks.
 
+**Start here: the [case study presentation](https://silas-automatework.github.io/archivox-signal-engine/case/)** walks through the strategy, the workflow and the thinking behind every stage.
+
 **This is a running system, not a slide.** The curated showcase snapshot lives in [`showcase/`](showcase/) (25 qualified signals, live cockpit: https://silas-automatework.github.io/archivox-signal-engine/). The `runs/` folder is written by a
 scheduled GitHub Action every morning; its commit history is the proof.
 
