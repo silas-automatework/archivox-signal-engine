@@ -5,6 +5,10 @@
   "type": "module",
   "scripts": {
     "watch:once": "tsx src/cli.ts watch",
+    "classify": "tsx src/cli.ts classify",
+    "brief": "tsx src/cli.ts brief",
+    "export": "tsx src/cli.ts export",
+    "queue": "tsx src/cli.ts queue",
     "report": "tsx src/cli.ts report",
     "demo": "tsx src/cli.ts watch --demo",
     "typecheck": "tsc --noEmit",

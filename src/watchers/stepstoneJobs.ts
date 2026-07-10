@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { S1_JOB_QUERIES, STEPSTONE_ACTOR, requireEnv } from "../config.js";
+import { stripHtml } from "../pipeline/normalize.js";
 import type { RawObservation, Watcher } from "../types.js";
 
 const APIFY_BASE = "https://api.apify.com/v2";
@@ -60,7 +61,7 @@ function toObservation(item: StepstoneItem, query: string): RawObservation | nul
     url,
     postedAt: item.publishFromDate ?? item.datePosted ?? null,
     location: item.location ?? null,
-    snippet: item.textSnippet ? String(item.textSnippet).slice(0, 1500) : null,
+    snippet: item.textSnippet ? stripHtml(String(item.textSnippet)).slice(0, 1500) : null,
     query,
     fetchedAt: new Date().toISOString(),
   };

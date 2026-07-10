@@ -4,7 +4,10 @@ import { stepstoneJobsWatcher } from "./watchers/stepstoneJobs.js";
 import { writeDailyReport } from "./report/daily.js";
 import { writeSignalsReport } from "./report/signals.js";
 import { classifyCompany } from "./pipeline/classify.js";
+import { generateBrief } from "./pipeline/brief.js";
 import { signalHash } from "./pipeline/normalize.js";
+import { exportSignals } from "./export/signals.js";
+import { writeQueuePage } from "./report/queue.js";
 import type { Watcher, WatcherRunStats } from "./types.js";
 
 const WATCHERS: Watcher[] = [stepstoneJobsWatcher];
@@ -136,6 +139,81 @@ async function classify() {
   store.close();
 }
 
+/** Generate structured SDR briefs for signals that lack one. */
+async function brief() {
+  const store = new Store("data/engine.sqlite");
+  const maxBriefs = Number(arg("max") ?? 30);
+  const pending = store.signalsWithoutBrief().slice(0, maxBriefs);
+  console.log(`Generating ${pending.length} briefs with ${MODELS.brief} ...`);
+
+  let ok = 0;
+  let contractViolations = 0;
+  const CHUNK = 4;
+
+  for (let i = 0; i < pending.length; i += CHUNK) {
+    const chunk = pending.slice(i, i + CHUNK);
+    const results = await Promise.all(
+      chunk.map(async (s) => {
+        try {
+          const evidence = JSON.parse(s.evidence_json);
+          const out = await generateBrief(
+            {
+              signalId: s.signal_id,
+              companyRaw: s.company_raw,
+              industry: s.industry,
+              confidence: s.confidence,
+              strength: s.strength,
+              quote: s.quote,
+              reason: s.reason,
+              evidence,
+              snippets: store.snippetsForCompany(s.company_key),
+            },
+            MODELS.brief
+          );
+          return { s, out };
+        } catch (err) {
+          console.log(`  ERROR ${s.company_raw}: ${(err as Error).message}`);
+          return null;
+        }
+      })
+    );
+
+    for (const res of results) {
+      if (!res) continue;
+      const { s, out } = res;
+      for (const u of out.usages) store.logLlmUsage(u);
+      const contractOk = out.problems.length === 0;
+      store.saveBrief(s.signal_id, JSON.stringify(out.brief), MODELS.brief, contractOk);
+      if (contractOk) {
+        ok++;
+        console.log(`  BRIEF   ${s.company_raw}`);
+      } else {
+        contractViolations++;
+        console.log(`  CONTRACT VIOLATION (kept, flagged) ${s.company_raw}: ${out.problems.join("; ")}`);
+      }
+    }
+  }
+
+  console.log(`\nDone: ${ok} briefs clean, ${contractViolations} flagged after retry.`);
+  store.close();
+}
+
+/** Write machine-readable exports (signals.json + signals.csv). */
+async function exportCmd() {
+  const store = new Store("data/engine.sqlite");
+  const { jsonPath, csvPath, count } = exportSignals(store);
+  console.log(`Exported ${count} signals:\n  ${jsonPath}\n  ${csvPath}`);
+  store.close();
+}
+
+/** Render the human-facing HTML queue page. */
+async function queue() {
+  const store = new Store("data/engine.sqlite");
+  const path = writeQueuePage(store, arg("out"));
+  console.log(`Queue page written: ${path}`);
+  store.close();
+}
+
 async function main() {
   const cmd = process.argv[2];
   switch (cmd) {
@@ -145,11 +223,22 @@ async function main() {
     case "classify":
       await classify();
       break;
+    case "brief":
+      await brief();
+      break;
+    case "export":
+      await exportCmd();
+      break;
+    case "queue":
+      await queue();
+      break;
     case "report":
       await report();
       break;
     default:
-      console.log("Usage: tsx src/cli.ts <watch|classify|report> [--demo] [--days 7] [--max-items 25] [--max 200]");
+      console.log(
+        "Usage: tsx src/cli.ts <watch|classify|brief|export|queue|report> [--demo] [--days 7] [--max-items 25] [--max N] [--out path]"
+      );
   }
 }
 

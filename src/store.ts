@@ -77,6 +77,15 @@ export class Store {
         created_at TEXT NOT NULL
       );
 
+      CREATE TABLE IF NOT EXISTS briefs (
+        id INTEGER PRIMARY KEY,
+        signal_id INTEGER UNIQUE NOT NULL REFERENCES signal_events(id),
+        brief_json TEXT NOT NULL,
+        model TEXT NOT NULL,
+        contract_ok INTEGER NOT NULL DEFAULT 1,
+        created_at TEXT NOT NULL
+      );
+
       CREATE TABLE IF NOT EXISTS llm_usage (
         id INTEGER PRIMARY KEY,
         used_at TEXT NOT NULL,
@@ -260,6 +269,81 @@ export class Store {
                 (SELECT COUNT(*) FROM observations o WHERE o.company_key = s.company_key) AS postings
          FROM signal_events s
          JOIN company_classifications c ON c.company_key = s.company_key
+         ORDER BY s.strength DESC, s.company_raw ASC`
+      )
+      .all() as any;
+  }
+
+  /** Signals lacking a brief, with the snippets needed as brief evidence. */
+  signalsWithoutBrief(): Array<{
+    signal_id: number;
+    company_key: string;
+    company_raw: string;
+    industry: string | null;
+    confidence: number;
+    strength: number;
+    quote: string | null;
+    reason: string | null;
+    evidence_json: string;
+  }> {
+    return this.db
+      .prepare(
+        `SELECT s.id AS signal_id, s.company_key, s.company_raw, s.strength, s.evidence_json,
+                c.industry, c.confidence, c.quote, c.reason
+         FROM signal_events s
+         JOIN company_classifications c ON c.company_key = s.company_key
+         LEFT JOIN briefs b ON b.signal_id = s.id
+         WHERE b.id IS NULL
+         ORDER BY s.strength DESC`
+      )
+      .all() as any;
+  }
+
+  snippetsForCompany(companyKey: string): { title: string; snippet: string | null; url: string }[] {
+    return this.db
+      .prepare(
+        `SELECT title, snippet, url FROM observations WHERE company_key = ? ORDER BY fetched_at DESC LIMIT 3`
+      )
+      .all(companyKey) as any;
+  }
+
+  saveBrief(signalId: number, briefJson: string, model: string, contractOk: boolean) {
+    this.db
+      .prepare(
+        `INSERT OR REPLACE INTO briefs (signal_id, brief_json, model, contract_ok, created_at)
+         VALUES (?, ?, ?, ?, ?)`
+      )
+      .run(signalId, briefJson, model, contractOk ? 1 : 0, new Date().toISOString());
+  }
+
+  /** Full signal rows incl. brief for export, queue rendering and routing. */
+  signalsForExport(): Array<{
+    signal_id: number;
+    company_raw: string;
+    company_key: string;
+    signal_type: string;
+    strength: number;
+    status: string;
+    created_at: string;
+    industry: string | null;
+    confidence: number;
+    quote: string | null;
+    reason: string | null;
+    evidence_json: string;
+    brief_json: string | null;
+    contract_ok: number | null;
+    postings: number;
+  }> {
+    return this.db
+      .prepare(
+        `SELECT s.id AS signal_id, s.company_raw, s.company_key, s.signal_type, s.strength,
+                s.status, s.created_at, s.evidence_json,
+                c.industry, c.confidence, c.quote, c.reason,
+                b.brief_json, b.contract_ok,
+                (SELECT COUNT(*) FROM observations o WHERE o.company_key = s.company_key) AS postings
+         FROM signal_events s
+         JOIN company_classifications c ON c.company_key = s.company_key
+         LEFT JOIN briefs b ON b.signal_id = s.id
          ORDER BY s.strength DESC, s.company_raw ASC`
       )
       .all() as any;

@@ -20,6 +20,20 @@ export function companyKey(raw: string): string {
     .trim();
 }
 
+/** Strip HTML tags and entities from scraped text (e.g. StepStone search highlighting). */
+export function stripHtml(s: string): string {
+  return s
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 /** One observation per job posting URL. */
 export function observationHash(url: string): string {
   return createHash("sha1").update(url.trim().toLowerCase()).digest("hex");
