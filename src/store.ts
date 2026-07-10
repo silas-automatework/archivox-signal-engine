@@ -412,6 +412,10 @@ export class Store {
       .all(companyKey) as any;
   }
 
+  markSignalRouted(signalId: number) {
+    this.db.prepare(`UPDATE signal_events SET status = 'routed' WHERE id = ?`).run(signalId);
+  }
+
   setContactAnrede(linkedinUrl: string, anrede: string) {
     this.db.prepare(`UPDATE contacts SET anrede = ? WHERE linkedin_url = ?`).run(anrede, linkedinUrl);
   }

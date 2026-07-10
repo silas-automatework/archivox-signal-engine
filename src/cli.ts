@@ -10,6 +10,7 @@ import { discoverPeople } from "./pipeline/people.js";
 import { signalHash } from "./pipeline/normalize.js";
 import { exportSignals } from "./export/signals.js";
 import { writeCockpit } from "./report/cockpit.js";
+import { setupHubspot, routeSignals } from "./route/hubspot.js";
 import type { Watcher, WatcherRunStats } from "./types.js";
 
 const WATCHERS: Watcher[] = [stepstoneJobsWatcher];
@@ -311,6 +312,23 @@ async function people() {
   store.close();
 }
 
+/** Create the engine-owned custom properties in the HubSpot portal. */
+async function hubspotSetup() {
+  console.log("Setting up HubSpot portal (custom company properties) ...");
+  await setupHubspot();
+  console.log("Done.");
+}
+
+/** Route signal events into HubSpot: company, note (brief), task (email draft). */
+async function route() {
+  const store = new Store("data/engine.sqlite");
+  const maxSignals = Number(arg("max") ?? 30);
+  console.log(`Routing up to ${maxSignals} signals into HubSpot ...`);
+  const { routed } = await routeSignals(store, maxSignals);
+  console.log(`\nDone: ${routed} signals routed.`);
+  store.close();
+}
+
 /** Write machine-readable exports (signals.json + signals.csv). */
 async function exportCmd() {
   const store = new Store("data/engine.sqlite");
@@ -347,6 +365,12 @@ async function main() {
       break;
     case "export":
       await exportCmd();
+      break;
+    case "hubspot:setup":
+      await hubspotSetup();
+      break;
+    case "route":
+      await route();
       break;
     case "cockpit":
       await cockpit();
