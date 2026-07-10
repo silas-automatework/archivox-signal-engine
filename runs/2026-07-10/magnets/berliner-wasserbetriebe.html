@@ -5,43 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S/4-Datenaltlast-Check · Berliner Wasserbetriebe</title>
 <style>
-  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --line:#e2e8e6; --bg:#ffffff; }
+  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --accent-soft:#e5f2f0; --line:#e2e8e6; --bg:#ffffff; }
   * { box-sizing:border-box; }
   body { margin:0; font:14px/1.55 ui-sans-serif, system-ui, "Segoe UI", sans-serif; color:var(--text); background:var(--bg); }
-  .page { max-width:760px; margin:0 auto; padding:44px 40px; }
-  .kicker { color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
-  h1 { font-size:24px; margin:6px 0 2px; }
-  .date { color:var(--dim); font-size:13px; margin-bottom:18px; }
-  .insight { border-left:3px solid var(--accent); padding:8px 16px; font-size:16px; margin:18px 0 22px; }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin:22px 0 8px; }
-  ul { margin:6px 0; padding-left:20px; }
-  li { margin:4px 0; }
-  table { width:100%; border-collapse:collapse; margin:8px 0; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--dim); }
-  .foot { margin-top:26px; padding-top:14px; border-top:1px solid var(--line); color:var(--dim); font-size:12px; }
+  .page { max-width:780px; margin:0 auto; padding:44px 44px 36px; }
+  .kicker { color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:.1em; font-weight:700; }
+  h1 { font-size:25px; margin:6px 0 4px; letter-spacing:-.01em; }
+  .sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
+  .insight { font-size:17px; line-height:1.45; font-weight:500; margin:0 0 8px; }
+  .situation { color:var(--dim); margin:0 0 24px; max-width:640px; }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 22px; }
+  @media (max-width:640px){ .tiles { grid-template-columns:1fr; } }
+  .tile { background:var(--accent-soft); border-radius:12px; padding:16px 18px; }
+  .tile b { display:block; font-size:21px; color:var(--accent); letter-spacing:-.01em; white-space:nowrap; }
+  .tile span { font-size:12.5px; color:var(--text); }
+  .bar-wrap { margin:0 0 26px; }
+  .bar-title { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin-bottom:8px; }
+  .bar { display:flex; height:34px; border-radius:6px; overflow:hidden; gap:2px; }
+  .bar .active { background:#cbd5d2; flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#3d4a47; min-width:120px; }
+  .bar .cold { background:var(--accent); flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#fff; min-width:150px; }
+  .bar-note { font-size:12px; color:var(--dim); margin-top:6px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--dim); margin:24px 0 10px; }
+  .hebel { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media (max-width:640px){ .hebel { grid-template-columns:1fr; } }
+  .h-card { border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .h-card b { display:block; margin-bottom:4px; font-size:13.5px; }
+  .h-card p { margin:0; font-size:13px; color:var(--dim); }
+  ol { margin:6px 0 0; padding-left:22px; }
+  ol li { margin:5px 0; }
+  .next { margin-top:26px; background:var(--accent); color:#fff; border-radius:12px; padding:16px 20px; font-size:14.5px; }
+  .next b { color:#fff; }
+  .foot { margin-top:18px; color:var(--dim); font-size:11px; line-height:1.5; }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="kicker">ArchivoX · Potenzial-Einschätzung</div>
-  <h1>S/4-Datenaltlast-Check: Berliner Wasserbetriebe</h1>
-  <div class="date">Stand 2026-07-10 · eine Seite · Annahmen klar gekennzeichnet</div>
-  <div class="insight">Mit der öffentlich sichtbaren Koordination von Systembereitstellung, Migration und Testing im SAP-S/4HANA-Stabsprojekt stellt sich bei den Berliner Wasserbetrieben früh die Frage, welche ECC-Daten für Betrieb, Nachweis und Aufbewahrung tatsächlich produktionsnah mitgeführt werden müssen.</div>
-  <h2>Ausgangslage (öffentlich beobachtbar)</h2>
-  <ul><li>Die Berliner Wasserbetriebe besetzen öffentlich eine Teil-Projektleitung Infrastruktur im Stabsprojekt SAP S/4HANA.</li><li>In der ausgeschriebenen Rolle werden Systembereitstellung sowie die Abstimmung mit Entwicklung, Migration und Testing ausdrücklich genannt.</li><li>Die Berliner Wasserbetriebe bezeichnen sich mit knapp 4.900 Mitarbeiter:innen als größtes Unternehmen der Wasser- und Abwasserbranche in Deutschland.</li></ul>
-  <h2>Annahmen dieser Einschätzung</h2>
-  <ul><li>Branchentypisch liegt in gewachsenen ECC-Landschaften ein erheblicher Anteil älterer Bewegungs- und Belegdaten, auf die operativ nur selten zugegriffen wird.</li><li>Wir unterstellen für die Wasser- und Abwasserbranche mehrjährige Aufbewahrungs- und Nachweisanforderungen für abrechnungsnahe, technische und instandhaltungsbezogene Informationen.</li><li>Branchentypisch entstehen in SAP über Jahre hohe Datenvolumina in FI-CA oder IS-U-nahen Belegen, PM-Meldungen und -Aufträgen sowie in angehängten Dokumenten.</li><li>Wir unterstellen, dass Infrastruktur-, Migrations- und Testaufwände im S/4-Programm auch von Datenmenge, Belegalter und Anzahl mitzuführender historischer Dokumente beeinflusst werden.</li></ul>
-  <h2>Potenzial-Hebel</h2>
-  <table>
-    <tr><th>Hebel</th><th>Typischer Effekt</th></tr>
-    <tr><td>Auslagerung älterer Abrechnungs-, Vertragskonto- und Verbrauchsbelege aus IS-U- bzw. FI-CA-nahen Bereichen, soweit sie vor allem für Auskunft, Prüfung und Historie benötigt werden</td><td>Je nach Datenlage typischerweise spürbare Reduktion des zu migrierenden Belegvolumens; in Versorgerlandschaften werden bei Altdatenanteilen häufig Größenordnungen von 20 bis 40 % weniger produktionsnah zu führenden Altbelegen betrachtet.</td></tr><tr><td>Archivierung älterer Instandhaltungsunterlagen wie PM-Meldungen, Aufträge, technische Dokumente sowie Anlagen- und Objekt-Historien mit überwiegend lesendem Zugriff</td><td>Je nach Umfang technischer Historien und Anhänge häufig Entlastung bei Datenbank- und Content-Volumen; typische Effekte liegen eher im Bereich einer klaren Bereinigung historischer Bestände als in einer vollständigen Verlagerung.</td></tr><tr><td>Trennung von aufbewahrungspflichtigen Altunterlagen aus Beschaffung, Rechnungswesen und dokumentenintensiven Prozessen, etwa Eingangsrechnungen, Lieferscheinen, Bescheinigungen und Korrespondenzen</td><td>Je nach Dokumentenlage und DMS-Anbindung sind oft reduzierte Test- und Migrationsumfänge möglich; in reifen Archivszenarien werden hierfür branchenübergreifend häufig 15 bis 30 % weniger historienahe Objekte im Zielsystem angesetzt.</td></tr>
-  </table>
-  <h2>Erste Prüfschritte (intern, ohne uns)</h2>
-  <ul><li>Tabellengrößen und Wachstumsverursacher in DB02 prüfen, ergänzt um eine Altersverteilung großer Anwendungsobjekte per SE16H oder geeigneten SE38-Auswertungen, zum Beispiel für FI-CA-, PM- und FI-Belege.</li><li>Belegvolumen je Modul und Geschäftsjahr auswerten, insbesondere für abrechnungsnahe Massenbelege, Instandhaltungsmeldungen und -aufträge sowie angehängte Dokumente; Ziel ist eine Trennung von aktiv genutzten gegenüber überwiegend historischen Beständen.</li><li>Liste aller im S/4-Programm berührten Alt- und Nebensysteme inklusive Archiv-, DMS- und Content-Repositories erstellen und je System klären, welche Informationen nur lesend benötigt werden und welche wirklich in Prozesse, Migration oder Tests eingehen müssen.</li></ul>
+  <div class="kicker">ArchivoX · Potenzial-Einschätzung · vorbereitet für Berliner Wasserbetriebe</div>
+  <h1>S/4-Datenaltlast-Check</h1>
+  <div class="sub">Stand 2026-07-10 · Lesezeit 2 Minuten</div>
+
+  <p class="insight">Bei den Berliner Wasserbetrieben entscheidet die Bereinigung technischer Anlagen-, Instandhaltungs- und Belegdaten darüber, ob das S/4HANA-Programm in Infrastruktur, Migration und Test stabil skalierbar bleibt.</p>
+  <p class="situation">Bei den Berliner Wasserbetrieben läuft das Stabsprojekt SAP S/4HANA bereits mit klarer Teilprojektverantwortung für die Infrastruktur. Die enge Abstimmung von Systembereitstellung mit Entwicklung, Migration und Testing zeigt, dass Datenvolumen, Altbelege und technische Dokumente jetzt zu einem operativen Thema des Programms werden.</p>
+
+  <div class="tiles">
+    <div class="tile"><b>1,2 TB bis 4,8 TB</b><span>Datenbestand, der typischerweise vor der Migration archivierbar ist</span></div>
+    <div class="tile"><b>70.000 € bis 505.000 €</b><span>Einsparpotenzial über 3 Jahre (HANA-Sizing, Infrastruktur, Betrieb)</span></div>
+    <div class="tile"><b>20 bis 40 %</b><span>weniger Belegvolumen im Migrationsscope, je nach Systemhistorie</span></div>
+  </div>
+
+  <div class="bar-wrap">
+    <div class="bar-title">Typischer ECC-Datenbestand einer Landschaft Ihrer Größenordnung</div>
+    <div class="bar">
+      <div class="active">aktiv genutzt</div>
+      <div class="cold">40 bis 60 % archivierbar</div>
+    </div>
+    <div class="bar-note">Basis: 2.000 bis 10.000 Mitarbeitende, ECC-Datenbank 3 TB bis 8 TB. Ihre realen Werte liefert eine DB02-Auswertung in unter einer Stunde.</div>
+  </div>
+
+  <h2>Wo das Potenzial konkret liegt</h2>
+  <div class="hebel">
+    <div class="h-card"><b>Technische Anlagenhistorie ordnen</b><p>Im Fokus stehen Equipments, technische Plätze, Wartungsaufträge, Meldungen und zugehörige Instandhaltungsakten. Gerade lange Historien aus Netz, Wasserwerken und Abwasseranlagen treiben Volumen, Testaufwand und Migrationskomplexität.</p></div><div class="h-card"><b>Netz- und Betriebsdokumente trennen</b><p>Relevante Dokumentklassen sind Betriebsanweisungen, Prüfprotokolle, Revisionsunterlagen, Pläne und Genehmigungsdokumente zu Anlagen und Leitungsnetz. Für S/4 sollte klar sein, was im operativen Zugriff bleiben muss und was aus dem Kernsystem herausgelöst werden kann.</p></div><div class="h-card"><b>Kunden- und Abrechnungsbelege bereinigen</b><p>Typisch sind Vertragskontodaten, Abrechnungsbelege, Gerätewechselhistorien, Zählerdatenbezüge sowie Schriftgut zu Anschluss- und Entwässerungsvorgängen. Diese Bestände beeinflussen besonders FI-CA-nahe Prozesse, Archivobjekte und das Volumen in Migration und Test.</p></div>
+  </div>
+
+  <h2>In zwei Wochen intern prüfbar</h2>
+  <ol><li>Größte Tabellen und Wachstum in DB02 nach Anwendungskomponente auswerten.</li><li>Belegvolumen je Modul mit SE16H für PM, MM, FI-CA prüfen.</li><li>Altsysteme, Archive und Dokumentquellen für Migration und Stilllegung inventarisieren.</li></ol>
+
+  <div class="next"><b>Nächster Schritt:</b> Antworten Sie kurz auf unsere Mail. Wir übertragen diese Modellrechnung in 30 Minuten auf Ihre reale Systemlandschaft, auf Basis Ihrer eigenen DB02-Zahlen, ohne Verpflichtung.</div>
+
   <div class="foot">
-    Diese Einschätzung basiert auf öffentlich verfügbaren Informationen und branchentypischen Erfahrungswerten.
-    Sie ersetzt keine Analyse Ihrer konkreten Systemlandschaft. ArchivoX · Referenzimplementierung Case Study.
+    Modellrechnung auf Basis branchentypischer Erfahrungswerte: Einordnung anhand von knapp 4.900 Mitarbeitenden (2.000 bis 10.000 Mitarbeitende);
+    HANA-Gesamtkosten 20.000 € bis 35.000 € pro TB und Jahr inkl. Betrieb und Ausfallsicherheit;
+    archivierbarer Anteil 40 bis 60 % des Altbestands. Ersetzt keine Analyse Ihrer konkreten Systemlandschaft.
+    ArchivoX Referenzimplementierung, Case Study.
   </div>
 </div>
 </body>

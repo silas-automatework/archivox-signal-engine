@@ -5,43 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S/4-Datenaltlast-Check · Willi Elbe Gelenkwellen GmbH &amp; Co. KG.</title>
 <style>
-  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --line:#e2e8e6; --bg:#ffffff; }
+  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --accent-soft:#e5f2f0; --line:#e2e8e6; --bg:#ffffff; }
   * { box-sizing:border-box; }
   body { margin:0; font:14px/1.55 ui-sans-serif, system-ui, "Segoe UI", sans-serif; color:var(--text); background:var(--bg); }
-  .page { max-width:760px; margin:0 auto; padding:44px 40px; }
-  .kicker { color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
-  h1 { font-size:24px; margin:6px 0 2px; }
-  .date { color:var(--dim); font-size:13px; margin-bottom:18px; }
-  .insight { border-left:3px solid var(--accent); padding:8px 16px; font-size:16px; margin:18px 0 22px; }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin:22px 0 8px; }
-  ul { margin:6px 0; padding-left:20px; }
-  li { margin:4px 0; }
-  table { width:100%; border-collapse:collapse; margin:8px 0; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--dim); }
-  .foot { margin-top:26px; padding-top:14px; border-top:1px solid var(--line); color:var(--dim); font-size:12px; }
+  .page { max-width:780px; margin:0 auto; padding:44px 44px 36px; }
+  .kicker { color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:.1em; font-weight:700; }
+  h1 { font-size:25px; margin:6px 0 4px; letter-spacing:-.01em; }
+  .sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
+  .insight { font-size:17px; line-height:1.45; font-weight:500; margin:0 0 8px; }
+  .situation { color:var(--dim); margin:0 0 24px; max-width:640px; }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 22px; }
+  @media (max-width:640px){ .tiles { grid-template-columns:1fr; } }
+  .tile { background:var(--accent-soft); border-radius:12px; padding:16px 18px; }
+  .tile b { display:block; font-size:21px; color:var(--accent); letter-spacing:-.01em; white-space:nowrap; }
+  .tile span { font-size:12.5px; color:var(--text); }
+  .bar-wrap { margin:0 0 26px; }
+  .bar-title { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin-bottom:8px; }
+  .bar { display:flex; height:34px; border-radius:6px; overflow:hidden; gap:2px; }
+  .bar .active { background:#cbd5d2; flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#3d4a47; min-width:120px; }
+  .bar .cold { background:var(--accent); flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#fff; min-width:150px; }
+  .bar-note { font-size:12px; color:var(--dim); margin-top:6px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--dim); margin:24px 0 10px; }
+  .hebel { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media (max-width:640px){ .hebel { grid-template-columns:1fr; } }
+  .h-card { border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .h-card b { display:block; margin-bottom:4px; font-size:13.5px; }
+  .h-card p { margin:0; font-size:13px; color:var(--dim); }
+  ol { margin:6px 0 0; padding-left:22px; }
+  ol li { margin:5px 0; }
+  .next { margin-top:26px; background:var(--accent); color:#fff; border-radius:12px; padding:16px 20px; font-size:14.5px; }
+  .next b { color:#fff; }
+  .foot { margin-top:18px; color:var(--dim); font-size:11px; line-height:1.5; }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="kicker">ArchivoX · Potenzial-Einschätzung</div>
-  <h1>S/4-Datenaltlast-Check: Willi Elbe Gelenkwellen GmbH &amp; Co. KG.</h1>
-  <div class="date">Stand 2026-07-10 · eine Seite · Annahmen klar gekennzeichnet</div>
-  <div class="insight">Die öffentlich sichtbare S/4HANA-Einführung und -Migration bei Willi Elbe legt nahe, die Datenaltlasten in FI/CO- und angrenzenden Logistikbelegen früh zu prüfen, weil historisch gewachsene ECC-Bestände Umfang, Laufzeit und Archivierungsbedarf eines S/4-Programms typischerweise mitprägen.</div>
-  <h2>Ausgangslage (öffentlich beobachtbar)</h2>
-  <ul><li>Öffentlich ausgeschrieben ist eine Inhouse-Rolle SAP Consultant FI/CO mit Aufgaben in der Einführung und Migration auf SAP S/4HANA.</li><li>Die Ausschreibung nennt ausdrücklich (Teil-)Projektleitung sowie aktive Mitwirkung im S/4HANA-Programm.</li><li>Die öffentliche Suche nach FI/CO-S/4-Kompetenz spricht für laufende Arbeiten an zentralen SAP-Kernprozessen im Finanz- und Controlling-Umfeld.</li></ul>
-  <h2>Annahmen dieser Einschätzung</h2>
-  <ul><li>Branchentypisch liegt in gewachsenen ECC-Systemen ein erheblicher Anteil historischer Beleg- und Bewegungsdaten, der im operativen Tagesgeschäft nur noch selten genutzt wird.</li><li>Wir unterstellen für die Automobilzulieferindustrie übliche Aufbewahrungs- und Nachweisanforderungen für Finanz-, Qualitäts-, Liefer- und Fertigungsunterlagen über mehrere Jahre.</li><li>Branchentypisch entstehen große Datenvolumina aus wiederkehrenden Einkaufs-, Produktions-, Liefer- und Abrechnungsprozessen sowie aus zugehörigen Drucklisten, Anhängen und Spool-Dateien.</li><li>Wir unterstellen die übliche Sizing-Logik, dass Datenbankvolumen, Dokumentenbestand und Zahl angebundener Altsysteme Aufwand für Migration, Betrieb und spätere Stilllegung wesentlich beeinflussen.</li></ul>
-  <h2>Potenzial-Hebel</h2>
-  <table>
-    <tr><th>Hebel</th><th>Typischer Effekt</th></tr>
-    <tr><td>Auslagerung älterer FI/CO-Belege, CO-Einzelposten und abgeschlossener Perioden- bzw. Geschäftsjahresdaten mit weiterhin prüfungssicherem Zugriff</td><td>Je nach Datenlage lassen sich relevante Teile des historischen Finanzdatenbestands aus dem produktiven Zugriffspfad herausnehmen; typischer Effekt sind spürbar geringere zu migrierende Volumina und ein schlankerer Zugriff auf aktuelle Perioden.</td></tr><tr><td>Archivierung historischer MM-, SD- und Fertigungsbelege wie Bestellungen, Lieferpläne, Lieferabrufe, Lieferscheine, Fakturen sowie rückliegender Produktions- und Materialbewegungen</td><td>Je nach Alterungsstruktur der Belege sind in diskreten Fertigungsumgebungen häufig deutliche Entlastungen bei großen Transaktionsbeständen möglich; typische Bandbreiten liegen im Bereich merklicher Volumenreduktionen in den betreffenden Modulen.</td></tr><tr><td>Trennung und Archivierung von qualitäts- und nachweisrelevanten Unterlagen wie Prüflose, Mess- und QK-Dokumentation, chargen- bzw. serienbezogene Nachweise sowie technische Anhänge aus angrenzenden Prozessen</td><td>Je nach Dokumentenanteil und Aufbewahrungspflichten sinkt die Last auf produktionsnahen Systemen typischerweise, während Nachweise für Audits und Reklamationsfälle weiter verfügbar bleiben.</td></tr>
-  </table>
-  <h2>Erste Prüfschritte (intern, ohne uns)</h2>
-  <ul><li>Tabellengrößen und Wachstumstreiber im ECC per DB02 bzw. DBACOCKPIT ermitteln, ergänzt um eine Top-Tabellen-Liste für FI, CO, MM, SD und Produktionsumfeld.</li><li>Belegvolumen und Altersstruktur je Modul auswerten, zum Beispiel über Standardselektionen in FI/CO sowie über SE16H/SE16N für große Belegtabellen, jeweils mit Verteilung nach Geschäftsjahr und Buchungskreis bzw. Werk.</li><li>Liste der SAP-nahen Altanwendungen, angebundenen Dokumentenspeicher und potenziell stillzulegenden Systeme erstellen, inklusive Zweck, Datenarten, Aufbewahrungsfrist und aktuellem Zugriffsbedarf der Fachbereiche.</li></ul>
+  <div class="kicker">ArchivoX · Potenzial-Einschätzung · vorbereitet für Willi Elbe Gelenkwellen GmbH &amp; Co. KG.</div>
+  <h1>S/4-Datenaltlast-Check</h1>
+  <div class="sub">Stand 2026-07-10 · Lesezeit 2 Minuten</div>
+
+  <p class="insight">Bei Willi Elbe entscheidet die Bereinigung gewachsener Fertigungs-, Qualitäts- und Finanzdaten darüber, ob die S/4HANA-Einführung in den Werken steuerbar bleibt.</p>
+  <p class="situation">Bei Willi Elbe läuft die Einführung und Migration auf SAP S/4HANA mit enger Verankerung im FI/CO-Umfeld und mit interner Projektverantwortung. In dieser Phase wird typischerweise sichtbar, welche historischen Belege, Materialstämme und produktionsnahen Dokumente das künftige System unnötig belasten.</p>
+
+  <div class="tiles">
+    <div class="tile"><b>0,4 TB bis 1,8 TB</b><span>Datenbestand, der typischerweise vor der Migration archivierbar ist</span></div>
+    <div class="tile"><b>25.000 € bis 190.000 €</b><span>Einsparpotenzial über 3 Jahre (HANA-Sizing, Infrastruktur, Betrieb)</span></div>
+    <div class="tile"><b>20 bis 40 %</b><span>weniger Belegvolumen im Migrationsscope, je nach Systemhistorie</span></div>
+  </div>
+
+  <div class="bar-wrap">
+    <div class="bar-title">Typischer ECC-Datenbestand einer Landschaft Ihrer Größenordnung</div>
+    <div class="bar">
+      <div class="active">aktiv genutzt</div>
+      <div class="cold">40 bis 60 % archivierbar</div>
+    </div>
+    <div class="bar-note">Basis: 500 bis 2.000 Mitarbeitende, ECC-Datenbank 1 TB bis 3 TB. Ihre realen Werte liefert eine DB02-Auswertung in unter einer Stunde.</div>
+  </div>
+
+  <h2>Wo das Potenzial konkret liegt</h2>
+  <div class="hebel">
+    <div class="h-card"><b>Material- und Variantenbereinigung</b><p>Bei Gelenkwellen, Kreuzgelenken und Antriebskomponenten wachsen Materialstämme, Stücklisten, Arbeitspläne und Änderungsstände über Jahre stark an. Für S/4 lohnt sich die Trennung zwischen aktiv genutzten Varianten und historisch vorgehaltenen Ausprägungen.</p></div><div class="h-card"><b>Qualitäts- und Chargendokumente</b><p>In der Serienfertigung sammeln sich Prüflose, Q-Meldungen, Erstmusterunterlagen, Reklamationsakten und chargenbezogene Nachweise aus mehreren Produktgenerationen. Diese Daten sind relevant, gehören aber nicht vollständig in den operativen S/4-Kern.</p></div><div class="h-card"><b>Auftrags- und Lieferhistorie</b><p>Kundenabrufe, Lieferpläne, Lieferscheine, Fakturabelege und EDI-nahe Bewegungsdaten prägen bei Automobilzulieferern schnell die größten Tabellen. Gerade bei langlaufenden Kundenbeziehungen sollte sauber zwischen operativer Verfügbarkeit und revisionssicherer Vorhaltung getrennt werden.</p></div>
+  </div>
+
+  <h2>In zwei Wochen intern prüfbar</h2>
+  <ol><li>Größte Tabellen und Wachstum in DB02 nach Anwendungsbereich auswerten.</li><li>Belegvolumen je Modul in SE16H für MM, SD, PP und FI prüfen.</li><li>Altsysteme, Dateiablagen und angebundene Archive je Werk inventarisieren.</li></ol>
+
+  <div class="next"><b>Nächster Schritt:</b> Antworten Sie kurz auf unsere Mail. Wir übertragen diese Modellrechnung in 30 Minuten auf Ihre reale Systemlandschaft, auf Basis Ihrer eigenen DB02-Zahlen, ohne Verpflichtung.</div>
+
   <div class="foot">
-    Diese Einschätzung basiert auf öffentlich verfügbaren Informationen und branchentypischen Erfahrungswerten.
-    Sie ersetzt keine Analyse Ihrer konkreten Systemlandschaft. ArchivoX · Referenzimplementierung Case Study.
+    Modellrechnung auf Basis branchentypischer Erfahrungswerte: Einordnung auf Basis der Unternehmensgröße (500 bis 2.000 Mitarbeitende);
+    HANA-Gesamtkosten 20.000 € bis 35.000 € pro TB und Jahr inkl. Betrieb und Ausfallsicherheit;
+    archivierbarer Anteil 40 bis 60 % des Altbestands. Ersetzt keine Analyse Ihrer konkreten Systemlandschaft.
+    ArchivoX Referenzimplementierung, Case Study.
   </div>
 </div>
 </body>

@@ -5,43 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S/4-Datenaltlast-Check · TKMS GmbH</title>
 <style>
-  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --line:#e2e8e6; --bg:#ffffff; }
+  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --accent-soft:#e5f2f0; --line:#e2e8e6; --bg:#ffffff; }
   * { box-sizing:border-box; }
   body { margin:0; font:14px/1.55 ui-sans-serif, system-ui, "Segoe UI", sans-serif; color:var(--text); background:var(--bg); }
-  .page { max-width:760px; margin:0 auto; padding:44px 40px; }
-  .kicker { color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
-  h1 { font-size:24px; margin:6px 0 2px; }
-  .date { color:var(--dim); font-size:13px; margin-bottom:18px; }
-  .insight { border-left:3px solid var(--accent); padding:8px 16px; font-size:16px; margin:18px 0 22px; }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin:22px 0 8px; }
-  ul { margin:6px 0; padding-left:20px; }
-  li { margin:4px 0; }
-  table { width:100%; border-collapse:collapse; margin:8px 0; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--dim); }
-  .foot { margin-top:26px; padding-top:14px; border-top:1px solid var(--line); color:var(--dim); font-size:12px; }
+  .page { max-width:780px; margin:0 auto; padding:44px 44px 36px; }
+  .kicker { color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:.1em; font-weight:700; }
+  h1 { font-size:25px; margin:6px 0 4px; letter-spacing:-.01em; }
+  .sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
+  .insight { font-size:17px; line-height:1.45; font-weight:500; margin:0 0 8px; }
+  .situation { color:var(--dim); margin:0 0 24px; max-width:640px; }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 22px; }
+  @media (max-width:640px){ .tiles { grid-template-columns:1fr; } }
+  .tile { background:var(--accent-soft); border-radius:12px; padding:16px 18px; }
+  .tile b { display:block; font-size:21px; color:var(--accent); letter-spacing:-.01em; white-space:nowrap; }
+  .tile span { font-size:12.5px; color:var(--text); }
+  .bar-wrap { margin:0 0 26px; }
+  .bar-title { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin-bottom:8px; }
+  .bar { display:flex; height:34px; border-radius:6px; overflow:hidden; gap:2px; }
+  .bar .active { background:#cbd5d2; flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#3d4a47; min-width:120px; }
+  .bar .cold { background:var(--accent); flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#fff; min-width:150px; }
+  .bar-note { font-size:12px; color:var(--dim); margin-top:6px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--dim); margin:24px 0 10px; }
+  .hebel { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media (max-width:640px){ .hebel { grid-template-columns:1fr; } }
+  .h-card { border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .h-card b { display:block; margin-bottom:4px; font-size:13.5px; }
+  .h-card p { margin:0; font-size:13px; color:var(--dim); }
+  ol { margin:6px 0 0; padding-left:22px; }
+  ol li { margin:5px 0; }
+  .next { margin-top:26px; background:var(--accent); color:#fff; border-radius:12px; padding:16px 20px; font-size:14.5px; }
+  .next b { color:#fff; }
+  .foot { margin-top:18px; color:var(--dim); font-size:11px; line-height:1.5; }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="kicker">ArchivoX · Potenzial-Einschätzung</div>
-  <h1>S/4-Datenaltlast-Check: TKMS GmbH</h1>
-  <div class="date">Stand 2026-07-10 · eine Seite · Annahmen klar gekennzeichnet</div>
-  <div class="insight">Die öffentlich erkennbare ECC-zu-S/4HANA-Migration bei TKMS legt nahe, dass die Abgrenzung von aktiv benötigten SAP-Daten gegenüber langlaufenden Projekt-, Qualitäts- und Nachweisdaten früh relevant wird.</div>
-  <h2>Ausgangslage (öffentlich beobachtbar)</h2>
-  <ul><li>In einer öffentlichen Ausschreibung wird für TKMS die Gesamtverantwortung für Planung, Steuerung und Umsetzung einer Migration von SAP ECC zu S/4HANA genannt, einschließlich System Landscape, Data Migration, Custom Code Evaluation und Teststrategie.</li><li>Die Rolle beschreibt Schnittstellendesign zwischen Business Stakeholdern und Service Ownern auf IT-Seite, ausdrücklich im Umfeld SAP ERP und Siemens Teamcenter.</li><li>Genannt werden zudem enge Zusammenarbeit mit Key Usern sowie Infrastruktur- und Security-Teams und Kenntnisse in Datenmigrationstechniken wie LTM, SAP Data Services und ETL.</li></ul>
-  <h2>Annahmen dieser Einschätzung</h2>
-  <ul><li>Branchentypisch liegt in gewachsenen ECC-Landschaften vor einer S/4-Umstellung ein erheblicher Anteil historischer Beleg-, Änderungs- und Protokolldaten vor, von denen häufig etwa 50 bis 80 Prozent nur noch selten operativ genutzt werden.</li><li>Wir unterstellen für projektorientierte Industrie- und Anlagenbauer lange Aufbewahrungs- und Nachweisanforderungen für Fertigungs-, Qualitäts-, Beschaffungs- und Serviceunterlagen, auch wenn diese Daten nicht vollständig im transaktionalen Kernsystem verbleiben müssen.</li><li>Branchentypisch entstehen Volumen- und Migrationsaufwände nicht nur aus Stamm- und Bewegungsdaten in SAP, sondern auch aus eng gekoppelten Dokument- und Änderungsobjekten an den Schnittstellen zu PLM- und Drittsystemen.</li><li>Wir unterstellen die übliche Sizing-Logik, dass Datenvolumen, Beleganzahl, Historientiefe und Zahl der zu transformierenden Objekte die Aufwände für Migration, Tests, Betriebsführung und HANA-Speicher mitbeeinflussen.</li></ul>
-  <h2>Potenzial-Hebel</h2>
-  <table>
-    <tr><th>Hebel</th><th>Typischer Effekt</th></tr>
-    <tr><td>Auslagerung älterer Projektbeschaffungs-, Bestell-, Wareneingangs- und Rechnungsbelege aus MM/FI bei gleichzeitigem Zugriff für Prüf- und Nachweiszwecke</td><td>Je nach Datenlage lässt sich das zu migrierende Belegvolumen typischerweise spürbar reduzieren; in vergleichbaren ECC-Beständen liegen die Effekte häufig im Bereich von 20 bis 40 Prozent weniger historischer Bewegungsdaten im Migrationsscope.</td></tr><tr><td>Trennung von abgeschlossenen Fertigungs-, Qualitäts- und Änderungsnachweisen, etwa zu Baugruppen, Prüflose, QM-Meldungen und dokumentationspflichtigen Abnahmen, sofern diese nur noch lesend benötigt werden</td><td>Je nach Historientiefe und Dokumentationsgrad sinkt typischerweise die Last auf Kerntransaktionen und Datenbanktabellen; in Einzelfällen werden 15 bis 35 Prozent weniger Altbelege und zugehörige Sekundärdaten im Zielsystem geführt.</td></tr><tr><td>Bereinigung beziehungsweise Archivierung älterer Instandhaltungs-, Service- und Geräteakten sowie historischer Schnittstellen- und Protokolldaten im Umfeld SAP ERP und angebundener Engineering-Systeme</td><td>Je nach Landschaftszuschnitt reduziert sich typischerweise die Zahl der dauerhaft produktiv vorzuhaltenden Altinformationen; daraus ergeben sich häufig geringere Testumfänge und ein schlankerer Betriebsbestand im S/4-Umfeld.</td></tr>
-  </table>
-  <h2>Erste Prüfschritte (intern, ohne uns)</h2>
-  <ul><li>In DB02 oder ST10 die größten Tabellen und das historische Wachstum der Kernmodule FI, CO, MM, SD, PP und PM ermitteln; ergänzend über TAANA oder Standardauswertungen Altersverteilungen zentraler Belegtabellen prüfen.</li><li>Je Modul das Belegvolumen nach Geschäftsjahr und Buchungskreis bzw. Werk auswerten, zum Beispiel über SE16H/SE16N auf BKPF, BSEG, MKPF, MSEG, EKKO, EKPO, QMEL, AUFK und PM-relevante Objekte, um den Anteil älterer, nur noch lesend genutzter Daten abzugrenzen.</li><li>Eine Liste aller angebundenen Alt- und Nebensysteme mit Datenklassen, Schnittstellen und Aufbewahrungsbedarf erstellen, insbesondere im Zusammenspiel von SAP ERP, Teamcenter und möglichen Dokumentablagen, um Stilllegungskandidaten und reine Lesebestände früh sichtbar zu machen.</li></ul>
+  <div class="kicker">ArchivoX · Potenzial-Einschätzung · vorbereitet für TKMS GmbH</div>
+  <h1>S/4-Datenaltlast-Check</h1>
+  <div class="sub">Stand 2026-07-10 · Lesezeit 2 Minuten</div>
+
+  <p class="insight">Bei TKMS entscheidet die Bereinigung von Projekt-, Konstruktions- und SAP-Altdaten darüber, ob die S/4HANA-Migration beherrschbar bleibt und Teamcenter sauber angebunden wird.</p>
+  <p class="situation">Bei TKMS läuft die Migration von SAP ECC nach S/4HANA bereits mit klarer Verantwortung für Systemlandschaft, Datenmigration, Custom Code und Teststrategie. Die enge Verzahnung von SAP, Siemens Teamcenter, Key Usern sowie Infrastruktur- und Security-Teams zeigt, dass es um eine tief integrierte Transformationslandschaft mit hoher Datenabhängigkeit geht.</p>
+
+  <div class="tiles">
+    <div class="tile"><b>1,2 TB bis 4,8 TB</b><span>Datenbestand, der typischerweise vor der Migration archivierbar ist</span></div>
+    <div class="tile"><b>70.000 € bis 505.000 €</b><span>Einsparpotenzial über 3 Jahre (HANA-Sizing, Infrastruktur, Betrieb)</span></div>
+    <div class="tile"><b>20 bis 40 %</b><span>weniger Belegvolumen im Migrationsscope, je nach Systemhistorie</span></div>
+  </div>
+
+  <div class="bar-wrap">
+    <div class="bar-title">Typischer ECC-Datenbestand einer Landschaft Ihrer Größenordnung</div>
+    <div class="bar">
+      <div class="active">aktiv genutzt</div>
+      <div class="cold">40 bis 60 % archivierbar</div>
+    </div>
+    <div class="bar-note">Basis: 2.000 bis 10.000 Mitarbeitende, ECC-Datenbank 3 TB bis 8 TB. Ihre realen Werte liefert eine DB02-Auswertung in unter einer Stunde.</div>
+  </div>
+
+  <h2>Wo das Potenzial konkret liegt</h2>
+  <div class="hebel">
+    <div class="h-card"><b>Projekt- und Auftragsakten</b><p>Im Marineschiffbau sammeln sich Auftrags-, Projektstruktur- und Fertigungsunterlagen über lange Laufzeiten in SAP und angrenzenden Ablagen. Für S/4 lohnt die Trennung zwischen aktiv benötigten Projektbelegen und historischer Vertrags-, Nachtrags- und Abnahmedokumentation.</p></div><div class="h-card"><b>Konstruktions- und Stücklistendaten</b><p>Die Kopplung von SAP mit Teamcenter macht Materialstämme, Stücklisten, Änderungsstände und Dokumentinfosätze zu einem zentralen Hebel. Gerade bei langen Entwicklungs- und Bauzyklen entstehen viele überholte Revisionen, die in der Migration gezielt abgegrenzt werden sollten.</p></div><div class="h-card"><b>Service- und Instandhaltungsnachweise</b><p>Für Marineplattformen wachsen Wartungshistorien, Ersatzteilbezüge, Prüfprotokolle und technische Lebenslaufakten über viele Jahre. Diese Datenklassen sollten nach Nutzungsrelevanz, Nachweispflichten und Zugriffshäufigkeit vor der Übernahme nach S/4 segmentiert werden.</p></div>
+  </div>
+
+  <h2>In zwei Wochen intern prüfbar</h2>
+  <ol><li>Größte Tabellen und Wachstum in DB02 nach Anwendungsbereich auswerten.</li><li>Belegvolumen je Modul in SE16H für MM, SD, PS, PM prüfen.</li><li>Altsysteme und angebundene Archive inklusive Teamcenter-Schnittstellen systematisch inventarisieren.</li></ol>
+
+  <div class="next"><b>Nächster Schritt:</b> Antworten Sie kurz auf unsere Mail. Wir übertragen diese Modellrechnung in 30 Minuten auf Ihre reale Systemlandschaft, auf Basis Ihrer eigenen DB02-Zahlen, ohne Verpflichtung.</div>
+
   <div class="foot">
-    Diese Einschätzung basiert auf öffentlich verfügbaren Informationen und branchentypischen Erfahrungswerten.
-    Sie ersetzt keine Analyse Ihrer konkreten Systemlandschaft. ArchivoX · Referenzimplementierung Case Study.
+    Modellrechnung auf Basis branchentypischer Erfahrungswerte: Einordnung nach TKMS-Unternehmensgröße und Konzernkontext (2.000 bis 10.000 Mitarbeitende);
+    HANA-Gesamtkosten 20.000 € bis 35.000 € pro TB und Jahr inkl. Betrieb und Ausfallsicherheit;
+    archivierbarer Anteil 40 bis 60 % des Altbestands. Ersetzt keine Analyse Ihrer konkreten Systemlandschaft.
+    ArchivoX Referenzimplementierung, Case Study.
   </div>
 </div>
 </body>

@@ -5,43 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S/4-Datenaltlast-Check · United Internet AG</title>
 <style>
-  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --line:#e2e8e6; --bg:#ffffff; }
+  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --accent-soft:#e5f2f0; --line:#e2e8e6; --bg:#ffffff; }
   * { box-sizing:border-box; }
   body { margin:0; font:14px/1.55 ui-sans-serif, system-ui, "Segoe UI", sans-serif; color:var(--text); background:var(--bg); }
-  .page { max-width:760px; margin:0 auto; padding:44px 40px; }
-  .kicker { color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
-  h1 { font-size:24px; margin:6px 0 2px; }
-  .date { color:var(--dim); font-size:13px; margin-bottom:18px; }
-  .insight { border-left:3px solid var(--accent); padding:8px 16px; font-size:16px; margin:18px 0 22px; }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin:22px 0 8px; }
-  ul { margin:6px 0; padding-left:20px; }
-  li { margin:4px 0; }
-  table { width:100%; border-collapse:collapse; margin:8px 0; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--dim); }
-  .foot { margin-top:26px; padding-top:14px; border-top:1px solid var(--line); color:var(--dim); font-size:12px; }
+  .page { max-width:780px; margin:0 auto; padding:44px 44px 36px; }
+  .kicker { color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:.1em; font-weight:700; }
+  h1 { font-size:25px; margin:6px 0 4px; letter-spacing:-.01em; }
+  .sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
+  .insight { font-size:17px; line-height:1.45; font-weight:500; margin:0 0 8px; }
+  .situation { color:var(--dim); margin:0 0 24px; max-width:640px; }
+  .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 22px; }
+  @media (max-width:640px){ .tiles { grid-template-columns:1fr; } }
+  .tile { background:var(--accent-soft); border-radius:12px; padding:16px 18px; }
+  .tile b { display:block; font-size:21px; color:var(--accent); letter-spacing:-.01em; white-space:nowrap; }
+  .tile span { font-size:12.5px; color:var(--text); }
+  .bar-wrap { margin:0 0 26px; }
+  .bar-title { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin-bottom:8px; }
+  .bar { display:flex; height:34px; border-radius:6px; overflow:hidden; gap:2px; }
+  .bar .active { background:#cbd5d2; flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#3d4a47; min-width:120px; }
+  .bar .cold { background:var(--accent); flex:50; display:flex; align-items:center; padding:0 12px; font-size:12.5px; color:#fff; min-width:150px; }
+  .bar-note { font-size:12px; color:var(--dim); margin-top:6px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--dim); margin:24px 0 10px; }
+  .hebel { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media (max-width:640px){ .hebel { grid-template-columns:1fr; } }
+  .h-card { border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .h-card b { display:block; margin-bottom:4px; font-size:13.5px; }
+  .h-card p { margin:0; font-size:13px; color:var(--dim); }
+  ol { margin:6px 0 0; padding-left:22px; }
+  ol li { margin:5px 0; }
+  .next { margin-top:26px; background:var(--accent); color:#fff; border-radius:12px; padding:16px 20px; font-size:14.5px; }
+  .next b { color:#fff; }
+  .foot { margin-top:18px; color:var(--dim); font-size:11px; line-height:1.5; }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="kicker">ArchivoX · Potenzial-Einschätzung</div>
-  <h1>S/4-Datenaltlast-Check: United Internet AG</h1>
-  <div class="date">Stand 2026-07-10 · eine Seite · Annahmen klar gekennzeichnet</div>
-  <div class="insight">Wenn United Internet AG parallel ein neues S/4HANA-Template für FI aufbaut und heute ECC-FI mit Schnittstellen zu CO, MM, SD und BW betreibt, wird die Trennung von aktiv benötigten Finanzdaten und Datenaltlasten zu einer zentralen Weichenstellung im S/4-Programm.</div>
-  <h2>Ausgangslage (öffentlich beobachtbar)</h2>
-  <ul><li>In einer öffentlichen Stellenausschreibung sucht United Internet AG einen Inhouse SAP Consultant FI mit Schwerpunkt IFRS und nennt mehrjährige praktische Erfahrung im SAP ECC FI-Umfeld als relevant.</li><li>laut Ausschreibung unterstützt das Team „SAP Finance &amp; Controlling“ den Fachbereich Finanzen bei Prozessdesign und Customizing, unter anderem für Bankbuchhaltung und Periodenabschlussprozesse auf Basis des SAP-Standards.</li><li>Die Ausschreibung nennt die Betreuung von Schnittstellen zwischen SAP und Non-SAP-Systemen sowie angrenzenden Modulen wie SAP CO, MM, SD und SAP BW und die Mitgestaltung eines neuen S/4HANA-Templates für FI.</li></ul>
-  <h2>Annahmen dieser Einschätzung</h2>
-  <ul><li>Branchentypisch liegt in gewachsenen ECC-Systemen ein erheblicher Anteil der FI-, SD- und Reporting-Daten in historisierten Belegen, Anhängen und Extrakten, die für den Tagesbetrieb nur selten benötigt werden.</li><li>Wir unterstellen für regulierte Finanzprozesse übliche Aufbewahrungsanforderungen für Buchungs-, Rechnungs-, Zahlungs- und Abschlussunterlagen über mehrere Jahre, sodass Löschung allein in der Regel keine ausreichende Option ist.</li><li>Branchentypisch entstehen in Umgebungen mit SAP- und Non-SAP-Schnittstellen zusätzliche Datenmengen durch Replikate, Ladeobjekte, Protokolle und BW-nahe Historien, die im Zielsystem nicht vollständig mitgeführt werden müssen.</li><li>Wir unterstellen die übliche Sizing-Logik von S/4-Programmen: Weniger produktiv mitgenommene Altbelege und Dokumente reduzieren typischerweise Migrationsvolumen, Testaufwand, Laufzeiten und den Bedarf an HANA-Hauptspeicher je nach Datenlage.</li></ul>
-  <h2>Potenzial-Hebel</h2>
-  <table>
-    <tr><th>Hebel</th><th>Typischer Effekt</th></tr>
-    <tr><td>Historisierung älterer FI-Belege, OP-Ausgleichshistorien, Zahlungs- und Bankbuchhaltungsunterlagen aus abgeschlossenen Perioden</td><td>Je nach Datenlage lassen sich große Teile selten genutzter Finanzhistorie aus dem operativen S/4-Umfang herausnehmen; typisch sind spürbare Entlastungen bei Datenvolumen und Belegzugriffen im Produktivsystem.</td></tr><tr><td>Auslagerung älterer SD-Abrechnungs-, Rechnungs- und Forderungsbelege aus dem Massengeschäft von Internet- und Hosting-Services, soweit nur noch Nachweis- und Auskunftspflichten bestehen</td><td>Je nach Belegalter und Fakturavolumen sind in serviceorientierten Geschäftsmodellen häufig relevante Volumenreduktionen möglich; in Benchmarks liegt der auslagerbare Anteil historischer Belegdaten oft im Bereich von 20 bis 40 Prozent des betroffenen Anwendungsumfangs.</td></tr><tr><td>Bereinigung bzw. Stilllegung von Datenreplikaten aus Non-SAP-Schnittstellen und BW-nahen Extrakten, sofern diese für das neue FI-Template nicht operativ erforderlich sind</td><td>Typischerweise sinken dadurch Migrations- und Testobjekte sowie Abstimmaufwände zwischen Quell- und Zielwelt; je nach Landschaft ist zusätzlich eine Reduktion von Parallelhaltung und späterem Legacy-Betrieb erreichbar.</td></tr>
-  </table>
-  <h2>Erste Prüfschritte (intern, ohne uns)</h2>
-  <ul><li>In DB02 oder über den DBACOCKPIT die größten Tabellen und Tabellenräume im ECC-FI-/SD-Umfeld ermitteln, insbesondere Belegkopf-, Belegpositions-, Index- und Archivtabellen, und die Altersverteilung der größten Objekte auswerten.</li><li>Mit Standardauswertungen in FI und SD das Belegvolumen der letzten 10 bis 15 Geschäftsjahre nach Buchungskreis, Geschäftsjahr und Belegart aufnehmen, getrennt nach offen, ausgeglichen und rein historisch genutzten Belegen.</li><li>Eine belastbare Liste aller SAP-, Non-SAP- und BW-Schnittstellen sowie potenziell stillzulegender Altsysteme erstellen, inklusive Zweck, Datenobjekten, Aufbewahrungsbedarf und der Frage, ob die Daten im neuen S/4-FI-Template operativ oder nur noch revisionssicher vorgehalten werden müssen.</li></ul>
+  <div class="kicker">ArchivoX · Potenzial-Einschätzung · vorbereitet für United Internet AG</div>
+  <h1>S/4-Datenaltlast-Check</h1>
+  <div class="sub">Stand 2026-07-10 · Lesezeit 2 Minuten</div>
+
+  <p class="insight">Bei United Internet entscheidet die Bereinigung historischer Abrechnungs-, Zahlungs- und Schnittstellendaten darüber, ob Ihr neues S/4HANA-FI-Template skaliert oder Altlasten aus ECC fortschreibt.</p>
+  <p class="situation">Bei United Internet läuft der Aufbau eines neuen S/4HANA-Templates für FI, während das bestehende ECC-FI-Umfeld mit Bankbuchhaltung, Periodenabschluss und angrenzenden Modulen weiterentwickelt wird. Gleichzeitig tragen die Schnittstellen zu Non-SAP-Systemen sowie zu CO, MM, SD und BW sichtbar dazu bei, dass sich Daten- und Belegbestände über Jahre in mehreren Systemgrenzen verfestigt haben.</p>
+
+  <div class="tiles">
+    <div class="tile"><b>3,2 TB bis 12 TB</b><span>Datenbestand, der typischerweise vor der Migration archivierbar ist</span></div>
+    <div class="tile"><b>190.000 € bis 1.260.000 €</b><span>Einsparpotenzial über 3 Jahre (HANA-Sizing, Infrastruktur, Betrieb)</span></div>
+    <div class="tile"><b>20 bis 40 %</b><span>weniger Belegvolumen im Migrationsscope, je nach Systemhistorie</span></div>
+  </div>
+
+  <div class="bar-wrap">
+    <div class="bar-title">Typischer ECC-Datenbestand einer Landschaft Ihrer Größenordnung</div>
+    <div class="bar">
+      <div class="active">aktiv genutzt</div>
+      <div class="cold">40 bis 60 % archivierbar</div>
+    </div>
+    <div class="bar-note">Basis: über 10.000 Mitarbeitende, ECC-Datenbank 8 TB bis 20 TB. Ihre realen Werte liefert eine DB02-Auswertung in unter einer Stunde.</div>
+  </div>
+
+  <h2>Wo das Potenzial konkret liegt</h2>
+  <div class="hebel">
+    <div class="h-card"><b>Abrechnungs- und Vertragsbelege ordnen</b><p>Im Hosting- und Internetgeschäft sammeln sich kundenbezogene Abrechnungsbelege, Vertragsänderungen, Gutschriften und Stornofälle über lange Laufzeiten. Für S/4 lohnt die Trennung zwischen aktiv benötigten Vorgängen und historischer Beleglast aus Altperioden.</p></div><div class="h-card"><b>Zahlungs- und Bankhistorien bereinigen</b><p>Wiederkehrende Zahlungen, Lastschriften, Rücklastschriften, Mahnläufe und Kontoauszugsdaten erzeugen in FI besonders dichte Historien. Gerade bei periodischen Massenvorgängen sollte geprüft werden, welche Zahlungs- und Abstimmungsdaten im operativen System verbleiben müssen.</p></div><div class="h-card"><b>Schnittstellenarchive konsolidieren</b><p>An den Übergängen zwischen SAP, Non-SAP-Systemen und BW entstehen IDoc-, Proxy-, Extrakt- und Abstimmungsdaten, die fachlich oft längst abgeschlossen sind. Ein sauberer Umgang mit diesen technischen und fachlichen Begleitdaten reduziert Komplexität im Zieltemplate spürbar.</p></div>
+  </div>
+
+  <h2>In zwei Wochen intern prüfbar</h2>
+  <ol><li>Größte FI-, SD- und BW-Tabellen samt Wachstum in DB02 auswerten.</li><li>Belegvolumen je Buchungskreis und Geschäftsjahr in SE16H verdichten.</li><li>Altsysteme, Schnittstellen und Archivobjekte in einem Inventar zusammenführen.</li></ol>
+
+  <div class="next"><b>Nächster Schritt:</b> Antworten Sie kurz auf unsere Mail. Wir übertragen diese Modellrechnung in 30 Minuten auf Ihre reale Systemlandschaft, auf Basis Ihrer eigenen DB02-Zahlen, ohne Verpflichtung.</div>
+
   <div class="foot">
-    Diese Einschätzung basiert auf öffentlich verfügbaren Informationen und branchentypischen Erfahrungswerten.
-    Sie ersetzt keine Analyse Ihrer konkreten Systemlandschaft. ArchivoX · Referenzimplementierung Case Study.
+    Modellrechnung auf Basis branchentypischer Erfahrungswerte: Einordnung auf Basis der Konzern- und Mitarbeitergröße (über 10.000 Mitarbeitende);
+    HANA-Gesamtkosten 20.000 € bis 35.000 € pro TB und Jahr inkl. Betrieb und Ausfallsicherheit;
+    archivierbarer Anteil 40 bis 60 % des Altbestands. Ersetzt keine Analyse Ihrer konkreten Systemlandschaft.
+    ArchivoX Referenzimplementierung, Case Study.
   </div>
 </div>
 </body>
