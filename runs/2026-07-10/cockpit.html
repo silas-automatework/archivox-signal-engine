@@ -82,13 +82,737 @@
   <p class="claim">Endanwender im Kauffenster, erkannt aus öffentlichen deutschen Quellen. Jede Akte: Beleg, Ansprechpartner, Mail-Entwurf, Give.</p>
 
   <div class="kpis">
-    <div class="kpi"><b>0</b><span>Qualifizierte Signale</span></div>
-    <div class="kpi"><b>0</b><span>Mit SDR-Brief</span></div>
-    <div class="kpi"><b>0</b><span>Personen-Hypothesen</span></div>
-    <div class="kpi"><b>$0.00</b><span>LLM-Kosten gesamt</span></div>
+    <div class="kpi"><b>25</b><span>Qualifizierte Signale</span></div>
+    <div class="kpi"><b>25</b><span>Mit SDR-Brief</span></div>
+    <div class="kpi"><b>77</b><span>Personen-Hypothesen</span></div>
+    <div class="kpi"><b>$4.41</b><span>LLM-Kosten gesamt</span></div>
   </div>
 
   
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
+        <span class="company">Hamburger Hochbahn AG</span>
+        <span class="record">S1-20260710 · STÄRKE 1.00 · KONF 0.90 · 4 BELEGE · 3 PERSONEN</span>
+        <span class="industry">public transport / transit operator</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Du übernimmst die Teilprojektleitung im Bereich Materials Management (MM) bei der Einführung von SAP S/4HANA"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>The evidence shows an active S/4HANA introduction with dedicated project leadership and PMO capacity. In programs at this stage, companies typically have to decide which legacy ERP data and documents must stay operationally accessible, what can be archived before migration, and what can later support legacy system decommissioning. Those decisions often affect HANA sizing, migration scope, and how much historical information business teams still need day to day.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>MM workstream is already staffed as a formal subproject</b> The posting for &quot;Teilprojektleitung SAP S/4HANA MM&quot; suggests Materials Management is important enough to run with dedicated leadership. That creates a concrete angle around historical purchasing, materials, and inventory-related records that MM users may still need after cutover.</li><li><b>PMO-backed S/4 introduction implies cross-workstream governance decisions are live</b> The &quot;Werkstudent Projektmanagement SAP S/4HANA&quot; role explicitly supports the project leadership and PMO in the operational steering of the S/4HANA introduction. That is a good entry point for how legacy data scope, archive access, and post-migration system retirement decisions are being governed across the program.</li><li><b>Transit-operator context makes document retention operationally sensitive</b> For public transport operators, MM-related history can intersect with long-lived asset and spare-parts processes. In an S/4HANA MM rollout, that can make the split between active transactional data and archived historical records more operationally sensitive than in a simpler office-based procurement environment.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence confirms active S/4HANA implementation, but not the current status of legacy data, archiving, or decommissioning decisions.</li><li>The clearest functional signal is MM; no direct evidence of FI, SD, HR, or other S/4 workstreams in the provided postings.</li><li>Decision-making may sit at program or central IT level rather than inside the MM subproject alone.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>A. G.</strong><span class="c-role">IT Projektmanager SAP S 4 HANA</span><span class="c-conf">98%</span></li><li><strong>B. P. C.</strong><span class="c-role">Teilprojektleiter Instandhaltung S/4 HANA Projekt</span><span class="c-conf">95%</span></li><li><strong>M. W.</strong><span class="c-role">Teamleiter SAP Applikationsmanagement</span><span class="c-conf">92%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-MM-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14192263-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Teilprojektleitung SAP S/4HANA MM (w/m/d)</a></li><li><a href="https://www.stepstone.de/jobs--Werkstudent-Projektmanagement-SAP-S-4HANA-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14182112-inline.html?rltr=17_17_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Werkstudent Projektmanagement SAP S/4HANA (w/m/d)</a></li><li><a href="https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-MM-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14192263-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Teilprojektleitung SAP S/4HANA MM (w/m/d)</a></li></ul>
+            <a class="akte-link" href="magnets/hamburger-hochbahn.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei HOCHBAHN</div>Hallo Frau G.,<br><br>wie groß ist im SAP S/4HANA-Einführungsprojekt der Anteil des Altdatenbestands, den Ihr Team im Alltag wirklich noch braucht?<br><br>Bei kommunalen Verkehrsbetrieben liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für HOCHBAHN eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
+        <span class="company">Isar Aerospace SE</span>
+        <span class="record">S1-20260710 · STÄRKE 1.00 · KONF 0.90 · 3 BELEGE · 1 PERSONEN</span>
+        <span class="industry">aerospace / launch provider</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"As part of our SAP S/4HANA Private Cloud program, you will play a critical role in designing, developing, and enhancing our enterprise platform at the heart of our business processes."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies moving to S/4 typically have to decide early what stays in the active HANA footprint versus what is kept accessible in an archive or legacy access layer. That decision often affects sizing, performance, development scope, and later decommissioning effort. In a private-cloud S/4 program focused on reliability and core business processes, unresolved legacy-data ownership can easily become a cross-functional gap between SAP engineering, integration, and business stakeholders.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Private-cloud S/4 program with explicit technical design ownership</b> The role is for an &quot;SAP S/4HANA Private Cloud Developer&quot; who will &quot;influence technical design decisions.&quot; That makes this a useful moment to ask who owns the boundary between active S/4 data and legacy-access requirements before those design decisions harden.</li><li><b>High-reliability platform focus</b> The posting emphasizes a &quot;high‑reliability SAP S/4 platform&quot; and &quot;Stable S/4HANA Private Cloud system performance.&quot; In programs with that emphasis, teams often need a clear view on which historical data must remain operationally available versus which can move out of the active platform.</li><li><b>Cross-functional coordination signal</b> The developer will work with &quot;integration teams, and business stakeholders&quot; on an enterprise platform &quot;at the heart of our business processes.&quot; That usually means ownership of old documents and legacy data access can fall between SAP, integration, and business process teams unless assigned explicitly.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The evidence confirms an S/4HANA Private Cloud program, but does not confirm whether this is a migration from ECC versus a broader transformation or new-build setup.</li><li>No direct evidence of incumbent archiving, document management, or legacy-system decommissioning plans.</li><li>Job posting is for a developer role; budget and ownership may sit with a broader SAP program, architecture, or business systems leader.</li><li>Industry classification is aerospace / launch provider, but the posting itself does not specify which business processes or document-heavy domains are in current scope.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>A. E.</strong><span class="c-role">Manager IT Infrastructure</span><span class="c-conf">94%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--SAP-S-4HANA-Private-Cloud-Developer-m-f-d-Ottobrunn-Isar-Aerospace-SE--13482380-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">SAP S/4HANA Private Cloud Developer (m/f/d)</a></li><li><a href="https://www.stepstone.de/jobs--SAP-S-4HANA-Private-Cloud-Developer-m-f-d-Ottobrunn-Isar-Aerospace-SE--13482380-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">SAP S/4HANA Private Cloud Developer (m/f/d)</a></li><li><a href="https://www.stepstone.de/jobs--SAP-S-4HANA-Private-Cloud-Developer-m-f-d-Ottobrunn-Isar-Aerospace-SE--13482380-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">SAP S/4HANA Private Cloud Developer (m/f/d)</a></li></ul>
+            <a class="akte-link" href="magnets/isar-aerospace.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Isar Aerospace</div>Hallo Herr E.,<br><br>in Ihrem SAP S/4HANA-Private-Cloud-Programm: Welches Team verantwortet die Entscheidung zu Altdaten und Altbelegen?<br><br>Bei Raumfahrtunternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Isar Aerospace eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
+        <span class="company">MANN+HUMMEL GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 1.00 · KONF 0.90 · 3 BELEGE · 7 PERSONEN</span>
+        <span class="industry">automotive supplier / filtration systems</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Design and implementation of global processes by shaping, harmonizing, and deploying standardized processes based on SAP S/4HANA (including customer order fulfillment / Order-to-Dispatch, shipping, transportation execution, delivery processing, and EDI with customers)"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>This is a credible transformation signal because the role is explicitly centered on shaping and deploying standardized processes on SAP S/4HANA, not just supporting a steady-state SAP environment. In S/4 programs, companies typically have to decide early which historical operational data and documents stay in the active core versus move to archive or a legacy access model, because that choice can affect sizing, process design, cutover scope, and what users still need from legacy ECC after go-live.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>O2C dispatch scope likely touches document-heavy logistics flows</b> The posted role covers &quot;customer order fulfillment / Order-to-Dispatch, shipping, transportation execution, delivery processing, and EDI with customers&quot;. That makes the treatment of historical delivery, shipping, transportation, and customer-facing message records a concrete topic in their S/4 design, especially if users still need day-to-day lookup after cutover.</li><li><b>SD and EWM process design increases the importance of what remains active</b> The posting asks for &quot;In-depth knowledge of SAP S/4HANA modules SD and EWM&quot;. In programs spanning sales and warehouse-related execution, teams often need a clear boundary between active operational data in S/4 and older fulfillment records that can sit outside the new core but remain accessible.</li><li><b>Global process harmonization raises cross-country retention and access questions</b> The role is about &quot;defining, harmonizing, and implementing&quot; global standard processes. When processes are standardized globally, legacy data and archived document access often need the same global design discipline rather than being left to local workarounds after go-live.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence is from a single job family; there is no explicit migration timeline in the posting.</li><li>The signal is strongest at the process-design layer; the posting does not explicitly mention data migration, archiving, or ECC retirement.</li><li>Decision-making may sit in a global or central transformation office rather than with the hiring manager alone.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>A. S.</strong><span class="c-role">CIO bei MANN+HUMMEL</span><span class="c-conf">99%</span></li><li><strong>P. N.</strong><span class="c-role">Head of Global Enterprise Service Management at MANN+HUMMEL</span><span class="c-conf">90%</span></li><li><strong>O. G.</strong><span class="c-role">Vice President IT Infrastructure &amp; Operations</span><span class="c-conf">89%</span></li><li><strong>B. C. C.</strong><span class="c-role">Director SAP Platform Operation &amp; SAP Security</span><span class="c-conf">88%</span></li><li><strong>J. K.</strong><span class="c-role">Director IT EMEA bei MANN+HUMMEL Gruppe | Standardizing IT and Production IT globally</span><span class="c-conf">84%</span></li><li><strong>D. B.</strong><span class="c-role">Director IT Strategic Projects bei MANN+HUMMEL</span><span class="c-conf">82%</span></li><li><strong>S. G.</strong><span class="c-role">Global SAP Process Manager SD</span><span class="c-conf">72%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Global-Process-Manager-m-f-d-SAP-S-4HANA-Dispatch-in-End-to-End-O2C-Process-Ludwigsburg-MANN-HUMMEL-GmbH--14183990-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Global Process Manager (m/f/d) - SAP S/4HANA Dispatch in End-to-End O2C Process</a></li><li><a href="https://www.stepstone.de/jobs--Global-Process-Manager-m-f-d-SAP-S-4HANA-Dispatch-in-End-to-End-O2C-Process-Ludwigsburg-MANN-HUMMEL-GmbH--14183990-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Global Process Manager (m/f/d) - SAP S/4HANA Dispatch in End-to-End O2C Process</a></li><li><a href="https://www.stepstone.de/jobs--Global-Process-Manager-m-f-d-SAP-S-4HANA-Dispatch-in-End-to-End-O2C-Process-Ludwigsburg-MANN-HUMMEL-GmbH--14183990-inline.html?rltr=1_1_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Global Process Manager (m/f/d) - SAP S/4HANA Dispatch in End-to-End O2C Process</a></li></ul>
+            <a class="akte-link" href="magnets/mann-hummel.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei MANN+HUMMEL</div>Hallo Herr S.,<br><br>in Ihrem SAP S/4HANA Dispatch im End-to-End-O2C-Prozess: Klären Sie das Altdaten- und Archivbild vor oder nach dem Sizing?<br><br>Bei automobilzulieferern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für MANN+HUMMEL eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">ALDI Einkauf SE &amp; Co. oHG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 3 PERSONEN</span>
+        <span class="industry">retail / supermarket</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Mitarbeit an einer zentralen, global eingesetzten S/4HANA-Lösung auf Basis eines international genutzten Templates"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>When companies roll out S/4HANA in a central template model, legacy data decisions often affect multiple countries and functions at once. In S/4 programs, teams typically have to decide how much historical ECC data and document access must stay in the new core versus being handled via archive and legacy access, especially for finance and invoice-related records that carry retention and audit relevance.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Global template raises the legacy-data standardization question</b> The posting mentions a &quot;zentralen, global eingesetzten S/4HANA-Lösung&quot; with an &quot;international genutzten Template&quot;. That usually means legacy-data handling cannot stay a local afterthought; archive access, retention handling, and what remains in the S/4 core often need a template-level decision.</li><li><b>Finance, Controlling, and Invoicing suggest high document volume with audit relevance</b> The role covers &quot;Finance, Controlling und Invoicing&quot; in S/4HANA. For a retailer, invoice and finance documents are the concrete document classes most likely to matter when deciding what historical content must remain accessible without loading everything into the new system.</li><li><b>Development hiring implies design choices are still being embedded in the target solution</b> Because ALDI is hiring a Development Specialist with S/4HANA development skills such as &quot;Eclipse, CDS Views&quot;, the program appears to be actively building on the target platform. That is a practical point to clarify whether historical data access is being designed into the solution architecture or left to later.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The evidence comes from a development hiring post, so it signals active S/4 build work but does not by itself confirm migration scope, phase, or timeline.</li><li>The posting references a central, global solution; decision-making may sit at group or template-program level rather than locally with ALDI Einkauf alone.</li><li>Only Finance-related S/4HANA evidence is provided; avoid assuming the same transformation scope across other SAP domains.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>F. G.</strong><span class="c-role">Vice Chief Technology and Operations Officer International</span><span class="c-conf">91%</span></li><li><strong>D. S.</strong><span class="c-role">Senior IT Manager / Program Manager / Head of SAP Supply Chain / SAP S4 HANA / Digital Transformation Expert</span><span class="c-conf">87%</span></li><li><strong>D. J.</strong><span class="c-role">Team Lead IT Supply Chain Solution Support</span><span class="c-conf">78%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Development-Specialist-SAP-S-4HANA-Finance-m-w-d-Essen-ALDI-Einkauf-SE-Co-oHG--14156518-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Development Specialist - SAP S/4HANA Finance (m/w/d)</a></li><li><a href="https://www.stepstone.de/jobs--Development-Specialist-SAP-S-4HANA-Finance-m-w-d-Essen-ALDI-Einkauf-SE-Co-oHG--14156518-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Development Specialist - SAP S/4HANA Finance (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/aldi-einkauf-co.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei ALDI</div>Hallo Herr G.,<br><br>in Ihrer zentralen, global eingesetzten S/4HANA-Lösung: Wie groß ist der Anteil des ECC-Altbestands, den Ihr Team im Alltag tatsächlich noch braucht?<br><br>Bei Lebensmitteleinzelhändlern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für ALDI eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">BSH Hausgeräte Gruppe</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 6 PERSONEN</span>
+        <span class="industry">home appliances manufacturer</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Support S/4HANA roll-in with several cross-department interlinkages"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies in an S/4 migration or roll-in typically have a narrow window to decide what stays as active ERP data, what moves into compliant archive, and how legacy access will work after go-live. If that decision is left until after sizing, teams often carry more historical ECC data into HANA than they need, increasing footprint and migration effort. Cross-functional roll-ins also tend to complicate ownership of old documents and retention requirements across departments.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Cross-department ownership in the S/4HANA roll-in</b> The posting ties the role to an 'S/4HANA roll-in' with 'several cross-department interlinkages'. That makes ownership of legacy data, archived documents, and retention rules a concrete coordination issue across functions, not just an SAP basis topic.</li><li><b>AI transformation alongside ERP change</b> Because the role sits in 'AI Transformation' while supporting the S/4HANA roll-in, there may be added sensitivity around which historical ERP records and documents remain operationally accessible versus archived during the transformation.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a Working Student posting, so the signal is strong but operational detail may be limited.</li><li>The posting is tied to an AI Transformation role, so the S/4HANA work may be one stream within a broader transformation rather than a standalone ERP program.</li><li>BSH is a group with multiple brands; decisions on archiving and legacy decommissioning could sit centrally at group level rather than locally.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>M. T. B.</strong><span class="c-role">Head of ERP/ IT-Business Consulting | SAP Expert @ BSH Home Appliances</span><span class="c-conf">98%</span></li><li><strong>R. S. G.</strong><span class="c-role">SAP Business Consultant bei BSH</span><span class="c-conf">97%</span></li><li><strong>C. B.</strong><span class="c-role">Project Leader IT Coordination bei BSH Hausgeräte GmbH</span><span class="c-conf">96%</span></li><li><strong>J. B.</strong><span class="c-role">IT Business Consultant bei BSH Home Appliances Group</span><span class="c-conf">93%</span></li><li><strong>U. L.</strong><span class="c-role">Vice President Data Management &amp; MDM Program Manager</span><span class="c-conf">81%</span></li><li><strong>S. H.</strong><span class="c-role">Head of Value Management PCS</span><span class="c-conf">74%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Working-Student-AI-Transformation-m-f-d-Munchen-BSH-Hausgerate-Gruppe--14185523-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">Working Student AI Transformation (m/f/d)</a></li><li><a href="https://www.stepstone.de/jobs--Working-Student-AI-Transformation-m-f-d-Munchen-BSH-Hausgerate-Gruppe--14185523-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">Working Student AI Transformation (m/f/d)</a></li></ul>
+            <a class="akte-link" href="magnets/bsh-hausgeraete.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei BSH</div>Hallo Frau B.,<br><br>im S/4HANA Roll-in, wird das Thema Altdaten und alte Dokumente bei Ihnen vor oder nach dem Sizing verbindlich entschieden?<br><br>Bei Hausgeräteherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für BSH eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">Berliner Wasserbetriebe</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 4 PERSONEN</span>
+        <span class="industry">water utility</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Koordinieren der Systembereitstellung sowie Abstimmung mit Entwicklung, Migration und Testing"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>In S/4HANA programs, infrastructure sizing and migration planning often force an early decision on what stays as active data versus what should remain in an archive or legacy-access model. Companies in regulated, asset-heavy environments typically carry long-retention business and technical records; if those are treated as live ERP scope by default, HANA footprint, migration effort, and legacy shutdown timelines can all expand unnecessarily.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Infrastructure workstream creates a sizing lever</b> The advertised role is specifically a &quot;Teil-Projektleitung Infrastruktur im Stabsprojekt SAP S/4HANA.&quot; That makes infrastructure scope concrete now: archive-versus-active-data decisions can directly affect the platform that this workstream has to provide and size.</li><li><b>Migration is already in the coordination loop</b> The posting says the role will handle &quot;Abstimmung mit Entwicklung, Migration und Testing.&quot; When migration is already an explicit coordination partner, legacy data handling is usually no longer a theoretical topic; it becomes a planning dependency across cutover scope, test scope, and what must be reachable after go-live.</li><li><b>Water and wastewater retention can complicate ERP scope</b> As a water utility, Berliner Wasserbetriebe likely deals with long-lived operational and commercial records typical for the sector, such as network, asset, maintenance, customer, and process-related documentation. In an S/4HANA program, the practical question is which of those records truly need to remain in the live ERP perimeter versus compliant archive access.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a hiring signal, not a formal project announcement.</li><li>The posting is for an infrastructure sub-project lead; this may not be the final owner of archiving or legacy-data decisions.</li><li>Two listings appear to be duplicates of the same role on StepStone.</li><li>As a public utility, procurement or governance decisions may be centralized beyond the immediate project team.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>O. S.</strong><span class="c-role">Projektleiter SAP S/4HANA</span><span class="c-conf">99%</span></li><li><strong>J. S.</strong><span class="c-role">Teamleiter Finanzanwendungen Und Logistik SAP</span><span class="c-conf">86%</span></li><li><strong>D. R.</strong><span class="c-role">IT Projekt Office / IT-Stabsprojekt S/4HANA</span><span class="c-conf">82%</span></li><li><strong>M. C.</strong><span class="c-role">Teamleiter Zentrale Anwendungen (IT)</span><span class="c-conf">72%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Teil-Projektleitung-Infrastruktur-im-Stabsprojekt-SAP-S-4HANA-w-m-d-Berlin-Berliner-Wasserbetriebe--14185389-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Teil-Projektleitung Infrastruktur im Stabsprojekt SAP S/4HANA (w/m/d)</a></li><li><a href="https://www.stepstone.de/jobs--Teil-Projektleitung-Infrastruktur-im-Stabsprojekt-SAP-S-4HANA-w-m-d-Berlin-Berliner-Wasserbetriebe--14185389-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Teil-Projektleitung Infrastruktur im Stabsprojekt SAP S/4HANA (w/m/d)</a></li></ul>
+            <a class="akte-link" href="magnets/berliner-wasserbetriebe.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei BWB</div>Hallo Herr S.,<br><br>im Stabsprojekt SAP S/4HANA beeinflussen lang aufbewahrte Netz-, Anlagen- und Vorgangsunterlagen die Infrastrukturgröße, wenn ECC-Bestand und Archiv nicht getrennt bewertet werden.<br><br>Bei Wasser- und Abwasserbetrieben liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für BWB eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">Otto Group one.O GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 2 PERSONEN</span>
+        <span class="industry">retail / e-commerce (holding)</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"gestaltest du die Architektur unserer Retail Accounting S/4HANA Systemlandschaft aktiv mit"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>When companies build out an S/4HANA landscape, decisions on what stays as active data versus what moves into an archive often get locked in early through architecture, integration, and sizing choices. In S/4 programs, that matters because retaining large ECC-era data volumes in the productive target can raise HANA footprint, migration effort, and long-term legacy complexity. For retail/accounting landscapes, document retention and access across connected systems also tends to become a design issue, not just an operations issue.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Retail Accounting landscape design</b> The posting explicitly centers on the &quot;Retail Accounting S/4HANA Systemlandschaft&quot;. That creates a concrete opening to discuss which accounting-relevant legacy data and documents need to remain active in S/4 versus accessible from an archive layer.</li><li><b>Adjacent systems and platform integration</b> They call out responsibility for the S/4HANA landscape &quot;im Zusammenspiel mit angrenzenden Systemen und Plattformen&quot;. That is a specific angle to ask how historical business documents should be accessed once processes span S/4 plus surrounding platforms.</li><li><b>Hybrid interface estate</b> The stated stack includes SAP CPI/PI, REST, OData, IDoc, and BAPI. In programs with both classic SAP interfaces and newer integration patterns, legacy document access and retention responsibilities often become fragmented across systems.</li><li><b>Cloud-connected target architecture</b> The role connects S/4HANA with SAP BTP, AWS, and GCP. For a cloud-connected target, a useful conversation is whether old ERP-era documents should stay in the core system or be served from a lower-cost archive architecture.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The posting is for Otto Group one.O GmbH, so the buying center could sit at shared-service or group-IT level rather than in one business unit.</li><li>Evidence shows architecture and integration work, but it does not confirm migration phase, timeline, or any current archiving setup.</li><li>Because the role spans adjacent systems, platforms, and cloud technologies, ownership of legacy-data decisions may be distributed rather than centralized.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>S. B.</strong><span class="c-role">Principal SAP Strategy Management &amp; Tech Consulting</span><span class="c-conf">92%</span></li><li><strong>P. R.</strong><span class="c-role">Team Lead Architecture Consulting</span><span class="c-conf">86%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--SAP-Solution-Architect-S-4HANA-w-m-d-Hamburg-Otto-Group-one-O-GmbH--13869245-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">SAP Solution Architect S/4HANA (w/m/d)</a></li><li><a href="https://www.stepstone.de/jobs--SAP-Solution-Architect-S-4HANA-w-m-d-Hamburg-Otto-Group-one-O-GmbH--13869245-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">SAP Solution Architect S/4HANA (w/m/d)</a></li></ul>
+            <a class="akte-link" href="magnets/otto-one-o.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Otto Group</div>Hallo Herr B.,<br><br>ist in Ihrer Retail-Accounting-S/4HANA-Systemlandschaft die Trennung zwischen aktiven Daten und Archiv bereits entschieden oder noch eingeplant?<br><br>Bei onlinehändlern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Otto Group eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">Papierfabrik Palm GmbH &amp; Co. KG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 2 PERSONEN</span>
+        <span class="industry">paper manufacturing</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Für die Abbildung unserer zentralen Geschäftsprozesse setzen wir auf SAP S/4HANA als Standardlösung."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>When companies standardize central business processes on SAP S/4HANA, decisions around legacy ERP data and historical documents usually affect HANA sizing, migration scope, and the future handling of older records across business functions. In this phase, teams often need to separate what must stay operational in S/4 from what can move into a compliant archive or a legacy access model, especially when central IT is coordinating requirements across multiple business areas.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Central-process scope raises cross-functional legacy decisions</b> The posting says SAP S/4HANA is the standard solution for Palm’s central business processes. That usually means archive and legacy-data decisions cannot stay inside one module team, because finance, procurement, logistics, and document-heavy process history tend to be affected together.</li><li><b>Role is designed to bridge IT and business requirements</b> Palm is hiring someone who 'die Verbindung zwischen IT und Fachbereichen lebt' and will advise business units on requirements in the S/4HANA system. That creates a concrete opening to discuss who is defining which historical data and documents are still needed operationally versus only for retention and lookup.</li><li><b>Group-level digital development suggests a broader template question</b> The role will 'die digitale Weiterentwicklung der Palm Gruppe aktiv mitgestaltet' from central IT in Aalen. That points to a likely group-wide design choice: whether legacy data access and archived documents are handled as part of the central S/4 target model rather than left to local workarounds.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence shows S/4HANA as the standard solution and a central IT hiring signal, but does not state whether Palm is migrating from ECC, already live, or expanding an existing S/4 landscape.</li><li>Posting is for central IT at the headquarters in Aalen, so decisions may sit at group level rather than within one plant or business unit.</li><li>Only one role is visible in the evidence; the actual program structure, timeline, and scope are not disclosed.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>M. S.</strong><span class="c-role">IT Architekt</span><span class="c-conf">95%</span></li><li><strong>T. H.</strong><span class="c-role">Teamleiter Group Processes (SAP, EDI, BI) in der Palm Gruppe</span><span class="c-conf">88%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Business-Information-Specialist-SAP-S-4HANA-m-w-d-Aalen-Aalen-Papierfabrik-Palm-GmbH-Co-KG--14243023-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Business Information Specialist – SAP S/4HANA (m/w/d), Aalen</a></li><li><a href="https://www.stepstone.de/jobs--Business-Information-Specialist-SAP-S-4HANA-m-w-d-Aalen-Aalen-Papierfabrik-Palm-GmbH-Co-KG--14243023-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Business Information Specialist – SAP S/4HANA (m/w/d), Aalen</a></li></ul>
+            <a class="akte-link" href="magnets/papierfabrik-palm.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Palm</div>Hallo Herr S.,<br><br>bei Ihrem SAP S/4HANA-Standard für zentrale Geschäftsprozesse wird der Schnitt zwischen operativen Daten und Archiv oft schon mit dem Zielbild in Aalen festgelegt.<br><br>Bei papierherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Palm eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">QIAGEN GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 5 PERSONEN</span>
+        <span class="industry">life sciences / biotechnology</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"As a Working Student in our QIAbase Program Management Office (PMO), you will actively support our digital transformation initiatives and contribute to impactful projects."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>When companies run a structured transformation program with a PMO, legacy data scope usually becomes a cost and timeline issue early, even if ownership is still diffuse. In S/4-related programs, teams typically need to decide how much historical ERP data and document volume must move into the new environment versus stay in a compliant archive, because that affects sizing, migration effort, and later legacy system shutdown options. In life sciences environments, this is often more sensitive because historical records can have long retention and audit relevance.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>QIAbase PMO creates a natural decision point for legacy scope</b> Because the role sits in the &quot;QIAbase Program Management Office (PMO)&quot;, there is likely a central forum where data scope, workstream ownership, and cutover dependencies are coordinated. That makes it a good entry point for the question of what historical ERP data and documents the program really needs operationally versus what can remain audit-accessible outside the new core.</li><li><b>Life sciences retention can complicate a clean cut to the new ERP core</b> For life sciences companies, historical records such as quality, batch, supplier, and traceability-related documents often need to stay accessible for long periods. In a transformation program, that can create tension between keeping the new core lean and preserving compliant access to older records.</li><li><b>Global transformation raises the bar for post-migration legacy access</b> The posting explicitly describes QIAGEN as a &quot;global life sciences company&quot;. In global programs, teams often need a consistent answer for how historical documents are accessed after go-live across sites or entities, especially if old systems are later decommissioned.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a Working Student posting, so the signal confirms an active transformation PMO but not the exact ERP scope.</li><li>The posting names &quot;QIAbase Program Management Office (PMO)&quot;, but does not explicitly mention SAP ECC, S/4HANA, or a migration timeline.</li><li>QIAGEN is described as a global company, so program decisions may sit above the German legal entity.</li><li>Posting language is broad digital transformation language; validate whether archive/legacy scope is already a defined workstream.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>T. H.</strong><span class="c-role">Vice President, Head of Digital Business Solutions</span><span class="c-conf">96%</span></li><li><strong>J. W.</strong><span class="c-role">Senior IT Director - Head of Enterprise Platforms</span><span class="c-conf">95%</span></li><li><strong>S. A.</strong><span class="c-role">Senior IT Service Manager SAP</span><span class="c-conf">92%</span></li><li><strong>J. P. B.</strong><span class="c-role">IT Service Manager SAP BASIS</span><span class="c-conf">91%</span></li><li><strong>J. D.</strong><span class="c-role">Senior Director, Head of Global IT Operations &amp; Infrastructure</span><span class="c-conf">90%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Working-Student-f-m-d-Project-Management-and-Digital-Transformation-Hilden-bei-Dusseldorf-QIAGEN-GmbH--13458827-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Working Student (f/m/d) - Project Management and Digital Transformation</a></li><li><a href="https://www.stepstone.de/jobs--Working-Student-f-m-d-Project-Management-and-Digital-Transformation-Hilden-bei-Dusseldorf-QIAGEN-GmbH--13458827-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Working Student (f/m/d) - Project Management and Digital Transformation</a></li></ul>
+            <a class="akte-link" href="magnets/qiagen.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei QIAGEN</div>Hallo Herr H.,<br><br>im QIAbase-Programm: Wie groß ist der Anteil der Altdaten und alten Dokumente, den Ihr Team im Alltag tatsächlich noch braucht?<br><br>Bei Life-Sciences-Unternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für QIAGEN eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">Willi Elbe Gelenkwellen GmbH &amp; Co. KG.</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 2 PERSONEN</span>
+        <span class="industry">automotive supplier / driveline components manufacturer</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Sie übernehmen (Teil-)Projektleitung sowie aktive Mitwirkung bei der Einführung und Migration auf SAP S/4HANA"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>This is a timely archiving conversation because companies in an active S/4HANA migration typically need to decide early what stays in the active system, what moves to archive, and how legacy data and documents will be accessed after go-live. Those choices can affect HANA sizing, migration scope, compliance handling, and whether legacy systems can later be decommissioned cleanly.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>FI/CO-led S/4HANA workstream</b> The role is specifically for 'SAP Consultant - Inhouse / FI/CO / S/4HANA', which suggests the finance/controlling area is close to the transformation. That makes retention and access to finance-related legacy records and documents a concrete discussion point during migration design.</li><li><b>In-house program ownership</b> The posting is for an in-house consultant, not an external project resource, and includes '(Teil-)Projektleitung'. That suggests decisions on data scope, archive approach, and post-migration legacy access may be shaped internally rather than left entirely to a systems integrator.</li><li><b>Active introduction and migration phase</b> The wording explicitly says 'Einführung und Migration auf SAP S/4HANA'. In that phase, the archive boundary is often set alongside the future ERP design, not after the fact, which makes this a relevant point of entry now.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a single repeated job posting snippet; depth is limited.</li><li>The posting is for one functional area, FI/CO, so broader enterprise data decisions could sit elsewhere.</li><li>Decision-making may be centralized at group or senior IT level rather than with the hiring manager for this role.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>R. F.</strong><span class="c-role">Projektmanager IT-Betrieb</span><span class="c-conf">95%</span></li><li><strong>B. H.</strong><span class="c-role">Stammdatenmanager SAP</span><span class="c-conf">91%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--SAP-Consultant-Inhouse-FI-CO-S-4HANA-m-w-d-Tamm-Willi-Elbe-Gelenkwellen-GmbH-Co-KG--13932638-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">SAP Consultant - Inhouse / FI/CO / S/4HANA (m/w/d)</a></li><li><a href="https://www.stepstone.de/jobs--SAP-Consultant-Inhouse-FI-CO-S-4HANA-m-w-d-Tamm-Willi-Elbe-Gelenkwellen-GmbH-Co-KG--13932638-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">SAP Consultant - Inhouse / FI/CO / S/4HANA (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/willi-elbe-gelenkwellen.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Willi Elbe</div>Hallo Herr F.,<br><br>bei Ihrer Einführung und Migration auf SAP S/4HANA ist die Trennung von aktiven Daten und Archiv bereits entschieden oder noch in Planung?<br><br>Bei automobilzulieferern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Willi Elbe eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
+        <span class="company">seca GmbH &amp; Co. KG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 1 PERSONEN</span>
+        <span class="industry">medical device manufacturer</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Dein erster Schwerpunkt liegt auf der Transformation von SAP R/3 zu SAP S/4HANA."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies moving from SAP R/3 to S/4HANA typically have to decide early what stays as active data in the new core versus what can remain in an archive or legacy-access model. That decision can materially affect HANA sizing, migration scope, and how long old systems must stay available after go-live. In regulated manufacturing environments, document retention and access to historical records also tend to shape the decommissioning path.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>PMO-led cross-functional transformation governance</b> The role is positioned in the Project Management Office and is described as steering 'komplexer, bereichsübergreifender Unternehmensinitiativen'. That makes archive scope and legacy-data ownership a coordination topic, not just a technical SAP basis task.</li><li><b>Explicit SAP R/3 to S/4HANA move</b> Because the posting names a transformation 'von SAP R/3 zu SAP S/4HANA', seca is likely approaching the classic cutover question of what historical ERP data must be migrated into S/4 versus left accessible outside the new core.</li><li><b>Medical-device record footprint</b> As a medical device manufacturer, seca may have long-lived quality, service, and commercial records tied to products and compliance. In S/4 programs, those document classes often influence whether old content should be migrated, archived, or kept available for audit-style access after ERP cutover.</li><li><b>Internal and external partner model</b> The posting highlights collaboration 'mit internen und externen Partnern'. That can create a practical opening around who defines the legacy-data boundary, especially if SI, internal IT, and business owners are each optimizing different parts of the program.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a single StepStone posting duplicated twice, so signal breadth is limited.</li><li>The posting is for a PMO role, which signals program activity but not necessarily who owns archiving or legacy decommissioning decisions.</li><li>The ad references the international headquarters in Hamburg; decision-making could still involve broader group or external-program stakeholders.</li><li>No timeline, deployment approach, or current archiving setup is stated in the evidence.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>F. W.</strong><span class="c-role">Projektmanager SAP</span><span class="c-conf">98%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Projektmanager-m-w-d-PMO-Fokus-SAP-S-4HANA-Transformation-Hamburg-seca-GmbH-Co-KG--14185680-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Projektmanager (m/w/d) PMO – Fokus SAP S/4HANA &amp; Transformation</a></li><li><a href="https://www.stepstone.de/jobs--Projektmanager-m-w-d-PMO-Fokus-SAP-S-4HANA-Transformation-Hamburg-seca-GmbH-Co-KG--14185680-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Projektmanager (m/w/d) PMO – Fokus SAP S/4HANA &amp; Transformation</a></li></ul>
+            <a class="akte-link" href="magnets/seca.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei seca</div>Hallo Herr W.,<br><br>bei Ihrer Transformation von SAP R/3 zu SAP S/4HANA legt die Systemauslegung den Schnitt zwischen aktiven Qualitätsdaten und Altbelegen faktisch schon fest.<br><br>Bei Medizintechnikherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für seca eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 90%"><span style="width:90%"></span></span>
+        <span class="company">AES Aircraft Elektro/Elektronik System GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.90 · KONF 0.90 · 1 BELEGE · 1 PERSONEN</span>
+        <span class="industry">aviation manufacturing</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Für ein strategisch bedeutendes Zukunftsprojekt suchen wir einen ERP-Projektleiter (m/w/d), der die Auswahl und Einführung eines neuen ERP-Systems in den kommenden Jahren verantwortet."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>The signal is early and meaningful: AES is not just optimizing an existing ERP, but staffing leadership for system selection, planning, and implementation. In S/4 or other major ERP replacement programs, companies typically make the archive and legacy-data cut line either explicitly during design or implicitly when sizing, scope, and migration effort are locked. That timing matters because cold ECC/legacy data and old documents can otherwise inflate the target footprint, migration workload, and the duration old systems must stay accessible after go-live.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Selection phase is the best point to define the archive boundary</b> The posting says the role has &quot;Gesamtverantwortung für die Auswahl, Planung und Implementierung eines neuen ERP-Systems&quot;. That makes this a rare point where AES can decide which legacy data and documents need to move into the new ERP scope versus remain in an archive/legacy-access model before design assumptions harden.</li><li><b>A multi-year ERP introduction increases the risk of parallel legacy access</b> AES states the new ERP system will be introduced &quot;in den kommenden Jahren&quot;. In programs with that timeline, teams often need a clear plan for how historical ERP data and old business documents stay accessible during transition and after go-live, otherwise legacy-system runtime can drag on.</li><li><b>Transformation leadership suggests cross-functional ownership may still be open</b> The role combines transformation leadership with ERP selection and implementation. At this stage, ownership of legacy data, archived documents, and eventual decommissioning is often not yet firmly assigned between IT, finance, and process owners, which can slow decisions later.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence shows a new ERP selection and implementation program, but does not name SAP, S/4HANA, or the incumbent ERP.</li><li>The posting is for AES Aircraft Elektro/Elektronik System GmbH specifically; buying authority could still sit at group or shareholder level if applicable.</li><li>No timeline beyond &quot;in den kommenden Jahren&quot; is provided, so program maturity is still unclear.</li><li>No evidence yet on document/compliance scope, archive tooling, or legacy-system landscape.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>R. R.</strong><span class="c-role">Team Leader IT</span><span class="c-conf">97%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--ERP-Projektleiter-m-w-d-Digitale-Transformation-Bremen-AES-Aircraft-Elektro-Elektronik-System-GmbH--14263506-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">ERP-Projektleiter (m/w/d) Digitale Transformation</a></li></ul>
+            <a class="akte-link" href="magnets/aes-aircraft-elektro-elektronik-system.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei AES</div>Hallo Herr R.,<br><br>bei Ihrem strategisch bedeutenden Zukunftsprojekt wird der Schnitt zwischen neuem ERP und Altbestand oft schon mit Auswahl und Planung faktisch festgelegt.<br><br>Bei Luftfahrtzulieferern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für AES eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 90%"><span style="width:90%"></span></span>
+        <span class="company">Alfred Kärcher SE &amp; Co. KG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.90 · KONF 0.90 · 1 BELEGE · 4 PERSONEN</span>
+        <span class="industry">cleaning equipment manufacturer</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Im Rahmen unseres SAP S/4HANA Transformationsprojekts identifizierst du komplexe Problemstellungen und entwickelst nachhaltige, praktikable Lösungskonzepte, die sich eng an den SAP Best Practices orientieren."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies migrating to S/4HANA typically have to decide early which legacy data stays active in the new core, what is archived compliantly, and how legacy access will work during and after the transition. Those decisions often affect HANA sizing, migration scope, and whether old ERP components can later be decommissioned cleanly. When a program is defining standards for hybrid SAP landscapes and coordinating implementation work packages, archive and legacy-data decisions are usually easier to anchor than after the target architecture is already fixed.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Hybrid SAP landscape standards imply an archive operating-model decision</b> The posting says the role &quot;definierst die Standards und Prozesse für den effizienten Betrieb unserer hybriden SAP-Landschaften&quot;. That is a concrete point where Kärcher will likely need a clear model for what remains in the S/4 core versus what is served from archive or legacy access, because those standards shape later operating complexity.</li><li><b>Complex SAP subprojects create a natural place for a legacy-data workstream</b> The role is expected to &quot;als Projektleitung komplexe Teilprojekte im SAP-Umfeld&quot; and coordinate implementation work packages. That makes legacy data, old documents, and eventual system retirement a plausible scoped subproject rather than an afterthought buried inside the core migration.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a single job posting, so scope and timeline of the broader transformation are not fully visible.</li><li>The posting is for an architecture/platform role; archive ownership could sit elsewhere in the program.</li><li>Decision-making may be centralized above the hiring team, especially for cross-landscape standards and long-term operating model choices.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>V. R.</strong><span class="c-role">Manager SAP SD &amp; CRM / Gruppenleiter SAP SD &amp; CRM</span><span class="c-conf">96%</span></li><li><strong>A. Z.</strong><span class="c-role">IT Servicemanager SAP HCM, Finance &amp; Controlling</span><span class="c-conf">93%</span></li><li><strong>D. B.</strong><span class="c-role">IT Architect and Service Manager</span><span class="c-conf">90%</span></li><li><strong>A. R.</strong><span class="c-role">Director IoT Platforms &amp; Analytics | Autonomous &amp; Digital Solutions / Senior Director Information Technology</span><span class="c-conf">72%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Senior-SAP-Platform-Architectin-m-w-d-Region-Stuttgart-Winnenden-Alfred-Karcher-SE-Co-KG--13747682-inline.html?rltr=24_24_25_seorl_m_1_0_0_0_0_0" target="_blank" rel="noopener">(Senior) SAP Platform Architect*in (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/alfred-kaercher.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Kärcher</div>Hallo Herr R.,<br><br>im SAP S/4HANA Transformationsprojekt werden Standards für hybride SAP-Landschaften festgelegt, während die Trennung von aktivem Bestand und Archiv den späteren Betriebsaufwand mitprägt.<br><br>Bei reinigungsgeräteherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Kärcher eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 90%"><span style="width:90%"></span></span>
+        <span class="company">Haufe Group SE</span>
+        <span class="record">S1-20260710 · STÄRKE 0.90 · KONF 0.90 · 1 BELEGE · 5 PERSONEN</span>
+        <span class="industry">software/publishing (corporate IT)</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Der digitale Wandel unseres Unternehmens führt zu einer grundlegenden Erneuerung unseres langjährig gewachsenen SAP ERP Systems."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies renewing long-grown SAP ERP landscapes typically have to decide early what remains active in the target environment versus what can move to archive or legacy access. That decision can affect target sizing, migration effort, compliance handling for historical documents, and whether older environments can later be decommissioned cleanly.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>New ERP leadership role tied to the renewal program</b> The hired role is specifically a 'Teamlead ERP Consulting (d/m/w)', which suggests Haufe Group is building leadership capacity around the ERP renewal itself. That makes ownership of legacy data, archived documents, and old-system access a timely design topic rather than a cleanup task after the fact.</li><li><b>Long-grown SAP ERP landscape implies legacy scope decisions</b> The posting describes a 'langjährig gewachsenes SAP ERP System'. In programs like this, the practical cut between active operational data and historical ERP content is usually where migration scope, archive scope, and later decommissioning feasibility are determined.</li><li><b>Fundamental renewal, not minor optimization</b> The wording 'grundlegende Erneuerung' indicates a deeper ERP change rather than routine maintenance. That creates a concrete opening to discuss whether historical SAP data and documents should remain in the future core system or be retained outside it with compliant access.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The public signal mentions SAP ERP renewal, but does not explicitly say S/4HANA.</li><li>Only one job posting is provided as evidence, so project scope, timeline, and system decisions are still unknown.</li><li>As a group structure ('Haufe Group SE'), ERP and archiving decisions may be made centrally above the hiring team.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>A. P.</strong><span class="c-role">CIO@HaufeGroup</span><span class="c-conf">99%</span></li><li><strong>B. B.</strong><span class="c-role">Program Lead Next Gen ERP</span><span class="c-conf">97%</span></li><li><strong>M. J.</strong><span class="c-role">Technical Lead SAP @ NextGen ERP</span><span class="c-conf">92%</span></li><li><strong>N. P.</strong><span class="c-role">Senior SAP Solution Architect</span><span class="c-conf">90%</span></li><li><strong>C. Z.</strong><span class="c-role">SAP Application Manager bei Haufe Lexware GmbH &amp; Co. KG</span><span class="c-conf">85%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Teamlead-ERP-Consulting-d-m-w-Freiburg-im-Breisgau-Haufe-Group-SE--14172241-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">Teamlead ERP Consulting (d/m/w)</a></li></ul>
+            <a class="akte-link" href="magnets/haufe.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Haufe</div>Hallo Herr P.,<br><br>bei der grundlegenden Erneuerung Ihres langjährig gewachsenen SAP ERP Systems legt die Zielgröße schnell fest, was als aktiver Bestand mitwandert und was Altlast bleibt.<br><br>Bei software- und verlagshäusern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Haufe eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 90%"><span style="width:90%"></span></span>
+        <span class="company">TKMS GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.90 · KONF 0.90 · 1 BELEGE · 3 PERSONEN</span>
+        <span class="industry">defense / naval shipbuilding</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Gesamtverantwortung für die Planung, Steuerung und Umsetzung der Migration von SAP ECC zu S/4HANA (incl. System Landscape, Data Migration, Custom Code Evaluation, Test Strategie)."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>This is a strong transformation signal because the role owns both architecture and execution of an ECC-to-S/4 program. In S/4 migrations, companies typically have to decide early which legacy data stays active in HANA, what can move into compliant archives, and how old documents will remain accessible after cutover or later legacy shutdown. Those decisions can materially affect HANA sizing, migration scope, and the path to eventual decommissioning of old ERP environments.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>One role spans both system landscape and data migration</b> The posting combines responsibility for &quot;System Landscape&quot; and &quot;Data Migration&quot; in the ECC-to-S/4HANA move. That makes it relevant to discuss where historical ERP data and archived documents should sit in the future landscape, because that decision affects both architecture and migration execution.</li><li><b>Cross-system design with Siemens Teamcenter raises document-access questions</b> The role covers &quot;Schnittstellen Design zwischen Business Stakeholdern (Process Managern) und Service Ownern auf IT-Seite (SAP ERP, Siemens Teamcenter).&quot; For a shipbuilding environment with ERP and PLM touchpoints, a useful angle is how users will access older SAP-linked business documents once the target landscape is defined.</li><li><b>Security teams are explicitly involved</b> The posting calls out &quot;Enge Zusammenarbeit mit ... Infrastruktur und Security Teams.&quot; That creates an opening to position compliant retention and controlled access to legacy SAP documents as part of the target-state design rather than a late cleanup topic.</li><li><b>Custom code evaluation suggests a chance to reduce legacy dependencies</b> Because the migration scope explicitly includes &quot;Custom Code Evaluation,&quot; there may be pressure to identify which historical SAP data and documents are truly still needed operationally versus what can remain accessible outside the productive S/4 core.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence is based on a single job posting.</li><li>The posting is for TKMS GmbH, but final ERP and archiving decisions could sit at a broader group or program level.</li><li>No explicit timeline, deployment model, or archiving incumbent is stated in the evidence.</li><li>No direct evidence confirms legacy-system decommissioning is already in scope; treat that as a discovery point, not a fact.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>G. B.</strong><span class="c-role">Head of Commercial Applications (SAP)</span><span class="c-conf">96%</span></li><li><strong>M. H.</strong><span class="c-role">Vice President Procurement Digitisation &amp; Excellence TKMS</span><span class="c-conf">95%</span></li><li><strong>H. H.</strong><span class="c-role">IT-Manager / business IT leadership</span><span class="c-conf">82%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Solution-Architect-Application-Management-m-w-d-Bremen-TKMS-GmbH--14246709-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Solution Architect Application Management (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/tkms.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei TKMS</div>Hallo Herr B.,<br><br>bei Ihrer Migration von SAP ECC zu S/4HANA wird der Zuschnitt von Altdaten und Dokumenten schon mit System Landscape und Data Migration festgelegt.<br><br>Bei Werften liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für TKMS eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 90%"><span style="width:90%"></span></span>
+        <span class="company">United Internet AG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.90 · KONF 0.90 · 1 BELEGE · 3 PERSONEN</span>
+        <span class="industry">internet services / web hosting</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Sie verantworten die Mitgestaltung und den Aufbau eines neuen S/4HANA-Templates für das SAP Modul FI, einschließlich der Schulung von (Key) Usern."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>The posting suggests an active SAP finance transformation with a move from ECC-era process knowledge into a new S/4HANA template. In S/4 programs, companies typically have to decide early which legacy finance data and documents stay in the active system, which move to an archive, and how historical access will work after cutover. That decision often affects HANA sizing, migration scope, audit readiness, and later legacy-system decommissioning.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>New S/4HANA FI template build</b> The role explicitly owns 'die Mitgestaltung und den Aufbau eines neuen S/4HANA-Templates für das SAP Modul FI'. That creates a concrete moment to define what historical FI data must remain directly accessible in S/4 versus what can be archived with compliant retrieval.</li><li><b>ECC FI process footprint entering redesign</b> The posting asks for practical experience in 'Konzeption und Implementierung von Geschäftsprozessen im SAP ECC FI-Umfeld'. That points to existing ECC FI processes being translated into the future design, which is where the legacy-data boundary for finance history often gets set.</li><li><b>Non-SAP and adjacent-module interfaces</b> The role covers 'Schnittstellen zwischen SAP und Non-SAP-Systemen sowie angrenzenden Modulen wie SAP CO, MM, SD oder SAP BW'. For outreach, that is a specific angle around preserving document and reporting access across interfaces when older records are removed from the active ERP footprint.</li><li><b>Bank accounting and period close processes</b> The posting names 'Optimierung der Bankbuchhaltung oder der Periodenabschlussprozesse'. Those finance areas typically depend on reliable access to historical postings and documents, making archive-access design relevant during template decisions rather than after go-live.</li><li><b>Key-user training implies future-state operating model</b> The S/4HANA template work includes 'Schulung von (Key) Usern'. Once training content is defined, teams often need a clear answer on where users will retrieve older finance records and documents in the future landscape.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a single FI-focused job posting; broader S/4 scope beyond finance is not confirmed.</li><li>The posting is for United Internet AG, but SAP platform decisions could still sit at group or shared-services level.</li><li>No timing, rollout geography, or migration approach is stated in the evidence.</li><li>The evidence confirms S/4HANA template build activity, but not the current archive solution or whether legacy decommissioning is already planned.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>B. M.</strong><span class="c-role">Head of SAP Finance</span><span class="c-conf">98%</span></li><li><strong>C. H.</strong><span class="c-role">Head of SAP Technology</span><span class="c-conf">89%</span></li><li><strong>M. S.</strong><span class="c-role">Head of Corporate IT Services</span><span class="c-conf">86%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--SAP-Consultant-FI-mit-Schwerpunkt-IFRS-w-m-d-inhouse-Montabaur-Karlsruhe-United-Internet-AG--14179126-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">SAP Consultant FI mit Schwerpunkt IFRS (w/m/d) - inhouse</a></li></ul>
+            <a class="akte-link" href="magnets/united-internet.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei United Internet</div>Hallo Herr M.,<br><br>bei Ihrem neuen S/4HANA-Template für FI, an welchem Punkt wird die Legacy-Frage geklärt, vor oder nach dem Sizing?<br><br>Bei internetdienstleistern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für United Internet eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 90%"><span style="width:90%"></span></span>
+        <span class="company">Wilhelm Brandenburg - ein Unternehmen der REWE GROUP</span>
+        <span class="record">S1-20260710 · STÄRKE 0.90 · KONF 0.90 · 1 BELEGE · 3 PERSONEN</span>
+        <span class="industry">food manufacturing / meat processing (retail group)</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Übernahme einer zentralen Rolle bei der Einführung und strategischen Weiterentwicklung der SAP-Analytics-Landschaft im Rahmen einer mehrjährigen Greenfield-Transformation in den Fleisch- und Wurstwerken der REWE Group"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>When companies move toward S/4-related target architectures, archive and legacy-data decisions usually surface early because they affect integration design, reporting scope, HANA sizing and the eventual path to decommission old ERP components. In Greenfield programs, teams often define the future analytics landscape before the boundary between active operational data and retained historical data is fully clarified.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Greenfield analytics while ECC remains an explicit source</b> The posting names integrations across &quot;SAP S/4HANA, ECC und Non-SAP-Quellen&quot;. That creates a concrete design fork: what historical ECC data must stay live for analytics versus what can be served from archive or a legacy-access layer.</li><li><b>Plant-wide rollout across meat and sausage works</b> The role supports a multi-year transformation &quot;in den Fleisch- und Wurstwerken der REWE Group&quot;. In multi-plant manufacturing landscapes, legacy data and document handling often differs by site, which can complicate a standardized cutover and later system retirement.</li><li><b>Analytics architecture is being defined now</b> They want someone to develop data models, data flows and integration scenarios and ensure a scalable architecture. That is the phase where the boundary between operational datasets, retained history and old business documents can get fixed implicitly by architecture decisions.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The posting is for Wilhelm Brandenburg, but decisions could sit at REWE Group level rather than locally.</li><li>The evidence is strongest for analytics and data-platform transformation; it does not explicitly confirm a full ERP core migration timeline.</li><li>The role references S/4HANA, ECC and non-SAP integrations, but does not state which legacy systems are in scope for decommissioning.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>H. D.</strong><span class="c-role">Leitung ERP-Transformation</span><span class="c-conf">94%</span></li><li><strong>A. H.</strong><span class="c-role">Leitung IT-Operations-Infrastructure &amp; Onsite-Service</span><span class="c-conf">90%</span></li><li><strong>S. W.</strong><span class="c-role">Bereichsleiter SAP bei REWE</span><span class="c-conf">83%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Senior-Analytics-Berater-SAP-BDC-inkl-SAC-Datasphere-m-w-d-Frankfurt-am-Main-Wilhelm-Brandenburg-ein-Unternehmen-der-REWE-GROUP--14192179-inline.html?rltr=16_16_25_seorl_m_1_0_0_0_0_0" target="_blank" rel="noopener">(Senior) Analytics Berater (SAP BDC inkl. SAC &amp; Datasphere) (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/wilhelm-brandenburg-ein-unternehmen-der-rewe.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Wilhelm Brandenburg</div>Hallo Herr D.,<br><br>in der mehrjährigen Greenfield-Transformation der SAP-Analytics-Landschaft in den Fleisch- und Wurstwerken wird der Schnitt zwischen ECC-Bestand und Archiv oft schon mit der Zielarchitektur festgelegt.<br><br>Bei Fleischverarbeitern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Wilhelm Brandenburg eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">Dr. August Oetker Nahrungsmittel KG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.80 · 2 BELEGE · 2 PERSONEN</span>
+        <span class="industry">food / consumer goods (bakery products)</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Our team is responsible for the functional coordination and implementation of mid-sized and large SAP rollout and integration projects."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies running SAP rollout and integration programs typically have a narrow window to decide what stays as active ERP data versus what can remain in a compliant archive. If that split is left late, it can expand migration scope, HANA sizing, and testing effort; if handled early, it also creates a cleaner path for later legacy-system retirement.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Rollout scope control across mid-sized and large SAP projects</b> Because the team explicitly mentions 'mid-sized and large SAP rollout and integration projects', a useful angle is how Oetker defines the cut between operational ERP data and historical documents per rollout wave so old volume does not quietly become part of each implementation scope.</li><li><b>Technical SAP ERP implementation creates an early archive-design dependency</b> The posting says the hire will 'play an active role in the technical implementation in SAP ERP'. That makes archive access, legacy document availability, and retention handling relevant during implementation design rather than only after go-live.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from a working-student posting, so the role signals active SAP delivery but not necessarily a named S/4HANA program.</li><li>The posting says 'SAP ERP', not S/4HANA; this may indicate rollout/integration work on the current ERP landscape rather than an explicit S/4 migration.</li><li>Decision-making could sit above the legal entity if SAP standards are managed centrally across the broader Oetker organization.</li><li>The Arabic-language requirement may point to specific rollout geographies or stakeholder groups, but that is not explicit in the evidence.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>M. S.</strong><span class="c-role">Senior Executive Manager IT</span><span class="c-conf">84%</span></li><li><strong>U. K.</strong><span class="c-role">CISO</span><span class="c-conf">60%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Working-Student-m-f-d-SAP-Implementation-with-Arabic-language-skills-Bielefeld-Dr-August-Oetker-Nahrungsmittel-KG--14245460-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Working Student (m/f/d) SAP Implementation with Arabic language skills</a></li><li><a href="https://www.stepstone.de/jobs--Working-Student-m-f-d-SAP-Implementation-with-Arabic-language-skills-Bielefeld-Dr-August-Oetker-Nahrungsmittel-KG--14245460-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Working Student (m/f/d) SAP Implementation with Arabic language skills</a></li></ul>
+            <a class="akte-link" href="magnets/dr-august-oetker-nahrungsmittel.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Oetker</div>Hallo Herr S.,<br><br>ist in Ihren SAP-Rollout- und Integrationsprojekten die Trennung von aktiven Daten und Archiv bereits entschieden oder eingeplant?<br><br>Bei nahrungsmittelherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Oetker eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">Getinge Holding B.V. &amp; Co. KG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.80 · 2 BELEGE · 3 PERSONEN</span>
+        <span class="industry">medical technology / healthcare devices</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"You support the Governance of our global SAP program with regards to template documentation, IT internal processes in the IT Enterprise Applications area and project controlling."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies running global SAP transformation programs typically lock in decisions about what remains in the active ERP core versus what moves to archive earlier than expected, often through template design, testing scope, and sizing assumptions. When programs span multiple SAP landscapes and governance layers, legacy data and document handling can affect migration effort, compliance design, and later system decommissioning.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Global SAP program governance is already formalized</b> The posting explicitly mentions governance of a global SAP program, including template documentation and project controlling. That is a concrete point where archive scope, legacy data boundaries, and old-document access models can otherwise get embedded implicitly.</li><li><b>Transition to SAP Cloud ALM changes how legacy scope shows up in delivery</b> Getinge is hiring support for a transition to SAP Cloud ALM. In SAP programs, the move to Cloud ALM often sharpens which systems and processes stay in active scope versus which historical data can be handled outside the productive core.</li><li><b>Test management across SAP projects can inflate scope if history stays in the active landscape</b> The role is responsible for SAP test management, test managers within SAP projects, and testing automation. In multi-project SAP programs, keeping large historical datasets and old processes in active systems can expand test scope and validation effort.</li><li><b>Mixed on-premise and cloud SAP landscape raises old-document access design questions</b> The posting references a global IT applications landscape related to on-premise and cloud applications. In that setup, teams often need a defined approach for historical SAP data and legacy documents so access is preserved without carrying unnecessary volume into the future landscape.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence points to a global SAP program, but does not explicitly name S/4HANA.</li><li>The posting is for Getinge Holding B.V. &amp; Co. KG; program decisions may sit at group or global IT level rather than locally in Rastatt.</li><li>No explicit archive, ILM, or legacy decommissioning language appears in the evidence, so outreach should stay anchored to governance, testing, and landscape transition.</li><li>Medical technology is the classified industry, but the posting itself does not mention specific regulated document types or business processes.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>H. M.</strong><span class="c-role">Director IT Sales &amp; Service Units Enterprise Application Europe</span><span class="c-conf">97%</span></li><li><strong>V. D.</strong><span class="c-role">Vice President Group IT Applications</span><span class="c-conf">92%</span></li><li><strong>H. R.</strong><span class="c-role">Head of System &amp; Application</span><span class="c-conf">85%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Expert-IT-SAP-Authorization-and-Test-Management-Rastatt-bei-Karlsruhe-Getinge-Holding-B-V-Co-KG--14251612-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Expert IT SAP Authorization and Test Management</a></li><li><a href="https://www.stepstone.de/jobs--Expert-IT-SAP-Authorization-and-Test-Management-Rastatt-bei-Karlsruhe-Getinge-Holding-B-V-Co-KG--14251612-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Expert IT SAP Authorization and Test Management</a></li></ul>
+            <a class="akte-link" href="magnets/getinge-b-v-co.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Getinge</div>Hallo Herr M.,<br><br>in Ihrem globalen SAP-Programm werden Altdaten über Template-Dokumentation, Testumfang und Projektcontrolling oft mitentschieden, bevor der Zielzuschnitt der Landschaft wirklich feststeht.<br><br>Bei Medizintechnikherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Getinge eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">MISUMI Europa GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.80 · 2 BELEGE · 1 PERSONEN</span>
+        <span class="industry">industrial components / manufacturing distributor</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"You lead digital transformation, software development, and implementation projects from initial concept through to successful go-live, ensuring a structured and efficient delivery."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies running transformation and implementation programs typically have to decide early what remains in the active ERP core versus what can be separated into compliant archive access. That choice often affects scope, sizing, migration effort, and later legacy-system retirement. When a company is explicitly staffing for project leadership across concept to go-live, it is usually a good time to probe how legacy data and document handling are being treated inside the program.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Go-live ownership creates a practical cutover decision</b> The hired role is expected to lead implementation projects &quot;from initial concept through to successful go-live.&quot; That makes the active-data vs. archive split a concrete cutover design topic, not just an infrastructure topic.</li><li><b>Process-and-system perspective suggests cross-functional archive decisions</b> The posting asks for the ability to consider &quot;both process and system perspectives.&quot; That is a useful anchor for discussing legacy data and old documents, because archive decisions usually sit between business process owners, application teams, and compliance requirements.</li><li><b>Digital transformation plus software development hints at parallel change streams</b> Because the role combines digital transformation, software development, and implementation projects, MISUMI Europa may be coordinating multiple change streams at once. In that setup, legacy data handling can easily be left implicit unless one team owns it explicitly.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The provided job-posting evidence supports active digital transformation and implementation work, but does not explicitly mention SAP, ECC, or S/4HANA in the posting text.</li><li>Only one role type is evidenced; transformation ownership could sit above this role or outside the local entity.</li><li>MISUMI Europa GmbH may operate within a broader group structure, so ERP and archive decisions could be influenced centrally.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>H. A.</strong><span class="c-role">Director Digital Transformation</span><span class="c-conf">78%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Project-Manager-Digital-Transformation-m-f-d-Frankfurt-am-Main-MISUMI-Europa-GmbH--14181933-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">Project Manager Digital Transformation (m/f/d)</a></li><li><a href="https://www.stepstone.de/jobs--Project-Manager-Digital-Transformation-m-f-d-Frankfurt-am-Main-MISUMI-Europa-GmbH--14181933-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">Project Manager Digital Transformation (m/f/d)</a></li></ul>
+            <a class="akte-link" href="magnets/misumi-europa.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei MISUMI</div>Hallo Herr A.,<br><br>in Ihren digitalen Transformations- und Implementierungsprojekten wird der Schnitt zwischen aktivem ERP-Bestand und Altdaten oft schon vor dem Go-live faktisch festgelegt.<br><br>Bei Industriezulieferern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für MISUMI eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">ZEISS</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.80 · 2 BELEGE · 4 PERSONEN</span>
+        <span class="industry">optics / manufacturing</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Work on a varied mix of operational, tactical and strategic tasks in the area of global supply chain transformation"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies running S/4-related transformation work in supply chain typically have to decide early which historical ERP data, documents, and process records must stay active versus move to an archive layer. That decision can materially affect HANA sizing, migration scope, and the effort required later to retire legacy environments while keeping compliant access to older records.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Global supply chain transformation scope</b> The posting explicitly anchors the program in &quot;global supply chain transformation.&quot; That makes historical supply chain records a concrete topic: older purchasing, delivery, inventory, and production-related documents often sit across ERP history and can expand the active footprint if not separated early.</li><li><b>Business transformation, not just technical upgrade</b> ZEISS frames this as &quot;Business Transformation,&quot; which suggests process redesign alongside system work. In those programs, archive and legacy-data decisions can otherwise get made implicitly during target-process and sizing work rather than as an explicit workstream.</li><li><b>Cross-level program activity</b> The role covers &quot;operational, tactical and strategic tasks,&quot; which suggests the transformation spans day-to-day execution and program-level planning. That is a useful cue to ask whether legacy data ownership sits with the central program, SAP team, or supply chain process owners.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from internship postings, so the signal indicates program activity but not necessarily budget ownership or project stage.</li><li>The posting references supply chain transformation but does not explicitly mention SAP ECC, S/4HANA, or a migration timeline.</li><li>Decision-making may sit centrally at group level rather than within the visible supply chain transformation team.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>M. R.</strong><span class="c-role">Head of IT and End-to-End Process and System Transformation @ ZEISS Vision Care</span><span class="c-conf">92%</span></li><li><strong>J. R.</strong><span class="c-role">Head of IT Business Products bei ZEISS Group</span><span class="c-conf">88%</span></li><li><strong>M. K.</strong><span class="c-role">Head of SAP Cloud Data Center</span><span class="c-conf">84%</span></li><li><strong>G. R.</strong><span class="c-role">SAP Team Head APAC</span><span class="c-conf">83%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Internship-in-Global-Supply-Chain-Business-Transformation-f-m-x-Aalen-Baden-Wurttemberg-ZEISS--14186208-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Internship in Global Supply Chain Business Transformation (f/m/x)</a></li><li><a href="https://www.stepstone.de/jobs--Internship-in-Global-Supply-Chain-Business-Transformation-f-m-x-Aalen-Baden-Wurttemberg-ZEISS--14186208-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Internship in Global Supply Chain Business Transformation (f/m/x)</a></li></ul>
+            <a class="akte-link" href="magnets/zeiss.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei ZEISS</div>Hallo Herr R.,<br><br>in Ihrer Global Supply Chain Business Transformation wird der Umfang historischer Liefer-, Bestands- und Fertigungsbelege oft schon vor dem Zielbild praktisch mitfestgelegt.<br><br>Bei Optikherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für ZEISS eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">Allianz Kunde und Markt GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.85 · 1 BELEGE · 4 PERSONEN</span>
+        <span class="industry">insurance</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Nach erfolgreichen Migrationen bestehender Datenbanken bauen wir nun die skalierbare Datenplattform der Zukunft."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies in migration and target-platform build phases typically have to decide, early enough, what historical data must stay operationally accessible versus what can remain in a compliant archive. That matters because legacy data and documents can quietly expand target-platform scope, cost, and ownership complexity if the split is not defined alongside platform design.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Ownership gap between migration and archive decisions</b> The posting centers on an &quot;Enablement &amp; Migration&quot; team while central components and processes are being redesigned. A useful angle is who, inside that setup, owns the decision on legacy data and old documents versus the future platform.</li><li><b>Turning point after prior database migrations</b> They describe a &quot;spannenden Wendepunkt&quot; after successful migrations. That is a concrete moment to discuss whether older data sets are still being pulled into new platform scope by default rather than separated by access need and retention purpose.</li><li><b>Insurance document estates in a future data platform</b> For insurers, historical policy, claims, and customer documents often have different usage and retention patterns than analytics-ready operational data. In a program building a scalable data platform, that split can be especially relevant when central processes are being redesigned.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence points to a data platform / migration program, not explicitly to SAP or S/4.</li><li>The posting is for Allianz Kunde und Markt GmbH, so final ownership could sit elsewhere in the broader Allianz organization.</li><li>Source is a working-student posting, so program detail is limited and some stakeholder mapping is necessarily hypothesis-driven.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>F. J.</strong><span class="c-role">Head of Data, Documents &amp; Sales Management and Chief Data Officer at Allianz Kunde und Markt</span><span class="c-conf">98%</span></li><li><strong>M. U.</strong><span class="c-role">Lead Architect bei Allianz Kunde und Markt GmbH</span><span class="c-conf">93%</span></li><li><strong>S. G.</strong><span class="c-role">Enterprise Architect @ Allianz</span><span class="c-conf">89%</span></li><li><strong>A. H.</strong><span class="c-role">Department Director at Allianz Kunde und Markt GmbH</span><span class="c-conf">78%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Werkstudent-im-Projektmanagement-fur-Data-Insights-Analytics-Enablement-Migration-m-w-d-Unterfohring-bei-Munchen-Allianz-Kunde-und-Markt-GmbH--14245652-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Werkstudent im Projektmanagement für Data Insights &amp; Analytics Enablement &amp; Migration (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/allianz-kunde-und-markt.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Allianz</div>Hallo Herr J.,<br><br>beim Aufbau Ihrer skalierbaren Datenplattform im Team DIA Enablement &amp; Migration, welches Team verantwortet die Entscheidung zu Altdaten und alten Dokumenten?<br><br>Bei Versicherern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Allianz eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">Daimler Truck AG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.85 · 1 BELEGE · 6 PERSONEN</span>
+        <span class="industry">automotive manufacturer (trucks)</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Desired knowledge of SAP ECC or SAP S4HANA"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>When companies move from ECC toward S/4, accounting is usually one of the most sensitive areas because document history, posting logic, and audit-relevant records have to remain accessible while the future data footprint is sized. In practice, teams often focus first on process design, testing, and change requests, while the split between active data and legacy/archived finance records gets decided late. That can increase HANA scope, complicate compliance handling, and delay legacy system retirement.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Accounting-specific legacy scope around FAST</b> The team is responsible for end-to-end accounting processes in the standardized SAP ECC system &quot;FAST&quot;. That makes finance legacy scope a concrete issue: which historical accounting data and documents must stay operationally accessible versus moved to archive access during any ECC-to-S/4 transition.</li><li><b>IFRS and local GAAP increase document-retention sensitivity</b> The posting mentions defining posting logics with &quot;IFRS and local GAAP requirements&quot; in mind. That points to audit-relevant financial records and country-specific retention/compliance needs, which can make archive design and legacy access decisions more consequential than in less regulated process areas.</li><li><b>Local market rollout and support model</b> The role supports live market tickets, prepares SAP training material, and documents processes for local markets. That suggests a distributed operating model where local finance users may still need historical access after template changes, making the future access model for old ECC records especially important.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The evidence comes from a working student posting, so the hiring level is junior even though the process context is meaningful.</li><li>The posting references both SAP ECC and SAP S4HANA knowledge, but it does not explicitly confirm a named S/4 migration program or timeline.</li><li>The signal is finance/accounting-specific; broader ERP ownership may sit centrally outside the Accounting Solutions Team.</li><li>&quot;FAST&quot; is mentioned as a standardized SAP ECC system, but the exact scope of that template across Daimler Truck is not stated in the evidence.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>R. V.</strong><span class="c-role">Group CIO</span><span class="c-conf">99%</span></li><li><strong>S. W.</strong><span class="c-role">SAP Application Owner</span><span class="c-conf">90%</span></li><li><strong>K. R.</strong><span class="c-role">Manager IT - SAP Center of Excellence</span><span class="c-conf">83%</span></li><li><strong>A. M.</strong><span class="c-role">Lead Solution Architect für Service Operation und IT-Prozesse SAP</span><span class="c-conf">74%</span></li><li><strong>N. S.</strong><span class="c-role">Manager IT - SAP S 4HANA Finance Hub EMEA</span><span class="c-conf">72%</span></li><li><strong>J. R.</strong><span class="c-role">Manager IT Aftersales SAP Application Management</span><span class="c-conf">70%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Working-student-in-the-Accounting-Solution-Team-starting-September-2026-Leinfelden-Echterdingen-Daimler-Truck-AG--14172682-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Working student in the Accounting Solution Team starting September 2026</a></li></ul>
+            <a class="akte-link" href="magnets/daimler-truck.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Daimler Truck</div>Hallo Herr V.,<br><br>im Accounting-Umfeld von FAST laufen Change Requests, Tests und Posting-Logiken parallel, während Altbelege für IFRS und local GAAP den späteren Zuschnitt mitbestimmen.<br><br>Bei Nutzfahrzeugherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Daimler Truck eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 85%"><span style="width:85%"></span></span>
+        <span class="company">SÜMO eG</span>
+        <span class="record">S1-20260710 · STÄRKE 0.85 · KONF 0.85 · 1 BELEGE · 1 PERSONEN</span>
+        <span class="industry">retail/wholesale cooperative</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"ein tolles, langfristig angelegtes ERP-Projekt mit großem Potenzial zur Weiterentwicklung und Gestaltung"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies in a long-running ERP program typically hit the legacy-data question before it is fully visible: what stays in the live ERP scope, what moves to archive, and how old documents remain accessible after process cutovers or later system consolidation. In retail and wholesale environments, that often affects high-volume operational records such as orders, delivery documents and invoices, where archive design can influence rollout complexity, user access and downstream migration scope.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Central-office ERP for member businesses</b> The posting says SÜMO acts as a 'Verbundgruppenzentrale' supporting member businesses and now also with 'einem eigenen Warenwirtschaftssystem (ERP-System)'. That setup can create a concrete ownership question around who decides retention, access and historical-document responsibility between the central office and member operations.</li><li><b>Long-term ERP project suggests standards set early</b> Because the role is framed around 'ein tolles, langfristig angelegtes ERP-Projekt', there is a specific opening to discuss whether archive and legacy-document rules are being standardized early in the program or left to later phases, when they are harder to change.</li><li><b>Retail/Warenwirtschaft document footprint</b> The role explicitly focuses on 'ERP-/Warenwirtschaftssysteme' and asks for experience in 'ERP-Systemen im Einzelhandel'. In these environments, historical orders, delivery records and invoice documents usually matter operationally beyond the cutover, making document access design a concrete topic rather than a generic IT cleanup item.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>The evidence comes from a job posting snippet; program scope, timeline and architecture are not stated beyond the references quoted.</li><li>The posting mentions the central office ('Verbundgruppenzentrale'); final ERP and archive decisions may sit centrally rather than in individual member businesses.</li><li>There is a title/snippet mismatch in the source (project staff vs. application consultant wording), so the exact reporting line of the hire may be unclear.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>S. K.</strong><span class="c-role">Vorstand Vertrieb</span><span class="c-conf">92%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Kaufmannischer-Projektmitarbeiter-m-w-d-mit-Schwerpunkt-ERP-Warenwirtschaftssysteme-Neu-Ulm-SUMO-eG--13357061-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Kaufmännischer Projektmitarbeiter (m/w/d) mit Schwerpunkt ERP-/Warenwirtschaftssysteme</a></li></ul>
+            <a class="akte-link" href="magnets/suemo-eg.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei SÜMO</div>Hallo Herr K.,<br><br>in Ihrem langfristig angelegten ERP-Projekt mit dem eigenen Warenwirtschaftssystem: Welches Team verantwortet die Entscheidung zu Altdaten und alten Belegen?<br><br>Bei Handelsgenossenschaften liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für SÜMO eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 80%"><span style="width:80%"></span></span>
+        <span class="company">Liebherr-MCCtec Rostock GmbH</span>
+        <span class="record">S1-20260710 · STÄRKE 0.80 · KONF 0.80 · 1 BELEGE · 1 PERSONEN</span>
+        <span class="industry">industrial manufacturer (construction/crane equipment)</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Anpassung und Konfiguration des ERP-Systems zur optimalen Unterstützung der Geschäftsprozesse in enger Abstimmung mit den Fachabteilungen"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>In ERP modernization programs, companies typically lock in data scope, archive treatment, and legacy access earlier than expected, especially around finance processes. If active ERP design is underway, decisions about which financial documents stay in the live system, which move to archive, and how legacy access is handled can influence system sizing, migration effort, compliance design, and later decommissioning options.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Finance-application scope can quietly pull legacy FI documents into the new ERP design</b> Because the role is explicitly &quot;Solution Architect ERP - Finance Applications&quot;, a relevant angle is whether historical finance documents and legacy FI data are being treated as part of the target application scope or separated into archive access.</li><li><b>Business-department alignment suggests ownership of legacy documents may be fragmented</b> The posting stresses &quot;enge Abstimmung mit den Fachabteilungen&quot;. In ERP finance work, that often means IT, finance, and compliance each influence retention, document access, and what must remain available day to day.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence is limited to a single job posting and snippet.</li><li>The posting indicates active ERP architecture/change work, but does not explicitly mention SAP, S/4HANA, or a migration timeline.</li><li>The role may support a broader Liebherr or divisional application landscape, so decision-making could sit above the Rostock entity.</li><li>No explicit archive, compliance, or legacy decommissioning language appears in the evidence.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>D. L.</strong><span class="c-role">Leiter Informationsmanagement</span><span class="c-conf">98%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Solution-Architect-ERP-Finance-Applications-Rostock-Liebherr-MCCtec-Rostock-GmbH--14241527-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Solution Architect ERP - Finance Applications</a></li></ul>
+            <a class="akte-link" href="magnets/liebherr-mcctec-rostock.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Liebherr-MCCtec</div>Hallo Herr L.,<br><br>bei Ihren ERP-Finance-Applications entscheidet die Trennung von laufenden Finanzdaten und Altbelegen früh über den Zuschnitt des künftigen Datenbestands.<br><br>Bei Maschinenbauern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Liebherr-MCCtec eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
 
   <footer>
     Referenzimplementierung · SalesPlaybook GTM Engineer Case Study · Evidence Contract: jede Unternehmensaussage

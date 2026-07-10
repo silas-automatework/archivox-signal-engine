@@ -83,12 +83,17 @@ export const stepstoneJobsWatcher: Watcher = {
 
     const token = requireEnv("APIFY_API_KEY");
     const all: RawObservation[] = [];
+    let failedQueries = 0;
+
+    // The actor only accepts these age-facet values.
+    const allowed = [1, 3, 7];
+    const postedWithin = String(allowed.find((v) => postedWithinDays <= v) ?? 7);
 
     for (const query of S1_JOB_QUERIES) {
       const input = {
         keyword: query,
         location: "deutschland",
-        postedWithin: String(postedWithinDays),
+        postedWithin,
         maxItems: maxItemsPerQuery,
         includeRelatedJobs: false,
         enrichEmails: false,
@@ -102,8 +107,14 @@ export const stepstoneJobsWatcher: Watcher = {
         console.log(`${items.length} items, ${obs.length} usable`);
         all.push(...obs);
       } catch (err) {
-        console.log(`ERROR: ${(err as Error).message}`);
+        failedQueries++;
+        console.log(`ERROR: ${(err as Error).message.slice(0, 300)}`);
       }
+    }
+
+    // Silence must never look like success: if every query failed, fail the run.
+    if (failedQueries === S1_JOB_QUERIES.length) {
+      throw new Error(`stepstone_jobs: all ${failedQueries} queries failed`);
     }
     return all;
   },
