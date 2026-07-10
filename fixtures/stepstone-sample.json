@@ -1,0 +1,39 @@
+[
+  {
+    "query": "S/4HANA Migration",
+    "items": [
+      {
+        "title": "Projektleiter SAP S/4HANA Migration (m/w/d)",
+        "companyName": "Müller Maschinenbau GmbH & Co. KG",
+        "url": "/jobs--Projektleiter-SAP-S4HANA-Migration-demo--0001",
+        "location": "Stuttgart",
+        "publishFromDate": "2026-07-02",
+        "textSnippet": "Verantwortung für die Ablösung unseres SAP ECC Systems bis 2028. Sie steuern die Migration auf S/4HANA inklusive Datenarchivierung und Legacy-Decommissioning.",
+        "isAnonymous": false
+      },
+      {
+        "title": "SAP S/4HANA Consultant Finance (m/w/d)",
+        "companyName": "Beispiel Consulting AG",
+        "url": "/jobs--SAP-S4HANA-Consultant-Finance-demo--0002",
+        "location": "München",
+        "publishFromDate": "2026-07-03",
+        "textSnippet": "Für unsere Kundenprojekte suchen wir SAP-Berater mit S/4HANA-Erfahrung. Sie beraten namhafte Unternehmen bei der digitalen Transformation.",
+        "isAnonymous": false
+      }
+    ]
+  },
+  {
+    "query": "SAP Archivierung",
+    "items": [
+      {
+        "title": "SAP Basis Administrator mit Schwerpunkt Archivierung / ILM (m/w/d)",
+        "companyName": "Nordlicht Energie AG",
+        "url": "/jobs--SAP-Basis-Administrator-Archivierung-demo--0003",
+        "location": "Hamburg",
+        "publishFromDate": "2026-07-05",
+        "textSnippet": "Betreuung unserer SAP-Landschaft im Rahmen der anstehenden ERP-Transformation. Themen: Datenarchivierung, ILM, GoBD-konforme Aufbewahrung, Stilllegung von Altsystemen.",
+        "isAnonymous": false
+      }
+    ]
+  }
+]

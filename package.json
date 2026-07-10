@@ -1,0 +1,24 @@
+{
+  "name": "archivox-signal-engine",
+  "version": "0.1.0",
+  "description": "Signal-based outbound engine for the ArchivoX case study: watches DACH market sources for ERP-migration buying signals and turns them into SDR-ready briefs.",
+  "type": "module",
+  "scripts": {
+    "watch:once": "tsx src/cli.ts watch",
+    "report": "tsx src/cli.ts report",
+    "demo": "tsx src/cli.ts watch --demo",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0"
+  }
+}
