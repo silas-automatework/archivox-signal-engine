@@ -5,9 +5,10 @@ import { writeDailyReport } from "./report/daily.js";
 import { writeSignalsReport } from "./report/signals.js";
 import { classifyCompany } from "./pipeline/classify.js";
 import { generateBrief } from "./pipeline/brief.js";
+import { discoverPeople } from "./pipeline/people.js";
 import { signalHash } from "./pipeline/normalize.js";
 import { exportSignals } from "./export/signals.js";
-import { writeQueuePage } from "./report/queue.js";
+import { writeCockpit } from "./report/cockpit.js";
 import type { Watcher, WatcherRunStats } from "./types.js";
 
 const WATCHERS: Watcher[] = [stepstoneJobsWatcher];
@@ -198,6 +199,57 @@ async function brief() {
   store.close();
 }
 
+/** Account -> people stage: LinkedIn contact discovery for signal companies. */
+async function people() {
+  const store = new Store("data/engine.sqlite");
+  const minContacts = Number(arg("min") ?? 2);
+  const maxCompanies = Number(arg("max") ?? 30);
+  const pending = store.companiesNeedingPeople(minContacts).slice(0, maxCompanies);
+  console.log(`People discovery for ${pending.length} companies (target: ${minContacts}+ contacts each) ...`);
+
+  const DEFAULT_ROLES = ["CIO", "Head of SAP", "Leiter IT", "Enterprise Architect"];
+  let found = 0;
+  const CHUNK = 4;
+
+  for (let i = 0; i < pending.length; i += CHUNK) {
+    const chunk = pending.slice(i, i + CHUNK);
+    const results = await Promise.all(
+      chunk.map(async (c) => {
+        const roles: string[] = c.brief_json
+          ? (JSON.parse(c.brief_json).stakeholder_hypothesis ?? DEFAULT_ROLES)
+          : DEFAULT_ROLES;
+        try {
+          return { c, out: await discoverPeople(c.company_raw, roles.slice(0, 4), MODELS.classify) };
+        } catch (err) {
+          console.log(`  ERROR ${c.company_raw}: ${(err as Error).message}`);
+          return null;
+        }
+      })
+    );
+
+    for (const res of results) {
+      if (!res) continue;
+      const { c, out } = res;
+      for (const u of out.usages) store.logLlmUsage(u);
+      for (const contact of out.contacts) {
+        store.upsertContact({
+          companyKey: c.company_key,
+          name: contact.name,
+          role: contact.role,
+          linkedinUrl: contact.linkedin_url,
+          confidence: contact.confidence,
+          reason: contact.reason,
+        });
+        found++;
+      }
+      console.log(`  ${out.contacts.length ? "PEOPLE " : "none   "} ${c.company_raw}: ${out.contacts.map((p) => `${p.name} (${p.role})`).join(", ") || "no confident match"}`);
+    }
+  }
+
+  console.log(`\nDone: ${found} contact hypotheses stored. Email enrichment stays stubbed (production: waterfall).`);
+  store.close();
+}
+
 /** Write machine-readable exports (signals.json + signals.csv). */
 async function exportCmd() {
   const store = new Store("data/engine.sqlite");
@@ -206,11 +258,11 @@ async function exportCmd() {
   store.close();
 }
 
-/** Render the human-facing HTML queue page. */
-async function queue() {
+/** Render the human-facing HTML cockpit. */
+async function cockpit() {
   const store = new Store("data/engine.sqlite");
-  const path = writeQueuePage(store, arg("out"));
-  console.log(`Queue page written: ${path}`);
+  const path = writeCockpit(store, arg("out"));
+  console.log(`Cockpit written: ${path}`);
   store.close();
 }
 
@@ -226,18 +278,21 @@ async function main() {
     case "brief":
       await brief();
       break;
+    case "people":
+      await people();
+      break;
     case "export":
       await exportCmd();
       break;
-    case "queue":
-      await queue();
+    case "cockpit":
+      await cockpit();
       break;
     case "report":
       await report();
       break;
     default:
       console.log(
-        "Usage: tsx src/cli.ts <watch|classify|brief|export|queue|report> [--demo] [--days 7] [--max-items 25] [--max N] [--out path]"
+        "Usage: tsx src/cli.ts <watch|classify|brief|people|export|cockpit|report> [--demo] [--days 7] [--max-items 25] [--max N] [--min N] [--out path]"
       );
   }
 }

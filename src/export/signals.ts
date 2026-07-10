@@ -1,4 +1,5 @@
 import { mkdirSync, writeFileSync } from "node:fs";
+import { renderEmail } from "../pipeline/emailTemplate.js";
 import type { Store } from "../store.js";
 import type { Brief } from "../pipeline/brief.js";
 
@@ -18,6 +19,8 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
   const full = rows.map((r) => {
     const evidence = JSON.parse(r.evidence_json);
     const brief: Brief | null = r.brief_json ? JSON.parse(r.brief_json) : null;
+    const contacts = store.contactsForCompany(r.company_key);
+    const email = brief ? renderEmail(brief.email_slots) : null;
     return {
       signal_id: r.signal_id,
       company: r.company_raw,
@@ -34,6 +37,8 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
       evidence,
       brief,
       brief_contract_ok: r.contract_ok === null ? null : r.contract_ok === 1,
+      contacts,
+      rendered_email: email,
     };
   });
 
@@ -60,6 +65,12 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
     "angle_1",
     "angle_2",
     "angle_3",
+    "contact_1_name",
+    "contact_1_role",
+    "contact_1_linkedin",
+    "contact_2_name",
+    "contact_2_role",
+    "contact_2_linkedin",
     "email_subject",
     "email_body",
   ];
@@ -82,8 +93,14 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
         f.brief?.angles?.[0]?.title ?? "",
         f.brief?.angles?.[1]?.title ?? "",
         f.brief?.angles?.[2]?.title ?? "",
-        f.brief?.email_draft?.subject ?? "",
-        f.brief?.email_draft?.body ?? "",
+        f.contacts[0]?.name ?? "",
+        f.contacts[0]?.role ?? "",
+        f.contacts[0]?.linkedin_url ?? "",
+        f.contacts[1]?.name ?? "",
+        f.contacts[1]?.role ?? "",
+        f.contacts[1]?.linkedin_url ?? "",
+        f.rendered_email?.subject ?? "",
+        f.rendered_email?.body ?? "",
       ]
         .map(esc)
         .join(",")

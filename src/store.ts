@@ -77,6 +77,23 @@ export class Store {
         created_at TEXT NOT NULL
       );
 
+      CREATE TABLE IF NOT EXISTS contacts (
+        id INTEGER PRIMARY KEY,
+        company_key TEXT NOT NULL,
+        name TEXT NOT NULL,
+        role TEXT NOT NULL,
+        linkedin_url TEXT UNIQUE NOT NULL,
+        confidence REAL NOT NULL,
+        reason TEXT,
+        source TEXT NOT NULL DEFAULT 'exa_linkedin',
+        status TEXT NOT NULL DEFAULT 'hypothesis',
+        email TEXT,
+        email_status TEXT NOT NULL DEFAULT 'not_enriched',
+        first_seen TEXT NOT NULL,
+        last_verified TEXT NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS idx_contacts_company ON contacts(company_key);
+
       CREATE TABLE IF NOT EXISTS briefs (
         id INTEGER PRIMARY KEY,
         signal_id INTEGER UNIQUE NOT NULL REFERENCES signal_events(id),
@@ -314,6 +331,56 @@ export class Store {
          VALUES (?, ?, ?, ?, ?)`
       )
       .run(signalId, briefJson, model, contractOk ? 1 : 0, new Date().toISOString());
+  }
+
+  upsertContact(c: {
+    companyKey: string;
+    name: string;
+    role: string;
+    linkedinUrl: string;
+    confidence: number;
+    reason: string;
+  }): boolean {
+    const now = new Date().toISOString();
+    const res = this.db
+      .prepare(
+        `INSERT INTO contacts (company_key, name, role, linkedin_url, confidence, reason, first_seen, last_verified)
+         VALUES (@companyKey, @name, @role, @linkedinUrl, @confidence, @reason, @now, @now)
+         ON CONFLICT(linkedin_url) DO UPDATE SET
+           role = excluded.role, confidence = excluded.confidence, last_verified = excluded.last_verified`
+      )
+      .run({ ...c, now });
+    return res.changes > 0;
+  }
+
+  contactsForCompany(companyKey: string): Array<{
+    name: string;
+    role: string;
+    linkedin_url: string;
+    confidence: number;
+    email_status: string;
+    last_verified: string;
+  }> {
+    return this.db
+      .prepare(
+        `SELECT name, role, linkedin_url, confidence, email_status, last_verified
+         FROM contacts WHERE company_key = ? ORDER BY confidence DESC`
+      )
+      .all(companyKey) as any;
+  }
+
+  /** Signal companies with fewer than min fresh contacts (the reuse bridge). */
+  companiesNeedingPeople(minContacts = 2): Array<{ company_key: string; company_raw: string; brief_json: string | null }> {
+    return this.db
+      .prepare(
+        `SELECT s.company_key, s.company_raw, b.brief_json
+         FROM signal_events s
+         LEFT JOIN briefs b ON b.signal_id = s.id
+         WHERE (SELECT COUNT(*) FROM contacts c WHERE c.company_key = s.company_key) < ?
+         GROUP BY s.company_key
+         ORDER BY s.strength DESC`
+      )
+      .all(minContacts) as any;
   }
 
   /** Full signal rows incl. brief for export, queue rendering and routing. */

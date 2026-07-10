@@ -23,7 +23,8 @@ export interface Brief {
   stakeholder_hypothesis: string[];
   angles: { title: string; detail: string }[];
   discovery_questions: string[];
-  email_draft: { subject: string; body: string };
+  /** Slots for the fixed email template (templates/email.de.md), not a full email. */
+  email_slots: { company_short: string; company_category_de: string; opener_de: string };
   flags: string[];
 }
 
@@ -37,7 +38,7 @@ const SCHEMA = {
     "stakeholder_hypothesis",
     "angles",
     "discovery_questions",
-    "email_draft",
+    "email_slots",
     "flags",
   ],
   properties: {
@@ -55,11 +56,15 @@ const SCHEMA = {
       },
     },
     discovery_questions: { type: "array", items: { type: "string" } },
-    email_draft: {
+    email_slots: {
       type: "object",
       additionalProperties: false,
-      required: ["subject", "body"],
-      properties: { subject: { type: "string" }, body: { type: "string" } },
+      required: ["company_short", "company_category_de", "opener_de"],
+      properties: {
+        company_short: { type: "string" },
+        company_category_de: { type: "string" },
+        opener_de: { type: "string" },
+      },
     },
     flags: { type: "array", items: { type: "string" } },
   },
@@ -88,12 +93,19 @@ EVIDENCE CONTRACT (hard rules):
 - flags: risks or caveats an SDR should know (e.g. "posting might be for a
   subsidiary", "group-level IT could decide centrally").
 
-Brief fields in English. email_draft in German (Du-Form is wrong here: use Sie).
-Email rules: max 120 words, reference the concrete evidence naturally (the company
-is hiring for its S/4 transformation), one specific value hypothesis, one low-friction
-CTA (kurzer Austausch), no buzzwords, no flattery, no exclamation marks. Never use
-em dashes anywhere. Do not use "nicht X, sondern Y" constructions. Write flowing,
-natural German sentences, not choppy fragments.`;
+Brief fields in English. The outreach email itself is a FIXED template; you only
+fill three German slots (email_slots):
+- company_short: how an SDR would naturally shorten the company name in German
+  ("Papierfabrik Palm GmbH & Co. KG" -> "Palm").
+- company_category_de: dative plural category for the sentence "Bei {category} in
+  dieser Phase geht es oft darum, ..." (e.g. "Papierherstellern",
+  "Automobilzulieferern", "kommunalen Verkehrsbetrieben"). Lowercase unless a noun.
+- opener_de: 1-2 sentences, Sie-Form, referencing the concrete evidence naturally
+  (what the company is hiring for / states publicly). Max 45 words. Sober tone,
+  no flattery, no buzzwords, no exclamation marks. Never use em dashes. Do not use
+  "nicht X, sondern Y" constructions. Flowing natural German, no choppy fragments.
+  The opener leads into a fixed paragraph about data volume reduction and legacy
+  decommissioning, so do not preempt that content.`;
 
 function userPrompt(s: SignalForBrief): string {
   const lines: string[] = [];
@@ -138,8 +150,11 @@ export function validateBrief(brief: Brief, s: SignalForBrief): string[] {
     }
   }
 
-  if (brief.email_draft.body.split(/\s+/).length > 150) {
-    problems.push("email body exceeds word limit");
+  if (brief.email_slots.opener_de.split(/\s+/).length > 50) {
+    problems.push("email opener exceeds word limit");
+  }
+  if (/nicht\s+\w[^.]{0,60},\s*sondern/i.test(brief.email_slots.opener_de)) {
+    problems.push("email opener uses a 'nicht X, sondern Y' construction");
   }
   if (/—/.test(briefText)) {
     problems.push("brief contains em dashes");
