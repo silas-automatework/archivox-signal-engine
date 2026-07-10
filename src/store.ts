@@ -103,6 +103,15 @@ export class Store {
         created_at TEXT NOT NULL
       );
 
+      CREATE TABLE IF NOT EXISTS magnets (
+        id INTEGER PRIMARY KEY,
+        signal_id INTEGER UNIQUE NOT NULL REFERENCES signal_events(id),
+        magnet_json TEXT NOT NULL,
+        html_path TEXT NOT NULL,
+        model TEXT NOT NULL,
+        created_at TEXT NOT NULL
+      );
+
       CREATE TABLE IF NOT EXISTS llm_usage (
         id INTEGER PRIMARY KEY,
         used_at TEXT NOT NULL,
@@ -324,6 +333,30 @@ export class Store {
       .all(companyKey) as any;
   }
 
+  /** Signals lacking a magnet, same shape as signalsWithoutBrief. */
+  signalsWithoutMagnet(): ReturnType<Store["signalsWithoutBrief"]> {
+    return this.db
+      .prepare(
+        `SELECT s.id AS signal_id, s.company_key, s.company_raw, s.strength, s.evidence_json,
+                c.industry, c.confidence, c.quote, c.reason
+         FROM signal_events s
+         JOIN company_classifications c ON c.company_key = s.company_key
+         LEFT JOIN magnets m ON m.signal_id = s.id
+         WHERE m.id IS NULL
+         ORDER BY s.strength DESC`
+      )
+      .all() as any;
+  }
+
+  saveMagnet(signalId: number, magnetJson: string, htmlPath: string, model: string) {
+    this.db
+      .prepare(
+        `INSERT OR REPLACE INTO magnets (signal_id, magnet_json, html_path, model, created_at)
+         VALUES (?, ?, ?, ?, ?)`
+      )
+      .run(signalId, magnetJson, htmlPath, model, new Date().toISOString());
+  }
+
   saveBrief(signalId: number, briefJson: string, model: string, contractOk: boolean) {
     this.db
       .prepare(
@@ -399,6 +432,7 @@ export class Store {
     evidence_json: string;
     brief_json: string | null;
     contract_ok: number | null;
+    magnet_path: string | null;
     postings: number;
   }> {
     return this.db
@@ -407,10 +441,12 @@ export class Store {
                 s.status, s.created_at, s.evidence_json,
                 c.industry, c.confidence, c.quote, c.reason,
                 b.brief_json, b.contract_ok,
+                m.html_path AS magnet_path,
                 (SELECT COUNT(*) FROM observations o WHERE o.company_key = s.company_key) AS postings
          FROM signal_events s
          JOIN company_classifications c ON c.company_key = s.company_key
          LEFT JOIN briefs b ON b.signal_id = s.id
+         LEFT JOIN magnets m ON m.signal_id = s.id
          ORDER BY s.strength DESC, s.company_raw ASC`
       )
       .all() as any;

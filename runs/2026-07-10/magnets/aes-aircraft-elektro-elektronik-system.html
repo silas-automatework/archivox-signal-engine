@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S/4-Datenaltlast-Check · AES Aircraft Elektro/Elektronik System GmbH</title>
+<style>
+  :root { --text:#15201e; --dim:#5e6d6a; --accent:#0f766e; --line:#e2e8e6; --bg:#ffffff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.55 ui-sans-serif, system-ui, "Segoe UI", sans-serif; color:var(--text); background:var(--bg); }
+  .page { max-width:760px; margin:0 auto; padding:44px 40px; }
+  .kicker { color:var(--accent); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
+  h1 { font-size:24px; margin:6px 0 2px; }
+  .date { color:var(--dim); font-size:13px; margin-bottom:18px; }
+  .insight { border-left:3px solid var(--accent); padding:8px 16px; font-size:16px; margin:18px 0 22px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); margin:22px 0 8px; }
+  ul { margin:6px 0; padding-left:20px; }
+  li { margin:4px 0; }
+  table { width:100%; border-collapse:collapse; margin:8px 0; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--dim); }
+  .foot { margin-top:26px; padding-top:14px; border-top:1px solid var(--line); color:var(--dim); font-size:12px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="kicker">ArchivoX · Potenzial-Einschätzung</div>
+  <h1>S/4-Datenaltlast-Check: AES Aircraft Elektro/Elektronik System GmbH</h1>
+  <div class="date">Stand 2026-07-10 · eine Seite · Annahmen klar gekennzeichnet</div>
+  <div class="insight">Wenn AES im Rahmen des strategischen ERP-Zukunftsprojekts Auswahl und Einführung eines neuen Systems vorbereitet, wird die frühe Trennung von aktiv benötigten Daten und Datenaltlasten zu einer zentralen Frage für Umfang, Migrationsaufwand und spätere Systemgröße.</div>
+  <h2>Ausgangslage (öffentlich beobachtbar)</h2>
+  <ul><li>AES sucht öffentlich einen ERP-Projektleiter für ein strategisch bedeutendes Zukunftsprojekt mit Gesamtverantwortung für Auswahl, Planung und Implementierung eines neuen ERP-Systems.</li><li>In der Ausschreibung wird mehrjährige Erfahrung in der Leitung komplexer IT-, Transformations- oder ERP-naher Projekte gefordert.</li><li>Die Rolle setzt ein gutes Verständnis für Geschäftsprozesse, ERP-Systeme und Unternehmensabläufe voraus und ist als eines der wichtigsten Transformationsprojekte des Unternehmens beschrieben.</li></ul>
+  <h2>Annahmen dieser Einschätzung</h2>
+  <ul><li>Branchentypisch liegt in gewachsenen ERP-Umgebungen ein erheblicher Anteil historischer Beleg-, Änderungs- und Bewegungsdaten vor, der für den Tagesbetrieb nur noch selten genutzt wird.</li><li>Wir unterstellen für Fertigungsunternehmen mit Qualitäts- und Rückverfolgbarkeitsanforderungen, dass Aufbewahrungsfristen und Nachweispflichten einen Teil der Daten langfristig verfügbar halten müssen, auch wenn diese Daten nicht in das neue Kernsystem migriert werden.</li><li>Branchentypisch treiben Datenvolumen, Anzahl historischer Belege und der Umfang anzubindender Altobjekte den Aufwand in Analyse, Migrationstest, Cutover und späterem Betrieb.</li><li>Wir unterstellen als übliche Sizing-Logik im S/4-Umfeld, dass die Reduktion von Altbelegen und selten genutzten Dokumenten vor der Migration typischerweise Infrastruktur-, Migrations- und Testaufwände spürbar beeinflusst, je nach Datenlage in unterschiedlichem Ausmaß.</li></ul>
+  <h2>Potenzial-Hebel</h2>
+  <table>
+    <tr><th>Hebel</th><th>Typischer Effekt</th></tr>
+    <tr><td>Auslagerung historischer Fertigungsaufträge, Materialbelege und Bestandsbewegungen mit abgeschlossenem Lebenszyklus</td><td>Kann das zu migrierende Belegvolumen in Produktion und Logistik typischerweise deutlich senken, häufig im Bereich von 20 bis 40 Prozent je nach Alter und Selektionslogik der Daten.</td></tr><tr><td>Trennung von älteren Qualitäts-, Prüf-, Freigabe- und Rückverfolgbarkeitsunterlagen wie Seriennummern-, Chargen- oder Änderungsstandsdaten in ein revisionssicher verfügbares Archiv</td><td>Reduziert typischerweise die Zahl komplexer historischer Objekte im Zielsystem und vereinfacht Validierung und Testumfang, je nach Dokumentenstruktur oft mit spürbarer Entlastung der Fachbereichstests.</td></tr><tr><td>Stilllegung historisch gewachsener ERP-nahe Datenbestände und Dokumentablagen aus Vor- oder Nebensystemen bei gleichzeitiger Beibehaltung des lesenden Zugriffs</td><td>Kann den Betriebs- und Schnittstellenumfang im Transformationsprogramm typischerweise begrenzen und die Zahl parallel zu betreuender Altdatenquellen reduzieren, je nach Systemlandschaft häufig in einer Größenordnung von 1 bis 3 Systemen oder Dateninseln.</td></tr>
+  </table>
+  <h2>Erste Prüfschritte (intern, ohne uns)</h2>
+  <ul><li>Tabellengrößen und Datenwachstum im bestehenden ERP mit DB02 beziehungsweise DBACOCKPIT auswerten und die größten Anteile nach Anwendungsbereichen wie MM, PP, SD, QM und FI/CO clustern.</li><li>Belegvolumen und Altersstruktur je Modul ermitteln, zum Beispiel über Standardreports, SE16H oder gezielte SE38-Auswertungen für Materialbelege, Fertigungsaufträge, Bestellungen, Lieferungen und Qualitätslose.</li><li>Eine Liste aller Alt- und Nebensysteme erstellen, aus denen für Fachbereiche heute noch lesend auf historische Belege, Prüfunterlagen, Seriennummern- oder Lieferantendaten zugegriffen wird, inklusive Zweck, Nutzerkreis und Aufbewahrungsbedarf.</li></ul>
+  <div class="foot">
+    Diese Einschätzung basiert auf öffentlich verfügbaren Informationen und branchentypischen Erfahrungswerten.
+    Sie ersetzt keine Analyse Ihrer konkreten Systemlandschaft. ArchivoX · Referenzimplementierung Case Study.
+  </div>
+</div>
+</body>
+</html>

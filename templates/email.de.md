@@ -1,12 +1,14 @@
-subject: Kurze Frage zu SAP-Altdaten bei {{company_short}}
+subject: Datenaltlast vor dem S/4-Cutover bei {{company_short}}
 ---
 Guten Tag{{salutation}},
 
 {{opener}}
 
-Bei {{company_category}} in dieser Phase geht es oft darum, das Datenvolumen vor der Migration zu reduzieren und Altsysteme nach dem Cutover sauber stillzulegen, ohne die Historie zu verlieren. ArchivoX macht genau das und senkt Archivierungskosten typischerweise um 40 bis 50 Prozent gegenüber klassischen Lösungen.
+Bei {{company_category}} liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
 
-Wäre ein kurzer Austausch sinnvoll, um zu prüfen, ob das bei {{company_short}} gerade ein Thema ist?
+Wir haben für {{company_short}} eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
 
 Mit freundlichen Grüßen
 {{sender}}

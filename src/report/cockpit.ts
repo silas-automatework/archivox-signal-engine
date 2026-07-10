@@ -62,6 +62,11 @@ export function writeCockpit(store: Store, outPath?: string): string {
               .map((p) => `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></li>`)
               .join("")}</ul>
             ${
+              r.magnet_path
+                ? `<h4>Lead magnet</h4><p><a href="${esc(r.magnet_path.replace(/^runs\/[^/]+\//, ""))}" target="_blank" rel="noopener">S/4-Datenaltlast-Check (das Give hinter der Mail)</a></p>`
+                : ""
+            }
+            ${
               email
                 ? `<h4>Email draft <span class="dim">(template + evidence slots, approval required)</span></h4>
                    <div class="email"><div class="email-subject">${esc(email.subject)}</div>${esc(email.body).replace(/\n/g, "<br>")}</div>`

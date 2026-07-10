@@ -90,6 +90,13 @@ EVIDENCE CONTRACT (hard rules):
   typically...") rather than asserted about this company.
 - stakeholder_hypothesis: role titles worth finding (e.g. "CIO", "Head of SAP
   Competence Center"), clearly hypotheses, no invented names.
+- angles: SPECIFIC to this company or they are worthless. Each angle must anchor
+  to a concrete detail: the exact role being hired, a stated timeline or system,
+  or industry-specific data/document types (e.g. batch records and GxP retention
+  for life sciences, maintenance records for transit operators, delivery documents
+  for retail logistics). Generic ArchivoX value statements ("reduce data volume
+  before migration") are FORBIDDEN as angles; they are the baseline, not an angle.
+  If the evidence is thin, return fewer angles rather than padding with generic ones.
 - flags: risks or caveats an SDR should know (e.g. "posting might be for a
   subsidiary", "group-level IT could decide centrally").
 
@@ -104,8 +111,9 @@ fill three German slots (email_slots):
   (what the company is hiring for / states publicly). Max 45 words. Sober tone,
   no flattery, no buzzwords, no exclamation marks. Never use em dashes. Do not use
   "nicht X, sondern Y" constructions. Flowing natural German, no choppy fragments.
-  The opener leads into a fixed paragraph about data volume reduction and legacy
-  decommissioning, so do not preempt that content.`;
+  The opener is followed by a fixed benchmark paragraph about cold ECC data and
+  HANA sizing cost, then a fixed offer of a prepared one-page assessment with a
+  yes/no CTA. Do not preempt any of that content in the opener.`;
 
 function userPrompt(s: SignalForBrief): string {
   const lines: string[] = [];

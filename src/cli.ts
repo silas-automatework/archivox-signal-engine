@@ -5,6 +5,7 @@ import { writeDailyReport } from "./report/daily.js";
 import { writeSignalsReport } from "./report/signals.js";
 import { classifyCompany } from "./pipeline/classify.js";
 import { generateBrief } from "./pipeline/brief.js";
+import { generateMagnet, renderMagnetHtml } from "./pipeline/magnet.js";
 import { discoverPeople } from "./pipeline/people.js";
 import { signalHash } from "./pipeline/normalize.js";
 import { exportSignals } from "./export/signals.js";
@@ -199,6 +200,65 @@ async function brief() {
   store.close();
 }
 
+/** Generate the one-page lead magnet ("S/4-Datenaltlast-Check") per signal. */
+async function magnet() {
+  const { mkdirSync, writeFileSync } = await import("node:fs");
+  const store = new Store("data/engine.sqlite");
+  const maxMagnets = Number(arg("max") ?? 30);
+  const pending = store.signalsWithoutMagnet().slice(0, maxMagnets);
+  const day = new Date().toISOString().slice(0, 10);
+  console.log(`Generating ${pending.length} magnets with ${MODELS.brief} ...`);
+
+  let ok = 0;
+  const CHUNK = 4;
+  for (let i = 0; i < pending.length; i += CHUNK) {
+    const chunk = pending.slice(i, i + CHUNK);
+    const results = await Promise.all(
+      chunk.map(async (s) => {
+        try {
+          const out = await generateMagnet(
+            {
+              signalId: s.signal_id,
+              companyRaw: s.company_raw,
+              industry: s.industry,
+              confidence: s.confidence,
+              strength: s.strength,
+              quote: s.quote,
+              reason: s.reason,
+              evidence: JSON.parse(s.evidence_json),
+              snippets: store.snippetsForCompany(s.company_key),
+            },
+            MODELS.brief
+          );
+          return { s, out };
+        } catch (err) {
+          console.log(`  ERROR ${s.company_raw}: ${(err as Error).message}`);
+          return null;
+        }
+      })
+    );
+
+    for (const res of results) {
+      if (!res) continue;
+      const { s, out } = res;
+      for (const u of out.usages) store.logLlmUsage(u);
+      if (out.problems.length) {
+        console.log(`  SKIPPED (contract) ${s.company_raw}: ${out.problems.join("; ")}`);
+        continue;
+      }
+      const dir = `runs/${day}/magnets`;
+      mkdirSync(dir, { recursive: true });
+      const path = `${dir}/${s.company_key.replace(/\s+/g, "-")}.html`;
+      writeFileSync(path, renderMagnetHtml(s.company_raw, out.magnet, day));
+      store.saveMagnet(s.signal_id, JSON.stringify(out.magnet), path, MODELS.brief);
+      ok++;
+      console.log(`  MAGNET  ${s.company_raw}`);
+    }
+  }
+  console.log(`\nDone: ${ok} magnets rendered to runs/${day}/magnets/.`);
+  store.close();
+}
+
 /** Account -> people stage: LinkedIn contact discovery for signal companies. */
 async function people() {
   const store = new Store("data/engine.sqlite");
@@ -277,6 +337,9 @@ async function main() {
       break;
     case "brief":
       await brief();
+      break;
+    case "magnet":
+      await magnet();
       break;
     case "people":
       await people();

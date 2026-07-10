@@ -9,6 +9,7 @@
     "brief": "tsx src/cli.ts brief",
     "export": "tsx src/cli.ts export",
     "people": "tsx src/cli.ts people",
+    "magnet": "tsx src/cli.ts magnet",
     "cockpit": "tsx src/cli.ts cockpit",
     "report": "tsx src/cli.ts report",
     "demo": "tsx src/cli.ts watch --demo",
