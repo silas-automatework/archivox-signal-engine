@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { renderEmail } from "../pipeline/emailTemplate.js";
+import { openerVariant } from "../pipeline/brief.js";
 import type { Store } from "../store.js";
 import type { Brief } from "../pipeline/brief.js";
 
@@ -39,6 +40,7 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
       brief_contract_ok: r.contract_ok === null ? null : r.contract_ok === 1,
       contacts,
       rendered_email: email,
+      opener_variant: openerVariant(r.signal_id),
     };
   });
 

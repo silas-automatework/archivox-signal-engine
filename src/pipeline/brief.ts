@@ -107,34 +107,46 @@ fill three German slots (email_slots):
 - company_category_de: dative plural category for the sentence "Bei {category} in
   dieser Phase geht es oft darum, ..." (e.g. "Papierherstellern",
   "Automobilzulieferern", "kommunalen Verkehrsbetrieben"). Lowercase unless a noun.
-- opener_de: ONE direct question to the reader, max 25 words, Sie-Form, ending
-  with "?". Name their concrete program or project inside the question. The user
-  message tells you which QUESTION TYPE to use; build the question of that type,
-  phrased naturally for THIS company:
-  * status: is the separation of active data and archive in their program
-    already decided or planned?
-  * quantity: how large is the share of the ECC legacy their team actually
-    still needs day-to-day?
-  * ownership: which team or role in their program owns the decision about
-    legacy data and old documents?
-  * timing: at which point of their program does the legacy question get
-    settled, before or after the sizing?
-  It must sound like a peer genuinely asking, never like a quiz or a rhetorical
-  setup. FORBIDDEN: discovery narration ("ich habe gesehen", "Sie suchen
-  aktuell", "Stellenanzeige"), rhetorical consultant framing ("stellt sich die
-  Frage", "wird relevant", "meist früher als geplant"), statements disguised as
-  questions. The specificity of naming their program IS the proof of research.
-  Starts lowercase (it continues after the salutation comma). Real German
-  umlauts (ä, ö, ü, ß), never ae/oe/ue/ss. No flattery, no buzzwords, no
-  exclamation marks, no em dashes, no "nicht X, sondern Y". The opener is
-  followed by a fixed benchmark paragraph about cold ECC data and HANA sizing
-  cost, then a fixed offer of a prepared one-page assessment with a yes/no CTA.
-  Do not preempt that content.`;
+- opener_de: max 25 words, Sie-Form, naming their concrete program or project.
+  The user message tells you the OPENER VARIANT (an A/B test; reply rates decide,
+  so execute the assigned variant exactly):
+  * VARIANT question/<type>: ONE direct question ending with "?". Types:
+    - status: is the separation of active data and archive in their program
+      already decided or planned?
+    - quantity: how large is the share of the ECC legacy their team actually
+      still needs day-to-day?
+    - ownership: which team or role in their program owns the decision about
+      legacy data and old documents?
+    - timing: at which point of their program does the legacy question get
+      settled, before or after the sizing?
+    It must sound like a peer genuinely asking, never like a quiz or a
+    rhetorical setup.
+  * VARIANT statement: ONE concrete observation about their program with
+    tension, NO question mark anywhere. Point at a specific fork or blind spot
+    their program faces around legacy data (e.g. that the archive cut usually
+    gets decided implicitly by the sizing deadline). Concrete and specific to
+    their industry and program; never an abstract meta-statement about
+    "questions becoming relevant".
+  FORBIDDEN in both variants: discovery narration ("ich habe gesehen", "Sie
+  suchen aktuell", "Stellenanzeige"), rhetorical consultant framing ("stellt
+  sich die Frage", "wird relevant", "meist früher als geplant"). The specificity
+  of naming their program IS the proof of research. Starts lowercase (it
+  continues after the salutation comma). Real German umlauts (ä, ö, ü, ß), never
+  ae/oe/ue/ss. No flattery, no buzzwords, no exclamation marks, no em dashes, no
+  "nicht X, sondern Y". The opener is followed by a fixed benchmark paragraph
+  about cold ECC data and HANA sizing cost, then a fixed offer of a prepared
+  one-page assessment with a yes/no CTA. Do not preempt that content.`;
 
-/** Deterministic rotation so the queue never reads as one cloned question. */
-export function openerQuestionType(signalId: number): string {
+/**
+ * Deterministic opener assignment: 50/50 A/B between question and statement
+ * openers (the friction hypothesis gets measured, not debated), and within
+ * the question variant a rotated type so the queue never reads as one
+ * cloned question.
+ */
+export function openerVariant(signalId: number): string {
+  if (signalId % 2 === 1) return "statement";
   const types = ["status", "quantity", "ownership", "timing"];
-  return types[signalId % types.length];
+  return `question/${types[Math.floor(signalId / 2) % types.length]}`;
 }
 
 function userPrompt(s: SignalForBrief): string {
@@ -142,7 +154,7 @@ function userPrompt(s: SignalForBrief): string {
   lines.push(`Company: ${s.companyRaw}`);
   lines.push(`Industry (classified): ${s.industry ?? "unknown"}`);
   lines.push(`Signal confidence: ${s.confidence} | strength: ${s.strength}`);
-  lines.push(`Question type for opener_de: ${openerQuestionType(s.signalId)}`);
+  lines.push(`Opener variant for opener_de: ${openerVariant(s.signalId)}`);
   if (s.reason) lines.push(`Classifier reason: ${s.reason}`);
   lines.push("");
   lines.push("Job postings (evidence):");
@@ -184,11 +196,15 @@ export function validateBrief(brief: Brief, s: SignalForBrief): string[] {
   if (brief.email_slots.opener_de.split(/\s+/).length > 32) {
     problems.push("email opener exceeds word limit");
   }
-  if (!brief.email_slots.opener_de.trim().endsWith("?")) {
-    problems.push("email opener must be a direct question ending with ?");
+  const variant = openerVariant(s.signalId);
+  if (variant.startsWith("question") && !brief.email_slots.opener_de.trim().endsWith("?")) {
+    problems.push("opener variant is 'question' but does not end with ?");
+  }
+  if (variant === "statement" && brief.email_slots.opener_de.includes("?")) {
+    problems.push("opener variant is 'statement' but contains a question");
   }
   if (/stellt sich die frage|wird .{0,30}relevant|meist früher/i.test(brief.email_slots.opener_de)) {
-    problems.push("email opener uses rhetorical consultant framing instead of a genuine question");
+    problems.push("email opener uses rhetorical consultant framing");
   }
   if (
     /ich habe (gesehen|gelesen|bemerkt|entdeckt)|bin (darauf|auf .{0,40}) gestoßen|mir ist aufgefallen|Stellenanzeige|Sie suchen (aktuell|derzeit|gerade)/i.test(
@@ -212,6 +228,16 @@ export function validateBrief(brief: Brief, s: SignalForBrief): string[] {
   return problems;
 }
 
+/** Deterministic cleanup that should never be left to the model. */
+export function normalizeBrief(brief: Brief, signalId: number): Brief {
+  const opener = brief.email_slots.opener_de.trim();
+  const needsPeriod = openerVariant(signalId) === "statement" && !/[.!?]$/.test(opener);
+  return {
+    ...brief,
+    email_slots: { ...brief.email_slots, opener_de: needsPeriod ? `${opener}.` : opener },
+  };
+}
+
 export async function generateBrief(
   s: SignalForBrief,
   model: string
@@ -229,7 +255,7 @@ export async function generateBrief(
   });
   usages.push(first.usage);
 
-  let brief = first.data;
+  let brief = normalizeBrief(first.data, s.signalId);
   let problems = validateBrief(brief, s);
 
   if (problems.length) {
@@ -245,7 +271,7 @@ export async function generateBrief(
       reasoningEffort: "low",
     });
     usages.push(retry.usage);
-    brief = retry.data;
+    brief = normalizeBrief(retry.data, s.signalId);
     problems = validateBrief(brief, s);
   }
 
