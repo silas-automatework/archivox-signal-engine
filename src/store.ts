@@ -50,6 +50,41 @@ export class Store {
         inserted INTEGER NOT NULL,
         duplicates INTEGER NOT NULL
       );
+
+      CREATE TABLE IF NOT EXISTS company_classifications (
+        company_key TEXT PRIMARY KEY,
+        company_raw TEXT NOT NULL,
+        company_type TEXT NOT NULL,
+        is_signal INTEGER NOT NULL,
+        confidence REAL NOT NULL,
+        industry TEXT,
+        quote TEXT,
+        reason TEXT,
+        escalated INTEGER NOT NULL DEFAULT 0,
+        model TEXT NOT NULL,
+        classified_at TEXT NOT NULL
+      );
+
+      CREATE TABLE IF NOT EXISTS signal_events (
+        id INTEGER PRIMARY KEY,
+        hash TEXT UNIQUE NOT NULL,
+        company_key TEXT NOT NULL,
+        company_raw TEXT NOT NULL,
+        signal_type TEXT NOT NULL,
+        strength REAL NOT NULL,
+        status TEXT NOT NULL DEFAULT 'candidate',
+        evidence_json TEXT NOT NULL,
+        created_at TEXT NOT NULL
+      );
+
+      CREATE TABLE IF NOT EXISTS llm_usage (
+        id INTEGER PRIMARY KEY,
+        used_at TEXT NOT NULL,
+        model TEXT NOT NULL,
+        purpose TEXT NOT NULL,
+        input_tokens INTEGER NOT NULL,
+        output_tokens INTEGER NOT NULL
+      );
     `);
   }
 
@@ -120,6 +155,136 @@ export class Store {
          ORDER BY postings DESC, company_raw ASC`
       )
       .all(sinceIso) as any;
+  }
+
+  /** Companies with observations not yet classified, with up to 3 postings each. */
+  unclassifiedCompanies(): Array<{
+    company_key: string;
+    company_raw: string;
+    postings: { title: string; url: string; snippet: string | null; query: string; postedAt: string | null }[];
+  }> {
+    const rows = this.db
+      .prepare(
+        `SELECT o.company_key, o.company_raw, o.title, o.url, o.snippet, o.query, o.posted_at
+         FROM observations o
+         LEFT JOIN company_classifications c ON c.company_key = o.company_key
+         WHERE c.company_key IS NULL
+         ORDER BY o.company_key, o.fetched_at DESC`
+      )
+      .all() as any[];
+    const byKey = new Map<string, any>();
+    for (const r of rows) {
+      if (!byKey.has(r.company_key)) {
+        byKey.set(r.company_key, { company_key: r.company_key, company_raw: r.company_raw, postings: [] });
+      }
+      const g = byKey.get(r.company_key);
+      if (g.postings.length < 3) {
+        g.postings.push({ title: r.title, url: r.url, snippet: r.snippet, query: r.query, postedAt: r.posted_at });
+      }
+    }
+    return [...byKey.values()];
+  }
+
+  saveClassification(c: {
+    companyKey: string;
+    companyRaw: string;
+    companyType: string;
+    isSignal: boolean;
+    confidence: number;
+    industry: string;
+    quote: string;
+    reason: string;
+    escalated: boolean;
+    model: string;
+  }) {
+    this.db
+      .prepare(
+        `INSERT OR REPLACE INTO company_classifications
+           (company_key, company_raw, company_type, is_signal, confidence, industry,
+            quote, reason, escalated, model, classified_at)
+         VALUES (@companyKey, @companyRaw, @companyType, @isSignal, @confidence, @industry,
+                 @quote, @reason, @escalated, @model, @classifiedAt)`
+      )
+      .run({
+        ...c,
+        isSignal: c.isSignal ? 1 : 0,
+        escalated: c.escalated ? 1 : 0,
+        classifiedAt: new Date().toISOString(),
+      });
+  }
+
+  upsertSignalEvent(e: {
+    hash: string;
+    companyKey: string;
+    companyRaw: string;
+    signalType: string;
+    strength: number;
+    evidenceJson: string;
+  }): boolean {
+    const res = this.db
+      .prepare(
+        `INSERT OR IGNORE INTO signal_events
+           (hash, company_key, company_raw, signal_type, strength, evidence_json, created_at)
+         VALUES (@hash, @companyKey, @companyRaw, @signalType, @strength, @evidenceJson, @createdAt)`
+      )
+      .run({ ...e, createdAt: new Date().toISOString() });
+    return res.changes > 0;
+  }
+
+  logLlmUsage(u: { model: string; purpose: string; inputTokens: number; outputTokens: number }) {
+    this.db
+      .prepare(
+        `INSERT INTO llm_usage (used_at, model, purpose, input_tokens, output_tokens)
+         VALUES (?, ?, ?, ?, ?)`
+      )
+      .run(new Date().toISOString(), u.model, u.purpose, u.inputTokens, u.outputTokens);
+  }
+
+  qualifiedSignals(): Array<{
+    company_raw: string;
+    company_key: string;
+    signal_type: string;
+    strength: number;
+    evidence_json: string;
+    created_at: string;
+    industry: string | null;
+    confidence: number;
+    quote: string | null;
+    reason: string | null;
+    postings: number;
+  }> {
+    return this.db
+      .prepare(
+        `SELECT s.company_raw, s.company_key, s.signal_type, s.strength, s.evidence_json, s.created_at,
+                c.industry, c.confidence, c.quote, c.reason,
+                (SELECT COUNT(*) FROM observations o WHERE o.company_key = s.company_key) AS postings
+         FROM signal_events s
+         JOIN company_classifications c ON c.company_key = s.company_key
+         ORDER BY s.strength DESC, s.company_raw ASC`
+      )
+      .all() as any;
+  }
+
+  classificationBreakdown(): Array<{ company_type: string; n: number; companies: string }> {
+    return this.db
+      .prepare(
+        `SELECT company_type, COUNT(*) AS n, GROUP_CONCAT(company_raw, ', ') AS companies
+         FROM company_classifications
+         WHERE is_signal = 0
+         GROUP BY company_type
+         ORDER BY n DESC`
+      )
+      .all() as any;
+  }
+
+  usageSummary(): Array<{ model: string; purpose: string; calls: number; input_tokens: number; output_tokens: number }> {
+    return this.db
+      .prepare(
+        `SELECT model, purpose, COUNT(*) AS calls,
+                SUM(input_tokens) AS input_tokens, SUM(output_tokens) AS output_tokens
+         FROM llm_usage GROUP BY model, purpose`
+      )
+      .all() as any;
   }
 
   recentRuns(sinceIso: string): Array<{
