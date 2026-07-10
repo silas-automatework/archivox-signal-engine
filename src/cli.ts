@@ -299,6 +299,7 @@ async function people() {
           linkedinUrl: contact.linkedin_url,
           confidence: contact.confidence,
           reason: contact.reason,
+          anrede: contact.anrede ?? "",
         });
         found++;
       }

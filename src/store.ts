@@ -17,6 +17,12 @@ export class Store {
     this.db = new Database(path);
     this.db.pragma("journal_mode = WAL");
     this.migrate();
+    // Additive migrations for existing databases.
+    try {
+      this.db.exec(`ALTER TABLE contacts ADD COLUMN anrede TEXT NOT NULL DEFAULT ''`);
+    } catch {
+      // column already exists
+    }
   }
 
   private migrate() {
@@ -84,6 +90,7 @@ export class Store {
         role TEXT NOT NULL,
         linkedin_url TEXT UNIQUE NOT NULL,
         confidence REAL NOT NULL,
+        anrede TEXT NOT NULL DEFAULT '',
         reason TEXT,
         source TEXT NOT NULL DEFAULT 'exa_linkedin',
         status TEXT NOT NULL DEFAULT 'hypothesis',
@@ -373,14 +380,16 @@ export class Store {
     linkedinUrl: string;
     confidence: number;
     reason: string;
+    anrede: string;
   }): boolean {
     const now = new Date().toISOString();
     const res = this.db
       .prepare(
-        `INSERT INTO contacts (company_key, name, role, linkedin_url, confidence, reason, first_seen, last_verified)
-         VALUES (@companyKey, @name, @role, @linkedinUrl, @confidence, @reason, @now, @now)
+        `INSERT INTO contacts (company_key, name, role, linkedin_url, confidence, anrede, reason, first_seen, last_verified)
+         VALUES (@companyKey, @name, @role, @linkedinUrl, @confidence, @anrede, @reason, @now, @now)
          ON CONFLICT(linkedin_url) DO UPDATE SET
-           role = excluded.role, confidence = excluded.confidence, last_verified = excluded.last_verified`
+           role = excluded.role, confidence = excluded.confidence, anrede = excluded.anrede,
+           last_verified = excluded.last_verified`
       )
       .run({ ...c, now });
     return res.changes > 0;
@@ -391,15 +400,24 @@ export class Store {
     role: string;
     linkedin_url: string;
     confidence: number;
+    anrede: string;
     email_status: string;
     last_verified: string;
   }> {
     return this.db
       .prepare(
-        `SELECT name, role, linkedin_url, confidence, email_status, last_verified
+        `SELECT name, role, linkedin_url, confidence, anrede, email_status, last_verified
          FROM contacts WHERE company_key = ? ORDER BY confidence DESC`
       )
       .all(companyKey) as any;
+  }
+
+  setContactAnrede(linkedinUrl: string, anrede: string) {
+    this.db.prepare(`UPDATE contacts SET anrede = ? WHERE linkedin_url = ?`).run(anrede, linkedinUrl);
+  }
+
+  allContacts(): Array<{ linkedin_url: string; name: string; anrede: string }> {
+    return this.db.prepare(`SELECT linkedin_url, name, anrede FROM contacts`).all() as any;
   }
 
   /** Signal companies with fewer than min fresh contacts (the reuse bridge). */

@@ -1,6 +1,6 @@
 subject: Datenaltlast vor dem S/4-Cutover bei {{company_short}}
 ---
-Guten Tag{{salutation}},
+Hallo{{salutation}},
 
 {{opener}}
 

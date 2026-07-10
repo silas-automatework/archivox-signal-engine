@@ -107,13 +107,23 @@ fill three German slots (email_slots):
 - company_category_de: dative plural category for the sentence "Bei {category} in
   dieser Phase geht es oft darum, ..." (e.g. "Papierherstellern",
   "Automobilzulieferern", "kommunalen Verkehrsbetrieben"). Lowercase unless a noun.
-- opener_de: 1-2 sentences, Sie-Form, referencing the concrete evidence naturally
-  (what the company is hiring for / states publicly). Max 45 words. Sober tone,
-  no flattery, no buzzwords, no exclamation marks. Never use em dashes. Do not use
-  "nicht X, sondern Y" constructions. Flowing natural German, no choppy fragments.
-  The opener is followed by a fixed benchmark paragraph about cold ECC data and
-  HANA sizing cost, then a fixed offer of a prepared one-page assessment with a
-  yes/no CTA. Do not preempt any of that content in the opener.`;
+- opener_de: 1-2 sentences, Sie-Form, max 40 words. THE HARD PART: start inside
+  the reader's world, never inside our research. Treat their program, project or
+  role as shared context and connect it to the data question with a sharp point
+  of view. One example of the right MOVE (do not reuse its wording or sentence
+  pattern; find your own for this company): "Wenn QIAbase in die Umsetzungsphase
+  geht, fällt meist früher als geplant die Entscheidung, wie viel ECC-Altbestand
+  mit nach S/4 wandert." FORBIDDEN: any discovery narration ("ich habe gesehen",
+  "ich bin darauf gestoßen", "mir ist aufgefallen", "Sie suchen aktuell", "in
+  Ihrer Stellenanzeige"). The specificity of naming their program IS the proof of
+  research; never narrate the act of finding it. The opener continues after the
+  salutation comma ("Hallo Herr X,"), so it MUST start lowercase. Write proper
+  German umlauts (ä, ö, ü, ß); never transliterate as ae/oe/ue/ss. Sober tone, no
+  flattery, no buzzwords, no exclamation marks. Never use em dashes. Do not use
+  "nicht X, sondern Y" constructions. Flowing natural German, no choppy
+  fragments. The opener is followed by a fixed benchmark paragraph about cold ECC
+  data and HANA sizing cost, then a fixed offer of a prepared one-page assessment
+  with a yes/no CTA. Do not preempt any of that content.`;
 
 function userPrompt(s: SignalForBrief): string {
   const lines: string[] = [];
@@ -160,6 +170,19 @@ export function validateBrief(brief: Brief, s: SignalForBrief): string[] {
 
   if (brief.email_slots.opener_de.split(/\s+/).length > 50) {
     problems.push("email opener exceeds word limit");
+  }
+  if (
+    /ich habe (gesehen|gelesen|bemerkt|entdeckt)|bin (darauf|auf .{0,40}) gestoßen|mir ist aufgefallen|Stellenanzeige|Sie suchen (aktuell|derzeit|gerade)/i.test(
+      brief.email_slots.opener_de
+    )
+  ) {
+    problems.push("email opener narrates signal discovery instead of starting in the reader's world");
+  }
+  if (/\b(fuer|ueber|frueh\w*|faell\w*|gehoer\w*|spaet\w*|waehrend|koenn\w*|moeglich\w*|loesung\w*|abloesung\w*)\b/i.test(brief.email_slots.opener_de)) {
+    problems.push("email opener transliterates umlauts (ae/oe/ue); use real German umlauts");
+  }
+  if (/^[A-ZÄÖÜ]/.test(brief.email_slots.opener_de.trim())) {
+    problems.push("email opener must start lowercase (it continues after the salutation comma)");
   }
   if (/nicht\s+\w[^.]{0,60},\s*sondern/i.test(brief.email_slots.opener_de)) {
     problems.push("email opener uses a 'nicht X, sondern Y' construction");

@@ -7,6 +7,8 @@ export interface ContactHypothesis {
   linkedin_url: string;
   confidence: number;
   reason: string;
+  /** German salutation form, empty when not confidently inferable from the first name. */
+  anrede: "Herr" | "Frau" | "";
 }
 
 interface ExaHit {
@@ -46,13 +48,14 @@ const MATCH_SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["name", "role", "linkedin_url", "confidence", "reason"],
+        required: ["name", "role", "linkedin_url", "confidence", "reason", "anrede"],
         properties: {
           name: { type: "string" },
           role: { type: "string" },
           linkedin_url: { type: "string" },
           confidence: { type: "number" },
           reason: { type: "string" },
+          anrede: { type: "string", enum: ["Herr", "Frau", ""] },
         },
       },
     },
@@ -66,7 +69,8 @@ a person currently at that company (or its obvious group parent) in a relevant r
 role from the result title/snippet. linkedin_url must be copied exactly from the
 provided results. Exclude: people at similarly named but different companies,
 consultants placed at the company, past employees where detectable, and irrelevant
-roles. confidence 0-1. Return an empty list rather than guessing.`;
+roles. confidence 0-1. Return an empty list rather than guessing.
+anrede: "Herr" or "Frau" when the first name makes it unambiguous, else "".`;
 
 export async function discoverPeople(
   companyRaw: string,

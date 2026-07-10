@@ -20,7 +20,7 @@ export function exportSignals(store: Store): { jsonPath: string; csvPath: string
     const evidence = JSON.parse(r.evidence_json);
     const brief: Brief | null = r.brief_json ? JSON.parse(r.brief_json) : null;
     const contacts = store.contactsForCompany(r.company_key);
-    const email = brief ? renderEmail(brief.email_slots) : null;
+    const email = brief ? renderEmail(brief.email_slots, { recipient: contacts[0] ?? null }) : null;
     return {
       signal_id: r.signal_id,
       company: r.company_raw,

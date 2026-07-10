@@ -33,7 +33,7 @@ export function writeCockpit(store: Store, outPath?: string): string {
       const contacts = store.contactsForCompany(r.company_key);
       contactsTotal += contacts.length;
       const pct = Math.round(r.strength * 100);
-      const email = brief ? renderEmail(brief.email_slots) : null;
+      const email = brief ? renderEmail(brief.email_slots, { recipient: contacts[0] ?? null }) : null;
       const akte = `S1-${String(r.created_at).slice(0, 10).replace(/-/g, "")} · STÄRKE ${r.strength.toFixed(2)} · KONF ${r.confidence.toFixed(2)} · ${r.postings} BELEGE · ${contacts.length} PERSONEN`;
 
       const contactsHtml = contacts.length
