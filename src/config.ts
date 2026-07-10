@@ -27,15 +27,19 @@ export const DEFAULTS = {
  * on the account.
  */
 export const MODELS = {
-  classify: process.env.CLASSIFY_MODEL ?? "gpt-5-mini",
-  brief: process.env.BRIEF_MODEL ?? "gpt-5",
+  classify: process.env.CLASSIFY_MODEL ?? "gpt-5.4-mini",
+  brief: process.env.BRIEF_MODEL ?? "gpt-5.4",
 };
 
 /** USD per 1M tokens, for the cost line in reports. Extend when adding models. */
 export const PRICE_PER_M: Record<string, { in: number; out: number }> = {
-  "gpt-5": { in: 1.25, out: 10 },
+  "gpt-5.4-nano": { in: 0.2, out: 1.25 },
+  "gpt-5.4-mini": { in: 0.75, out: 4.5 },
+  "gpt-5.4": { in: 2.5, out: 15 },
+  "gpt-5.5": { in: 5, out: 30 },
   "gpt-5-mini": { in: 0.25, out: 2 },
   "gpt-5-nano": { in: 0.05, out: 0.4 },
+  "gpt-5": { in: 1.25, out: 10 },
 };
 
 export function estimateCostUsd(rows: { model: string; input_tokens: number; output_tokens: number }[]): number {

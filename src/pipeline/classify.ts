@@ -105,7 +105,7 @@ export async function classifyCompany(
     user: userPrompt(c, []),
     schemaName: "signal_classification",
     schema: SCHEMA,
-    reasoningEffort: "minimal",
+    reasoningEffort: "none",
   });
   usages.push(first.usage);
 
@@ -129,7 +129,7 @@ export async function classifyCompany(
     user: userPrompt(c, lookupEvidence),
     schemaName: "signal_classification",
     schema: SCHEMA,
-    reasoningEffort: "minimal",
+    reasoningEffort: "none",
   });
   usages.push(second.usage);
 

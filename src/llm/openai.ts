@@ -24,7 +24,8 @@ export async function jsonCall<T>(opts: {
   user: string;
   schemaName: string;
   schema: object;
-  reasoningEffort?: "minimal" | "low" | "medium" | "high";
+  /** gpt-5.4+ vocabulary; older models get the param dropped via the 400 retry below. */
+  reasoningEffort?: "none" | "low" | "medium" | "high" | "xhigh";
 }): Promise<JsonCallResult<T>> {
   const key = requireEnv("OPENAI_API_KEY");
 
