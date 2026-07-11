@@ -12,6 +12,40 @@ const esc = (s: unknown): string =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+/** Per-day run log: what each daily run found and cost. */
+function renderRunLog(store: Store): string {
+  const days = store.dailyStats();
+  if (!days.length) return "";
+  const usage = store.dailyUsage();
+  const costFor = (day: string) => estimateCostUsd(usage.filter((u) => u.day === day));
+  const maxSignals = Math.max(...days.map((d) => d.new_signals), 1);
+
+  const rows = days
+    .map((d) => {
+      const companies = d.new_companies
+        ? esc(d.new_companies.length > 110 ? d.new_companies.slice(0, 110) + " …" : d.new_companies)
+        : '<span class="dim-log">keine neuen Signale</span>';
+      const pct = Math.round((d.new_signals / maxSignals) * 100);
+      return `<tr>
+        <td class="mono-cell">${esc(d.day)}</td>
+        <td class="mono-cell num">${d.fetched}</td>
+        <td class="mono-cell num"><span class="logbar" style="--w:${pct}%"></span>+${d.new_signals}</td>
+        <td class="mono-cell num">+${d.new_contacts}</td>
+        <td class="mono-cell num">$${costFor(d.day).toFixed(2)}</td>
+        <td class="companies">${companies}</td>
+      </tr>`;
+    })
+    .join("");
+
+  return `
+  <h2 class="runlog-title">Tagesläufe</h2>
+  <p class="runlog-sub">Jeder Lauf setzt auf dem Vortag auf. Bekannte Signale werden dedupliziert (30-Tage-Fenster), gezählt wird nur Neues.</p>
+  <div class="runlog-scroll"><table class="runlog">
+    <tr><th>Tag</th><th>Postings</th><th>Neue Signale</th><th>Neue Personen</th><th>LLM-Kosten</th><th>Neue Firmen</th></tr>
+    ${rows}
+  </table></div>`;
+}
+
 /**
  * The SDR cockpit in the ArchivoX design system: every signal is an Akte
  * (file) with a Registerkarte, mono record lines carry the registratur data.
@@ -167,6 +201,18 @@ export function writeCockpit(store: Store, outPath?: string): string {
   .email { border:1px solid var(--line); background:var(--panel); padding:14px 16px; font-size:13px; line-height:1.6; }
   .email-subject { font-weight:700; margin-bottom:8px; }
   footer { color:var(--ink-35); font:400 10.5px/1.7 var(--mono); letter-spacing:.04em; text-transform:uppercase; margin-top:34px; border-top:1px solid var(--line); padding-top:14px; }
+  .runlog-title { font-weight:800; font-stretch:108%; font-size:20px; letter-spacing:-.01em; margin:40px 0 4px; }
+  .runlog-sub { color:var(--ink-60); font-size:13px; margin:0 0 14px; }
+  .runlog-scroll { overflow-x:auto; }
+  table.runlog { width:100%; border-collapse:collapse; border:1.5px solid var(--ink); background:var(--card); min-width:720px; }
+  table.runlog th { font:500 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60); text-align:left; padding:9px 14px; border-bottom:1.5px solid var(--ink); }
+  table.runlog td { padding:9px 14px; border-bottom:1px solid var(--line); font-size:13px; vertical-align:top; }
+  table.runlog tr:last-child td { border-bottom:none; }
+  .mono-cell { font-family:var(--mono); font-size:12px; white-space:nowrap; }
+  .companies { color:var(--ink-60); font-size:12.5px; }
+  .dim-log { color:var(--ink-35); }
+  .logbar { display:inline-block; width:40px; height:5px; background:var(--gauge-track); margin-right:8px; vertical-align:middle; position:relative; }
+  .logbar::after { content:""; position:absolute; left:0; top:0; bottom:0; width:var(--w); background:var(--petrol); }
 </style>
 </head>
 <body>
@@ -185,6 +231,8 @@ export function writeCockpit(store: Store, outPath?: string): string {
   </div>
 
   ${items}
+
+  ${renderRunLog(store)}
 
   <footer>
     Referenzimplementierung · SalesPlaybook GTM Engineer Case Study · Evidence Contract: jede Unternehmensaussage

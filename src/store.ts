@@ -486,6 +486,44 @@ export class Store {
       .all() as any;
   }
 
+  /** Per-day run log for the cockpit: what each daily run found and cost. */
+  dailyStats(): Array<{
+    day: string;
+    fetched: number;
+    inserted: number;
+    new_signals: number;
+    new_companies: string;
+    new_contacts: number;
+  }> {
+    return this.db
+      .prepare(
+        `WITH days AS (
+           SELECT DISTINCT substr(started_at, 1, 10) AS day FROM watcher_runs
+           UNION SELECT DISTINCT substr(created_at, 1, 10) FROM signal_events
+           UNION SELECT DISTINCT substr(used_at, 1, 10) FROM llm_usage
+         )
+         SELECT d.day,
+           COALESCE((SELECT SUM(fetched) FROM watcher_runs w WHERE substr(w.started_at,1,10) = d.day), 0) AS fetched,
+           COALESCE((SELECT SUM(inserted) FROM watcher_runs w WHERE substr(w.started_at,1,10) = d.day), 0) AS inserted,
+           (SELECT COUNT(*) FROM signal_events s WHERE substr(s.created_at,1,10) = d.day) AS new_signals,
+           COALESCE((SELECT GROUP_CONCAT(company_raw, ', ') FROM signal_events s WHERE substr(s.created_at,1,10) = d.day), '') AS new_companies,
+           (SELECT COUNT(*) FROM contacts c WHERE substr(c.first_seen,1,10) = d.day) AS new_contacts
+         FROM days d ORDER BY d.day DESC`
+      )
+      .all() as any;
+  }
+
+  /** Per-day, per-model token usage so cost can be computed with the price table. */
+  dailyUsage(): Array<{ day: string; model: string; input_tokens: number; output_tokens: number }> {
+    return this.db
+      .prepare(
+        `SELECT substr(used_at,1,10) AS day, model,
+                SUM(input_tokens) AS input_tokens, SUM(output_tokens) AS output_tokens
+         FROM llm_usage GROUP BY 1, 2`
+      )
+      .all() as any;
+  }
+
   usageSummary(): Array<{ model: string; purpose: string; calls: number; input_tokens: number; output_tokens: number }> {
     return this.db
       .prepare(
