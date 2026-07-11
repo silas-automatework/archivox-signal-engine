@@ -160,7 +160,9 @@ const fmtTb = (v: number): string => v.toLocaleString("de-DE", { maximumFraction
 export function renderMagnetHtml(companyRaw: string, m: Magnet, day: string): string {
   const mod = computeModel(m.size_class);
   const coldMid = (mod.coldSharePct[0] + mod.coldSharePct[1]) / 2;
-  const akte = `AKTE S1-${day.replace(/-/g, "")} · ${companyRaw.toUpperCase().slice(0, 34)}`;
+  // Customer-facing document: the folder tab carries letterhead, never
+  // internal record ids (those belong in the cockpit, not in front of a buyer).
+  const tabText = `ARCHIVOX · POTENZIAL-EINSCHÄTZUNG`;
 
   return `<!doctype html>
 <html lang="de">
@@ -242,7 +244,7 @@ export function renderMagnetHtml(companyRaw: string, m: Magnet, day: string): st
 </head>
 <body>
 <div class="sheet">
-  <div class="tab">${esc(akte)}</div>
+  <div class="tab">${esc(tabText)}</div>
   <div class="head">
     <h1>S/4-Datenaltlast-Check</h1>
     <div class="meta">VORBEREITET FÜR <b>${esc(companyRaw.toUpperCase())}</b> · STAND ${day} · LESEZEIT 2 MIN · MODELLRECHNUNG, ANNAHMEN IM FUSSTEIL</div>

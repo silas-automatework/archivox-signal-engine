@@ -57,6 +57,8 @@ jobs:
         run: npx tsx src/cli.ts brief --max 25
       - name: Generate lead magnets
         run: npx tsx src/cli.ts magnet --max 25
+      - name: Re-render all magnets on the current template
+        run: npx tsx scripts/rerender-magnets.ts
       - name: Discover people
         run: npx tsx src/cli.ts people --max 15
       - name: Route new signals into HubSpot (drafts + tasks, never sends)
