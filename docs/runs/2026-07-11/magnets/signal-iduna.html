@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S/4-Datenaltlast-Check · SIGNAL IDUNA Gruppe</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root {
+    --ink:#10201C; --ink-60:#4C605A; --ink-35:#8CA09A;
+    --paper:#FCFDFC; --panel:#F3F7F5;
+    --petrol:#0A5C50; --petrol-deep:#07473E; --petrol-tint:#E3EFEC;
+    --line:#DCE5E1;
+    --sans:"Archivo", ui-sans-serif, system-ui, sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.6 var(--sans); font-weight:400; }
+  .sheet { max-width:820px; margin:0 auto; padding:56px 52px 40px; }
+  @media (max-width:680px){ .sheet { padding:32px 20px; } }
+
+  .tab { display:inline-block; background:var(--ink); color:var(--paper); font:500 11px/1 var(--mono);
+         letter-spacing:.12em; padding:9px 26px 9px 14px; margin-left:2px;
+         clip-path:polygon(0 100%, 0 6px, 6px 0, calc(100% - 16px) 0, 100% 100%); }
+  .head { border:1.5px solid var(--ink); padding:30px 32px 26px; margin-bottom:34px; }
+  h1 { font-family:var(--sans); font-weight:800; font-stretch:112%; font-size:clamp(30px,5vw,44px);
+       line-height:1.02; letter-spacing:-.025em; margin:0 0 14px; }
+  .meta { font:400 11.5px/1.6 var(--mono); color:var(--ink-60); letter-spacing:.04em; }
+  .meta b { color:var(--petrol); font-weight:500; }
+
+  .insight { font-size:19px; line-height:1.45; font-weight:600; letter-spacing:-.01em; margin:0 0 10px; max-width:660px; }
+  .situation { color:var(--ink-60); margin:0 0 34px; max-width:640px; }
+
+  .money { display:grid; grid-template-columns:1.6fr 1fr; border:1.5px solid var(--ink); margin-bottom:2px; }
+  @media (max-width:680px){ .money { grid-template-columns:1fr; } }
+  .money-main { padding:26px 30px 24px; border-right:1.5px solid var(--ink); }
+  @media (max-width:680px){ .money-main { border-right:none; border-bottom:1.5px solid var(--ink); } }
+  .money-label { font:500 11px/1 var(--mono); letter-spacing:.12em; color:var(--petrol); text-transform:uppercase; }
+  .money-value { font-weight:900; font-stretch:105%; font-size:clamp(30px,4.6vw,42px); letter-spacing:-.03em; line-height:1.05; margin:10px 0 6px; }
+  .money-sub { color:var(--ink-60); font-size:13.5px; }
+  .money-side { display:flex; flex-direction:column; }
+  .mini { flex:1; padding:16px 22px 14px; }
+  .mini + .mini { border-top:1px solid var(--line); }
+  .mini b { display:block; font-weight:800; font-size:21px; letter-spacing:-.02em; }
+  .mini span { font-size:12.5px; color:var(--ink-60); }
+
+  .gauge { border:1.5px solid var(--ink); border-top:none; padding:20px 30px 18px; margin-bottom:36px; background:var(--panel); }
+  .gauge-title { font:500 11px/1 var(--mono); letter-spacing:.12em; color:var(--ink-60); text-transform:uppercase; margin-bottom:12px; }
+  .bar { display:flex; height:30px; gap:2px; }
+  .bar > div { display:flex; align-items:center; padding:0 12px; font-size:12px; }
+  .bar .active { background:#CBD8D3; color:var(--ink); flex:50; min-width:110px; }
+  .bar .cold { background:var(--petrol); color:#fff; flex:50; min-width:170px; font-weight:600; }
+  .gauge-note { font-size:12.5px; color:var(--ink-60); margin-top:10px; }
+  .gauge-note b { color:var(--ink); font-weight:600; }
+
+  h2 { font:500 11px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-60); margin:34px 0 14px; }
+  .hebel { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:680px){ .hebel { grid-template-columns:1fr; } }
+  .h-card { position:relative; border:1px solid var(--line); background:var(--paper); padding:38px 16px 16px; }
+  .h-tab { position:absolute; top:0; left:0; background:var(--petrol-tint); color:var(--petrol-deep);
+           font:500 10px/1 var(--mono); letter-spacing:.1em; padding:7px 20px 7px 12px;
+           clip-path:polygon(0 100%, 0 4px, 4px 0, calc(100% - 12px) 0, 100% 100%); }
+  .h-card b { display:block; font-weight:700; font-size:14.5px; letter-spacing:-.01em; margin-bottom:5px; }
+  .h-card p { margin:0; font-size:13px; line-height:1.55; color:var(--ink-60); }
+
+  .steps { border-left:1.5px solid var(--ink); padding-left:0; margin:0; list-style:none; counter-reset:s; }
+  .steps li { counter-increment:s; padding:8px 0 8px 54px; position:relative; max-width:620px; }
+  .steps li::before { content:counter(s,decimal-leading-zero); position:absolute; left:16px; top:10px;
+                      font:500 12px/1.4 var(--mono); color:var(--petrol); }
+
+  .next { margin-top:36px; background:var(--ink); color:#EAF2EF; padding:22px 28px; font-size:15px; line-height:1.55; }
+  .next b { color:#fff; font-weight:700; }
+  .next .mono { font:400 11px/1 var(--mono); letter-spacing:.12em; color:#9DB8B0; display:block; margin-bottom:8px; text-transform:uppercase; }
+
+  .foot { margin-top:18px; color:var(--ink-35); font:400 10.5px/1.6 var(--mono); text-transform:uppercase; }
+  @media print { .sheet { padding:0; } body { background:#fff; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="tab">AKTE S1-20260711 · SIGNAL IDUNA GRUPPE</div>
+  <div class="head">
+    <h1>S/4-Datenaltlast-Check</h1>
+    <div class="meta">VORBEREITET FÜR <b>SIGNAL IDUNA GRUPPE</b> · STAND 2026-07-11 · LESEZEIT 2 MIN · MODELLRECHNUNG, ANNAHMEN IM FUSSTEIL</div>
+  </div>
+
+  <p class="insight">Bei SIGNAL IDUNA entscheidet die Trennung von aktiv genutzten Versicherungs-, Schaden- und Finanzdaten von gewachsenen Altbeständen direkt darüber, wie schlank und steuerbar Ihr S/4-Zielbild wird.</p>
+  <p class="situation">Bei SIGNAL IDUNA laufen die Weiterentwicklung des SAP Application Managements im Finanzumfeld und digitale Transformationsprojekte parallel und mit klarer fachlicher Verankerung. In dieser Konstellation wird die Datenfrage früh relevant, weil gewachsene Bestände aus Vertragsverwaltung, Schadenbearbeitung und kaufmännischen Prozessen die S/4-Ausgestaltung, Testaufwände und spätere Betriebsführung spürbar prägen.</p>
+
+  <div class="money">
+    <div class="money-main">
+      <div class="money-label">Einsparpotenzial über 3 Jahre</div>
+      <div class="money-value">190.000 € bis 1.260.000 €</div>
+      <div class="money-sub">HANA-Sizing, Infrastruktur und Betrieb, wenn Altbestand vor der Migration archiviert wird</div>
+    </div>
+    <div class="money-side">
+      <div class="mini"><b>3,2 TB bis 12 TB</b><span>typischerweise archivierbarer Datenbestand</span></div>
+      <div class="mini"><b>20 bis 40 %</b><span>weniger Belegvolumen im Migrationsscope</span></div>
+    </div>
+  </div>
+
+  <div class="gauge">
+    <div class="gauge-title">Typischer ECC-Datenbestand · über 10.000 Mitarbeitende</div>
+    <div class="bar">
+      <div class="active">aktiv genutzt</div>
+      <div class="cold">40 bis 60 % archivierbar</div>
+    </div>
+    <div class="gauge-note">ECC-Datenbank 8 TB bis 20 TB angenommen. <b>Ihre realen Werte liefert eine DB02-Auswertung in unter einer Stunde.</b></div>
+  </div>
+
+  <h2>Wo das Potenzial konkret liegt</h2>
+  <div class="hebel">
+    <div class="h-card"><div class="h-tab">HEBEL 01</div><b>Bestands- und Vertragsakten trennen</b><p>Historische Vertragsunterlagen, Policen, Nachträge und Korrespondenzen müssen für Fachbereiche verfügbar bleiben, gehören aber nur selektiv in die operative S/4-Nutzung. Eine saubere Zuordnung von aktiven Bestandsdaten zu revisionsrelevanten Altakten entlastet Migration und Folgeprozesse.</p></div><div class="h-card"><div class="h-tab">HEBEL 02</div><b>Schaden- und Leistungsdokumente ordnen</b><p>Schadenakten, Leistungsbelege, Gutachten, Zahlungsnachweise und fallbezogene Kommunikation erzeugen über Jahre hohe Datenlasten. Für S/4 ist entscheidend, welche schadenbezogenen Beleg- und Referenzdaten operativ benötigt werden und was in ein angebundenes Altarchiv gehört.</p></div><div class="h-card"><div class="h-tab">HEBEL 03</div><b>FI-Belege und Abschlussdaten fokussieren</b><p>Im SAP-Finanzumfeld wachsen Hauptbuch-, Debitoren-, Kreditoren-, Zahlungs- und Abstimmbelege kontinuierlich an. Wenn operative Perioden, offene Posten und Abschlussnachweise klar abgegrenzt sind, bleibt das Zielsystem beherrschbar und auswertbar.</p></div>
+  </div>
+
+  <h2>In zwei Wochen intern prüfbar</h2>
+  <ol class="steps"><li>Größte Tabellen und Wachstum in DB02 je SAP-System auswerten.</li><li>Belegvolumen je FI-Modul in SE16H nach Geschäftsjahren verdichten.</li><li>Altsysteme und Archive mit Aufbewahrungsfristen und Schnittstellen inventarisieren.</li></ol>
+
+  <div class="next">
+    <span class="mono">Nächster Schritt</span>
+    <b>Antworten Sie kurz auf unsere Mail.</b> Wir übertragen diese Modellrechnung in 30 Minuten auf Ihre reale Systemlandschaft, auf Basis Ihrer eigenen DB02-Zahlen, ohne Verpflichtung.
+  </div>
+
+  <div class="foot">
+    MODELLRECHNUNG · Großer Versicherungskonzern mit bundesweiter Organisation (über 10.000 Mitarbeitende) · HANA-GESAMTKOSTEN 20.000 € BIS 35.000 € PRO TB/JAHR INKL. BETRIEB UND AUSFALLSICHERHEIT · ARCHIVIERBARER ANTEIL 40 BIS 60 % DES ALTBESTANDS · ERSETZT KEINE ANALYSE IHRER KONKRETEN SYSTEMLANDSCHAFT · ARCHIVOX REFERENZIMPLEMENTIERUNG, CASE STUDY
+  </div>
+</div>
+</body>
+</html>
