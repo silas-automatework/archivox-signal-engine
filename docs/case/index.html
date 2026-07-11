@@ -171,6 +171,7 @@
   <a href="#proof">04 Proof</a>
   <a href="#blueprint">05 Blueprint</a>
   <a href="#plan">06 Plan</a>
+  <a href="#qa">07 Q&amp;A</a>
 </div></nav>
 
 <div class="wrap hero">
@@ -369,9 +370,41 @@
       <div class="ph"><div class="card-tab">PHASE 4 · MO 6</div><b>Industrialize</b><p>Runbooks, enablement, handover. Roadmap: partner signals, DSAG events, verticals.</p><div class="exit">EXIT: engine runs on &lt;0.5 FTE ops</div></div>
     </div>
 
-    <div class="next">
-      <span class="mono">Why this maps to SalesPlaybook</span>
-      <b>"Generate qualified pipeline with AI &amp; process, not people."</b> SalesPlaybook's own sentence is this engine's spec: message-based, zero added headcount, HubSpot as system of engagement, a human gate wherever trust is at stake. Every engagement leaves reusable parts behind: watchers, the evidence contract, routing patterns, templates.
+  </div>
+</section>
+
+<section id="qa">
+  <div class="wrap">
+    <div class="eyebrow">07 · The Questions from the Brief</div>
+    <h2>Fit, track record, and the honest parts</h2>
+
+    <div class="duo" style="margin-top:8px">
+      <div class="card tabbed"><div class="card-tab">WHO BENEFITS · WHO DOESN'T</div>
+        <ul class="tight">
+          <li><strong>Strongest fit:</strong> high ACV, finite definable TAM, event-driven purchases (ERP, compliance, leadership change), displacement sales where "why now" beats "what", research-bottlenecked SDR teams. ArchivoX is close to the archetype.</li>
+          <li><strong>Weak fit:</strong> low-ACV velocity motions (volume math wins there), tender-driven public sector, new categories with no detectable triggers, TAMs under a few hundred accounts (human ABM covers them), and any team too slow to work a hot queue: signals decay in days.</li>
+        </ul>
+      </div>
+      <div class="card tabbed"><div class="card-tab">BUILT BEFORE · WHAT WORKED, WHAT WAS HARD</div>
+        <ul class="tight">
+          <li><strong>Lead universe + evidence-grounded cold email</strong> (own GTM stack): Postgres canonical store (~2,400 resolved leads), suppression, AI first lines strictly grounded in scraped evidence, Instantly delivery, HubSpot sync, 38 documented workflows. <strong>Worked:</strong> the evidence contract lifted reply quality and killed hallucinated personalization. <strong>Hardest:</strong> entity resolution across sources without silent false merges; solved with match keys, confidence thresholds and a review queue.</li>
+          <li><strong>LinkedIn / Sales Navigator assist extension</strong> (self-built): captures profile and account context, proposes next steps via hotkeys, feeds enrichment and DM drafts. <strong>Worked:</strong> ~3x throughput per hour while every send stayed a human decision. <strong>Hardest:</strong> drawing the automation boundary; full automation was easy and wrong. Tier A in this engine draws the same line.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="card tabbed"><div class="card-tab">SUPERPOWER · FIRST 3 MONTHS</div>
+        <ul class="tight">
+          <li><strong>End-to-end system ownership at AI-native speed:</strong> GTM logic, data model, enrichment, CRM integration, production hosting and the AI layer in one person, shipping working v1s in days with coding agents as the daily mode. This case study's engine is itself the sample.</li>
+          <li><strong>At SalesPlaybook:</strong> 2 to 3 client engines shipped to production in the first 3 months, and everything reusable extracted into an internal library (watchers, evidence-contract prompts, routing patterns, HubSpot modules) so each next engagement starts at 60%. Live prototyping in client conversations turns pitches into demos.</li>
+        </ul>
+      </div>
+      <div class="card tabbed"><div class="card-tab">KRYPTONITE</div>
+        <ul class="tight">
+          <li>My default is building the robust version before the scrappy one: data contracts and edge cases before a stakeholder has seen v1. It comes from running production systems solo, and it is the wrong instinct in week one of a client engagement.</li>
+          <li><strong>What helps:</strong> explicit MVP scope, timeboxes, and a culture where showing unfinished work early is expected. A manager who insists on "demo on Friday" gets my best output.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
