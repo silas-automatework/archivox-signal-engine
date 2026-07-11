@@ -145,10 +145,13 @@
   .linkcard .mono { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--petrol); }
   .linkcard b { display:block; font-size:15.5px; margin:6px 0 4px; }
   .linkcard span { font-size:12.5px; color:var(--ink-60); }
-  .email-demo { border:1px solid var(--line); background:var(--panel); padding:18px 22px; margin-top:24px; max-width:640px; font-size:14px; }
+  .email-demo { border:1px solid var(--line); background:var(--panel); padding:18px 22px; font-size:13.5px; }
   .email-demo .subj { font-weight:700; margin-bottom:10px; }
   .email-demo .from { font:400 10.5px/1.6 var(--mono); color:var(--ink-60); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:8px; }
+  .email-demo .from b { color:var(--petrol); font-weight:600; }
   .email-demo p { margin:0 0 10px; }
+  .email-demo .slot { border-left:3px solid var(--petrol); padding:2px 0 2px 12px; }
+  .slot-tag { display:block; font:500 9.5px/1 var(--mono); letter-spacing:.1em; color:var(--petrol); text-transform:uppercase; margin-bottom:4px; }
 
   .next { background:var(--ink); color:#EAF2EF; padding:22px 28px; margin-top:36px; }
   .next b { color:#fff; }
@@ -294,16 +297,30 @@
       </div>
     </div>
 
-    <div class="email-demo">
-      <div class="from">DRAFT · TIER A · TEMPLATE + EVIDENCE SLOTS · VARIANT: QUESTION/OWNERSHIP</div>
-      <div class="subj">Datenaltlast vor dem S/4-Cutover bei QIAGEN</div>
-      <p>Hallo Herr H.,</p>
-      <p>welches Team verantwortet im QIAbase-Programm bei Ihnen die Entscheidung zu Altdaten und alten Dokumenten?</p>
-      <p>Bei Biotechnologieunternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.</p>
-      <p>Wir haben für QIAGEN eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.</p>
-      <p style="margin:0">Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.</p>
+    <div class="duo" style="margin-top:26px">
+      <div class="email-demo">
+        <div class="from">DRAFT · TIER A · <b>VARIANT A: QUESTION OPENER</b></div>
+        <div class="subj">Datenaltlast vor dem S/4-Cutover bei QIAGEN</div>
+        <p>Hallo Herr H.,</p>
+        <p class="slot"><span class="slot-tag">The one variable slot</span>welches Team verantwortet im QIAbase-Programm bei Ihnen die Entscheidung zu Altdaten und alten Dokumenten?</p>
+        <p>Bei Biotechnologieunternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.</p>
+        <p>Wir haben für QIAGEN eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.</p>
+        <p style="margin:0">Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.</p>
+      </div>
+      <div class="email-demo">
+        <div class="from">DRAFT · TIER A · <b>VARIANT B: STATEMENT OPENER</b></div>
+        <div class="subj">Datenaltlast vor dem S/4-Cutover bei BWB</div>
+        <p>Hallo Herr S.,</p>
+        <p class="slot"><span class="slot-tag">The one variable slot</span>im Stabsprojekt SAP S/4HANA beeinflussen lang aufbewahrte Netz-, Anlagen- und Vorgangsunterlagen die Infrastrukturgröße, wenn ECC-Bestand und Archiv nicht getrennt bewertet werden.</p>
+        <p>Bei Wasser- und Abwasserbetrieben liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.</p>
+        <p>Wir haben für BWB eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.</p>
+        <p style="margin:0">Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.</p>
+      </div>
     </div>
-    <p class="muted" style="font-size:13px;max-width:640px">The offered one-pager exists: <a href="https://silas-automatework.github.io/archivox-signal-engine/magnets/qiagen.html">the engine generates it per account</a>, savings ranges computed by a benchmark model in code. The LLM writes prose; the numbers come from arithmetic.</p>
+    <ul class="tight" style="max-width:760px">
+      <li><strong>Same reviewed template, one variable slot.</strong> Variant A opens with a peer question (here: to QIAGEN's digital-solutions VP), variant B with a concrete observation (here: to the S/4 project lead at Berlin's water utility). Signals alternate 50/50 by signal id; <strong>reply rates decide</strong>, exported as <span class="mono" style="font-size:12px">opener_variant</span>.</li>
+      <li>The offered one-pager exists: <a href="https://silas-automatework.github.io/archivox-signal-engine/magnets/qiagen.html">the engine generates it per account</a>, savings ranges computed by a benchmark model in code. The LLM writes prose; the numbers come from arithmetic.</li>
+    </ul>
 
     <div class="links">
       <a class="linkcard" href="https://github.com/silas-automatework/archivox-signal-engine">

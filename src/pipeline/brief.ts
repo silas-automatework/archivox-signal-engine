@@ -104,9 +104,10 @@ Brief fields in English. The outreach email itself is a FIXED template; you only
 fill three German slots (email_slots):
 - company_short: how an SDR would naturally shorten the company name in German
   ("Papierfabrik Palm GmbH & Co. KG" -> "Palm").
-- company_category_de: dative plural category for the sentence "Bei {category} in
-  dieser Phase geht es oft darum, ..." (e.g. "Papierherstellern",
-  "Automobilzulieferern", "kommunalen Verkehrsbetrieben"). Lowercase unless a noun.
+- company_category_de: dative plural category that fits mid-sentence after "Bei"
+  (e.g. "Papierherstellern", "Automobilzulieferern", "kommunalen
+  Verkehrsbetrieben"). Follow German orthography strictly: nouns capitalized,
+  leading adjectives lowercase.
 - opener_de: max 25 words, Sie-Form, naming their concrete program or project.
   The user message tells you the OPENER VARIANT (an A/B test; reply rates decide,
   so execute the assigned variant exactly):
