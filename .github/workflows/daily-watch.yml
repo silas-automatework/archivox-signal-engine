@@ -1,19 +1,24 @@
 name: Daily Signal Watch
 
 # The engine runs as a monitor: every morning it watches the German job market
-# for S1 (ERP/S4 transformation) signals, classifies, briefs, generates the
-# lead magnets and commits the day's artifacts. The commit history of runs/
-# is the proof that this is a running system, not a screenshot.
+# for S1 (ERP/S4 transformation) signals, classifies, briefs, finds people,
+# generates the lead magnets and commits the day's artifacts. The commit
+# history of runs/ is the proof that this is a running system.
 #
-# Stateless by design in CI: each run starts from a fresh database with a
-# 2-day lookback window (dedupe works within the run; production uses a
-# persistent Postgres, see docs/decisions.md). Committed artifacts are
-# person-redacted (REDACT_PEOPLE=1).
+# State persists between runs via the Actions cache (private storage), so the
+# database accumulates day over day: cross-day dedupe works and the cockpit on
+# GitHub Pages grows cumulatively. Committed artifacts stay person-redacted
+# (REDACT_PEOPLE=1); full person data lives only in the private cache and in
+# the CRM. If the cache ever expires, the engine rebuilds from a fresh window.
 
 on:
   schedule:
     - cron: "0 4 * * *" # 06:00 CET
   workflow_dispatch:
+    inputs:
+      days:
+        description: "Lookback window in days (actor accepts 1/3/7)"
+        default: "3"
 
 concurrency:
   group: daily-watch
@@ -29,6 +34,7 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       EXA_AI_API_KEY: ${{ secrets.EXA_AI_API_KEY }}
       REDACT_PEOPLE: "1"
+      DAYS: ${{ github.event.inputs.days || '3' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,30 +42,42 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Watch job boards (3-day window)
-        run: npx tsx src/cli.ts watch --days 3 --max-items 25
+      - name: Restore engine state
+        uses: actions/cache/restore@v4
+        with:
+          path: data/engine.sqlite
+          key: engine-db-${{ github.run_id }}
+          restore-keys: engine-db-
+      - name: Watch job boards
+        run: npx tsx src/cli.ts watch --days "$DAYS" --max-items 25
       - name: Classify signals
         run: npx tsx src/cli.ts classify --max 120
-      - name: Generate briefs (top signals)
-        run: npx tsx src/cli.ts brief --max 15
+      - name: Generate briefs
+        run: npx tsx src/cli.ts brief --max 25
       - name: Generate lead magnets
-        run: npx tsx src/cli.ts magnet --max 15
+        run: npx tsx src/cli.ts magnet --max 25
+      - name: Discover people
+        run: npx tsx src/cli.ts people --max 15
       - name: Export signals (json + csv)
         run: npx tsx src/cli.ts export
-      # The curated showcase (showcase/, docs/index.html) is never touched by CI;
-      # the daily fresh snapshot publishes to docs/daily/.
-      - name: Render cockpit (repo + GitHub Pages daily snapshot)
+      - name: Render cumulative cockpit for GitHub Pages
         run: |
           npx tsx src/cli.ts cockpit
-          npx tsx src/cli.ts cockpit --out docs/daily/index.html
+          npx tsx src/cli.ts cockpit --out docs/index.html
           DAY=$(date -u +%F)
-          mkdir -p docs/daily/runs
-          rm -rf docs/daily/runs/*
-          cp -r "runs/$DAY" "docs/daily/runs/$DAY"
+          mkdir -p docs/runs
+          rm -rf "docs/runs/$DAY"
+          cp -r "runs/$DAY" "docs/runs/$DAY"
+      - name: Save engine state
+        uses: actions/cache/save@v4
+        with:
+          path: data/engine.sqlite
+          key: engine-db-${{ github.run_id }}
       - name: Commit the day's artifacts
         run: |
           git config user.name "archivox-signal-engine"
           git config user.email "actions@users.noreply.github.com"
+          git pull --rebase
           git add runs/ docs/
           git diff --cached --quiet && echo "no changes" && exit 0
           git commit -m "Daily watch: $(date -u +%F)"
