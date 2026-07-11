@@ -73,7 +73,7 @@ QIAGEN appears to be a life sciences end user and the postings explicitly mentio
 
 ## Rottendorf Pharma GmbH
 
-Strength 1.00 · Confidence 0.96 · Industry: pharmaceuticals · Postings: 6
+Strength 1.00 · Confidence 0.96 · Industry: pharmaceuticals · Postings: 7
 
 > "nach dem SAP S/4HANA Go-Live"
 
@@ -149,7 +149,7 @@ VHV Gruppe appears to be an end-user insurer, and the posting explicitly mention
 
 ## SIGNAL IDUNA Gruppe
 
-Strength 0.95 · Confidence 0.90 · Industry: insurance · Postings: 5
+Strength 0.95 · Confidence 0.90 · Industry: insurance · Postings: 6
 
 > "S/4HANA Transformation"
 
@@ -232,7 +232,7 @@ Getinge appears to be an operating company with a global SAP program and SAP lan
 
 ## Hans Hundegger AG
 
-Strength 0.91 · Confidence 0.91 · Industry: machinery manufacturing · Postings: 1
+Strength 0.91 · Confidence 0.91 · Industry: machinery manufacturing · Postings: 2
 
 > "Aktive Mitwirkung bei der Umstellung auf SAP S/4HANA Public Cloud"
 
@@ -292,11 +292,11 @@ Interzero appears to be an operating business, and the posting explicitly shows 
 
 ## Filtered out (no outreach)
 
-- **end_user** (58): AES Aircraft Elektro/Elektronik System GmbH, ALDI Einkauf SE & Co. oHG, bautec Energiemanagement GmbH, Beckhoff Automation GmbH & Co. KG, BizLink Industry Germany GmbH, Börsenmedien AG, British American Tobacco (Germany) GmbH, CADENAS GmbH, Dr. August Oetker Nahrungsmittel KG, E.ON Digital Technology GmbH, ELANTAS GmbH, Elektrizitätswerk Mittelbaden AG & Co.KG, Henkell & Co. Sektkellerei KG, ifm-Unternehmensgruppe, Isar Aerospace SE, KNDS, Konica Minolta Business Solutions Deutschland GmbH, Lekkerland SE (Ein Unternehmen der REWE Group), MANN+HUMMEL GmbH, OLEDWorks GmbH, PMB International GmbH, POSITEC Germany GmbH, RICO GmbH & Co. KG, seca GmbH & Co. KG, SimonsVoss Technologies GmbH, SÜMO eG, TEKA - Maschinenbau GmbH, VINCORION Advanced Systems GmbH, WCG Wärme Contracting GmbH, ZWILLING J.A. Henckels Europa GmbH, ADAC, AL-KO THERM GMBH, BMS Corporate Solutions GmbH, Fliegl Agro-Center GmbH, FUCHS SE, HDI AG, HOLBORN Europa Raffinerie GmbH, Mediengruppe Pressedruck, MLL Münchner Leukämielabor GmbH, RATIONAL Technical Services GmbH, Rhenus Group, SILAG Handel GmbH, VPV Versicherungen, Würth IT GmbH, 3B Scientific GmbH, 50Hertz Transmission GmbH, Basalt-Actien-Gesellschaft, BEW Berliner Energie und Wärme GmbH, Christoph Kroschke GmbH, DACHSER SE, Interhyp Gruppe, KRONE Business Center DigITal GmbH & Co.KG, Murrplastik Systemtechnik GmbH, Ritter Sport - Alfred Ritter GmbH & Co. KG, Schreiner Group GmbH & Co. KG, Schwartauer Werke GmbH & Co. KG, Unternehmensgruppe Theo Müller GmbH & Co. KG, WESTFLEISCH SCE mbH
-- **it_consultancy** (21): adesso business consulting AG, Bertrandt AG, BExO GmbH, EY Deutschland, Ferendin Engineering Gmbh, Finatycs GmbH, Fusion Consulting (Germany) GmbH, KPMG AG Wirtschaftsprüfungsgesellschaft, MulTra - Multiplex Transfer GmbH, OnStream Consulting GmbH, Scheer Group, Tieto Germany GmbH, 4U-Consult GmbH & Co. KG, adesso SE, Clatum Consulting Gruppe, :em engineering methods AG, it-motive AG, PTA GmbH, xpertnova GmbH, NTT DATA Business Solutions AG, OEDIV Oetker Daten- und Informationsverarbeitung KG
+- **end_user** (60): AES Aircraft Elektro/Elektronik System GmbH, ALDI Einkauf SE & Co. oHG, bautec Energiemanagement GmbH, Beckhoff Automation GmbH & Co. KG, BizLink Industry Germany GmbH, Börsenmedien AG, British American Tobacco (Germany) GmbH, CADENAS GmbH, Dr. August Oetker Nahrungsmittel KG, E.ON Digital Technology GmbH, ELANTAS GmbH, Elektrizitätswerk Mittelbaden AG & Co.KG, Henkell & Co. Sektkellerei KG, ifm-Unternehmensgruppe, Isar Aerospace SE, KNDS, Konica Minolta Business Solutions Deutschland GmbH, Lekkerland SE (Ein Unternehmen der REWE Group), MANN+HUMMEL GmbH, OLEDWorks GmbH, PMB International GmbH, POSITEC Germany GmbH, RICO GmbH & Co. KG, seca GmbH & Co. KG, SimonsVoss Technologies GmbH, SÜMO eG, TEKA - Maschinenbau GmbH, VINCORION Advanced Systems GmbH, WCG Wärme Contracting GmbH, ZWILLING J.A. Henckels Europa GmbH, ADAC, AL-KO THERM GMBH, BMS Corporate Solutions GmbH, Fliegl Agro-Center GmbH, FUCHS SE, HDI AG, HOLBORN Europa Raffinerie GmbH, Mediengruppe Pressedruck, MLL Münchner Leukämielabor GmbH, RATIONAL Technical Services GmbH, Rhenus Group, SILAG Handel GmbH, VPV Versicherungen, Würth IT GmbH, 3B Scientific GmbH, 50Hertz Transmission GmbH, Basalt-Actien-Gesellschaft, BEW Berliner Energie und Wärme GmbH, Christoph Kroschke GmbH, DACHSER SE, Interhyp Gruppe, KRONE Business Center DigITal GmbH & Co.KG, Murrplastik Systemtechnik GmbH, Ritter Sport - Alfred Ritter GmbH & Co. KG, Schreiner Group GmbH & Co. KG, Schwartauer Werke GmbH & Co. KG, Unternehmensgruppe Theo Müller GmbH & Co. KG, WESTFLEISCH SCE mbH, thyssenkrupp Gerlach GmbH, UMMD changeMITdigital GmbH
+- **it_consultancy** (22): adesso business consulting AG, Bertrandt AG, BExO GmbH, EY Deutschland, Ferendin Engineering Gmbh, Finatycs GmbH, Fusion Consulting (Germany) GmbH, KPMG AG Wirtschaftsprüfungsgesellschaft, MulTra - Multiplex Transfer GmbH, OnStream Consulting GmbH, Scheer Group, Tieto Germany GmbH, 4U-Consult GmbH & Co. KG, adesso SE, Clatum Consulting Gruppe, :em engineering methods AG, it-motive AG, PTA GmbH, xpertnova GmbH, NTT DATA Business Solutions AG, OEDIV Oetker Daten- und Informationsverarbeitung KG, Rheinmetall IT Solutions GmbH
 - **public_research** (8): BGHM Berufsgenossenschaft Holz und Metall, Max-Planck-Gesellschaft zur Förderung der Wissenschaften e. V., Stadt Rüsselsheim am Main, Landkreis Ravensburg, CTC gGmbH – Center for the Transformation of Chemistry, Global Legal Entity Identifier Foundation (GLEIF), Technische Universität Dortmund, Universität Hamburg
 - **software_vendor** (7): ak tronic Software & Services GmbH, SAP SE, adesso insurance solutions GmbH, Haufe Group SE, STREIT Software GmbH, Marvya GmbH, Simba Computer Systeme GmbH
 - **staffing_recruiting** (6): Dr. Maier + Partner Executive Search GmbH, duerenhoff GmbH, FERCHAU – Connecting People and Technologies, Kempers Recruiting & Consulting GmbH, Amadeus Fire AG, HAPEKO Deutschland GmbH
 
 ---
-Classification: 200 LLM calls, est. cost $0.918. Every quote above is copied verbatim from captured evidence (evidence contract).
+Classification: 212 LLM calls, est. cost $1.009. Every quote above is copied verbatim from captured evidence (evidence contract).
