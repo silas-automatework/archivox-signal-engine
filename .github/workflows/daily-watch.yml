@@ -33,6 +33,7 @@ jobs:
       APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       EXA_AI_API_KEY: ${{ secrets.EXA_AI_API_KEY }}
+      HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
       REDACT_PEOPLE: "1"
       DAYS: ${{ github.event.inputs.days || '3' }}
     steps:
@@ -58,6 +59,8 @@ jobs:
         run: npx tsx src/cli.ts magnet --max 25
       - name: Discover people
         run: npx tsx src/cli.ts people --max 15
+      - name: Route new signals into HubSpot (drafts + tasks, never sends)
+        run: npx tsx src/cli.ts route --max 30
       - name: Export signals (json + csv)
         run: npx tsx src/cli.ts export
       - name: Render cumulative cockpit for GitHub Pages
