@@ -1,0 +1,181 @@
+company,industry,signal_type,strength,confidence,postings_count,detected_at,signal_quote,evidence_url_1,evidence_url_2,why_now,angle_1,angle_2,angle_3,contact_1_name,contact_1_role,contact_1_linkedin,contact_2_name,contact_2_role,contact_2_linkedin,email_subject,email_body
+Alfred Kärcher SE & Co. KG,industrial equipment manufacturing,S1_erp_migration,1.00,0.95,2,2026-07-11T06:09:47.274Z,"Im Rahmen unseres SAP S/4HANA Transformationsprojekts identifizierst du komplexe Problemstellungen und entwickelst nachhaltige, praktikable Lösungskonzepte, die sich eng an den SAP Best Practices orientieren.",https://www.stepstone.de/jobs--Senior-SAP-Platform-Architectin-m-w-d-Region-Stuttgart-Winnenden-Alfred-Karcher-SE-Co-KG--13747682-inline.html?rltr=20_20_25_seorl_m_1_0_0_0_0_0,https://www.stepstone.de/jobs--Senior-SAP-Platform-Architectin-m-w-d-Region-Stuttgart-Winnenden-Alfred-Karcher-SE-Co-KG--13747682-inline.html?rltr=18_18_25_seorl_m_1_0_0_0_0_0,"This is a timely outreach moment because the evidence shows an active S/4HANA transformation, not a vague future plan. In S/4 programs, companies typically have to decide how much ECC history, legacy documents, and archive content must remain directly accessible versus what should be separated before migration. That decision often affects HANA sizing, migration scope, and the later effort to retire legacy environments. Where hybrid SAP landscapes are involved, the archive and legacy-data operating model also tends to become an architectural topic rather than just a storage topic.",Hybrid SAP landscape standards create an archive operating-model decision,Platform-architecture ownership suggests legacy data may sit with the architecture team,Complex SAP subprojects imply a need to avoid hidden legacy scope inside work packages,,,,,,,Datenaltlast vor dem S/4-Cutover bei Kärcher,"Hallo,
+
+im SAP S/4HANA-Transformationsprojekt: wie groß ist der Anteil des ECC-Bestands, den Ihr Team im Alltag tatsächlich noch braucht?
+
+Bei Maschinenbauern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Kärcher eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Hamburger Hochbahn AG,public transport,S1_erp_migration,1.00,0.96,4,2026-07-11T06:09:58.945Z,Du wirkst aktiv an der Einführung von SAP S/4HANA mit und arbeitest in einem bereichsübergreifenden Team an diesem Großprojekt.,https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-FI-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14195696-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_1_0,https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-MM-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14192263-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0,"When companies are in active S/4HANA implementation, decisions around what transactional history, accounting documents, and purchasing records remain in the new core versus move to an archive often get locked in implicitly by process design and sizing work. In public transport environments, FI and MM typically touch high-volume, long-retention document sets, so clarifying legacy-data scope early can reduce HANA footprint, avoid carrying unnecessary history into S/4, and create a cleaner path to decommissioning older ERP components later.",FI subproject is shaping document scope now,MM implementation raises purchasing-document legacy choices,Cross-functional project creates a coordination issue between FI and MM,,,,,,,Datenaltlast vor dem S/4-Cutover bei Hochbahn,"Hallo,
+
+bei Ihrer SAP S/4HANA-Einführung laufen FI und MM parallel, während der Zuschnitt von Altdaten und Belegen den HANA-Umfang früh mitfestlegt.
+
+Bei Verkehrsbetrieben liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Hochbahn eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+seca GmbH & Co. KG,medical technology,S1_erp_migration,1.00,0.95,2,2026-07-11T06:10:05.534Z,Dein erster Schwerpunkt liegt auf der Transformation von SAP R/3 zu SAP S/4HANA.,https://www.stepstone.de/jobs--Projektmanager-m-w-d-PMO-Fokus-SAP-S-4HANA-Transformation-Hamburg-seca-GmbH-Co-KG--14185680-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_0_0,https://www.stepstone.de/jobs--Projektmanager-m-w-d-PMO-Fokus-SAP-S-4HANA-Transformation-Hamburg-seca-GmbH-Co-KG--14185680-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0,"This is a timely archiving signal because companies moving from SAP R/3 to SAP S/4HANA typically have to decide early how much legacy data should stay in the new core, what can be archived compliantly, and how old documents will remain accessible after migration. When a PMO role is created to steer a cross-functional S/4 transformation, data scope, retention, and legacy system exit often become program-level decisions rather than a purely technical cleanup task.",PMO-led cross-functional governance,R/3-to-S/4 scope decision point,Internal and external partner setup,,,,,,,Datenaltlast vor dem S/4-Cutover bei seca,"Hallo,
+
+bei Ihrer Transformation von SAP R/3 zu SAP S/4HANA wird der Schnitt zwischen operativen Daten und Altbelegen oft schon durch das Programmsetup festgelegt.
+
+Bei Medizintechnikherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für seca eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+enercity Netz GmbH,utilities,S1_erp_migration,0.99,0.94,2,2026-07-11T06:09:55.866Z,"Im Zuge der Transformation von SAP IS-U zu SAP S/4 Utilities begleitest du die Weiterentwicklung datengetriebener Prozesse bis hin zur Stärkung moderner Reporting- und Analyticsansätze, insbesondere im Umfeld von Power BI, Datasphere und SAC.",https://www.stepstone.de/jobs--Fachgebietsleiter-in-Messdatenmanagement-SAP-Reporting-befristet-bis-31-12-2027-Hannover-enercity-Netz-GmbH--14263498-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0,https://www.stepstone.de/jobs--Fachgebietsleiter-in-Messdatenmanagement-SAP-Reporting-befristet-bis-31-12-2027-Hannover-enercity-Netz-GmbH--14263498-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_0_0,"The posting shows an active SAP IS-U to SAP S/4 Utilities program, with operational accountability for metering, billing/prognosis processes, and reporting running in parallel. In S/4 utility migrations, companies typically have to decide early which legacy operational data and documents stay active, which move to archive, and how historical data will be exposed to reporting without inflating the new HANA footprint. That matters even more when process stability and analytics modernization are both in scope at the same time.",Meter data continuity during IS-U to S/4 Utilities,Reporting modernization could pull legacy data into the new stack,Transformation governance runs through 31.12.2027,,,,,,,Datenaltlast vor dem S/4-Cutover bei enercity Netz,"Hallo,
+
+bei der Transformation von SAP IS-U zu SAP S/4 Utilities laufen Messdaten für Abrechnung und Prognose sowie Altbelege schnell gemeinsam in das neue Reporting-Setup.
+
+Bei Energieversorgern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für enercity Netz eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+AES Aircraft Elektro/Elektronik System GmbH,aerospace electronics,S1_erp_migration,0.98,0.93,2,2026-07-11T06:09:47.273Z,"Für ein strategisch bedeutendes Zukunftsprojekt suchen wir einen ERP-Projektleiter (m/w/d), der die Auswahl und Einführung eines neuen ERP-Systems in den kommenden Jahren verantwortet.",https://www.stepstone.de/jobs--ERP-Projektleiter-m-w-d-Digitale-Transformation-Bremen-AES-Aircraft-Elektro-Elektronik-System-GmbH--14263506-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_1_0,https://www.stepstone.de/jobs--ERP-Projektleiter-m-w-d-Digitale-Transformation-Bremen-AES-Aircraft-Elektro-Elektronik-System-GmbH--14263506-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_1_0,"A company that is selecting and introducing a new ERP system typically has to decide early which historical ERP data and legacy documents must stay operational in the target environment versus what can be archived separately. Those decisions can materially affect target architecture, migration scope, testing effort, and long-term legacy system costs if they are left implicit until late in planning.",ERP selection phase is still open,Multi-year program creates legacy retention risk,Aerospace electronics documentation footprint,,,,,,,Datenaltlast vor dem S/4-Cutover bei AES,"Hallo,
+
+bei Ihrem strategisch bedeutenden Zukunftsprojekt zur Auswahl und Einführung eines neuen ERP-Systems zieht jeder zusätzliche Bestand an Prüf-, Fertigungs- und Einkaufsbelegen direkt die Zielarchitektur mit.
+
+Bei Luftfahrtelektronikherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für AES eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+TKMS GmbH,shipbuilding / defense contractor,S1_erp_migration,0.98,0.98,1,2026-07-11T06:10:06.853Z,"Gesamtverantwortung für Planung, Steuerung und Umsetzung der Migration von SAP ECC zu S/4HANA sowie Koordination von Change-Management, Cut-over- und Go-Live-Aktivitäten",https://www.stepstone.de/jobs--Solution-Architect-Application-Management-m-w-d-Hamburg-Kiel-Emden-Wismar-Bremen-TKMS-GmbH--14196642-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0,,"This is a strong in-program transformation signal. Companies moving from SAP ECC to S/4HANA typically have to decide early which legacy data and documents remain in the new core, what is archived compliantly outside HANA, and how old-system access is handled after go-live. Those decisions often intersect with sizing, cutover scope, and cross-team ownership, especially when architecture, infrastructure, security, and data migration are all being coordinated together.",Cross-functional migration scope suggests legacy-data decisions can get tied to program sequencing,Explicit data-migration tooling focus creates a concrete split between what migrates and what should stay outside S/4,Shipbuilding context points to long-retention technical and project records around the ERP core,,,,,,,Datenaltlast vor dem S/4-Cutover bei TKMS,"Hallo,
+
+bei Ihrer SAP ECC zu S/4HANA-Migration, wann wird die Legacy-Frage bei Ihnen geklärt, vor oder nach dem Sizing?
+
+Bei Schiffbauunternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für TKMS eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Bischof+Klein SE & Co. KG,packaging manufacturer,S1_erp_migration,0.96,0.86,3,2026-07-11T06:09:49.523Z,"Du hast Lust die Weiterentwicklung unserer SAP-Landschaft zu verantworten und somit als wichtige Ansprechperson für die Fachbereiche Planung, Fertigungssteuerung und Instandhaltung zu agieren?",https://www.stepstone.de/jobs--IT-Inhouse-Consultant-m-w-d-SAP-PP-SAP-ePP-DS-und-SAP-MM-Lengerich-Bischof-Klein-SE-Co-KG--14262537-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0,https://www.stepstone.de/jobs--IT-Inhouse-Consultant-m-w-d-SAP-PP-SAP-ePP-DS-und-SAP-MM-Lengerich-Bischof-Klein-SE-Co-KG--14262537-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0,"When companies evolve their SAP landscape while running broader manufacturing transformation programs, legacy data decisions often become time-sensitive. In S/4-era programs generally, teams have to decide which operational history must stay in the new core, what can be archived compliantly, and how old documents remain accessible if legacy applications are later retired. Those choices matter especially where planning, production control, and maintenance teams depend on historical records day to day.",Production planning and maintenance footprint in SAP,Transformation is connected to operations leadership,Global transformation with site changes and production moves,,,,,,,Datenaltlast vor dem S/4-Cutover bei Bischof+Klein,"Hallo,
+
+in Ihrer industriellen Transformation und der Weiterentwicklung der SAP-Landschaft: Welches Team verantwortet bei Ihnen die Entscheidung zu Altdaten und Altbelegen?
+
+Bei verpackungsherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Bischof+Klein eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Wilhelm Brandenburg - ein Unternehmen der REWE GROUP,food manufacturing,S1_erp_migration,0.96,0.96,1,2026-07-11T06:10:08.240Z,Übernahme einer zentralen Rolle bei der Einführung und strategischen Weiterentwicklung der SAP-Analytics-Landschaft im Rahmen einer mehrjährigen Greenfield-Transformation in den Fleisch- und Wurstwerken der REWE Group,https://www.stepstone.de/jobs--Senior-Analytics-Berater-SAP-BDC-inkl-SAC-Datasphere-m-w-d-Frankfurt-am-Main-Wilhelm-Brandenburg-ein-Unternehmen-der-REWE-GROUP--14192179-inline.html?rltr=12_12_25_seorl_m_1_0_0_0_0_0,,"This hiring signal suggests active design work around the future SAP data and reporting landscape. In S/4-related transformations, companies typically need to decide early which ECC-era data must remain operationally accessible, what should move into compliant archives, and how legacy documents will be handled without inflating HANA and analytics footprints.",Greenfield analytics landscape across meat and sausage plants,ECC explicitly named as a source in the future architecture,Datasphere/SAC/BW4 role implies pressure on data scope and performance,,,,,,,Datenaltlast vor dem S/4-Cutover bei Wilhelm Brandenburg,"Hallo,
+
+in Ihrer mehrjährigen Greenfield-Transformation für die Fleisch- und Wurstwerke wird der Schnitt zwischen aktiven SAP-Daten, ECC-Historie und Reporting-Zugriff oft im Architekturdesign festgelegt.
+
+Bei Lebensmittelherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Wilhelm Brandenburg eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Berner Omnichannel Trading Holding SE,retail / omnichannel commerce,S1_erp_migration,0.93,0.93,1,2026-07-11T06:09:49.522Z,die Transformation einer SAP BW HANA Landschaft hin zu einer modernen Databricks Datenplattform,https://www.stepstone.de/jobs--Data-Engineer-Data-Warehouse-w-m-d-Koln-Kunzelsau-Berner-Omnichannel-Trading-Holding-SE--14196098-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_0_0,,"This hiring signal suggests active design work around the future data landscape, not just run operations. In S/4-related transitions, companies typically have to decide in parallel what remains in the operational core, what moves into the new analytics platform, and what should stay accessible as archive or legacy content. Those decisions often affect HANA sizing, migration scope, and later legacy-system retirement.",BW on HANA successor design creates a legacy-data split decision,ECC/S4 data structures are already part of the required skill set,Initial platform setup is happening now,,,,,,,Datenaltlast vor dem S/4-Cutover bei Berner,"Hallo,
+
+bei Ihrer BW-on-HANA-Nachfolge in Databricks wird die Grenze zwischen aktiv benötigter SAP-Historie und Altlast oft schon im Plattform-Setup festgelegt.
+
+Bei Omnichannel-Händlern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Berner eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Hero,consumer goods,S1_erp_migration,0.92,0.92,1,2026-07-11T06:10:00.547Z,Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams.,https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0,,"This is a strong transformation signal because the posting ties business process ownership directly to active global SAP S/4HANA rollout work. In S/4 programs, companies typically have to decide early which legacy transactional data and document history must stay operationally accessible, what can move into compliant archives, and how master data governance interacts with migration scope and HANA sizing.",P2P rollout scope will touch high-volume purchasing history and documents,Master data governance plus migration support suggests a boundary decision between active and legacy data,Global rollout coordination raises consistency questions for legacy access across regions,,,,,,,Datenaltlast vor dem S/4-Cutover bei Hero,"Hallo,
+
+bei Ihren globalen SAP S/4HANA Rollouts, ist die Trennung von Aktivdaten und Archiv bereits festgelegt?
+
+Bei Konsumgüterherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Hero eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Mercedes-Benz AG,automotive,S1_erp_migration,0.91,0.91,1,2026-07-11T06:10:02.934Z,"Wir bei „Digitale Transformation Supply Chain“ optimieren die Supply Chain mit neuen digitalen Lösungen, steuern die Digitalisierungsstrategie für die komplette Logistikkette und entwickeln die IT-Systeme für den Kundenauftragsprozess der Zukunft.",https://www.stepstone.de/jobs--Praktikantin-Digital-Transformation-Supply-Chain-Boblingen-Mercedes-Benz-AG--14198655-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_0_0,,"This is a strong timing signal because companies in active S/4 and broader ERP transformation programs typically have to decide which logistics and order-process data must stay online, which historical documents can move to compliant archives, and how much legacy footprint should remain after the target-process design. Those decisions can materially affect HANA sizing, migration scope, and later legacy decommissioning if they are addressed early enough in the program.",Customer order process scope,End-to-end logistics chain governance,Digital Supply Chain transformation team,,,,,,,Datenaltlast vor dem S/4-Cutover bei Mercedes-Benz,"Hallo,
+
+in Ihrer digitalen Transformation Supply Chain hängt der Zuschnitt der künftigen IT-Systeme für den Kundenauftragsprozess direkt an der Trennung von aktivem Bestand und Altbelegen.
+
+Bei automobilherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Mercedes-Benz eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Otto Group one.O GmbH,retail / e-commerce group,S1_erp_migration,0.91,0.86,2,2026-07-11T06:10:04.286Z,gestaltest du die Architektur unserer Retail Accounting S/4HANA Systemlandschaft aktiv mit,https://www.stepstone.de/jobs--SAP-Solution-Architect-S-4HANA-w-m-d-Hamburg-Otto-Group-one-O-GmbH--13869245-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0,https://www.stepstone.de/jobs--SAP-Solution-Architect-S-4HANA-w-m-d-Hamburg-Otto-Group-one-O-GmbH--13869245-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0,"Companies in an active S/4 program typically have to decide early how much legacy ERP data and historical documents remain in the new HANA footprint versus move into an archive layer. That matters even more when the target landscape is not standalone S/4, but connected with integration platforms, cloud services, and adjacent business systems, because historical access, retention, and decommissioning scope can otherwise stay unresolved until late in architecture sizing.",Retail Accounting history across the new S/4 landscape,Cross-system legacy access in a highly integrated target architecture,SD/MM document history in an accounting-centric S/4 program,,,,,,,Datenaltlast vor dem S/4-Cutover bei Otto Group,"Hallo,
+
+in Ihrer Retail Accounting S/4HANA-Systemlandschaft: Welches Team verantwortet die Entscheidung zu Altdaten und Altbelegen?
+
+Bei Handelsgruppen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Otto Group eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+hagebau IT GmbH,building materials retail cooperative,S1_erp_migration,0.88,0.88,1,2026-07-11T06:09:58.945Z,"Praktische Erfahrung im Umgang mit modernen (Cloud-)Architekturen und einschlägigen Softwaresystemen wie ERP, PIM, SAP oder vergleichbaren Lösungen.",https://www.stepstone.de/jobs--Informatiker-als-Senior-Solution-Architect-m-w-d-ERP-Integration-Soltau-hagebau-IT-GmbH--14252528-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_1_0,,"This hire suggests active work on the target architecture around ERP and integration. In programs that modernize ERP landscapes, companies typically have to decide early how much legacy data and historical documents stay in the productive core versus move into a compliant archive, because that affects scope, interfaces, and later platform costs. That question becomes more important when multiple business systems and many operating sites are involved.","ERP, PIM and SAP architecture convergence","Scale across over 1,500 hagebau locations",Own data center plus modern cloud architectures,,,,,,,Datenaltlast vor dem S/4-Cutover bei hagebau,"Hallo,
+
+in Ihrer ERP- und Integrationsarchitektur bei hagebau: an welchem Punkt wird die Legacy-Frage entschieden, vor oder nach dem Sizing?
+
+Bei Baustoffhändlern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für hagebau eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+Konica Minolta Business Solutions Deutschland GmbH,office technology / IT services,S1_erp_migration,0.86,0.76,3,2026-07-11T06:10:01.807Z,"Du bringst intensive Kenntnisse im Handlungsfeld (ERP/ECM/DMS/ITSM/etc.) mit und hast Erfahrungen im Projektgeschäft, inklusive ITILv3 und PRINCE2.",https://www.stepstone.de/jobs--Consultant-Business-Intelligence-ERP-SAP-m-w-d-bundesweit-Konica-Minolta-Business-Solutions-Deutschland-GmbH--14263167-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_0_0,https://www.stepstone.de/jobs--Consultant-Business-Intelligence-ERP-SAP-m-w-d-bundesweit-Konica-Minolta-Business-Solutions-Deutschland-GmbH--14263167-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0,"When companies are actively building ERP/SAP process ownership, they often have to decide in parallel what stays in the active ERP core versus what can move into compliant archive access. In S/4-related programs, that decision typically affects HANA sizing, migration scope, end-user access to historical documents, and later legacy system shutdown. The signal here is especially relevant because the role spans ERP together with ECM/DMS, which is where archive and old-document decisions often surface.",ERP plus ECM/DMS scope in one role,Process design ownership for ERP-SAP,Training and support responsibility for ERP-SAP users,,,,,,,Datenaltlast vor dem S/4-Cutover bei Konica Minolta,"Hallo,
+
+im ERP-SAP Handlungsfeld: wie groß ist der Anteil des ECC-Altbestands, den Ihr Team im Alltag tatsächlich noch braucht?
+
+Bei IT-Dienstleistern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für Konica Minolta eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
+ifm-Unternehmensgruppe,industrial manufacturing / sensors,S1_erp_migration,0.86,0.86,1,2026-07-11T06:10:00.548Z,"Weiterentwicklung unserer SAP Add-ons mit dem Schwerpunkt im Bereich Fertigung / Manufacturing (GIB Suite für SAP ECC, GIB SCX für S/4 HANA)",https://www.stepstone.de/jobs--Software-Developer-SAP-ABAP-m-w-d-Schwerpunkt-Manufacturing-Siegen-ifm-Unternehmensgruppe--14121711-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_0_0,,"This is a strong ERP transformation signal because the posting references both ECC- and S/4-based manufacturing tooling in the same role. In S/4 programs, companies typically have to decide early which legacy transactional and document-heavy data stays in the live HANA footprint, what moves into compliant archive access, and how much historical manufacturing context users still need day to day. Those choices often affect sizing, migration effort, and the path to later legacy system retirement.",ECC and S/4 manufacturing tools are named in one role,Manufacturing process focus raises historical production-data access questions,SCM simplification can conflict with keeping old data in the operational core,,,,,,,Datenaltlast vor dem S/4-Cutover bei ifm,"Hallo,
+
+bei Ihrer Fertigungslandschaft mit GIB Suite für SAP ECC und GIB SCX für S/4 HANA wird der Schnitt bei Altbelegen oft schon durch die Zielarchitektur vorgeprägt.
+
+Bei Sensorherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.
+
+Wir haben für ifm eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.
+
+Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.
+
+Mit freundlichen Grüßen
+[SDR Name]"
