@@ -71,6 +71,18 @@
   .email { border:1px solid var(--line); background:var(--panel); padding:14px 16px; font-size:13px; line-height:1.6; }
   .email-subject { font-weight:700; margin-bottom:8px; }
   footer { color:var(--ink-35); font:400 10.5px/1.7 var(--mono); letter-spacing:.04em; text-transform:uppercase; margin-top:34px; border-top:1px solid var(--line); padding-top:14px; }
+  .runlog-title { font-weight:800; font-stretch:108%; font-size:20px; letter-spacing:-.01em; margin:40px 0 4px; }
+  .runlog-sub { color:var(--ink-60); font-size:13px; margin:0 0 14px; }
+  .runlog-scroll { overflow-x:auto; }
+  table.runlog { width:100%; border-collapse:collapse; border:1.5px solid var(--ink); background:var(--card); min-width:720px; }
+  table.runlog th { font:500 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60); text-align:left; padding:9px 14px; border-bottom:1.5px solid var(--ink); }
+  table.runlog td { padding:9px 14px; border-bottom:1px solid var(--line); font-size:13px; vertical-align:top; }
+  table.runlog tr:last-child td { border-bottom:none; }
+  .mono-cell { font-family:var(--mono); font-size:12px; white-space:nowrap; }
+  .companies { color:var(--ink-60); font-size:12.5px; }
+  .dim-log { color:var(--ink-35); }
+  .logbar { display:inline-block; width:40px; height:5px; background:var(--gauge-track); margin-right:8px; vertical-align:middle; position:relative; }
+  .logbar::after { content:""; position:absolute; left:0; top:0; bottom:0; width:var(--w); background:var(--petrol); }
 </style>
 </head>
 <body>
@@ -82,10 +94,10 @@
   <p class="claim">Endanwender im Kauffenster, erkannt aus öffentlichen deutschen Quellen. Jede Akte: Beleg, Ansprechpartner, Mail-Entwurf, Give.</p>
 
   <div class="kpis">
-    <div class="kpi"><b>24</b><span>Qualifizierte Signale</span></div>
-    <div class="kpi"><b>24</b><span>Mit SDR-Brief</span></div>
-    <div class="kpi"><b>85</b><span>Personen-Hypothesen</span></div>
-    <div class="kpi"><b>$0.89</b><span>LLM-Kosten gesamt</span></div>
+    <div class="kpi"><b>27</b><span>Qualifizierte Signale</span></div>
+    <div class="kpi"><b>27</b><span>Mit SDR-Brief</span></div>
+    <div class="kpi"><b>92</b><span>Personen-Hypothesen</span></div>
+    <div class="kpi"><b>$1.01</b><span>LLM-Kosten gesamt</span></div>
   </div>
 
   
@@ -179,8 +191,37 @@
     <details class="akte">
       <summary>
         <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
+        <span class="company">Hero</span>
+        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.97 · 5 BELEGE · 1 PERSONEN</span>
+        <span class="industry">food and beverage</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>Companies in the middle of S/4 programs typically have to decide how much ECC-era data and document history must stay operational in the new core versus move to an archive or legacy access model. That choice can affect HANA sizing, migration scope, and later decommissioning effort. In global rollouts, the issue often gets harder because process teams, master data governance, audit needs, and plant or quality documentation all intersect across regions and functions.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>P2P rollout scope across global S/4 program</b> The Global Key User Purchase to Pay role is explicitly meant to &quot;Support and co‑lead global SAP S/4HANA rollout activities&quot;. That makes P2P document history and day-to-day access to older purchasing data a concrete discussion point for the rollout team, not just an IT backend topic.</li><li><b>Governance and audit readiness in plant-facing systems</b> The IT Project Manager - Product &amp; Plant Systems role calls out &quot;documentation completeness, and audit readiness&quot; across R&amp;D, Quality, and Manufacturing domains. For a food and beverage manufacturer, retention and access to quality, manufacturing, and maintenance-related records can become a practical legacy-data design issue during ERP transformation.</li><li><b>Cross-functional footprint beyond finance alone</b> Hero is not only hiring for procurement transformation but also for Product &amp; Plant Systems covering PLM and CMMS. That suggests the S/4-related transformation touches both transactional ERP processes and plant/product documentation landscapes, which can complicate decisions on what historical data stays live versus moves to archive access.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence comes from job postings only; no confirmed timeline, migration phase, or named program beyond global SAP S/4HANA rollouts.</li><li>The postings indicate global scope, so ownership may sit with a central or group-level team rather than locally in Germany.</li><li>No explicit mention of archiving, ECC decommissioning, or current archive setup in the evidence.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>D. K.</strong><span class="c-role">Global SAP Application Expert at Hero Group</span><span class="c-conf">93%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Global Key User Purchase to Pay</a></li><li><a href="https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">Global Key User Purchase to Pay</a></li><li><a href="https://www.stepstone.de/jobs--IT-Projektmanager-in-Product-Plant-Systems-Bad-Schwartau-Hero--14060120-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0" target="_blank" rel="noopener">IT-Projektmanager/in - Product &amp; Plant Systems</a></li></ul>
+            <a class="akte-link" href="magnets/hero.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Hero</div>Hallo D. K.,<br><br>bei Ihren globalen SAP S/4HANA Rollouts: Wie groß ist der Anteil des ECC-Altbestands, den Ihr Team im Alltag tatsächlich noch braucht?<br><br>Bei Lebensmittelherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Hero eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
+        <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
         <span class="company">METRO AG</span>
-        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.90 · 7 BELEGE · 5 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.90 · 14 BELEGE · 5 PERSONEN</span>
         <span class="industry">retail wholesale</span>
       </summary>
       <div class="detail">
@@ -238,7 +279,7 @@
       <summary>
         <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
         <span class="company">Rottendorf Pharma GmbH</span>
-        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.96 · 3 BELEGE · 4 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.96 · 6 BELEGE · 4 PERSONEN</span>
         <span class="industry">pharmaceuticals</span>
       </summary>
       <div class="detail">
@@ -296,7 +337,7 @@
       <summary>
         <span class="gauge" title="Signalstärke 100%"><span style="width:100%"></span></span>
         <span class="company">ZEISS</span>
-        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.95 · 2 BELEGE · 4 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 1.00 · KONF 0.95 · 3 BELEGE · 4 PERSONEN</span>
         <span class="industry">optics and industrial technology</span>
       </summary>
       <div class="detail">
@@ -354,7 +395,7 @@
       <summary>
         <span class="gauge" title="Signalstärke 98%"><span style="width:98%"></span></span>
         <span class="company">Daimler Truck AG</span>
-        <span class="record">S1-20260711 · STÄRKE 0.98 · KONF 0.93 · 3 BELEGE · 4 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 0.98 · KONF 0.93 · 5 BELEGE · 4 PERSONEN</span>
         <span class="industry">commercial vehicles / automotive</span>
       </summary>
       <div class="detail">
@@ -410,9 +451,38 @@
 
     <details class="akte">
       <summary>
+        <span class="gauge" title="Signalstärke 96%"><span style="width:96%"></span></span>
+        <span class="company">VHV Gruppe</span>
+        <span class="record">S1-20260711 · STÄRKE 0.96 · KONF 0.91 · 2 BELEGE · 5 PERSONEN</span>
+        <span class="industry">insurance</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Systembetrieb und Überwachung: Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW)."</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>This signal suggests active SAP platform change around S/4HANA, BW and AWS. In S/4 programs, companies typically need to decide early which historical SAP data and documents stay in the active footprint versus move to compliant archive or legacy access, because that choice affects HANA sizing, migration scope and later decommissioning options.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>S/4HANA plus BW in the same operated landscape</b> The posting names an SAP system landscape 'inkl. S/4HANA und BW'. That creates a concrete angle around how VHV wants to separate active operational data from historical reporting-relevant data and documents before sizing the future landscape.</li><li><b>AWS migration and hybrid architecture</b> The role includes 'Unterstützung bei Cloud-Migrationen (AWS) und Mitgestaltung hybrider Architekturen'. In a hybrid target state, archive and legacy-access placement becomes a practical design decision: what must remain near the active SAP core versus what can be removed from the migration path.</li><li><b>Basis-owned operational stability mandate</b> The hire is responsible for 'Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung'. That makes operational load, system footprint and retirement of non-essential legacy data a relevant conversation for the team closest to platform stability.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence shows active SAP platform work, but not a named S/4 transformation program or timeline.</li><li>The posting is for a SAP Basis Administrator, so the initiative may currently be infrastructure- or operations-led rather than business-led.</li><li>Decision-making could sit centrally across group IT; the vacancy alone does not prove who owns archive or legacy decommissioning decisions.</li><li>No source evidence confirms current archive tooling, ECC footprint, or decommissioning plans.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>J. A.</strong><span class="c-role">Head of Digital Development SAP Insurance</span><span class="c-conf">96%</span></li><li><strong>F. D.</strong><span class="c-role">Leiter IT-Infrastruktur</span><span class="c-conf">92%</span></li><li><strong>J. E.</strong><span class="c-role">SAP Architect</span><span class="c-conf">90%</span></li><li><strong>D. S.</strong><span class="c-role">Leiter Plattformbetrieb und Automation</span><span class="c-conf">87%</span></li><li><strong>O. C. v. B.</strong><span class="c-role">Head of International IT Platform</span><span class="c-conf">82%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=24_24_25_seorl_s_0_0_0_0_1_0" target="_blank" rel="noopener">SAP Basis Administrator mit Schwerpunkt Linux, AWS &amp; BTP (w/m/d)</a></li><li><a href="https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">SAP Basis Administrator mit Schwerpunkt Linux, AWS &amp; BTP (w/m/d)</a></li></ul>
+            <a class="akte-link" href="magnets/vhv.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei VHV</div>Hallo Herr A.,<br><br>bei Ihrem S/4HANA-, BW- und AWS-Zielbild wird der Schnitt zwischen aktivem SAP-Bestand und Altbelegen oft schon durch Betriebs- und Sizing-Entscheidungen festgelegt.<br><br>Bei Versicherern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für VHV eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
         <span class="gauge" title="Signalstärke 95%"><span style="width:95%"></span></span>
         <span class="company">SIGNAL IDUNA Gruppe</span>
-        <span class="record">S1-20260711 · STÄRKE 0.95 · KONF 0.90 · 2 BELEGE · 5 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 0.95 · KONF 0.90 · 5 BELEGE · 5 PERSONEN</span>
         <span class="industry">insurance</span>
       </summary>
       <div class="detail">
@@ -642,6 +712,35 @@
 
     <details class="akte">
       <summary>
+        <span class="gauge" title="Signalstärke 91%"><span style="width:91%"></span></span>
+        <span class="company">Hans Hundegger AG</span>
+        <span class="record">S1-20260711 · STÄRKE 0.91 · KONF 0.91 · 1 BELEGE · 1 PERSONEN</span>
+        <span class="industry">machinery manufacturing</span>
+      </summary>
+      <div class="detail">
+        <blockquote>"Aktive Mitwirkung bei der Umstellung auf SAP S/4HANA Public Cloud"</blockquote>
+        <div class="cols">
+          <div>
+            <h4>Why now</h4>
+            <p>The strongest signal is direct hiring into finance with responsibility during an S/4HANA Public Cloud transition. In S/4 programs, companies typically have to decide early what remains in the new core versus what should stay in archive or a legacy access layer, because those choices affect data scope, migration effort, and later legacy system retirement. Public Cloud programs can make that separation especially important because teams often aim for a cleaner target footprint and tighter process standardization.</p>
+            <h4>Angles</h4>
+            <ul class="plain"><li><b>Finance-led S/4 Public Cloud change</b> The posting is for a Finanzbuchhalter, and the role includes active participation in the S/4HANA Public Cloud transition. That suggests accounting is directly involved, making retention and day-to-day access to historical finance documents a practical workstream, not just an IT topic.</li><li><b>Public Cloud target increases pressure to define legacy scope</b> Because the posting names SAP S/4HANA Public Cloud explicitly, a relevant discussion is which historical finance data and documents need to stay operationally accessible versus what can be archived outside the new core.</li></ul>
+            <h4>Flags</h4><ul class="plain"><li>Evidence is from a single job posting only.</li><li>The signal is finance-specific; broader enterprise scope should be validated.</li><li>No timeline, incumbent SAP landscape, or migration phase beyond 'Umstellung' is stated in the evidence.</li><li>Decision-making may sit outside the hiring team, for example with central IT or a group-level SAP program.</li></ul>
+          </div>
+          <div>
+            <h4>Personen</h4>
+            <ul class="contacts"><li><strong>S. F.</strong><span class="c-role">IT Manager</span><span class="c-conf">92%</span></li></ul>
+            <h4>Belege</h4>
+            <ul class="plain evidence"><li><a href="https://www.stepstone.de/jobs--Finanzbuchhalter-m-w-d-Hawangen-Hans-Hundegger-AG--14199454-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_1_0" target="_blank" rel="noopener">Finanzbuchhalter (m/w/d)</a></li></ul>
+            <a class="akte-link" href="magnets/hans-hundegger.html" target="_blank" rel="noopener">Datenaltlast-Check öffnen (das Give hinter der Mail) →</a>
+            <h4>Mail-Entwurf <span class="soft">Template + Evidence-Slots · Freigabe erforderlich</span></h4>
+                   <div class="email"><div class="email-subject">Datenaltlast vor dem S/4-Cutover bei Hundegger</div>Hallo Herr F.,<br><br>bei Ihrer Umstellung auf SAP S/4HANA Public Cloud im Finanzbereich fällt die Trennung zwischen laufenden Belegen und Altbelegen oft schon im Zielbild.<br><br>Bei Maschinenbauern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.<br><br>Wir haben für Hundegger eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.<br><br>Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.<br><br>Mit freundlichen Grüßen<br>[SDR Name]</div>
+          </div>
+        </div></div>
+    </details>
+
+    <details class="akte">
+      <summary>
         <span class="gauge" title="Signalstärke 89%"><span style="width:89%"></span></span>
         <span class="company">Allianz Kunde und Markt GmbH</span>
         <span class="record">S1-20260711 · STÄRKE 0.89 · KONF 0.89 · 1 BELEGE · 4 PERSONEN</span>
@@ -673,7 +772,7 @@
       <summary>
         <span class="gauge" title="Signalstärke 89%"><span style="width:89%"></span></span>
         <span class="company">Daimler Buses GmbH</span>
-        <span class="record">S1-20260711 · STÄRKE 0.89 · KONF 0.89 · 1 BELEGE · 4 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 0.89 · KONF 0.89 · 3 BELEGE · 4 PERSONEN</span>
         <span class="industry">bus manufacturer</span>
       </summary>
       <div class="detail">
@@ -760,7 +859,7 @@
       <summary>
         <span class="gauge" title="Signalstärke 77%"><span style="width:77%"></span></span>
         <span class="company">Interzero Circular Solutions Germany GmbH</span>
-        <span class="record">S1-20260711 · STÄRKE 0.77 · KONF 0.77 · 1 BELEGE · 2 PERSONEN</span>
+        <span class="record">S1-20260711 · STÄRKE 0.77 · KONF 0.77 · 3 BELEGE · 2 PERSONEN</span>
         <span class="industry">recycling / circular economy</span>
       </summary>
       <div class="detail">
@@ -784,6 +883,21 @@
           </div>
         </div></div>
     </details>
+
+  
+  <h2 class="runlog-title">Tagesläufe</h2>
+  <p class="runlog-sub">Jeder Lauf setzt auf dem Vortag auf. Bekannte Signale werden dedupliziert (30-Tage-Fenster), gezählt wird nur Neues.</p>
+  <div class="runlog-scroll"><table class="runlog">
+    <tr><th>Tag</th><th>Postings</th><th>Neue Signale</th><th>Neue Personen</th><th>LLM-Kosten</th><th>Neue Firmen</th></tr>
+    <tr>
+        <td class="mono-cell">2026-07-11</td>
+        <td class="mono-cell num">450</td>
+        <td class="mono-cell num"><span class="logbar" style="--w:100%"></span>+27</td>
+        <td class="mono-cell num">+92</td>
+        <td class="mono-cell num">$1.01</td>
+        <td class="companies">Allianz Kunde und Markt GmbH, Berlin TXL Management GmbH, Berliner Wasserbetriebe, Berner Omnichannel Trading  …</td>
+      </tr>
+  </table></div>
 
   <footer>
     Referenzimplementierung · SalesPlaybook GTM Engineer Case Study · Evidence Contract: jede Unternehmensaussage

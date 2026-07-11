@@ -351,6 +351,101 @@
     "opener_variant": "question/quantity"
   },
   {
+    "signal_id": 26,
+    "company": "Hero",
+    "company_key": "hero",
+    "signal_type": "S1_erp_migration",
+    "strength": 1,
+    "confidence": 0.97,
+    "industry": "food and beverage",
+    "status": "candidate",
+    "detected_at": "2026-07-11T14:47:09.211Z",
+    "postings_count": 5,
+    "classifier_quote": "Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams.",
+    "classifier_reason": "Hero appears to be an operating company running global SAP transformation work itself, including S/4HANA rollouts.",
+    "evidence": {
+      "postings": [
+        {
+          "title": "Global Key User Purchase to Pay",
+          "url": "https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0",
+          "postedAt": "2026-07-11T06:03:12+02:00"
+        },
+        {
+          "title": "Global Key User Purchase to Pay",
+          "url": "https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0",
+          "postedAt": "2026-07-11T06:03:12+02:00"
+        },
+        {
+          "title": "IT-Projektmanager/in - Product & Plant Systems",
+          "url": "https://www.stepstone.de/jobs--IT-Projektmanager-in-Product-Plant-Systems-Bad-Schwartau-Hero--14060120-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0",
+          "postedAt": "2026-07-11T06:03:14+02:00"
+        }
+      ],
+      "lookup": [],
+      "quote": "Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams."
+    },
+    "brief": {
+      "signal_summary": "Hero is hiring for roles directly tied to global SAP S/4HANA rollout work and broader ERP-driven digital transformation. The clearest signal is a Global Key User Purchase to Pay role with active responsibility in global SAP S/4HANA rollouts, alongside an IT Project Manager role spanning R&D, Quality, and Manufacturing systems.",
+      "why_now": "Companies in the middle of S/4 programs typically have to decide how much ECC-era data and document history must stay operational in the new core versus move to an archive or legacy access model. That choice can affect HANA sizing, migration scope, and later decommissioning effort. In global rollouts, the issue often gets harder because process teams, master data governance, audit needs, and plant or quality documentation all intersect across regions and functions.",
+      "signal_quote": "Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams.",
+      "stakeholder_hypothesis": [
+        "Global Head of SAP or SAP Program Lead",
+        "Head of Purchase to Pay / Global Process Owner P2P",
+        "IT Project Manager for Product & Plant Systems",
+        "Enterprise Architect or ERP Transformation Lead",
+        "Head of IT Governance / Compliance",
+        "Master Data Governance Lead"
+      ],
+      "angles": [
+        {
+          "title": "P2P rollout scope across global S/4 program",
+          "detail": "The Global Key User Purchase to Pay role is explicitly meant to \"Support and co‑lead global SAP S/4HANA rollout activities\". That makes P2P document history and day-to-day access to older purchasing data a concrete discussion point for the rollout team, not just an IT backend topic."
+        },
+        {
+          "title": "Governance and audit readiness in plant-facing systems",
+          "detail": "The IT Project Manager - Product & Plant Systems role calls out \"documentation completeness, and audit readiness\" across R&D, Quality, and Manufacturing domains. For a food and beverage manufacturer, retention and access to quality, manufacturing, and maintenance-related records can become a practical legacy-data design issue during ERP transformation."
+        },
+        {
+          "title": "Cross-functional footprint beyond finance alone",
+          "detail": "Hero is not only hiring for procurement transformation but also for Product & Plant Systems covering PLM and CMMS. That suggests the S/4-related transformation touches both transactional ERP processes and plant/product documentation landscapes, which can complicate decisions on what historical data stays live versus moves to archive access."
+        }
+      ],
+      "discovery_questions": [
+        "In the global SAP S/4HANA rollouts, how much of the ECC-era purchasing history does the P2P team expect to need in daily operations after go-live?",
+        "Who owns the decision on legacy data access in the rollout: the global P2P process team, the SAP team, or a central transformation lead?",
+        "For Product & Plant Systems, are audit-ready historical records expected to remain in operational systems, or is a separate archive/legacy access model being considered?",
+        "Has Hero already defined which document types from R&D, Quality, Manufacturing, or maintenance must remain directly accessible during the transformation?"
+      ],
+      "email_slots": {
+        "company_short": "Hero",
+        "company_category_de": "Lebensmittelherstellern",
+        "opener_de": "bei Ihren globalen SAP S/4HANA Rollouts: Wie groß ist der Anteil des ECC-Altbestands, den Ihr Team im Alltag tatsächlich noch braucht?"
+      },
+      "flags": [
+        "Evidence comes from job postings only; no confirmed timeline, migration phase, or named program beyond global SAP S/4HANA rollouts.",
+        "The postings indicate global scope, so ownership may sit with a central or group-level team rather than locally in Germany.",
+        "No explicit mention of archiving, ECC decommissioning, or current archive setup in the evidence."
+      ]
+    },
+    "brief_contract_ok": true,
+    "contacts": [
+      {
+        "name": "D. K.",
+        "role": "Global SAP Application Expert at Hero Group",
+        "linkedin_url": "",
+        "confidence": 0.93,
+        "anrede": "",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.167Z"
+      }
+    ],
+    "rendered_email": {
+      "subject": "Datenaltlast vor dem S/4-Cutover bei Hero",
+      "body": "Hallo D. K.,\n\nbei Ihren globalen SAP S/4HANA Rollouts: Wie groß ist der Anteil des ECC-Altbestands, den Ihr Team im Alltag tatsächlich noch braucht?\n\nBei Lebensmittelherstellern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.\n\nWir haben für Hero eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.\n\nSoll ich sie Ihnen schicken? Ein kurzes Ja genügt.\n\nMit freundlichen Grüßen\n[SDR Name]"
+    },
+    "opener_variant": "question/quantity"
+  },
+  {
     "signal_id": 11,
     "company": "METRO AG",
     "company_key": "metro",
@@ -360,7 +455,7 @@
     "industry": "retail wholesale",
     "status": "candidate",
     "detected_at": "2026-07-11T14:16:02.283Z",
-    "postings_count": 7,
+    "postings_count": 14,
     "classifier_quote": "The main objective of our LUCA program is to successfully upgrade METRO's Finance to SAP S/4HANA to ensure business continuity and avoid security and compliance risks.",
     "classifier_reason": "METRO is an end user and the postings show an active SAP S/4HANA finance transformation with compliance focus, which is a strong archiving-related buying signal.",
     "evidence": {
@@ -626,7 +721,7 @@
     "industry": "pharmaceuticals",
     "status": "candidate",
     "detected_at": "2026-07-11T14:16:05.928Z",
-    "postings_count": 3,
+    "postings_count": 6,
     "classifier_quote": "nach dem SAP S/4HANA Go-Live",
     "classifier_reason": "The company appears to be a pharma manufacturer and the posting explicitly references post-go-live SAP S/4HANA/EWM transformation work.",
     "evidence": {
@@ -860,7 +955,7 @@
     "industry": "optics and industrial technology",
     "status": "candidate",
     "detected_at": "2026-07-11T14:16:10.265Z",
-    "postings_count": 2,
+    "postings_count": 3,
     "classifier_quote": "Work on a varied mix of operational, tactical and strategic tasks in the area of global supply chain transformation",
     "classifier_reason": "ZEISS is an industrial end user and the postings point to a global ERP/S/4 transformation context in supply chain.",
     "evidence": {
@@ -1085,7 +1180,7 @@
     "industry": "commercial vehicles / automotive",
     "status": "candidate",
     "detected_at": "2026-07-11T14:15:54.822Z",
-    "postings_count": 3,
+    "postings_count": 5,
     "classifier_quote": "Steering of SAP template rollouts in new markets from As-is analysis to the end of the hypercare phase",
     "classifier_reason": "Daimler Truck is an end user and the posting shows active SAP template rollout and governance work tied to standardized finance systems, which is a strong ERP transformation signal.",
     "evidence": {
@@ -1303,6 +1398,134 @@
     "opener_variant": "question/ownership"
   },
   {
+    "signal_id": 27,
+    "company": "VHV Gruppe",
+    "company_key": "vhv",
+    "signal_type": "S1_erp_migration",
+    "strength": 0.9600000000000001,
+    "confidence": 0.91,
+    "industry": "insurance",
+    "status": "candidate",
+    "detected_at": "2026-07-11T14:47:14.019Z",
+    "postings_count": 2,
+    "classifier_quote": "Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW).",
+    "classifier_reason": "VHV Gruppe appears to be an end-user insurer, and the posting explicitly mentions S/4HANA, SAP BW, AWS migration, and SAP Basis operations.",
+    "evidence": {
+      "postings": [
+        {
+          "title": "SAP Basis Administrator mit Schwerpunkt Linux, AWS & BTP (w/m/d)",
+          "url": "https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=24_24_25_seorl_s_0_0_0_0_1_0",
+          "postedAt": "2026-07-11T00:31:08+02:00"
+        },
+        {
+          "title": "SAP Basis Administrator mit Schwerpunkt Linux, AWS & BTP (w/m/d)",
+          "url": "https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0",
+          "postedAt": "2026-07-11T00:31:08+02:00"
+        }
+      ],
+      "lookup": [],
+      "quote": "Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW)."
+    },
+    "brief": {
+      "signal_summary": "VHV Gruppe is hiring a SAP Basis Administrator focused on Linux, AWS and BTP, with the role explicitly covering operation of the SAP landscape including S/4HANA and BW plus support for AWS cloud migrations and hybrid architecture.",
+      "why_now": "This signal suggests active SAP platform change around S/4HANA, BW and AWS. In S/4 programs, companies typically need to decide early which historical SAP data and documents stay in the active footprint versus move to compliant archive or legacy access, because that choice affects HANA sizing, migration scope and later decommissioning options.",
+      "signal_quote": "Systembetrieb und Überwachung: Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW).",
+      "stakeholder_hypothesis": [
+        "Leiter SAP Basis",
+        "Head of SAP Platform / SAP Operations",
+        "Programmleiter S/4HANA Transformation",
+        "Leiter Enterprise Architecture",
+        "Leiter Datenmanagement / Information Governance",
+        "Leiter Infrastruktur / Cloud Platform"
+      ],
+      "angles": [
+        {
+          "title": "S/4HANA plus BW in the same operated landscape",
+          "detail": "The posting names an SAP system landscape 'inkl. S/4HANA und BW'. That creates a concrete angle around how VHV wants to separate active operational data from historical reporting-relevant data and documents before sizing the future landscape."
+        },
+        {
+          "title": "AWS migration and hybrid architecture",
+          "detail": "The role includes 'Unterstützung bei Cloud-Migrationen (AWS) und Mitgestaltung hybrider Architekturen'. In a hybrid target state, archive and legacy-access placement becomes a practical design decision: what must remain near the active SAP core versus what can be removed from the migration path."
+        },
+        {
+          "title": "Basis-owned operational stability mandate",
+          "detail": "The hire is responsible for 'Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung'. That makes operational load, system footprint and retirement of non-essential legacy data a relevant conversation for the team closest to platform stability."
+        }
+      ],
+      "discovery_questions": [
+        "In the S/4HANA and BW landscape, has VHV already defined what historical SAP data must remain online for daily operations versus what can move to archive access?",
+        "Who owns the legacy-data decision in the AWS / hybrid architecture workstream: SAP Basis, enterprise architecture, the S/4 program team, or a governance function?",
+        "Is the current focus at VHV more on technical platform migration, or is there already a parallel plan for compliant retention and eventual decommissioning of old SAP components?",
+        "For insurance operations, which document-heavy objects are most likely to drive footprint discussions during the program: policy, claims, finance, or correspondence-related records?",
+        "Has archive scope been considered before final HANA sizing, or is that still open?"
+      ],
+      "email_slots": {
+        "company_short": "VHV",
+        "company_category_de": "Versicherern",
+        "opener_de": "bei Ihrem S/4HANA-, BW- und AWS-Zielbild wird der Schnitt zwischen aktivem SAP-Bestand und Altbelegen oft schon durch Betriebs- und Sizing-Entscheidungen festgelegt."
+      },
+      "flags": [
+        "Evidence shows active SAP platform work, but not a named S/4 transformation program or timeline.",
+        "The posting is for a SAP Basis Administrator, so the initiative may currently be infrastructure- or operations-led rather than business-led.",
+        "Decision-making could sit centrally across group IT; the vacancy alone does not prove who owns archive or legacy decommissioning decisions.",
+        "No source evidence confirms current archive tooling, ECC footprint, or decommissioning plans."
+      ]
+    },
+    "brief_contract_ok": true,
+    "contacts": [
+      {
+        "name": "J. A.",
+        "role": "Head of Digital Development SAP Insurance",
+        "linkedin_url": "",
+        "confidence": 0.96,
+        "anrede": "Herr",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.168Z"
+      },
+      {
+        "name": "F. D.",
+        "role": "Leiter IT-Infrastruktur",
+        "linkedin_url": "",
+        "confidence": 0.92,
+        "anrede": "Herr",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.168Z"
+      },
+      {
+        "name": "J. E.",
+        "role": "SAP Architect",
+        "linkedin_url": "",
+        "confidence": 0.9,
+        "anrede": "Herr",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.168Z"
+      },
+      {
+        "name": "D. S.",
+        "role": "Leiter Plattformbetrieb und Automation",
+        "linkedin_url": "",
+        "confidence": 0.87,
+        "anrede": "Herr",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.167Z"
+      },
+      {
+        "name": "O. C. v. B.",
+        "role": "Head of International IT Platform",
+        "linkedin_url": "",
+        "confidence": 0.82,
+        "anrede": "Herr",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.168Z"
+      }
+    ],
+    "rendered_email": {
+      "subject": "Datenaltlast vor dem S/4-Cutover bei VHV",
+      "body": "Hallo Herr A.,\n\nbei Ihrem S/4HANA-, BW- und AWS-Zielbild wird der Schnitt zwischen aktivem SAP-Bestand und Altbelegen oft schon durch Betriebs- und Sizing-Entscheidungen festgelegt.\n\nBei Versicherern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.\n\nWir haben für VHV eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.\n\nSoll ich sie Ihnen schicken? Ein kurzes Ja genügt.\n\nMit freundlichen Grüßen\n[SDR Name]"
+    },
+    "opener_variant": "statement"
+  },
+  {
     "signal_id": 24,
     "company": "SIGNAL IDUNA Gruppe",
     "company_key": "signal iduna",
@@ -1312,7 +1535,7 @@
     "industry": "insurance",
     "status": "candidate",
     "detected_at": "2026-07-11T14:22:16.549Z",
-    "postings_count": 2,
+    "postings_count": 5,
     "classifier_quote": "S/4HANA Transformation",
     "classifier_reason": "SIGNAL IDUNA is a direct insurance/financial services end user, and the postings point to SAP application management and S/4HANA transformation work.",
     "evidence": {
@@ -2197,6 +2420,88 @@
     "opener_variant": "question/status"
   },
   {
+    "signal_id": 25,
+    "company": "Hans Hundegger AG",
+    "company_key": "hans hundegger",
+    "signal_type": "S1_erp_migration",
+    "strength": 0.91,
+    "confidence": 0.91,
+    "industry": "machinery manufacturing",
+    "status": "candidate",
+    "detected_at": "2026-07-11T14:47:05.676Z",
+    "postings_count": 1,
+    "classifier_quote": "Aktive Mitwirkung bei der Umstellung auf SAP S/4HANA Public Cloud",
+    "classifier_reason": "Hans Hundegger AG appears to be an industrial end user and the posting explicitly mentions an SAP S/4HANA conversion, which is a strong ERP transformation signal.",
+    "evidence": {
+      "postings": [
+        {
+          "title": "Finanzbuchhalter (m/w/d)",
+          "url": "https://www.stepstone.de/jobs--Finanzbuchhalter-m-w-d-Hawangen-Hans-Hundegger-AG--14199454-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_1_0",
+          "postedAt": "2026-07-11T05:48:56+02:00"
+        }
+      ],
+      "lookup": [],
+      "quote": "Aktive Mitwirkung bei der Umstellung auf SAP S/4HANA Public Cloud"
+    },
+    "brief": {
+      "signal_summary": "Hans Hundegger AG is hiring a Finanzbuchhalter with active involvement in a transition to SAP S/4HANA Public Cloud, indicating an in-flight ERP transformation with finance participation.",
+      "why_now": "The strongest signal is direct hiring into finance with responsibility during an S/4HANA Public Cloud transition. In S/4 programs, companies typically have to decide early what remains in the new core versus what should stay in archive or a legacy access layer, because those choices affect data scope, migration effort, and later legacy system retirement. Public Cloud programs can make that separation especially important because teams often aim for a cleaner target footprint and tighter process standardization.",
+      "signal_quote": "Aktive Mitwirkung bei der Umstellung auf SAP S/4HANA Public Cloud",
+      "stakeholder_hypothesis": [
+        "CFO",
+        "Head of Accounting",
+        "Head of SAP / SAP Program Lead",
+        "ERP Transformation Lead",
+        "Head of IT Applications",
+        "Finance Process Owner for SAP"
+      ],
+      "angles": [
+        {
+          "title": "Finance-led S/4 Public Cloud change",
+          "detail": "The posting is for a Finanzbuchhalter, and the role includes active participation in the S/4HANA Public Cloud transition. That suggests accounting is directly involved, making retention and day-to-day access to historical finance documents a practical workstream, not just an IT topic."
+        },
+        {
+          "title": "Public Cloud target increases pressure to define legacy scope",
+          "detail": "Because the posting names SAP S/4HANA Public Cloud explicitly, a relevant discussion is which historical finance data and documents need to stay operationally accessible versus what can be archived outside the new core."
+        }
+      ],
+      "discovery_questions": [
+        "In your S/4HANA Public Cloud transition, who owns the decision on historical finance data and old accounting documents?",
+        "For accounting users, which legacy documents must remain accessible day-to-day after go-live, and which can move to archive-only access?",
+        "Has the team already defined the cut between data to migrate into S/4HANA Public Cloud and data to leave in a compliant archive?",
+        "Is legacy system decommissioning part of the program scope after the S/4 move, or is that planned as a later phase?"
+      ],
+      "email_slots": {
+        "company_short": "Hundegger",
+        "company_category_de": "Maschinenbauern",
+        "opener_de": "bei Ihrer Umstellung auf SAP S/4HANA Public Cloud im Finanzbereich fällt die Trennung zwischen laufenden Belegen und Altbelegen oft schon im Zielbild."
+      },
+      "flags": [
+        "Evidence is from a single job posting only.",
+        "The signal is finance-specific; broader enterprise scope should be validated.",
+        "No timeline, incumbent SAP landscape, or migration phase beyond 'Umstellung' is stated in the evidence.",
+        "Decision-making may sit outside the hiring team, for example with central IT or a group-level SAP program."
+      ]
+    },
+    "brief_contract_ok": true,
+    "contacts": [
+      {
+        "name": "S. F.",
+        "role": "IT Manager",
+        "linkedin_url": "",
+        "confidence": 0.92,
+        "anrede": "Herr",
+        "email_status": "not_enriched",
+        "last_verified": "2026-07-11T14:47:37.168Z"
+      }
+    ],
+    "rendered_email": {
+      "subject": "Datenaltlast vor dem S/4-Cutover bei Hundegger",
+      "body": "Hallo Herr F.,\n\nbei Ihrer Umstellung auf SAP S/4HANA Public Cloud im Finanzbereich fällt die Trennung zwischen laufenden Belegen und Altbelegen oft schon im Zielbild.\n\nBei Maschinenbauern liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.\n\nWir haben für Hundegger eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.\n\nSoll ich sie Ihnen schicken? Ein kurzes Ja genügt.\n\nMit freundlichen Grüßen\n[SDR Name]"
+    },
+    "opener_variant": "statement"
+  },
+  {
     "signal_id": 1,
     "company": "Allianz Kunde und Markt GmbH",
     "company_key": "allianz kunde und markt",
@@ -2323,7 +2628,7 @@
     "industry": "bus manufacturer",
     "status": "candidate",
     "detected_at": "2026-07-11T14:22:12.049Z",
-    "postings_count": 1,
+    "postings_count": 3,
     "classifier_quote": "* Du unterstützt das Team „Digital Transformation Office“ in verschiedenen Themen rund um die digitale Transformation und Digitalisierungsstrategie bei Daimler Buses",
     "classifier_reason": "Daimler Buses is an end user, and the posting shows an internal digital transformation office tied to strategy, which is a plausible buying signal for ERP/S/4 transformation context.",
     "evidence": {
@@ -2641,7 +2946,7 @@
     "industry": "recycling / circular economy",
     "status": "candidate",
     "detected_at": "2026-07-11T14:22:13.970Z",
-    "postings_count": 1,
+    "postings_count": 3,
     "classifier_quote": "Planung, Steuerung & Umsetzung einer ERP-Transformation",
     "classifier_reason": "Interzero appears to be an operating business, and the posting explicitly shows an ERP transformation program at the company itself.",
     "evidence": {

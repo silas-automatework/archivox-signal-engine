@@ -1,6 +1,6 @@
 # Qualified Signals 2026-07-11
 
-24 end-user companies with an active S1 (ERP/S4 transformation) signal, ranked by strength.
+27 end-user companies with an active S1 (ERP/S4 transformation) signal, ranked by strength.
 
 ## BSH Hausgeräte Gruppe
 
@@ -36,9 +36,21 @@ Hamburger Hochbahn AG is an end user and the postings clearly show an ongoing SA
 - Evidence: [Teilprojektleitung SAP S/4HANA MM (w/m/d)](https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-MM-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14192263-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0) (2026-07-09T11:18:01+02:00)
 - Evidence: [Werkstudent Projektmanagement SAP S/4HANA (w/m/d)](https://www.stepstone.de/jobs--Werkstudent-Projektmanagement-SAP-S-4HANA-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14182112-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0) (2026-07-07T01:23:13+02:00)
 
+## Hero
+
+Strength 1.00 · Confidence 0.97 · Industry: food and beverage · Postings: 5
+
+> "Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams."
+
+Hero appears to be an operating company running global SAP transformation work itself, including S/4HANA rollouts.
+
+- Evidence: [Global Key User Purchase to Pay](https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0) (2026-07-11T06:03:12+02:00)
+- Evidence: [Global Key User Purchase to Pay](https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0) (2026-07-11T06:03:12+02:00)
+- Evidence: [IT-Projektmanager/in - Product & Plant Systems](https://www.stepstone.de/jobs--IT-Projektmanager-in-Product-Plant-Systems-Bad-Schwartau-Hero--14060120-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0) (2026-07-11T06:03:14+02:00)
+
 ## METRO AG
 
-Strength 1.00 · Confidence 0.90 · Industry: retail wholesale · Postings: 7
+Strength 1.00 · Confidence 0.90 · Industry: retail wholesale · Postings: 14
 
 > "The main objective of our LUCA program is to successfully upgrade METRO's Finance to SAP S/4HANA to ensure business continuity and avoid security and compliance risks."
 
@@ -61,7 +73,7 @@ QIAGEN appears to be a life sciences end user and the postings explicitly mentio
 
 ## Rottendorf Pharma GmbH
 
-Strength 1.00 · Confidence 0.96 · Industry: pharmaceuticals · Postings: 3
+Strength 1.00 · Confidence 0.96 · Industry: pharmaceuticals · Postings: 6
 
 > "nach dem SAP S/4HANA Go-Live"
 
@@ -83,7 +95,7 @@ TKMS appears to be an industrial end user, and the postings explicitly describe 
 
 ## ZEISS
 
-Strength 1.00 · Confidence 0.95 · Industry: optics and industrial technology · Postings: 2
+Strength 1.00 · Confidence 0.95 · Industry: optics and industrial technology · Postings: 3
 
 > "Work on a varied mix of operational, tactical and strategic tasks in the area of global supply chain transformation"
 
@@ -105,7 +117,7 @@ Palm is a manufacturing end user and the posting clearly shows an active SAP S/4
 
 ## Daimler Truck AG
 
-Strength 0.98 · Confidence 0.93 · Industry: commercial vehicles / automotive · Postings: 3
+Strength 0.98 · Confidence 0.93 · Industry: commercial vehicles / automotive · Postings: 5
 
 > "Steering of SAP template rollouts in new markets from As-is analysis to the end of the hypercare phase"
 
@@ -124,9 +136,20 @@ This is an end user in the REWE Group, and the posting explicitly mentions a mul
 
 - Evidence: [(Senior) Analytics Berater (SAP BDC inkl. SAC & Datasphere) (m/w/d)](https://www.stepstone.de/jobs--Senior-Analytics-Berater-SAP-BDC-inkl-SAC-Datasphere-m-w-d-Frankfurt-am-Main-Wilhelm-Brandenburg-ein-Unternehmen-der-REWE-GROUP--14192179-inline.html?rltr=21_21_25_seorl_m_1_0_0_0_0_0) (2026-07-09T15:36:48+02:00)
 
+## VHV Gruppe
+
+Strength 0.96 · Confidence 0.91 · Industry: insurance · Postings: 2
+
+> "Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW)."
+
+VHV Gruppe appears to be an end-user insurer, and the posting explicitly mentions S/4HANA, SAP BW, AWS migration, and SAP Basis operations.
+
+- Evidence: [SAP Basis Administrator mit Schwerpunkt Linux, AWS & BTP (w/m/d)](https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=24_24_25_seorl_s_0_0_0_0_1_0) (2026-07-11T00:31:08+02:00)
+- Evidence: [SAP Basis Administrator mit Schwerpunkt Linux, AWS & BTP (w/m/d)](https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0) (2026-07-11T00:31:08+02:00)
+
 ## SIGNAL IDUNA Gruppe
 
-Strength 0.95 · Confidence 0.90 · Industry: insurance · Postings: 2
+Strength 0.95 · Confidence 0.90 · Industry: insurance · Postings: 5
 
 > "S/4HANA Transformation"
 
@@ -207,6 +230,16 @@ Getinge appears to be an operating company with a global SAP program and SAP lan
 
 - Evidence: [Expert IT SAP Authorization and Test Management](https://www.stepstone.de/jobs--Expert-IT-SAP-Authorization-and-Test-Management-Rastatt-bei-Karlsruhe-Getinge-Holding-B-V-Co-KG--14251612-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0) (2026-07-08T06:41:07+02:00)
 
+## Hans Hundegger AG
+
+Strength 0.91 · Confidence 0.91 · Industry: machinery manufacturing · Postings: 1
+
+> "Aktive Mitwirkung bei der Umstellung auf SAP S/4HANA Public Cloud"
+
+Hans Hundegger AG appears to be an industrial end user and the posting explicitly mentions an SAP S/4HANA conversion, which is a strong ERP transformation signal.
+
+- Evidence: [Finanzbuchhalter (m/w/d)](https://www.stepstone.de/jobs--Finanzbuchhalter-m-w-d-Hawangen-Hans-Hundegger-AG--14199454-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_1_0) (2026-07-11T05:48:56+02:00)
+
 ## Allianz Kunde und Markt GmbH
 
 Strength 0.89 · Confidence 0.89 · Industry: insurance · Postings: 1
@@ -219,7 +252,7 @@ This is an end-user insurer with an active data migration program and a dedicate
 
 ## Daimler Buses GmbH
 
-Strength 0.89 · Confidence 0.89 · Industry: bus manufacturer · Postings: 1
+Strength 0.89 · Confidence 0.89 · Industry: bus manufacturer · Postings: 3
 
 > "* Du unterstützt das Team „Digital Transformation Office“ in verschiedenen Themen rund um die digitale Transformation und Digitalisierungsstrategie bei Daimler Buses"
 
@@ -249,7 +282,7 @@ United Internet is an end user and the posting shows an inhouse S/4HANA template
 
 ## Interzero Circular Solutions Germany GmbH
 
-Strength 0.77 · Confidence 0.77 · Industry: recycling / circular economy · Postings: 1
+Strength 0.77 · Confidence 0.77 · Industry: recycling / circular economy · Postings: 3
 
 > "Planung, Steuerung & Umsetzung einer ERP-Transformation"
 
@@ -259,11 +292,11 @@ Interzero appears to be an operating business, and the posting explicitly shows 
 
 ## Filtered out (no outreach)
 
-- **end_user** (44): AES Aircraft Elektro/Elektronik System GmbH, ALDI Einkauf SE & Co. oHG, bautec Energiemanagement GmbH, Beckhoff Automation GmbH & Co. KG, BizLink Industry Germany GmbH, Börsenmedien AG, British American Tobacco (Germany) GmbH, CADENAS GmbH, Dr. August Oetker Nahrungsmittel KG, E.ON Digital Technology GmbH, ELANTAS GmbH, Elektrizitätswerk Mittelbaden AG & Co.KG, Henkell & Co. Sektkellerei KG, ifm-Unternehmensgruppe, Isar Aerospace SE, KNDS, Konica Minolta Business Solutions Deutschland GmbH, Lekkerland SE (Ein Unternehmen der REWE Group), MANN+HUMMEL GmbH, OLEDWorks GmbH, PMB International GmbH, POSITEC Germany GmbH, RICO GmbH & Co. KG, seca GmbH & Co. KG, SimonsVoss Technologies GmbH, SÜMO eG, TEKA - Maschinenbau GmbH, VINCORION Advanced Systems GmbH, WCG Wärme Contracting GmbH, ZWILLING J.A. Henckels Europa GmbH, ADAC, AL-KO THERM GMBH, BMS Corporate Solutions GmbH, Fliegl Agro-Center GmbH, FUCHS SE, HDI AG, HOLBORN Europa Raffinerie GmbH, Mediengruppe Pressedruck, MLL Münchner Leukämielabor GmbH, RATIONAL Technical Services GmbH, Rhenus Group, SILAG Handel GmbH, VPV Versicherungen, Würth IT GmbH
-- **it_consultancy** (19): adesso business consulting AG, Bertrandt AG, BExO GmbH, EY Deutschland, Ferendin Engineering Gmbh, Finatycs GmbH, Fusion Consulting (Germany) GmbH, KPMG AG Wirtschaftsprüfungsgesellschaft, MulTra - Multiplex Transfer GmbH, OnStream Consulting GmbH, Scheer Group, Tieto Germany GmbH, 4U-Consult GmbH & Co. KG, adesso SE, Clatum Consulting Gruppe, :em engineering methods AG, it-motive AG, PTA GmbH, xpertnova GmbH
-- **software_vendor** (5): ak tronic Software & Services GmbH, SAP SE, adesso insurance solutions GmbH, Haufe Group SE, STREIT Software GmbH
-- **staffing_recruiting** (4): Dr. Maier + Partner Executive Search GmbH, duerenhoff GmbH, FERCHAU – Connecting People and Technologies, Kempers Recruiting & Consulting GmbH
-- **public_research** (4): BGHM Berufsgenossenschaft Holz und Metall, Max-Planck-Gesellschaft zur Förderung der Wissenschaften e. V., Stadt Rüsselsheim am Main, Landkreis Ravensburg
+- **end_user** (58): AES Aircraft Elektro/Elektronik System GmbH, ALDI Einkauf SE & Co. oHG, bautec Energiemanagement GmbH, Beckhoff Automation GmbH & Co. KG, BizLink Industry Germany GmbH, Börsenmedien AG, British American Tobacco (Germany) GmbH, CADENAS GmbH, Dr. August Oetker Nahrungsmittel KG, E.ON Digital Technology GmbH, ELANTAS GmbH, Elektrizitätswerk Mittelbaden AG & Co.KG, Henkell & Co. Sektkellerei KG, ifm-Unternehmensgruppe, Isar Aerospace SE, KNDS, Konica Minolta Business Solutions Deutschland GmbH, Lekkerland SE (Ein Unternehmen der REWE Group), MANN+HUMMEL GmbH, OLEDWorks GmbH, PMB International GmbH, POSITEC Germany GmbH, RICO GmbH & Co. KG, seca GmbH & Co. KG, SimonsVoss Technologies GmbH, SÜMO eG, TEKA - Maschinenbau GmbH, VINCORION Advanced Systems GmbH, WCG Wärme Contracting GmbH, ZWILLING J.A. Henckels Europa GmbH, ADAC, AL-KO THERM GMBH, BMS Corporate Solutions GmbH, Fliegl Agro-Center GmbH, FUCHS SE, HDI AG, HOLBORN Europa Raffinerie GmbH, Mediengruppe Pressedruck, MLL Münchner Leukämielabor GmbH, RATIONAL Technical Services GmbH, Rhenus Group, SILAG Handel GmbH, VPV Versicherungen, Würth IT GmbH, 3B Scientific GmbH, 50Hertz Transmission GmbH, Basalt-Actien-Gesellschaft, BEW Berliner Energie und Wärme GmbH, Christoph Kroschke GmbH, DACHSER SE, Interhyp Gruppe, KRONE Business Center DigITal GmbH & Co.KG, Murrplastik Systemtechnik GmbH, Ritter Sport - Alfred Ritter GmbH & Co. KG, Schreiner Group GmbH & Co. KG, Schwartauer Werke GmbH & Co. KG, Unternehmensgruppe Theo Müller GmbH & Co. KG, WESTFLEISCH SCE mbH
+- **it_consultancy** (21): adesso business consulting AG, Bertrandt AG, BExO GmbH, EY Deutschland, Ferendin Engineering Gmbh, Finatycs GmbH, Fusion Consulting (Germany) GmbH, KPMG AG Wirtschaftsprüfungsgesellschaft, MulTra - Multiplex Transfer GmbH, OnStream Consulting GmbH, Scheer Group, Tieto Germany GmbH, 4U-Consult GmbH & Co. KG, adesso SE, Clatum Consulting Gruppe, :em engineering methods AG, it-motive AG, PTA GmbH, xpertnova GmbH, NTT DATA Business Solutions AG, OEDIV Oetker Daten- und Informationsverarbeitung KG
+- **public_research** (8): BGHM Berufsgenossenschaft Holz und Metall, Max-Planck-Gesellschaft zur Förderung der Wissenschaften e. V., Stadt Rüsselsheim am Main, Landkreis Ravensburg, CTC gGmbH – Center for the Transformation of Chemistry, Global Legal Entity Identifier Foundation (GLEIF), Technische Universität Dortmund, Universität Hamburg
+- **software_vendor** (7): ak tronic Software & Services GmbH, SAP SE, adesso insurance solutions GmbH, Haufe Group SE, STREIT Software GmbH, Marvya GmbH, Simba Computer Systeme GmbH
+- **staffing_recruiting** (6): Dr. Maier + Partner Executive Search GmbH, duerenhoff GmbH, FERCHAU – Connecting People and Technologies, Kempers Recruiting & Consulting GmbH, Amadeus Fire AG, HAPEKO Deutschland GmbH
 
 ---
-Classification: 157 LLM calls, est. cost $0.778. Every quote above is copied verbatim from captured evidence (evidence contract).
+Classification: 200 LLM calls, est. cost $0.918. Every quote above is copied verbatim from captured evidence (evidence contract).

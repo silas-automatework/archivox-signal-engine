@@ -6,481 +6,394 @@ Candidate signal: S1 (ERP/S4 transformation) via German job postings.
 
 | Watcher | Queries | Fetched | New | Duplicates |
 |---|---|---|---|---|
-| stepstone_jobs | 6 | 150 | 127 | 23 |
+| stepstone_jobs | 6 | 150 | 120 | 30 |
 
-## Companies with signal-candidate postings (69)
-
-### adesso business consulting AG
-
-Postings: 15 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC,SAP ILM
-
-- [Senior Consultant SAP S/4HANA Cloud Public Edition (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-S-4HANA-Cloud-Public-Edition-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-weitere-Standorte-in-DE-adesso-business-consulting-AG--13951171-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_0_0)
-- [Consultant SAP S/4HANA Cloud Public Edition (all genders)](https://www.stepstone.de/jobs--Consultant-SAP-S-4HANA-Cloud-Public-Edition-all-genders-Berlin-Hamburg-Munchen-Koln-Frankfurt-Stuttgart-Leipzig-Dortmund-adesso-business-consulting-AG--13951168-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0)
-- [Senior Consultant SAP S/4HANA Service/FSM (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-S-4HANA-Service-FSM-all-genders-Bonn-Hameln-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949237-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0)
-- [Senior Consultant SAP Retail S/4HANA Public Cloud (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-Retail-S-4HANA-Public-Cloud-all-genders-Hameln-Bonn-Hannover-Paderborn-Koln-Dusseldorf-adesso-business-consulting-AG--13949145-inline.html?rltr=17_17_25_seorl_m_0_0_0_0_0_0)
-- [Senior Data Migration Architect SAP (all genders)](https://www.stepstone.de/jobs--Senior-Data-Migration-Architect-SAP-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949198-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0)
-- [Teamleitung SAP Data Migration (all genders)](https://www.stepstone.de/jobs--Teamleitung-SAP-Data-Migration-all-genders-Bonn-Hameln-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949147-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_0_0)
-- [Senior Consultant SAP S/4HANA Cloud Public Edition (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-S-4HANA-Cloud-Public-Edition-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-weitere-Standorte-in-DE-adesso-business-consulting-AG--13951171-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0)
-- [Consultant SAP S/4HANA Cloud Public Edition (all genders)](https://www.stepstone.de/jobs--Consultant-SAP-S-4HANA-Cloud-Public-Edition-all-genders-Berlin-Hamburg-Munchen-Koln-Frankfurt-Stuttgart-Leipzig-Dortmund-adesso-business-consulting-AG--13951168-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0)
-- [Senior Consultant SAP Formulartechnologien (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-Formulartechnologien-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949280-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
-- [Senior Consultant SAP MDG (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-MDG-all-genders-Berlin-Dortmund-Dusseldorf-Essen-Frankfurt-Gottingen-weitere-Standorte-in-DE-adesso-business-consulting-AG--13949168-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0)
-- [Senior Consultant SAP MDM (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-MDM-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949162-inline.html?rltr=22_22_25_seorl_s_0_0_0_0_0_0)
-- [Senior Consultant SAP MDM Fokus Geschäftspartner (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-MDM-Fokus-Geschaftspartner-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949133-inline.html?rltr=23_23_25_seorl_s_0_0_0_0_0_0)
-- [Senior Consultant OpenText VIM (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-OpenText-VIM-all-genders-Hameln-Bonn-Hannover-Paderborn-Koln-Dusseldorf-adesso-business-consulting-AG--13949143-inline.html?rltr=24_24_25_seorl_s_0_0_0_0_0_0)
-- [SAP ILM Consultant (all genders)](https://www.stepstone.de/jobs--SAP-ILM-Consultant-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949241-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0)
-- [SAP ILM Manager (all genders)](https://www.stepstone.de/jobs--SAP-ILM-Manager-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-adesso-business-consulting-AG--13949243-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
-
-### SAP SE
-
-Postings: 5 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC,SAP Archivierung
-
-- [Senior Quality Engineer (f/m/d) - SAP S/4HANA Product Compliance](https://www.stepstone.de/jobs--Senior-Quality-Engineer-f-m-d-SAP-S-4HANA-Product-Compliance-Markdorf-DE-88677-SAP-SE--14189415-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
-- [Senior Quality Engineer (f/m/d) - SAP S/4HANA Product Compliance](https://www.stepstone.de/jobs--Senior-Quality-Engineer-f-m-d-SAP-S-4HANA-Product-Compliance-Markdorf-DE-88677-SAP-SE--14189415-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0)
-- [Master - SAP AI Engineering Architect (f/m/d)](https://www.stepstone.de/jobs--Master-SAP-AI-Engineering-Architect-f-m-d-Walldorf-DE-69190-SAP-SE--13809242-inline.html?rltr=25_25_25_seorl_s_0_0_0_0_0_0)
-- [SAP S/4HANA Engineer (Basis) Expert - Sovereign Cloud Delivery Germany (m/f/d)](https://www.stepstone.de/jobs--SAP-S-4HANA-Engineer-Basis-Expert-Sovereign-Cloud-Delivery-Germany-m-f-d-Berlin-DE-10557-SAP-SE--13874962-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_0_0)
-- [Development Expert (m/f/d) - - Identity & Trust Services, SAP Cloud Infrastructure](https://www.stepstone.de/jobs--Development-Expert-m-f-d-Identity-Trust-Services-SAP-Cloud-Infrastructure-Berlin-DE-10557-SAP-SE--13950695-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0)
-
-### Würth IT GmbH
-
-Postings: 5 · Queries: SAP ECC,SAP Archivierung,SAP ILM
-
-- [SAP Entwickler (m/w/d) - SD / Vertrieb](https://www.stepstone.de/jobs--SAP-Entwickler-m-w-d-SD-Vertrieb-Berlin-Wurth-IT-GmbH--14263000-inline.html?rltr=19_19_25_seorl_s_1_0_0_0_0_0)
-- [SAP Support Specialist - Logistik / EWM / WM (m/w/d)](https://www.stepstone.de/jobs--SAP-Support-Specialist-Logistik-EWM-WM-m-w-d-Bad-Mergentheim-bei-Wurzburg-Wurth-IT-GmbH--14263002-inline.html?rltr=15_15_25_seorl_m_1_0_0_0_0_0)
-- [SAP Entwickler (m/w/d) - SD / Vertrieb](https://www.stepstone.de/jobs--SAP-Entwickler-m-w-d-SD-Vertrieb-Berlin-Wurth-IT-GmbH--14263000-inline.html?rltr=18_18_25_seorl_m_1_0_0_0_0_0)
-- [SAP Support Specialist - Logistik / EWM / WM (m/w/d)](https://www.stepstone.de/jobs--SAP-Support-Specialist-Logistik-EWM-WM-m-w-d-Bad-Mergentheim-bei-Wurzburg-Wurth-IT-GmbH--14263002-inline.html?rltr=17_17_25_seorl_m_1_0_0_0_0_0)
-- [SAP Entwickler (m/w/d) - SD / Vertrieb](https://www.stepstone.de/jobs--SAP-Entwickler-m-w-d-SD-Vertrieb-Berlin-Wurth-IT-GmbH--14263000-inline.html?rltr=20_20_25_seorl_m_1_0_0_0_0_0)
+## Companies with signal-candidate postings (53)
 
 ### EY Deutschland
 
-Postings: 4 · Queries: S/4HANA Migration,S/4HANA Transformation
+Postings: 14 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC,SAP Archivierung,ERP Transformation
 
-- [Business Process Consultant - SAP S/4HANA Logistics (SAP EWM, Warehouse & Intralogistics) (w/m/d)](https://www.stepstone.de/jobs--Business-Process-Consultant-SAP-S-4HANA-Logistics-SAP-EWM-Warehouse-Intralogistics-w-m-d-Berlin-Dusseldorf-Hamburg-Koln-Stuttgart-Munchen-Frankfurt-Main-EY-Deutschland--14200472-inline.html?rltr=4_4_25_seorl_m_1_0_0_0_0_0)
-- [Berater - SAP S/4HANA Manufacturing - PP, QM, EAM (w/m/d)](https://www.stepstone.de/jobs--Berater-SAP-S-4HANA-Manufacturing-PP-QM-EAM-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Koln-Munchen-Stuttgart-EY-Deutschland--14200474-inline.html?rltr=5_5_25_seorl_m_1_0_0_0_0_0)
-- [Business Process Consultant - SAP S/4HANA Logistics (SAP EWM, Warehouse & Intralogistics) (w/m/d)](https://www.stepstone.de/jobs--Business-Process-Consultant-SAP-S-4HANA-Logistics-SAP-EWM-Warehouse-Intralogistics-w-m-d-Berlin-Dusseldorf-Hamburg-Koln-Stuttgart-Munchen-Frankfurt-Main-EY-Deutschland--14200472-inline.html?rltr=5_5_25_seorl_m_1_0_0_0_0_0)
-- [Berater - SAP S/4HANA Manufacturing - PP, QM, EAM (w/m/d)](https://www.stepstone.de/jobs--Berater-SAP-S-4HANA-Manufacturing-PP-QM-EAM-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Koln-Munchen-Stuttgart-EY-Deutschland--14200474-inline.html?rltr=7_7_25_seorl_m_1_0_0_0_0_0)
+- [Business Process Consultant - SAP S/4HANA Logistics (SAP EWM, Warehouse & Intralogistics) (w/m/d)](https://www.stepstone.de/jobs--Business-Process-Consultant-SAP-S-4HANA-Logistics-SAP-EWM-Warehouse-Intralogistics-w-m-d-Berlin-Dusseldorf-Hamburg-Koln-Stuttgart-Munchen-Frankfurt-Main-EY-Deutschland--14200472-inline.html?rltr=3_3_25_seorl_m_1_0_0_0_0_0)
+- [Berater - SAP S/4HANA Manufacturing - PP, QM, EAM (w/m/d)](https://www.stepstone.de/jobs--Berater-SAP-S-4HANA-Manufacturing-PP-QM-EAM-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Koln-Munchen-Stuttgart-EY-Deutschland--14200474-inline.html?rltr=4_4_25_seorl_m_1_0_0_0_0_0)
+- [(Senior) Consultant Beratung Public Sector - Digitale Transformation (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-Beratung-Public-Sector-Digitale-Transformation-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Munchen-Stuttgart-Nurnberg-EY-Deutschland--14200430-inline.html?rltr=12_12_25_seorl_m_1_0_0_0_0_0)
+- [(Senior) Consultant Cloud & Data Center Transformation & Sovereignity (Financial Services) (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-Cloud-Data-Center-Transformation-Sovereignity-Financial-Services-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Koln-Stuttgart-Munchen-EY-Deutschland--14200785-inline.html?rltr=13_13_25_seorl_m_1_0_0_0_0_0)
+- [Manager Cloud & Data Center Transformation & Sovereignity (Financial Services) (w/m/d)](https://www.stepstone.de/jobs--Manager-Cloud-Data-Center-Transformation-Sovereignity-Financial-Services-w-m-d-Berlin-Dusseldorf-Hamburg-Frankfurt-Main-Munchen-Koln-Stuttgart-EY-Deutschland--14200792-inline.html?rltr=14_14_25_seorl_m_1_0_0_0_0_0)
+- [Berater für Project & Program Management - Business Transformation (w/m/d)](https://www.stepstone.de/jobs--Berater-fur-Project-Program-Management-Business-Transformation-w-m-d-Frankfurt-Main-Berlin-Hamburg-Stuttgart-Koln-Dusseldorf-Nurnberg-Munchen-EY-Deutschland--14200470-inline.html?rltr=17_17_25_seorl_m_1_0_0_0_0_0)
+- [Berater im Projektmanagement im öffentlichen Sektor - Business Transformation (w/m/d)](https://www.stepstone.de/jobs--Berater-im-Projektmanagement-im-offentlichen-Sektor-Business-Transformation-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Munchen-Hamburg-Koln-Stuttgart-Nurnberg-EY-Deutschland--14200471-inline.html?rltr=19_19_25_seorl_m_1_0_0_0_0_0)
+- [Berater - SAP S/4HANA Manufacturing - PP, QM, EAM (w/m/d)](https://www.stepstone.de/jobs--Berater-SAP-S-4HANA-Manufacturing-PP-QM-EAM-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Koln-Munchen-Stuttgart-EY-Deutschland--14200474-inline.html?rltr=16_16_25_seorl_s_1_0_0_0_0_0)
+- [Business Process Consultant - SAP S/4HANA Logistics (SAP EWM, Warehouse & Intralogistics) (w/m/d)](https://www.stepstone.de/jobs--Business-Process-Consultant-SAP-S-4HANA-Logistics-SAP-EWM-Warehouse-Intralogistics-w-m-d-Berlin-Dusseldorf-Hamburg-Koln-Stuttgart-Munchen-Frankfurt-Main-EY-Deutschland--14200472-inline.html?rltr=18_18_25_seorl_m_1_0_0_0_0_0)
+- [(Senior) Consultant Beratung Public Sector - Digitale Transformation (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-Beratung-Public-Sector-Digitale-Transformation-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Munchen-Stuttgart-Nurnberg-EY-Deutschland--14200430-inline.html?rltr=10_10_25_seorl_m_1_0_0_0_0_0)
+- [(Senior) Consultant Cloud & Data Center Transformation & Sovereignity (Financial Services) (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-Cloud-Data-Center-Transformation-Sovereignity-Financial-Services-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Hamburg-Koln-Stuttgart-Munchen-EY-Deutschland--14200785-inline.html?rltr=11_11_25_seorl_m_1_0_0_0_0_0)
+- [Manager Cloud & Data Center Transformation & Sovereignity (Financial Services) (w/m/d)](https://www.stepstone.de/jobs--Manager-Cloud-Data-Center-Transformation-Sovereignity-Financial-Services-w-m-d-Berlin-Dusseldorf-Hamburg-Frankfurt-Main-Munchen-Koln-Stuttgart-EY-Deutschland--14200792-inline.html?rltr=12_12_25_seorl_m_1_0_0_0_0_0)
+- [Berater für Project & Program Management - Business Transformation (w/m/d)](https://www.stepstone.de/jobs--Berater-fur-Project-Program-Management-Business-Transformation-w-m-d-Frankfurt-Main-Berlin-Hamburg-Stuttgart-Koln-Dusseldorf-Nurnberg-Munchen-EY-Deutschland--14200470-inline.html?rltr=14_14_25_seorl_m_1_0_0_0_0_0)
+- [Berater im Projektmanagement im öffentlichen Sektor - Business Transformation (w/m/d)](https://www.stepstone.de/jobs--Berater-im-Projektmanagement-im-offentlichen-Sektor-Business-Transformation-w-m-d-Berlin-Dusseldorf-Frankfurt-Main-Munchen-Hamburg-Koln-Stuttgart-Nurnberg-EY-Deutschland--14200471-inline.html?rltr=16_16_25_seorl_m_1_0_0_0_0_0)
 
-### HOLBORN Europa Raffinerie GmbH
+### SAP SE
 
-Postings: 4 · Queries: SAP Archivierung,SAP ILM
+Postings: 9 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC,SAP Archivierung
 
-- [SAP Application Manager FI/CO (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Manager-FI-CO-m-w-d-Hamburg-HOLBORN-Europa-Raffinerie-GmbH--14193246-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_1_0)
-- [SAP Application Manager EAM/MM (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Manager-EAM-MM-m-w-d-Hamburg-HOLBORN-Europa-Raffinerie-GmbH--14193276-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_1_0)
-- [SAP Application Manager FI/CO (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Manager-FI-CO-m-w-d-Hamburg-HOLBORN-Europa-Raffinerie-GmbH--14193246-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0)
-- [SAP Application Manager EAM/MM (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Manager-EAM-MM-m-w-d-Hamburg-HOLBORN-Europa-Raffinerie-GmbH--14193276-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_1_0)
-
-### Hamburger Hochbahn AG
-
-Postings: 4 · Queries: S/4HANA Migration,S/4HANA Transformation
-
-- [Teilprojektleitung SAP S/4HANA FI (w/m/d)](https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-FI-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14195696-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_1_0)
-- [Teilprojektleitung SAP S/4HANA MM (w/m/d)](https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-MM-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14192263-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0)
-- [Teilprojektleitung SAP S/4HANA FI (w/m/d)](https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-FI-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14195696-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_1_0)
-- [Teilprojektleitung SAP S/4HANA MM (w/m/d)](https://www.stepstone.de/jobs--Teilprojektleitung-SAP-S-4HANA-MM-w-m-d-Hamburg-Hamburger-Hochbahn-AG--14192263-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_0_0)
+- [Senior Applied Scientist for Tabular ML (T3) (f/m/d)](https://www.stepstone.de/jobs--Senior-Applied-Scientist-for-Tabular-ML-T3-f-m-d-Garching-bei-Munchen-DE-85748-SAP-SE--13950693-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0)
+- [Applied Senior/Staff Scientist with SAP S/4 Domain Expertise (f/m/d)](https://www.stepstone.de/jobs--Applied-Senior-Staff-Scientist-with-SAP-S-4-Domain-Expertise-f-m-d-Garching-bei-Munchen-DE-85748-SAP-SE--13950692-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_0_0)
+- [Senior Applied Scientist for Tabular ML (T3) (f/m/d)](https://www.stepstone.de/jobs--Senior-Applied-Scientist-for-Tabular-ML-T3-f-m-d-Garching-bei-Munchen-DE-85748-SAP-SE--13950693-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0)
+- [SAP S/4HANA Engineer (Basis) Expert - Sovereign Cloud Delivery Germany (m/f/d)](https://www.stepstone.de/jobs--SAP-S-4HANA-Engineer-Basis-Expert-Sovereign-Cloud-Delivery-Germany-m-f-d-Berlin-DE-10557-SAP-SE--13874962-inline.html?rltr=6_6_25_seorl_s_0_0_0_0_0_0)
+- [Development Expert (m/f/d) - - Identity & Trust Services, SAP Cloud Infrastructure](https://www.stepstone.de/jobs--Development-Expert-m-f-d-Identity-Trust-Services-SAP-Cloud-Infrastructure-Berlin-DE-10557-SAP-SE--13950695-inline.html?rltr=7_7_25_seorl_s_0_0_0_0_0_0)
+- [Applied Senior/Staff Scientist with SAP S/4 Domain Expertise (f/m/d)](https://www.stepstone.de/jobs--Applied-Senior-Staff-Scientist-with-SAP-S-4-Domain-Expertise-f-m-d-Garching-bei-Munchen-DE-85748-SAP-SE--13950692-inline.html?rltr=9_9_25_seorl_s_0_0_0_0_0_0)
+- [Applied Senior/Staff Scientist with SAP S/4 Domain Expertise (f/m/d)](https://www.stepstone.de/jobs--Applied-Senior-Staff-Scientist-with-SAP-S-4-Domain-Expertise-f-m-d-Garching-bei-Munchen-DE-85748-SAP-SE--13950692-inline.html?rltr=1_1_25_seorl_m_0_0_0_0_0_0)
+- [SAP S/4HANA Engineer (Basis) Expert - Sovereign Cloud Delivery Germany (m/f/d)](https://www.stepstone.de/jobs--SAP-S-4HANA-Engineer-Basis-Expert-Sovereign-Cloud-Delivery-Germany-m-f-d-Berlin-DE-10557-SAP-SE--13874962-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_0_0)
+- [Development Expert (m/f/d) - - Identity & Trust Services, SAP Cloud Infrastructure](https://www.stepstone.de/jobs--Development-Expert-m-f-d-Identity-Trust-Services-SAP-Cloud-Infrastructure-Berlin-DE-10557-SAP-SE--13950695-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_0_0)
 
 ### METRO AG
 
-Postings: 4 · Queries: SAP ECC,SAP Archivierung,SAP ILM
+Postings: 7 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC,SAP Archivierung
 
-- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=18_18_25_seorl_s_0_0_0_0_1_0)
-- [Solution Architect - SAP S4/HANA Finance (all genders)](https://www.stepstone.de/jobs--Solution-Architect-SAP-S4-HANA-Finance-all-genders-Dusseldorf-METRO-AG--14199905-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_1_0)
-- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_1_0)
-- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_1_0)
+- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_1_0)
+- [Solution Architect - SAP S4/HANA Finance (all genders)](https://www.stepstone.de/jobs--Solution-Architect-SAP-S4-HANA-Finance-all-genders-Dusseldorf-METRO-AG--14199905-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_1_0)
+- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_1_0)
+- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=4_4_25_seorl_s_0_0_0_0_1_0)
+- [Solution Architect - SAP S4/HANA Finance (all genders)](https://www.stepstone.de/jobs--Solution-Architect-SAP-S4-HANA-Finance-all-genders-Dusseldorf-METRO-AG--14199905-inline.html?rltr=10_10_25_seorl_s_0_0_0_0_1_0)
+- [Solution Architect - SAP S4/HANA Finance (all genders)](https://www.stepstone.de/jobs--Solution-Architect-SAP-S4-HANA-Finance-all-genders-Dusseldorf-METRO-AG--14199905-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_1_0)
+- [SAP Ariba Solution Architect (all genders)](https://www.stepstone.de/jobs--SAP-Ariba-Solution-Architect-all-genders-Dusseldorf-METRO-AG--14199904-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_1_0)
 
-### Ratiodata SE
+### Hero
 
-Postings: 4 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP Archivierung,SAP ILM
+Postings: 5 · Queries: S/4HANA Migration,S/4HANA Transformation,ERP Transformation
 
-- [SAP Consultant (m/w/d) CS / S/4HANA Service](https://www.stepstone.de/jobs--SAP-Consultant-m-w-d-CS-S-4HANA-Service-Berlin-Mitte-Frankfurt-am-Main-Karlsruhe-Munster-Hannover-Koblenz-Ratiodata-SE--14264446-inline.html?rltr=2_2_25_seorl_m_1_0_0_0_0_0)
-- [SAP Consultant (m/w/d) CS / S/4HANA Service](https://www.stepstone.de/jobs--SAP-Consultant-m-w-d-CS-S-4HANA-Service-Berlin-Mitte-Frankfurt-am-Main-Karlsruhe-Munster-Hannover-Koblenz-Ratiodata-SE--14264446-inline.html?rltr=4_4_25_seorl_m_1_0_0_0_0_0)
-- [SAP Consultant (m/w/d) CS / S/4HANA Service](https://www.stepstone.de/jobs--SAP-Consultant-m-w-d-CS-S-4HANA-Service-Berlin-Mitte-Frankfurt-am-Main-Karlsruhe-Munster-Hannover-Koblenz-Ratiodata-SE--14264446-inline.html?rltr=16_16_25_seorl_m_1_0_0_0_0_0)
-- [SAP Consultant (m/w/d) CS / S/4HANA Service](https://www.stepstone.de/jobs--SAP-Consultant-m-w-d-CS-S-4HANA-Service-Berlin-Mitte-Frankfurt-am-Main-Karlsruhe-Munster-Hannover-Koblenz-Ratiodata-SE--14264446-inline.html?rltr=18_18_25_seorl_m_1_0_0_0_0_0)
-
-### Konica Minolta Business Solutions Deutschland GmbH
-
-Postings: 3 · Queries: SAP Archivierung,SAP ILM,ERP Transformation
-
-- [Consultant Business Intelligence ERP/SAP (m/w/d)](https://www.stepstone.de/jobs--Consultant-Business-Intelligence-ERP-SAP-m-w-d-bundesweit-Konica-Minolta-Business-Solutions-Deutschland-GmbH--14263167-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0)
-- [Consultant Business Intelligence ERP/SAP (m/w/d)](https://www.stepstone.de/jobs--Consultant-Business-Intelligence-ERP-SAP-m-w-d-bundesweit-Konica-Minolta-Business-Solutions-Deutschland-GmbH--14263167-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_0_0)
-- [Consultant Business Intelligence ERP/SAP (m/w/d)](https://www.stepstone.de/jobs--Consultant-Business-Intelligence-ERP-SAP-m-w-d-bundesweit-Konica-Minolta-Business-Solutions-Deutschland-GmbH--14263167-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_0_0)
-
-### adesso SE
-
-Postings: 3 · Queries: S/4HANA Migration
-
-- [IT-Consultant - Migration (all genders)](https://www.stepstone.de/jobs--IT-Consultant-Migration-all-genders-Dusseldorf-Koln-Essen-Paderborn-Hamburg-Munster-adesso-SE--13949324-inline.html?rltr=21_21_25_seorl_m_1_0_0_0_0_0)
-- [Consultant Cloud Migration (all genders)](https://www.stepstone.de/jobs--Consultant-Cloud-Migration-all-genders-Dusseldorf-Koln-Essen-Paderborn-Munster-Hamburg-adesso-SE--13949385-inline.html?rltr=23_23_25_seorl_m_1_0_0_0_0_0)
-- [Business Analyst Datenmigration Utilities (all genders)](https://www.stepstone.de/jobs--Business-Analyst-Datenmigration-Utilities-all-genders-Dusseldorf-Koln-Essen-Hamburg-Paderborn-Munster-adesso-SE--13949325-inline.html?rltr=25_25_25_seorl_m_1_0_0_0_0_0)
-
-### :em engineering methods AG
-
-Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
-
-- [Senior Consultant CAD/PDM (m/w/d) – Experte für digitale Transformation in der Produktentwicklung](https://www.stepstone.de/jobs--Senior-Consultant-CAD-PDM-m-w-d-Experte-fur-digitale-Transformation-in-der-Produktentwicklung-Darmstadt-em-engineering-methods-AG--14263173-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_1_0)
-- [Senior Consultant CAD/PDM (m/w/d) – Experte für digitale Transformation in der Produktentwicklung](https://www.stepstone.de/jobs--Senior-Consultant-CAD-PDM-m-w-d-Experte-fur-digitale-Transformation-in-der-Produktentwicklung-Darmstadt-em-engineering-methods-AG--14263173-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_1_0)
-
-### ADAC
-
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
-
-- [Inhouse Berater SAP FS-CD (w|m|d)](https://www.stepstone.de/jobs--Inhouse-Berater-SAP-FS-CD-wmd-Munchen-ADAC--13818533-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_1_0)
-- [Inhouse Berater SAP FS-CD (w|m|d)](https://www.stepstone.de/jobs--Inhouse-Berater-SAP-FS-CD-wmd-Munchen-ADAC--13818533-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_1_0)
-
-### AL-KO THERM GMBH
-
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
-
-- [Inhouse Consultant SAP Logistik / MM (m/w/d)](https://www.stepstone.de/jobs--Inhouse-Consultant-SAP-Logistik-MM-m-w-d-Jettingen-Scheppach-AL-KO-THERM-GMBH--14200734-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0)
-- [Inhouse Consultant SAP Logistik / MM (m/w/d)](https://www.stepstone.de/jobs--Inhouse-Consultant-SAP-Logistik-MM-m-w-d-Jettingen-Scheppach-AL-KO-THERM-GMBH--14200734-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
-
-### BMS Corporate Solutions GmbH
-
-Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
-
-- [Lead AI Expert (m/w/d) – Enablement & Transformation](https://www.stepstone.de/jobs--Lead-AI-Expert-m-w-d-Enablement-Transformation-bundesweit-BMS-Corporate-Solutions-GmbH--14263890-inline.html?rltr=19_19_25_seorl_m_1_0_0_0_0_0)
-- [Lead AI Expert (m/w/d) – Enablement & Transformation](https://www.stepstone.de/jobs--Lead-AI-Expert-m-w-d-Enablement-Transformation-bundesweit-BMS-Corporate-Solutions-GmbH--14263890-inline.html?rltr=20_20_25_seorl_m_1_0_0_0_0_0)
-
-### EDAG Engineering GmbH
-
-Postings: 2 · Queries: S/4HANA Migration,S/4HANA Transformation
-
-- [SAP Inhouse Consultant* Analytics oder Finance (S/4HANA)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-Analytics-oder-Finance-S-4HANA-Fulda-EDAG-Engineering-GmbH--14136112-inline.html?rltr=12_12_25_seorl_m_1_0_0_0_0_0)
-- [SAP Inhouse Consultant* Analytics oder Finance (S/4HANA)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-Analytics-oder-Finance-S-4HANA-Fulda-EDAG-Engineering-GmbH--14136112-inline.html?rltr=13_13_25_seorl_m_1_0_0_0_0_0)
-
-### Ferendin Engineering Gmbh
-
-Postings: 2 · Queries: S/4HANA Migration,SAP ECC
-
-- [Senior SAP S/4HANA Berater (m/w/d)](https://www.stepstone.de/jobs--Senior-SAP-S-4HANA-Berater-m-w-d-Ludwigsburg-Ferendin-Engineering-Gmbh--14061078-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_1_0)
-- [Senior SAP S/4HANA Berater (m/w/d)](https://www.stepstone.de/jobs--Senior-SAP-S-4HANA-Berater-m-w-d-Ludwigsburg-Ferendin-Engineering-Gmbh--14061078-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_1_0)
+- [Global Key User Purchase to Pay](https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
+- [IT-Projektmanager/in - Product & Plant Systems](https://www.stepstone.de/jobs--IT-Projektmanager-in-Product-Plant-Systems-Bad-Schwartau-Hero--14060120-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0)
+- [Global Key User Purchase to Pay](https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0)
+- [IT-Projektmanager/in - Product & Plant Systems](https://www.stepstone.de/jobs--IT-Projektmanager-in-Product-Plant-Systems-Bad-Schwartau-Hero--14060120-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
+- [Global Key User Purchase to Pay](https://www.stepstone.de/jobs--Global-Key-User-Purchase-to-Pay-Bad-Schwartau-Hero--14060091-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0)
 
 ### Finatycs GmbH
 
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
+Postings: 4 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC,SAP Archivierung
 
-- [SAP ABAP Developer](https://www.stepstone.de/jobs--SAP-ABAP-Developer-Berlin-Finatycs-GmbH--13808555-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_1_0)
-- [SAP ABAP Developer](https://www.stepstone.de/jobs--SAP-ABAP-Developer-Berlin-Finatycs-GmbH--13808555-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_1_0)
+- [SAP ABAP Developer](https://www.stepstone.de/jobs--SAP-ABAP-Developer-Berlin-Finatycs-GmbH--13808555-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_1_0)
+- [SAP ABAP Developer](https://www.stepstone.de/jobs--SAP-ABAP-Developer-Berlin-Finatycs-GmbH--13808555-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_1_0)
+- [SAP ABAP Developer](https://www.stepstone.de/jobs--SAP-ABAP-Developer-Berlin-Finatycs-GmbH--13808555-inline.html?rltr=8_8_25_seorl_s_0_0_0_0_1_0)
+- [SAP ABAP Developer](https://www.stepstone.de/jobs--SAP-ABAP-Developer-Berlin-Finatycs-GmbH--13808555-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_1_0)
 
-### HDI AG
+### Scheer Group
 
-Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
+Postings: 4 · Queries: S/4HANA Migration,SAP ECC,SAP Archivierung
 
-- [Trainee Transformation und Ressortsteuerung](https://www.stepstone.de/jobs--Trainee-Transformation-und-Ressortsteuerung-Hilden-HDI-AG--14262596-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_0_0)
-- [Trainee Transformation und Ressortsteuerung](https://www.stepstone.de/jobs--Trainee-Transformation-und-Ressortsteuerung-Hilden-HDI-AG--14262596-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0)
+- [Teamlead Sales/PreSales (m/w/d) Managed Services](https://www.stepstone.de/jobs--Teamlead-Sales-PreSales-m-w-d-Managed-Services-Saarbrucken-Scheer-Group--14061130-inline.html?rltr=20_20_25_seorl_m_1_0_0_0_1_0)
+- [Senior Consultant SAP Logistik - Managed Services (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-Logistik-Managed-Services-w-m-d-Saarbrucken-Munchen-Hamburg-Leipzig-Freiburg-im-Breisgau-Berlin-Scheer-Group--14200546-inline.html?rltr=2_2_25_seorl_m_1_0_0_0_1_0)
+- [SAP FI/CO Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-FI-CO-Consultant-m-w-d-Saarbrucken-Scheer-Group--14200479-inline.html?rltr=23_23_25_seorl_s_1_0_0_0_1_0)
+- [Senior Consultant SAP Logistik - Managed Services (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-Logistik-Managed-Services-w-m-d-Saarbrucken-Munchen-Hamburg-Leipzig-Freiburg-im-Breisgau-Berlin-Scheer-Group--14200546-inline.html?rltr=21_21_25_seorl_m_1_0_0_0_1_0)
 
-### KNDS
+### Schwartauer Werke GmbH & Co. KG
 
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
+Postings: 4 · Queries: SAP Archivierung,SAP ILM
 
-- [SAP Inhouse Consultant EWM (m/w/d)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-EWM-m-w-d-Munchen-KNDS--14255082-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_0_0)
-- [SAP Inhouse Consultant EWM (m/w/d)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-EWM-m-w-d-Munchen-KNDS--14255082-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0)
+- [SAP Application Expert CO (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Expert-CO-m-w-d-Bad-Schwartau-Schwartauer-Werke-GmbH-Co-KG--13005016-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0)
+- [SAP Application Expert PP/DS (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Expert-PP-DS-m-w-d-Bad-Schwartau-Schwartauer-Werke-GmbH-Co-KG--13005020-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
+- [SAP Application Expert CO (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Expert-CO-m-w-d-Bad-Schwartau-Schwartauer-Werke-GmbH-Co-KG--13005016-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0)
+- [SAP Application Expert PP/DS (m/w/d)](https://www.stepstone.de/jobs--SAP-Application-Expert-PP-DS-m-w-d-Bad-Schwartau-Schwartauer-Werke-GmbH-Co-KG--13005020-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0)
 
-### MLL Münchner Leukämielabor GmbH
+### Rottendorf Pharma GmbH
 
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
+Postings: 3 · Queries: S/4HANA Migration,S/4HANA Transformation,SAP ECC
 
-- [SAP Inhouse Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-m-w-d-Munchen-MLL-Munchner-Leukamielabor-GmbH--14194517-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0)
-- [SAP Inhouse Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-m-w-d-Munchen-MLL-Munchner-Leukamielabor-GmbH--14194517-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
-
-### Otto Group one.O GmbH
-
-Postings: 2 · Queries: S/4HANA Migration,S/4HANA Transformation
-
-- [SAP Solution Architect S/4HANA (w/m/d)](https://www.stepstone.de/jobs--SAP-Solution-Architect-S-4HANA-w-m-d-Hamburg-Otto-Group-one-O-GmbH--13869245-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0)
-- [SAP Solution Architect S/4HANA (w/m/d)](https://www.stepstone.de/jobs--SAP-Solution-Architect-S-4HANA-w-m-d-Hamburg-Otto-Group-one-O-GmbH--13869245-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_0_0)
-
-### RATIONAL Technical Services GmbH
-
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
-
-- [SAP Key User & Project Manager Service Operations (m/w/d)](https://www.stepstone.de/jobs--SAP-Key-User-Project-Manager-Service-Operations-m-w-d-Landsberg-am-Lech-RATIONAL-Technical-Services-GmbH--14263565-inline.html?rltr=17_17_25_seorl_m_0_0_0_0_0_0)
-- [SAP Key User & Project Manager Service Operations (m/w/d)](https://www.stepstone.de/jobs--SAP-Key-User-Project-Manager-Service-Operations-m-w-d-Landsberg-am-Lech-RATIONAL-Technical-Services-GmbH--14263565-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0)
-
-### Rhenus Group
-
-Postings: 2 · Queries: SAP Archivierung,SAP ILM
-
-- [Systemkraft (m/w/d) SAP](https://www.stepstone.de/jobs--Systemkraft-m-w-d-SAP-Kamenz-Rhenus-Group--13662660-inline.html?rltr=13_13_25_seorl_m_1_0_0_0_0_0)
-- [Systemkraft (m/w/d) SAP](https://www.stepstone.de/jobs--Systemkraft-m-w-d-SAP-Kamenz-Rhenus-Group--13662660-inline.html?rltr=15_15_25_seorl_m_1_0_0_0_0_0)
+- [Supply Chain Excellence Specialist (m/w/d) – SAP S/4HANA & EWM](https://www.stepstone.de/jobs--Supply-Chain-Excellence-Specialist-m-w-d-SAP-S-4HANA-EWM-Ennigerloh-Rottendorf-Pharma-GmbH--14199315-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_1_0)
+- [Supply Chain Excellence Specialist (m/w/d) – SAP S/4HANA & EWM](https://www.stepstone.de/jobs--Supply-Chain-Excellence-Specialist-m-w-d-SAP-S-4HANA-EWM-Ennigerloh-Rottendorf-Pharma-GmbH--14199315-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_1_0)
+- [Supply Chain Excellence Specialist (m/w/d) – SAP S/4HANA & EWM](https://www.stepstone.de/jobs--Supply-Chain-Excellence-Specialist-m-w-d-SAP-S-4HANA-EWM-Ennigerloh-Rottendorf-Pharma-GmbH--14199315-inline.html?rltr=17_17_25_seorl_s_0_0_0_0_1_0)
 
 ### SIGNAL IDUNA Gruppe
 
-Postings: 2 · Queries: S/4HANA Transformation,SAP Archivierung
+Postings: 3 · Queries: S/4HANA Transformation,SAP Archivierung,ERP Transformation
 
-- [(Senior) Business Analyst (m/w/d) digitale Transformationsprojekte](https://www.stepstone.de/jobs--Senior-Business-Analyst-m-w-d-digitale-Transformationsprojekte-Hamburg-SIGNAL-IDUNA-Gruppe--14192327-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
-- [Chapter Lead (m/w/d) SAP Application Management](https://www.stepstone.de/jobs--Chapter-Lead-m-w-d-SAP-Application-Management-Dortmund-SIGNAL-IDUNA-Gruppe--14135555-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
+- [(Senior) Business Analyst (m/w/d) digitale Transformationsprojekte](https://www.stepstone.de/jobs--Senior-Business-Analyst-m-w-d-digitale-Transformationsprojekte-Hamburg-SIGNAL-IDUNA-Gruppe--14192327-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0)
+- [Chapter Lead (m/w/d) SAP Application Management](https://www.stepstone.de/jobs--Chapter-Lead-m-w-d-SAP-Application-Management-Dortmund-SIGNAL-IDUNA-Gruppe--14135555-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_0_0)
+- [(Senior) Business Analyst (m/w/d) digitale Transformationsprojekte](https://www.stepstone.de/jobs--Senior-Business-Analyst-m-w-d-digitale-Transformationsprojekte-Hamburg-SIGNAL-IDUNA-Gruppe--14192327-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
+
+### Unternehmensgruppe Theo Müller GmbH & Co. KG
+
+Postings: 3 · Queries: SAP ECC,SAP Archivierung,SAP ILM
+
+- [Integrationsspezialist SAP PO / IS (m/w/d)](https://www.stepstone.de/jobs--Integrationsspezialist-SAP-PO-IS-m-w-d-Fischach-Freising-Dresden-Unternehmensgruppe-Theo-Muller-GmbH-Co-KG--14199267-inline.html?rltr=19_19_25_seorl_s_0_0_0_0_0_0)
+- [Integrationsspezialist SAP PO / IS (m/w/d)](https://www.stepstone.de/jobs--Integrationsspezialist-SAP-PO-IS-m-w-d-Fischach-Freising-Dresden-Unternehmensgruppe-Theo-Muller-GmbH-Co-KG--14199267-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
+- [Integrationsspezialist SAP PO / IS (m/w/d)](https://www.stepstone.de/jobs--Integrationsspezialist-SAP-PO-IS-m-w-d-Fischach-Freising-Dresden-Unternehmensgruppe-Theo-Muller-GmbH-Co-KG--14199267-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
+
+### adesso business consulting AG
+
+Postings: 3 · Queries: S/4HANA Migration
+
+- [Senior Consultant SAP S/4HANA Cloud Public Edition (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-S-4HANA-Cloud-Public-Edition-all-genders-Hameln-Bonn-Hannover-Koln-Paderborn-Dusseldorf-weitere-Standorte-in-DE-adesso-business-consulting-AG--13951171-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_0_0)
+- [Consultant SAP S/4HANA Cloud Public Edition (all genders)](https://www.stepstone.de/jobs--Consultant-SAP-S-4HANA-Cloud-Public-Edition-all-genders-Berlin-Hamburg-Munchen-Koln-Frankfurt-Stuttgart-Leipzig-Dortmund-adesso-business-consulting-AG--13951168-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0)
+- [Senior Consultant SAP Public Cloud Output Management (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-Public-Cloud-Output-Management-all-genders-Hameln-Bonn-Hannover-Koln-Dusseldorf-Paderborn-adesso-business-consulting-AG--13951170-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
+
+### ADAC
+
+Postings: 2 · Queries: SAP ECC,SAP Archivierung
+
+- [Inhouse Berater SAP FS-CD (w|m|d)](https://www.stepstone.de/jobs--Inhouse-Berater-SAP-FS-CD-wmd-Munchen-ADAC--13818533-inline.html?rltr=11_11_25_seorl_s_0_0_0_0_1_0)
+- [Inhouse Berater SAP FS-CD (w|m|d)](https://www.stepstone.de/jobs--Inhouse-Berater-SAP-FS-CD-wmd-Munchen-ADAC--13818533-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_1_0)
+
+### Amadeus Fire AG
+
+Postings: 2 · Queries: S/4HANA Migration,SAP ECC
+
+- [SAP FI/CO Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-FI-CO-Consultant-m-w-d-Berlin-Dusseldorf-Frankfurt-Hamburg-Hannover-Koln-Mannheim-Munchen-Stuttgart-Esslingen-Amadeus-Fire-AG--14268227-inline.html?rltr=17_17_25_seorl_m_1_0_0_0_0_0)
+- [SAP FI/CO Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-FI-CO-Consultant-m-w-d-Berlin-Dusseldorf-Frankfurt-Hamburg-Hannover-Koln-Mannheim-Munchen-Stuttgart-Esslingen-Amadeus-Fire-AG--14268227-inline.html?rltr=25_25_25_seorl_s_1_0_0_0_0_0)
+
+### Basalt-Actien-Gesellschaft
+
+Postings: 2 · Queries: SAP ECC,SAP ILM
+
+- [Payroll Experte SAP / Entgeltabrechnung (m/w/d)](https://www.stepstone.de/jobs--Payroll-Experte-SAP-Entgeltabrechnung-m-w-d-Linz-am-Rhein-Basalt-Actien-Gesellschaft--14199685-inline.html?rltr=21_21_25_seorl_s_0_0_0_0_1_0)
+- [Payroll Experte SAP / Entgeltabrechnung (m/w/d)](https://www.stepstone.de/jobs--Payroll-Experte-SAP-Entgeltabrechnung-m-w-d-Linz-am-Rhein-Basalt-Actien-Gesellschaft--14199685-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_1_0)
+
+### CTC gGmbH – Center for the Transformation of Chemistry
+
+Postings: 2 · Queries: ERP Transformation
+
+- [Chemisch-technische Assistenz (CTA) (m/w/d)](https://www.stepstone.de/jobs--Chemisch-technische-Assistenz-CTA-m-w-d-Leipzig-CTC-gGmbH-Center-for-the-Transformation-of-Chemistry--14200426-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0)
+- [Eventmanager (m/w/d)](https://www.stepstone.de/jobs--Eventmanager-m-w-d-Delitzsch-CTC-gGmbH-Center-for-the-Transformation-of-Chemistry--14200425-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_1_0)
+
+### DACHSER SE
+
+Postings: 2 · Queries: S/4HANA Migration,SAP ECC
+
+- [SAP SD Consultant (m/w/d) Digital Product Group Finance](https://www.stepstone.de/jobs--SAP-SD-Consultant-m-w-d-Digital-Product-Group-Finance-Kempten-Frankfurt-Am-Main-Hamburg-Koln-Unterschleissheim-DACHSER-SE--14200952-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0)
+- [SAP SD Consultant (m/w/d) Digital Product Group Finance](https://www.stepstone.de/jobs--SAP-SD-Consultant-m-w-d-Digital-Product-Group-Finance-Kempten-Frankfurt-Am-Main-Hamburg-Koln-Unterschleissheim-DACHSER-SE--14200952-inline.html?rltr=13_13_25_seorl_s_0_0_0_0_0_0)
+
+### Daimler Buses GmbH
+
+Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
+
+- [Praktikum im Digital Transformation Office bei Daimler Busses ab September 2026](https://www.stepstone.de/jobs--Praktikum-im-Digital-Transformation-Office-bei-Daimler-Busses-ab-September-2026-Neu-Ulm-Daimler-Buses-GmbH--14200795-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
+- [Praktikum im Digital Transformation Office bei Daimler Busses ab September 2026](https://www.stepstone.de/jobs--Praktikum-im-Digital-Transformation-Office-bei-Daimler-Busses-ab-September-2026-Neu-Ulm-Daimler-Buses-GmbH--14200795-inline.html?rltr=7_7_25_seorl_m_0_0_0_0_0_0)
+
+### Daimler Truck AG
+
+Postings: 2 · Queries: SAP ECC,SAP Archivierung
+
+- [Senior SAP finance inhouse consultant (f/m/d) fixed-term](https://www.stepstone.de/jobs--Senior-SAP-finance-inhouse-consultant-f-m-d-fixed-term-Leinfelden-Echterdingen-Daimler-Truck-AG--14200560-inline.html?rltr=5_5_25_seorl_s_0_0_0_0_0_0)
+- [Senior SAP finance inhouse consultant (f/m/d) fixed-term](https://www.stepstone.de/jobs--Senior-SAP-finance-inhouse-consultant-f-m-d-fixed-term-Leinfelden-Echterdingen-Daimler-Truck-AG--14200560-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_0_0)
+
+### HAPEKO Deutschland GmbH
+
+Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
+
+- [Senior Business Controller / Finance Manager / Manager Unternehmenssteuerung / Manager Finance Transformation (m/w/d)](https://www.stepstone.de/jobs--Senior-Business-Controller-Finance-Manager-Manager-Unternehmenssteuerung-Manager-Finance-Transformation-m-w-d-Sankt-Leon-Rot-Waghausel-HAPEKO-Deutschland-GmbH--14200763-inline.html?rltr=20_20_25_seorl_m_1_0_0_0_0_0)
+- [Senior Business Controller / Finance Manager / Manager Unternehmenssteuerung / Manager Finance Transformation (m/w/d)](https://www.stepstone.de/jobs--Senior-Business-Controller-Finance-Manager-Manager-Unternehmenssteuerung-Manager-Finance-Transformation-m-w-d-Sankt-Leon-Rot-Waghausel-HAPEKO-Deutschland-GmbH--14200763-inline.html?rltr=17_17_25_seorl_m_1_0_0_0_0_0)
+
+### HDI AG
+
+Postings: 2 · Queries: S/4HANA Migration,SAP ECC
+
+- [SAP FI/CO Consulting](https://www.stepstone.de/jobs--SAP-FI-CO-Consulting-Koln-HDI-AG--14141270-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_0_0)
+- [SAP FI/CO Consulting](https://www.stepstone.de/jobs--SAP-FI-CO-Consulting-Koln-HDI-AG--14141270-inline.html?rltr=14_14_25_seorl_s_0_0_0_0_0_0)
+
+### Henkell & Co. Sektkellerei KG
+
+Postings: 2 · Queries: S/4HANA Migration,SAP Archivierung
+
+- [Solution Consultant – Finance & Controlling Applications/SAP FI (f/m/d)](https://www.stepstone.de/jobs--Solution-Consultant-Finance-Controlling-Applications-SAP-FI-f-m-d-Wiesbaden-Henkell-Co-Sektkellerei-KG--12743966-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0)
+- [Solution Consultant – Finance & Controlling Applications/SAP FI (f/m/d)](https://www.stepstone.de/jobs--Solution-Consultant-Finance-Controlling-Applications-SAP-FI-f-m-d-Wiesbaden-Henkell-Co-Sektkellerei-KG--12743966-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_0_0)
+
+### Interhyp Gruppe
+
+Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
+
+- [Head of Strategy and Transformation (m/w/d)](https://www.stepstone.de/jobs--Head-of-Strategy-and-Transformation-m-w-d-Munchen-Interhyp-Gruppe--14200679-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0)
+- [Head of Strategy and Transformation (m/w/d)](https://www.stepstone.de/jobs--Head-of-Strategy-and-Transformation-m-w-d-Munchen-Interhyp-Gruppe--14200679-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_0_0)
+
+### Interzero Circular Solutions Germany GmbH
+
+Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
+
+- [Senior ERP-Transformationsmanager (m/w/d)](https://www.stepstone.de/jobs--Senior-ERP-Transformationsmanager-m-w-d-Koln-Interzero-Circular-Solutions-Germany-GmbH--14201146-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0)
+- [Senior ERP-Transformationsmanager (m/w/d)](https://www.stepstone.de/jobs--Senior-ERP-Transformationsmanager-m-w-d-Koln-Interzero-Circular-Solutions-Germany-GmbH--14201146-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_0_0)
+
+### KPMG AG Wirtschaftsprüfungsgesellschaft
+
+Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
+
+- [(Senior) Manager Tax Transformation - Tax Technology (w/m/d)](https://www.stepstone.de/jobs--Senior-Manager-Tax-Transformation-Tax-Technology-w-m-d-Berlin-Munchen-Hamburg-Frankfurt-Dusseldorf-KPMG-AG-Wirtschaftsprufungsgesellschaft--13329558-inline.html?rltr=10_10_25_seorl_m_1_0_0_0_0_0)
+- [(Senior) Manager Tax Transformation - Tax Technology (w/m/d)](https://www.stepstone.de/jobs--Senior-Manager-Tax-Transformation-Tax-Technology-w-m-d-Berlin-Munchen-Hamburg-Frankfurt-Dusseldorf-KPMG-AG-Wirtschaftsprufungsgesellschaft--13329558-inline.html?rltr=8_8_25_seorl_m_1_0_0_0_0_0)
+
+### MLL Münchner Leukämielabor GmbH
+
+Postings: 2 · Queries: SAP ECC,SAP Archivierung
+
+- [SAP Inhouse Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-m-w-d-Munchen-MLL-Munchner-Leukamielabor-GmbH--14194517-inline.html?rltr=12_12_25_seorl_s_0_0_0_0_0_0)
+- [SAP Inhouse Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-Inhouse-Consultant-m-w-d-Munchen-MLL-Munchner-Leukamielabor-GmbH--14194517-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_0_0)
+
+### Rhenus Group
+
+Postings: 2 · Queries: SAP ECC,SAP Archivierung
+
+- [Systemkraft (m/w/d) SAP](https://www.stepstone.de/jobs--Systemkraft-m-w-d-SAP-Kamenz-Rhenus-Group--13662660-inline.html?rltr=18_18_25_seorl_s_1_0_0_0_0_0)
+- [Systemkraft (m/w/d) SAP](https://www.stepstone.de/jobs--Systemkraft-m-w-d-SAP-Kamenz-Rhenus-Group--13662660-inline.html?rltr=9_9_25_seorl_m_1_0_0_0_0_0)
 
 ### SILAG Handel GmbH
 
 Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
 
-- [Berater Digitale Transformation und KI Vernetzung (m/w/d)](https://www.stepstone.de/jobs--Berater-Digitale-Transformation-und-KI-Vernetzung-m-w-d-Langenfeld-SILAG-Handel-GmbH--14200250-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0)
-- [Berater Digitale Transformation und KI Vernetzung (m/w/d)](https://www.stepstone.de/jobs--Berater-Digitale-Transformation-und-KI-Vernetzung-m-w-d-Langenfeld-SILAG-Handel-GmbH--14200250-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_1_0)
+- [Berater Digitale Transformation und KI Vernetzung (m/w/d)](https://www.stepstone.de/jobs--Berater-Digitale-Transformation-und-KI-Vernetzung-m-w-d-Langenfeld-SILAG-Handel-GmbH--14200250-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_1_0)
+- [Berater Digitale Transformation und KI Vernetzung (m/w/d)](https://www.stepstone.de/jobs--Berater-Digitale-Transformation-und-KI-Vernetzung-m-w-d-Langenfeld-SILAG-Handel-GmbH--14200250-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_1_0)
 
-### adesso insurance solutions GmbH
+### Technische Universität Dortmund
 
-Postings: 2 · Queries: S/4HANA Migration
+Postings: 2 · Queries: S/4HANA Transformation,ERP Transformation
 
-- [Senior Consultant Datenmigration (all genders)](https://www.stepstone.de/jobs--Senior-Consultant-Datenmigration-all-genders-Dusseldorf-Frankfurt-Essen-Hamburg-Munchen-Dortmund-Berlin-Koln-adesso-insurance-solutions-GmbH--13949113-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0)
-- [Software Developer Datenmigration (all genders)](https://www.stepstone.de/jobs--Software-Developer-Datenmigration-all-genders-Dusseldorf-Frankfurt-Koln-Essen-Bonn-Paderborn-Aachen-Dortmund-adesso-insurance-solutions-GmbH--13949112-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
+- [Doktorand*in / Post-Doktorand*in am Lehrstuhl Digitale Transformation der TU Dortmund (100 %)](https://www.stepstone.de/jobs--Doktorandin-Post-Doktorandin-am-Lehrstuhl-Digitale-Transformation-der-TU-Dortmund-100-Dortmund-Technische-Universitat-Dortmund--14200157-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_1_0)
+- [Doktorand*in / Post-Doktorand*in am Lehrstuhl Digitale Transformation der TU Dortmund (100 %)](https://www.stepstone.de/jobs--Doktorandin-Post-Doktorandin-am-Lehrstuhl-Digitale-Transformation-der-TU-Dortmund-100-Dortmund-Technische-Universitat-Dortmund--14200157-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_1_0)
 
-### it-motive AG
+### VHV Gruppe
 
-Postings: 2 · Queries: SAP ECC
+Postings: 2 · Queries: S/4HANA Migration,SAP ECC
 
-- [SAP PP Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-PP-Consultant-m-w-d-Duisburg-Dortmund-Regensburg-it-motive-AG--13406114-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0)
-- [SAP EAM/ CS Berater (m/w/d)](https://www.stepstone.de/jobs--SAP-EAM-CS-Berater-m-w-d-Duisburg-Dortmund-Regensburg-it-motive-AG--13409987-inline.html?rltr=17_17_25_seorl_m_0_0_0_0_0_0)
+- [SAP Basis Administrator mit Schwerpunkt Linux, AWS & BTP (w/m/d)](https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_1_0)
+- [SAP Basis Administrator mit Schwerpunkt Linux, AWS & BTP (w/m/d)](https://www.stepstone.de/jobs--SAP-Basis-Administrator-mit-Schwerpunkt-Linux-AWS-BTP-w-m-d-Hannover-VHV-Gruppe--13985396-inline.html?rltr=24_24_25_seorl_s_0_0_0_0_1_0)
 
-### 4U-Consult GmbH & Co. KG
+### VPV Versicherungen
 
-Postings: 1 · Queries: SAP ECC
+Postings: 2 · Queries: SAP ECC,SAP Archivierung
 
-- [SAP Senior-Security-Manager (m/w/d) mit starker Beratungskompetenz gesucht](https://www.stepstone.de/jobs--SAP-Senior-Security-Manager-m-w-d-mit-starker-Beratungskompetenz-gesucht-Weinheim-Bergstrasse-4U-Consult-GmbH-Co-KG--14128408-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_1_0)
+- [Senior SAP Entwickler (m/w/d)](https://www.stepstone.de/jobs--Senior-SAP-Entwickler-m-w-d-Stuttgart-VPV-Versicherungen--14140326-inline.html?rltr=20_20_25_seorl_s_0_0_0_0_0_0)
+- [Senior SAP Entwickler (m/w/d)](https://www.stepstone.de/jobs--Senior-SAP-Entwickler-m-w-d-Stuttgart-VPV-Versicherungen--14140326-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0)
 
-### AES Aircraft Elektro/Elektronik System GmbH
-
-Postings: 1 · Queries: ERP Transformation
-
-- [ERP-Projektleiter (m/w/d) Digitale Transformation](https://www.stepstone.de/jobs--ERP-Projektleiter-m-w-d-Digitale-Transformation-Bremen-AES-Aircraft-Elektro-Elektronik-System-GmbH--14263506-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_1_0)
-
-### BExO GmbH
-
-Postings: 1 · Queries: SAP ECC
-
-- [SAP® Entwickler (m, w, d) – Deine Chance bei BEXO GmbH](https://www.stepstone.de/jobs--SAPR-Entwickler-m-w-d-Deine-Chance-bei-BEXO-GmbH-Schonwald-Oberfranken-BExO-GmbH--14198373-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_1_0)
-
-### BGHM Berufsgenossenschaft Holz und Metall
+### 3B Scientific GmbH
 
 Postings: 1 · Queries: ERP Transformation
 
-- [Werkstudent/-in Informationstechnologie (IT) für ERP- und SAP-Systeme Bereich Finanzen und Controlling (m/w/d)](https://www.stepstone.de/jobs--Werkstudent-in-Informationstechnologie-IT-fur-ERP-und-SAP-Systeme-Bereich-Finanzen-und-Controlling-m-w-d-Mainz-Hannover-BGHM-Berufsgenossenschaft-Holz-und-Metall--14256379-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_0_0)
+- [Lagermitarbeiter/in Wareneingang (m/w/d)](https://www.stepstone.de/jobs--Lagermitarbeiter-in-Wareneingang-m-w-d-Hamburg-Hamburg-Deutschland-3B-Scientific-GmbH--14135556-inline.html?rltr=21_21_25_seorl_m_0_0_0_0_0_0)
 
-### Beckhoff Automation GmbH & Co. KG
+### 50Hertz Transmission GmbH
 
-Postings: 1 · Queries: ERP Transformation
+Postings: 1 · Queries: SAP Archivierung
 
-- [ERP Inhouse Support Engineer (m/w/d)](https://www.stepstone.de/jobs--ERP-Inhouse-Support-Engineer-m-w-d-Verl-Beckhoff-Automation-GmbH-Co-KG--14125576-inline.html?rltr=13_13_25_seorl_m_0_0_0_0_0_0)
+- [Werkstudentin SAP Plattform Support (m/w/d)](https://www.stepstone.de/jobs--Werkstudentin-SAP-Plattform-Support-m-w-d-Berlin-50Hertz-Transmission-GmbH--14200807-inline.html?rltr=17_17_25_seorl_m_1_0_0_0_0_0)
 
-### Berner Omnichannel Trading Holding SE
+### AL-KO THERM GMBH
 
-Postings: 1 · Queries: SAP ECC
+Postings: 1 · Queries: SAP Archivierung
 
-- [Data Engineer - Data Warehouse (w/m/d)](https://www.stepstone.de/jobs--Data-Engineer-Data-Warehouse-w-m-d-Koln-Kunzelsau-Berner-Omnichannel-Trading-Holding-SE--14196098-inline.html?rltr=4_4_25_seorl_m_0_0_0_0_0_0)
+- [Inhouse Consultant SAP Logistik / MM (m/w/d)](https://www.stepstone.de/jobs--Inhouse-Consultant-SAP-Logistik-MM-m-w-d-Jettingen-Scheppach-AL-KO-THERM-GMBH--14200734-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_0_0)
 
-### Bertrandt AG
+### BEW Berliner Energie und Wärme GmbH
 
-Postings: 1 · Queries: SAP ECC
+Postings: 1 · Queries: SAP Archivierung
 
-- [Materialdisponent (m/w/d)](https://www.stepstone.de/jobs--Materialdisponent-m-w-d-Wedel-Bertrandt-AG--14196506-inline.html?rltr=7_7_25_seorl_m_1_0_0_0_0_0)
-
-### BizLink Industry Germany GmbH
-
-Postings: 1 · Queries: S/4HANA Transformation
-
-- [AI Strategy & Process Transformation Manager (m/f/d)](https://www.stepstone.de/jobs--AI-Strategy-Process-Transformation-Manager-m-f-d-Roth-BizLink-Industry-Germany-GmbH--14200339-inline.html?rltr=2_2_25_seorl_m_0_0_0_0_1_0)
-
-### British American Tobacco (Germany) GmbH
-
-Postings: 1 · Queries: S/4HANA Transformation
-
-- [Finance Transformation Manager (m/f/d)](https://www.stepstone.de/jobs--Finance-Transformation-Manager-m-f-d-Hamburg-British-American-Tobacco-Germany-GmbH--14264248-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_0_0)
-
-### Börsenmedien AG
-
-Postings: 1 · Queries: ERP Transformation
-
-- [ERP Specialist Warenwirtschaft und Reporting (m/w/d)](https://www.stepstone.de/jobs--ERP-Specialist-Warenwirtschaft-und-Reporting-m-w-d-Kulmbach-Bayreuth-Coburg-Nunberg-Bamberg-Borsenmedien-AG--14004480-inline.html?rltr=17_17_25_seorl_m_0_0_0_0_1_0)
+- [SAP Solution Lead – Plattform & Projekte](https://www.stepstone.de/jobs--SAP-Solution-Lead-Plattform-Projekte-Berlin-BEW-Berliner-Energie-und-Warme-GmbH--14267983-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_0_0)
 
 ### CADENAS GmbH
 
 Postings: 1 · Queries: ERP Transformation
 
-- [(Junior) ERP Developer (m/w/d) Microsoft Business Central](https://www.stepstone.de/jobs--Junior-ERP-Developer-m-w-d-Microsoft-Business-Central-Augsburg-CADENAS-GmbH--14200358-inline.html?rltr=14_14_25_seorl_m_0_0_0_0_0_0)
+- [(Junior) ERP Developer (m/w/d) Microsoft Business Central](https://www.stepstone.de/jobs--Junior-ERP-Developer-m-w-d-Microsoft-Business-Central-Augsburg-CADENAS-GmbH--14200358-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_0_0)
 
-### Clatum Consulting Gruppe
-
-Postings: 1 · Queries: S/4HANA Migration
-
-- [Technischer Berater - SAP Grantor / S/4HANA / WebUI (m/w/d)](https://www.stepstone.de/jobs--Technischer-Berater-SAP-Grantor-S-4HANA-WebUI-m-w-d-Eschborn-Clatum-Consulting-Gruppe--12897323-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_1_0)
-
-### Daimler Buses GmbH
-
-Postings: 1 · Queries: S/4HANA Transformation
-
-- [Praktikum im Digital Transformation Office bei Daimler Busses ab September 2026](https://www.stepstone.de/jobs--Praktikum-im-Digital-Transformation-Office-bei-Daimler-Busses-ab-September-2026-Neu-Ulm-Daimler-Buses-GmbH--14200795-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0)
-
-### Daimler Truck AG
+### Christoph Kroschke GmbH
 
 Postings: 1 · Queries: SAP Archivierung
 
-- [Senior SAP finance inhouse consultant (f/m/d) fixed-term](https://www.stepstone.de/jobs--Senior-SAP-finance-inhouse-consultant-f-m-d-fixed-term-Leinfelden-Echterdingen-Daimler-Truck-AG--14200560-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0)
+- [Business Application Manager (m/w/d) SAP und E-Commerce](https://www.stepstone.de/jobs--Business-Application-Manager-m-w-d-SAP-und-E-Commerce-Ahrensburg-Christoph-Kroschke-GmbH--14267236-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0)
 
-### FUCHS SE
-
-Postings: 1 · Queries: SAP ECC
-
-- [Manager SAP Berechtigungen (m/w/d)](https://www.stepstone.de/jobs--Manager-SAP-Berechtigungen-m-w-d-Mannheim-FUCHS-SE--14190647-inline.html?rltr=21_21_25_seorl_s_0_0_0_0_0_0)
-
-### Fliegl Agro-Center GmbH
+### Global Legal Entity Identifier Foundation (GLEIF)
 
 Postings: 1 · Queries: ERP Transformation
 
-- [ERP- Projektmanager (m/w/d)](https://www.stepstone.de/jobs--ERP-Projektmanager-m-w-d-Kastl-Fliegl-Agro-Center-GmbH--13608655-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0)
+- [Senior Financial Accountant (m/w/d)](https://www.stepstone.de/jobs--Senior-Financial-Accountant-m-w-d-Frankfurt-Basel-Global-Legal-Entity-Identifier-Foundation-GLEIF--13955020-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_0_0)
 
-### Fusion Consulting (Germany) GmbH
-
-Postings: 1 · Queries: SAP ECC
-
-- [SAP EWM Consultant](https://www.stepstone.de/jobs--SAP-EWM-Consultant-Frankfurt-am-Main-Fusion-Consulting-Germany-GmbH--14126579-inline.html?rltr=12_12_25_seorl_m_0_0_0_0_1_0)
-
-### Haufe Group SE
-
-Postings: 1 · Queries: ERP Transformation
-
-- [Lead Partner Growth & Revenue Operations für ERP-Cloud Lösung (d/m/w)](https://www.stepstone.de/jobs--Lead-Partner-Growth-Revenue-Operations-fur-ERP-Cloud-Losung-d-m-w-Freiburg-im-Breisgau-Haufe-Group-SE--14258009-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_1_0)
-
-### Henkell & Co. Sektkellerei KG
-
-Postings: 1 · Queries: SAP Archivierung
-
-- [Solution Consultant – Finance & Controlling Applications/SAP FI (f/m/d)](https://www.stepstone.de/jobs--Solution-Consultant-Finance-Controlling-Applications-SAP-FI-f-m-d-Wiesbaden-Henkell-Co-Sektkellerei-KG--12743966-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_0_0)
-
-### Interzero Circular Solutions Germany GmbH
-
-Postings: 1 · Queries: ERP Transformation
-
-- [Senior ERP-Transformationsmanager (m/w/d)](https://www.stepstone.de/jobs--Senior-ERP-Transformationsmanager-m-w-d-Koln-Interzero-Circular-Solutions-Germany-GmbH--14201146-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_0_0)
-
-### KPMG AG Wirtschaftsprüfungsgesellschaft
-
-Postings: 1 · Queries: S/4HANA Transformation
-
-- [(Senior) Manager Tax Transformation - Tax Technology (w/m/d)](https://www.stepstone.de/jobs--Senior-Manager-Tax-Transformation-Tax-Technology-w-m-d-Berlin-Munchen-Hamburg-Frankfurt-Dusseldorf-KPMG-AG-Wirtschaftsprufungsgesellschaft--13329558-inline.html?rltr=24_24_25_seorl_m_1_0_0_0_0_0)
-
-### Landkreis Ravensburg
+### Hans Hundegger AG
 
 Postings: 1 · Queries: S/4HANA Migration
 
-- [Volljurist/in (w/m/d) für das Dezernat Bürgerservice, Gesundheit und Migration zum nächstmöglichen Zeitpunkt](https://www.stepstone.de/jobs--Volljurist-in-w-m-d-fur-das-Dezernat-Burgerservice-Gesundheit-und-Migration-zum-nachstmoglichen-Zeitpunkt-Ravensburg-Landkreis-Ravensburg--14192159-inline.html?rltr=15_15_25_seorl_m_1_0_0_0_0_0)
+- [Finanzbuchhalter (m/w/d)](https://www.stepstone.de/jobs--Finanzbuchhalter-m-w-d-Hawangen-Hans-Hundegger-AG--14199454-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_1_0)
 
-### Mediengruppe Pressedruck
+### KRONE Business Center DigITal GmbH & Co.KG
 
 Postings: 1 · Queries: SAP ECC
 
-- [SAP Basis & Platform Administrator / Engineer (m/w/d)](https://www.stepstone.de/jobs--SAP-Basis-Platform-Administrator-Engineer-m-w-d-Augsburg-Konstanz-Wurzburg-Mediengruppe-Pressedruck--14264037-inline.html?rltr=20_20_25_seorl_s_0_0_0_0_0_0)
+- [SAP EWM Inhouse Consultant (m/w/d)](https://www.stepstone.de/jobs--SAP-EWM-Inhouse-Consultant-m-w-d-Haselunne-Spelle-Werlte-KRONE-Business-Center-DigITal-GmbH-Co-KG--14199486-inline.html?rltr=15_15_25_seorl_s_0_0_0_0_0_0)
 
-### OLEDWorks GmbH
+### Marvya GmbH
 
-Postings: 1 · Queries: ERP Transformation
+Postings: 1 · Queries: S/4HANA Migration
 
-- [IT Specialist MES / ERP (m/w/d)](https://www.stepstone.de/jobs--IT-Specialist-MES-ERP-m-w-d-Aachen-OLEDWorks-GmbH--14256520-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_1_0)
+- [Junior Full-Stack Developer (m/w/d) – Shopify Migration](https://www.stepstone.de/jobs--Junior-Full-Stack-Developer-m-w-d-Shopify-Migration-Saarbrucken-Deutschland-Marvya-GmbH--12657920-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0)
+
+### Murrplastik Systemtechnik GmbH
+
+Postings: 1 · Queries: S/4HANA Migration
+
+- [Lagerfachkraft (w/m/d)](https://www.stepstone.de/jobs--Lagerfachkraft-w-m-d-Oppenweiler-Murrplastik-Systemtechnik-GmbH--14200550-inline.html?rltr=23_23_25_seorl_m_0_0_0_0_0_0)
+
+### NTT DATA Business Solutions AG
+
+Postings: 1 · Queries: SAP Archivierung
+
+- [Enterprise IT Architect - SAP (w/m/d)](https://www.stepstone.de/jobs--Enterprise-IT-Architect-SAP-w-m-d-Bielefeld-Berlin-Dortmund-Hamburg-Heidelberg-Koln-Oldenburg-Munchen-Stuttgart-bundesweit-NTT-DATA-Business-Solutions-AG--13762551-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0)
+
+### OEDIV Oetker Daten- und Informationsverarbeitung KG
+
+Postings: 1 · Queries: SAP Archivierung
+
+- [(Junior) Enterprise Solutions Specialist – SAP BTP (m/w/d)](https://www.stepstone.de/jobs--Junior-Enterprise-Solutions-Specialist-SAP-BTP-m-w-d-Bielefeld-Oldenburg-Koln-OEDIV-Oetker-Daten-und-Informationsverarbeitung-KG--14200078-inline.html?rltr=19_19_25_seorl_m_0_0_0_0_1_0)
 
 ### PMB International GmbH
 
 Postings: 1 · Queries: ERP Transformation
 
-- [Systemadministrator (m/w/d) / ERP und Security Spezialist](https://www.stepstone.de/jobs--Systemadministrator-m-w-d-ERP-und-Security-Spezialist-Nordhausen-PMB-International-GmbH--14199398-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_1_0)
+- [Systemadministrator (m/w/d) / ERP und Security Spezialist](https://www.stepstone.de/jobs--Systemadministrator-m-w-d-ERP-und-Security-Spezialist-Nordhausen-PMB-International-GmbH--14199398-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_1_0)
 
-### PTA GmbH
-
-Postings: 1 · Queries: ERP Transformation
-
-- [SAP Consultant ERP / SAP Berater ERP (m/w/d)](https://www.stepstone.de/jobs--SAP-Consultant-ERP-SAP-Berater-ERP-m-w-d-Berlin-Dresden-Dusseldorf-Frankfurt-Hamburg-Karlsruhe-Kassel-Koln-Mannheim-Munchen-PTA-GmbH--13495173-inline.html?rltr=18_18_25_seorl_m_0_0_0_0_0_0)
-
-### RICO GmbH & Co. KG
+### Ritter Sport - Alfred Ritter GmbH & Co. KG
 
 Postings: 1 · Queries: ERP Transformation
 
-- [Softwareentwickler (m/w/d) ERP & .NET](https://www.stepstone.de/jobs--Softwareentwickler-m-w-d-ERP-NET-Kirchheim-Teck-RICO-GmbH-Co-KG--14256685-inline.html?rltr=11_11_25_seorl_m_0_0_0_0_1_0)
+- [VP Marketing](https://www.stepstone.de/jobs--VP-Marketing-Waldenbuch-Ritter-Sport-Alfred-Ritter-GmbH-Co-KG--14199735-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
 
-### Rottendorf Pharma GmbH
+### Schreiner Group GmbH & Co. KG
 
-Postings: 1 · Queries: S/4HANA Migration
+Postings: 1 · Queries: SAP Archivierung
 
-- [Supply Chain Excellence Specialist (m/w/d) – SAP S/4HANA & EWM](https://www.stepstone.de/jobs--Supply-Chain-Excellence-Specialist-m-w-d-SAP-S-4HANA-EWM-Ennigerloh-Rottendorf-Pharma-GmbH--14199315-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_1_0)
+- [Werkstudent (m/w/d) für unser Archiv](https://www.stepstone.de/jobs--Werkstudent-m-w-d-fur-unser-Archiv-Oberschleissheim-bei-Munchen-Schreiner-Group-GmbH-Co-KG--14200297-inline.html?rltr=22_22_25_seorl_m_0_0_0_0_0_0)
 
-### STREIT Software GmbH
+### Simba Computer Systeme GmbH
 
 Postings: 1 · Queries: ERP Transformation
 
-- [ERP-Berater / Software-Consultant Handwerksbetriebe im Außendienst - Kaufmann für Digitalisierungsmanagement / IT-System Management o. ä. (m/w/d)](https://www.stepstone.de/jobs--ERP-Berater-Software-Consultant-Handwerksbetriebe-im-Aussendienst-Kaufmann-fur-Digitalisierungsmanagement-IT-System-Management-o-a-m-w-d-Haslach-im-Kinzigtal-Augsburg-Ulm-Hamburg-Hannover-Kassel-STREIT-Software-GmbH--14257823-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
-
-### Scheer Group
-
-Postings: 1 · Queries: SAP ECC
-
-- [Senior Consultant SAP Logistik - Managed Services (w/m/d)](https://www.stepstone.de/jobs--Senior-Consultant-SAP-Logistik-Managed-Services-w-m-d-Saarbrucken-Munchen-Hamburg-Leipzig-Freiburg-im-Breisgau-Berlin-Scheer-Group--14200546-inline.html?rltr=3_3_25_seorl_m_1_0_0_0_1_0)
+- [Software Developer (m/w/d) Schwerpunkt ERP bei Simba Computer Systeme GmbH](https://www.stepstone.de/jobs--Software-Developer-m-w-d-Schwerpunkt-ERP-bei-Simba-Computer-Systeme-GmbH-Ostfildern-Deutschland-Simba-Computer-Systeme-GmbH--13282866-inline.html?rltr=20_20_25_seorl_m_0_0_0_0_0_0)
 
 ### SimonsVoss Technologies GmbH
 
 Postings: 1 · Queries: ERP Transformation
 
-- [Business Analyst im Bereich ERP & Eco Systeme (m/w/d)](https://www.stepstone.de/jobs--Business-Analyst-im-Bereich-ERP-Eco-Systeme-m-w-d-Unterfohring-bei-Munchen-SimonsVoss-Technologies-GmbH--13807155-inline.html?rltr=15_15_25_seorl_m_1_0_0_0_1_0)
+- [Business Analyst im Bereich ERP & Eco Systeme (m/w/d)](https://www.stepstone.de/jobs--Business-Analyst-im-Bereich-ERP-Eco-Systeme-m-w-d-Unterfohring-bei-Munchen-SimonsVoss-Technologies-GmbH--13807155-inline.html?rltr=4_4_25_seorl_m_1_0_0_0_1_0)
 
 ### Stadt Rüsselsheim am Main
 
 Postings: 1 · Queries: S/4HANA Migration
 
-- [Sachbearbeiterin / Sachbearbeiter (m/w/d) im Bereich Einbürgerung und Migration](https://www.stepstone.de/jobs--Sachbearbeiterin-Sachbearbeiter-m-w-d-im-Bereich-Einburgerung-und-Migration-Russelsheim-am-Main-Stadt-Russelsheim-am-Main--14199295-inline.html?rltr=10_10_25_seorl_m_0_0_0_0_0_0)
+- [Sachbearbeiterin / Sachbearbeiter (m/w/d) im Bereich Einbürgerung und Migration](https://www.stepstone.de/jobs--Sachbearbeiterin-Sachbearbeiter-m-w-d-im-Bereich-Einburgerung-und-Migration-Russelsheim-am-Main-Stadt-Russelsheim-am-Main--14199295-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_0_0)
 
-### SÜMO eG
+### Universität Hamburg
+
+Postings: 1 · Queries: S/4HANA Migration
+
+- [Teamleitung Warengruppen- und Supportmanagement](https://www.stepstone.de/jobs--Teamleitung-Warengruppen-und-Supportmanagement-Hamburg-Universitat-Hamburg--14199429-inline.html?rltr=16_16_25_seorl_m_0_0_0_0_0_0)
+
+### WESTFLEISCH SCE mbH
+
+Postings: 1 · Queries: SAP ECC
+
+- [Senior SAP PP Inhouse Consultant (m/w/d)](https://www.stepstone.de/jobs--Senior-SAP-PP-Inhouse-Consultant-m-w-d-Munster-WESTFLEISCH-SCE-mbH--14060145-inline.html?rltr=22_22_25_seorl_s_0_0_0_0_0_0)
+
+### ZEISS
 
 Postings: 1 · Queries: ERP Transformation
 
-- [Kaufmännischer Projektmitarbeiter (m/w/d) mit Schwerpunkt ERP-/Warenwirtschaftssysteme](https://www.stepstone.de/jobs--Kaufmannischer-Projektmitarbeiter-m-w-d-mit-Schwerpunkt-ERP-Warenwirtschaftssysteme-Neu-Ulm-SUMO-eG--13357061-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0)
+- [Program Manager - Business & Ecosystems Lifesciences (f/m/x)](https://www.stepstone.de/jobs--Program-Manager-Business-Ecosystems-Lifesciences-f-m-x-Munchen-ZEISS--14200440-inline.html?rltr=24_24_25_seorl_m_0_0_0_0_0_0)
 
-### TEKA - Maschinenbau GmbH
-
-Postings: 1 · Queries: ERP Transformation
-
-- [ERP Administrator (m/w/d)](https://www.stepstone.de/jobs--ERP-Administrator-m-w-d-Edenkoben-bei-Landau-TEKA-Maschinenbau-GmbH--14134541-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_1_0)
-
-### TKMS GmbH
+### it-motive AG
 
 Postings: 1 · Queries: SAP ECC
 
-- [Solution Architect Application Management (m/w/d)](https://www.stepstone.de/jobs--Solution-Architect-Application-Management-m-w-d-Hamburg-Kiel-Emden-Wismar-Bremen-TKMS-GmbH--14196642-inline.html?rltr=6_6_25_seorl_m_0_0_0_0_0_0)
-
-### VINCORION Advanced Systems GmbH
-
-Postings: 1 · Queries: SAP ECC
-
-- [Materialdisponent*in (all genders)](https://www.stepstone.de/jobs--Materialdisponentin-all-genders-Wedel-VINCORION-Advanced-Systems-GmbH--14192051-inline.html?rltr=5_5_25_seorl_m_0_0_0_0_0_0)
-
-### VPV Versicherungen
-
-Postings: 1 · Queries: SAP Archivierung
-
-- [Senior SAP Entwickler (m/w/d)](https://www.stepstone.de/jobs--Senior-SAP-Entwickler-m-w-d-Stuttgart-VPV-Versicherungen--14140326-inline.html?rltr=25_25_25_seorl_m_0_0_0_0_0_0)
-
-### WCG Wärme Contracting GmbH
-
-Postings: 1 · Queries: ERP Transformation
-
-- [IT-Consultant ERP (m/w/d)](https://www.stepstone.de/jobs--IT-Consultant-ERP-m-w-d-Hamburg-WCG-Warme-Contracting-GmbH--14258456-inline.html?rltr=9_9_25_seorl_m_0_0_0_0_1_0)
-
-### Wilhelm Brandenburg - ein Unternehmen der REWE GROUP
-
-Postings: 1 · Queries: SAP ECC
-
-- [(Senior) Analytics Berater (SAP BDC inkl. SAC & Datasphere) (m/w/d)](https://www.stepstone.de/jobs--Senior-Analytics-Berater-SAP-BDC-inkl-SAC-Datasphere-m-w-d-Frankfurt-am-Main-Wilhelm-Brandenburg-ein-Unternehmen-der-REWE-GROUP--14192179-inline.html?rltr=10_10_25_seorl_m_1_0_0_0_0_0)
-
-### bautec Energiemanagement GmbH
-
-Postings: 1 · Queries: ERP Transformation
-
-- [ERP Support Spezialist, Voll-/Teilzeit (m/w/d)](https://www.stepstone.de/jobs--ERP-Support-Spezialist-Voll-Teilzeit-m-w-d-Norderstedt-bautec-Energiemanagement-GmbH--14263884-inline.html?rltr=7_7_25_seorl_m_1_0_0_0_0_0)
-
-### duerenhoff GmbH
-
-Postings: 1 · Queries: SAP ECC
-
-- [(Senior) SAP FI/CO Consultant Finance Innovation Job (g.n.)](https://www.stepstone.de/jobs--Senior-SAP-FI-CO-Consultant-Finance-Innovation-Job-g-n-Wiesbaden-duerenhoff-GmbH--14124709-inline.html?rltr=8_8_25_seorl_m_0_0_0_0_0_0)
-
-### xpertnova GmbH
-
-Postings: 1 · Queries: SAP ECC
-
-- [SAP MM/SD Berater (m/w/d)](https://www.stepstone.de/jobs--SAP-MM-SD-Berater-m-w-d-Hamburg-xpertnova-GmbH--14256903-inline.html?rltr=15_15_25_seorl_m_0_0_0_0_0_0)
+- [SAP EAM/ CS Berater (m/w/d)](https://www.stepstone.de/jobs--SAP-EAM-CS-Berater-m-w-d-Duisburg-Dortmund-Regensburg-it-motive-AG--13409987-inline.html?rltr=3_3_25_seorl_m_0_0_0_0_0_0)
 
 ---
 Next pipeline stages (classification, scoring, briefs) consume observations with status 'new'.
