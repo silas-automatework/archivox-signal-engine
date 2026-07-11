@@ -38,7 +38,7 @@ Hamburger Hochbahn AG is an end user and the postings clearly show an ongoing SA
 
 ## Hero
 
-Strength 1.00 · Confidence 0.97 · Industry: food and beverage · Postings: 5
+Strength 1.00 · Confidence 0.97 · Industry: food and beverage · Postings: 8
 
 > "Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams."
 
@@ -50,7 +50,7 @@ Hero appears to be an operating company running global SAP transformation work i
 
 ## METRO AG
 
-Strength 1.00 · Confidence 0.90 · Industry: retail wholesale · Postings: 14
+Strength 1.00 · Confidence 0.90 · Industry: retail wholesale · Postings: 19
 
 > "The main objective of our LUCA program is to successfully upgrade METRO's Finance to SAP S/4HANA to ensure business continuity and avoid security and compliance risks."
 
@@ -73,7 +73,7 @@ QIAGEN appears to be a life sciences end user and the postings explicitly mentio
 
 ## Rottendorf Pharma GmbH
 
-Strength 1.00 · Confidence 0.96 · Industry: pharmaceuticals · Postings: 7
+Strength 1.00 · Confidence 0.96 · Industry: pharmaceuticals · Postings: 8
 
 > "nach dem SAP S/4HANA Go-Live"
 
@@ -117,7 +117,7 @@ Palm is a manufacturing end user and the posting clearly shows an active SAP S/4
 
 ## Daimler Truck AG
 
-Strength 0.98 · Confidence 0.93 · Industry: commercial vehicles / automotive · Postings: 5
+Strength 0.98 · Confidence 0.93 · Industry: commercial vehicles / automotive · Postings: 6
 
 > "Steering of SAP template rollouts in new markets from As-is analysis to the end of the hypercare phase"
 
@@ -138,7 +138,7 @@ This is an end user in the REWE Group, and the posting explicitly mentions a mul
 
 ## VHV Gruppe
 
-Strength 0.96 · Confidence 0.91 · Industry: insurance · Postings: 2
+Strength 0.96 · Confidence 0.91 · Industry: insurance · Postings: 3
 
 > "Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW)."
 
@@ -149,7 +149,7 @@ VHV Gruppe appears to be an end-user insurer, and the posting explicitly mention
 
 ## SIGNAL IDUNA Gruppe
 
-Strength 0.95 · Confidence 0.90 · Industry: insurance · Postings: 6
+Strength 0.95 · Confidence 0.90 · Industry: insurance · Postings: 7
 
 > "S/4HANA Transformation"
 
@@ -252,7 +252,7 @@ This is an end-user insurer with an active data migration program and a dedicate
 
 ## Daimler Buses GmbH
 
-Strength 0.89 · Confidence 0.89 · Industry: bus manufacturer · Postings: 3
+Strength 0.89 · Confidence 0.89 · Industry: bus manufacturer · Postings: 4
 
 > "* Du unterstützt das Team „Digital Transformation Office“ in verschiedenen Themen rund um die digitale Transformation und Digitalisierungsstrategie bei Daimler Buses"
 
@@ -282,7 +282,7 @@ United Internet is an end user and the posting shows an inhouse S/4HANA template
 
 ## Interzero Circular Solutions Germany GmbH
 
-Strength 0.77 · Confidence 0.77 · Industry: recycling / circular economy · Postings: 3
+Strength 0.77 · Confidence 0.77 · Industry: recycling / circular economy · Postings: 4
 
 > "Planung, Steuerung & Umsetzung einer ERP-Transformation"
 
@@ -295,8 +295,8 @@ Interzero appears to be an operating business, and the posting explicitly shows 
 - **end_user** (60): AES Aircraft Elektro/Elektronik System GmbH, ALDI Einkauf SE & Co. oHG, bautec Energiemanagement GmbH, Beckhoff Automation GmbH & Co. KG, BizLink Industry Germany GmbH, Börsenmedien AG, British American Tobacco (Germany) GmbH, CADENAS GmbH, Dr. August Oetker Nahrungsmittel KG, E.ON Digital Technology GmbH, ELANTAS GmbH, Elektrizitätswerk Mittelbaden AG & Co.KG, Henkell & Co. Sektkellerei KG, ifm-Unternehmensgruppe, Isar Aerospace SE, KNDS, Konica Minolta Business Solutions Deutschland GmbH, Lekkerland SE (Ein Unternehmen der REWE Group), MANN+HUMMEL GmbH, OLEDWorks GmbH, PMB International GmbH, POSITEC Germany GmbH, RICO GmbH & Co. KG, seca GmbH & Co. KG, SimonsVoss Technologies GmbH, SÜMO eG, TEKA - Maschinenbau GmbH, VINCORION Advanced Systems GmbH, WCG Wärme Contracting GmbH, ZWILLING J.A. Henckels Europa GmbH, ADAC, AL-KO THERM GMBH, BMS Corporate Solutions GmbH, Fliegl Agro-Center GmbH, FUCHS SE, HDI AG, HOLBORN Europa Raffinerie GmbH, Mediengruppe Pressedruck, MLL Münchner Leukämielabor GmbH, RATIONAL Technical Services GmbH, Rhenus Group, SILAG Handel GmbH, VPV Versicherungen, Würth IT GmbH, 3B Scientific GmbH, 50Hertz Transmission GmbH, Basalt-Actien-Gesellschaft, BEW Berliner Energie und Wärme GmbH, Christoph Kroschke GmbH, DACHSER SE, Interhyp Gruppe, KRONE Business Center DigITal GmbH & Co.KG, Murrplastik Systemtechnik GmbH, Ritter Sport - Alfred Ritter GmbH & Co. KG, Schreiner Group GmbH & Co. KG, Schwartauer Werke GmbH & Co. KG, Unternehmensgruppe Theo Müller GmbH & Co. KG, WESTFLEISCH SCE mbH, thyssenkrupp Gerlach GmbH, UMMD changeMITdigital GmbH
 - **it_consultancy** (22): adesso business consulting AG, Bertrandt AG, BExO GmbH, EY Deutschland, Ferendin Engineering Gmbh, Finatycs GmbH, Fusion Consulting (Germany) GmbH, KPMG AG Wirtschaftsprüfungsgesellschaft, MulTra - Multiplex Transfer GmbH, OnStream Consulting GmbH, Scheer Group, Tieto Germany GmbH, 4U-Consult GmbH & Co. KG, adesso SE, Clatum Consulting Gruppe, :em engineering methods AG, it-motive AG, PTA GmbH, xpertnova GmbH, NTT DATA Business Solutions AG, OEDIV Oetker Daten- und Informationsverarbeitung KG, Rheinmetall IT Solutions GmbH
 - **public_research** (8): BGHM Berufsgenossenschaft Holz und Metall, Max-Planck-Gesellschaft zur Förderung der Wissenschaften e. V., Stadt Rüsselsheim am Main, Landkreis Ravensburg, CTC gGmbH – Center for the Transformation of Chemistry, Global Legal Entity Identifier Foundation (GLEIF), Technische Universität Dortmund, Universität Hamburg
+- **staffing_recruiting** (7): Dr. Maier + Partner Executive Search GmbH, duerenhoff GmbH, FERCHAU – Connecting People and Technologies, Kempers Recruiting & Consulting GmbH, Amadeus Fire AG, HAPEKO Deutschland GmbH, element GmbH
 - **software_vendor** (7): ak tronic Software & Services GmbH, SAP SE, adesso insurance solutions GmbH, Haufe Group SE, STREIT Software GmbH, Marvya GmbH, Simba Computer Systeme GmbH
-- **staffing_recruiting** (6): Dr. Maier + Partner Executive Search GmbH, duerenhoff GmbH, FERCHAU – Connecting People and Technologies, Kempers Recruiting & Consulting GmbH, Amadeus Fire AG, HAPEKO Deutschland GmbH
 
 ---
-Classification: 212 LLM calls, est. cost $1.009. Every quote above is copied verbatim from captured evidence (evidence contract).
+Classification: 215 LLM calls, est. cost $1.014. Every quote above is copied verbatim from captured evidence (evidence contract).

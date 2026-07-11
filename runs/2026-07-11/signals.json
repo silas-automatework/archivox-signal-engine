@@ -360,7 +360,7 @@
     "industry": "food and beverage",
     "status": "routed",
     "detected_at": "2026-07-11T14:47:09.211Z",
-    "postings_count": 5,
+    "postings_count": 8,
     "classifier_quote": "Support and co‑lead global SAP S/4HANA rollout activities in close collaboration with the global P2P and SAP teams.",
     "classifier_reason": "Hero appears to be an operating company running global SAP transformation work itself, including S/4HANA rollouts.",
     "evidence": {
@@ -473,7 +473,7 @@
     "industry": "retail wholesale",
     "status": "routed",
     "detected_at": "2026-07-11T14:16:02.283Z",
-    "postings_count": 14,
+    "postings_count": 19,
     "classifier_quote": "The main objective of our LUCA program is to successfully upgrade METRO's Finance to SAP S/4HANA to ensure business continuity and avoid security and compliance risks.",
     "classifier_reason": "METRO is an end user and the postings show an active SAP S/4HANA finance transformation with compliance focus, which is a strong archiving-related buying signal.",
     "evidence": {
@@ -739,7 +739,7 @@
     "industry": "pharmaceuticals",
     "status": "routed",
     "detected_at": "2026-07-11T14:16:05.928Z",
-    "postings_count": 7,
+    "postings_count": 8,
     "classifier_quote": "nach dem SAP S/4HANA Go-Live",
     "classifier_reason": "The company appears to be a pharma manufacturer and the posting explicitly references post-go-live SAP S/4HANA/EWM transformation work.",
     "evidence": {
@@ -1198,7 +1198,7 @@
     "industry": "commercial vehicles / automotive",
     "status": "routed",
     "detected_at": "2026-07-11T14:15:54.822Z",
-    "postings_count": 5,
+    "postings_count": 6,
     "classifier_quote": "Steering of SAP template rollouts in new markets from As-is analysis to the end of the hypercare phase",
     "classifier_reason": "Daimler Truck is an end user and the posting shows active SAP template rollout and governance work tied to standardized finance systems, which is a strong ERP transformation signal.",
     "evidence": {
@@ -1425,7 +1425,7 @@
     "industry": "insurance",
     "status": "routed",
     "detected_at": "2026-07-11T14:47:14.019Z",
-    "postings_count": 2,
+    "postings_count": 3,
     "classifier_quote": "Sicherstellung eines stabilen Betriebs, Monitoring und kontinuierliche Optimierung der SAP-Systemlandschaft (inkl. S/4HANA und BW).",
     "classifier_reason": "VHV Gruppe appears to be an end-user insurer, and the posting explicitly mentions S/4HANA, SAP BW, AWS migration, and SAP Basis operations.",
     "evidence": {
@@ -1553,7 +1553,7 @@
     "industry": "insurance",
     "status": "routed",
     "detected_at": "2026-07-11T14:22:16.549Z",
-    "postings_count": 6,
+    "postings_count": 7,
     "classifier_quote": "S/4HANA Transformation",
     "classifier_reason": "SIGNAL IDUNA is a direct insurance/financial services end user, and the postings point to SAP application management and S/4HANA transformation work.",
     "evidence": {
@@ -2655,7 +2655,7 @@
     "industry": "bus manufacturer",
     "status": "routed",
     "detected_at": "2026-07-11T14:22:12.049Z",
-    "postings_count": 3,
+    "postings_count": 4,
     "classifier_quote": "* Du unterstützt das Team „Digital Transformation Office“ in verschiedenen Themen rund um die digitale Transformation und Digitalisierungsstrategie bei Daimler Buses",
     "classifier_reason": "Daimler Buses is an end user, and the posting shows an internal digital transformation office tied to strategy, which is a plausible buying signal for ERP/S/4 transformation context.",
     "evidence": {
@@ -2973,7 +2973,7 @@
     "industry": "recycling / circular economy",
     "status": "routed",
     "detected_at": "2026-07-11T14:22:13.970Z",
-    "postings_count": 3,
+    "postings_count": 4,
     "classifier_quote": "Planung, Steuerung & Umsetzung einer ERP-Transformation",
     "classifier_reason": "Interzero appears to be an operating business, and the posting explicitly shows an ERP transformation program at the company itself.",
     "evidence": {
