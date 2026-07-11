@@ -118,7 +118,8 @@ export async function generateMagnet(
     ...s.snippets.map((p) => `- ${p.title}${p.snippet ? `: ${p.snippet}` : ""}`),
   ].join("\n");
 
-  const res = await jsonCall<Magnet>({
+  const usages = [];
+  const first = await jsonCall<Magnet>({
     model,
     purpose: "magnet",
     system: SYSTEM,
@@ -127,8 +128,27 @@ export async function generateMagnet(
     schema: SCHEMA,
     reasoningEffort: "low",
   });
+  usages.push(first.usage);
 
-  return { magnet: res.data, usages: [res.usage], problems: validateMagnet(res.data) };
+  let magnet = first.data;
+  let problems = validateMagnet(magnet);
+
+  if (problems.length) {
+    const retry = await jsonCall<Magnet>({
+      model,
+      purpose: "magnet_retry",
+      system: SYSTEM,
+      user: `${user}\n\nYour previous draft violated these rules:\n- ${problems.join("\n- ")}\nProduce a corrected version.`,
+      schemaName: "datenaltlast_check",
+      schema: SCHEMA,
+      reasoningEffort: "low",
+    });
+    usages.push(retry.usage);
+    magnet = retry.data;
+    problems = validateMagnet(magnet);
+  }
+
+  return { magnet, usages, problems };
 }
 
 /** Evidence-contract checks for the magnet document. */
