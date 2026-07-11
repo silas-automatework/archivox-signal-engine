@@ -8,7 +8,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap');
   :root {
     --ink:#10201C; --ink-60:#4C605A; --ink-35:#8CA09A;
-    --paper:#FCFDFC; --panel:#F3F7F5; --panel-2:#EDF3F0;
+    --paper:#FCFDFC; --panel:#F3F7F5;
     --petrol:#0A5C50; --petrol-deep:#07473E; --petrol-tint:#E3EFEC;
     --line:#DCE5E1;
     --sans:"Archivo", ui-sans-serif, system-ui, sans-serif;
@@ -16,57 +16,63 @@
   }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 var(--sans); }
+  body { margin:0; background:var(--paper); color:var(--ink); font:15.5px/1.55 var(--sans); }
   .wrap { max-width:1060px; margin:0 auto; padding:0 24px; }
-  section { padding:72px 0; }
+  section { padding:64px 0; }
   section + section { border-top:1px solid var(--line); }
+
+  nav { position:sticky; top:0; z-index:10; background:var(--paper); border-bottom:1px solid var(--line); }
+  nav .wrap { display:flex; gap:4px; align-items:center; overflow-x:auto; padding-top:10px; padding-bottom:10px; }
+  nav a { font:500 10.5px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60);
+          text-decoration:none; padding:7px 12px; white-space:nowrap; }
+  nav a:hover { color:var(--petrol); }
+  nav .brand { font-weight:800; font-family:var(--sans); font-size:13px; letter-spacing:-.01em; color:var(--ink); margin-right:auto; padding-left:0; text-transform:none; }
 
   .tab { display:inline-block; background:var(--ink); color:var(--paper); font:500 11px/1 var(--mono);
          letter-spacing:.12em; padding:9px 26px 9px 14px;
          clip-path:polygon(0 100%, 0 6px, 6px 0, calc(100% - 16px) 0, 100% 100%); }
   .eyebrow { font:500 11px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--petrol); margin-bottom:14px; }
-  h1 { font-weight:900; font-stretch:110%; font-size:clamp(38px,7vw,72px); line-height:.98; letter-spacing:-.03em; margin:18px 0 22px; }
-  h2 { font-weight:800; font-stretch:108%; font-size:clamp(26px,4vw,38px); letter-spacing:-.02em; line-height:1.05; margin:0 0 14px; }
-  h3 { font-weight:700; font-size:18px; letter-spacing:-.01em; margin:0 0 8px; }
-  .lede { font-size:19px; line-height:1.55; color:var(--ink-60); max-width:680px; }
-  .lede strong, p strong { color:var(--ink); }
-  p { max-width:680px; }
+  h1 { font-weight:900; font-stretch:110%; font-size:clamp(40px,7.5vw,78px); line-height:.98; letter-spacing:-.03em; margin:18px 0 22px; }
+  h1 em { font-style:normal; color:var(--petrol); }
+  h2 { font-weight:800; font-stretch:108%; font-size:clamp(25px,4vw,36px); letter-spacing:-.02em; line-height:1.05; margin:0 0 12px; }
+  h3 { font-weight:700; font-size:17px; letter-spacing:-.01em; margin:0 0 8px; }
+  .lede { font-size:18px; line-height:1.5; color:var(--ink-60); max-width:640px; }
+  .lede strong, p strong, li strong { color:var(--ink); }
+  p { max-width:660px; }
   .muted { color:var(--ink-60); }
   .mono { font-family:var(--mono); }
   a { color:var(--petrol); text-decoration-thickness:1px; text-underline-offset:3px; }
+  ul.tight { padding-left:18px; margin:10px 0 0; }
+  ul.tight li { margin:7px 0; font-size:14px; color:var(--ink-60); }
 
-  /* hero */
-  .hero { padding:88px 0 64px; }
+  .hero { padding:72px 0 56px; }
   .hero-meta { font:400 12px/1.8 var(--mono); letter-spacing:.06em; color:var(--ink-60); text-transform:uppercase; }
-  .kpis { display:grid; grid-template-columns:repeat(4,1fr); border:1.5px solid var(--ink); background:var(--paper); margin-top:40px; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); border:1.5px solid var(--ink); background:var(--paper); margin-top:36px; }
   @media (max-width:760px){ .kpis { grid-template-columns:repeat(2,1fr); } }
-  .kpi { padding:18px 22px 16px; border-right:1px solid var(--line); }
+  .kpi { padding:16px 20px 14px; border-right:1px solid var(--line); }
   .kpi:last-child { border-right:none; }
   @media (max-width:760px){ .kpi:nth-child(2){border-right:none} .kpi:nth-child(-n+2){border-bottom:1px solid var(--line)} }
-  .kpi b { display:block; font-weight:800; font-size:clamp(22px,3vw,30px); letter-spacing:-.02em; }
-  .kpi span { font:500 10.5px/1.5 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60); }
+  .kpi b { display:block; font-weight:800; font-size:clamp(21px,3vw,28px); letter-spacing:-.02em; }
+  .kpi span { font:500 10px/1.5 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60); }
   .kpi .live { color:var(--petrol); }
 
-  /* thesis cards */
-  .duo { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:32px; }
+  .duo { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px; }
   @media (max-width:760px){ .duo { grid-template-columns:1fr; } }
-  .card { border:1px solid var(--line); background:var(--paper); padding:22px 24px; position:relative; }
-  .card.tabbed { padding-top:44px; }
+  .card { border:1px solid var(--line); background:var(--paper); padding:20px 22px; position:relative; }
+  .card.tabbed { padding-top:42px; }
   .card-tab { position:absolute; top:0; left:0; background:var(--petrol-tint); color:var(--petrol-deep);
               font:500 10px/1 var(--mono); letter-spacing:.1em; padding:7px 20px 7px 12px;
               clip-path:polygon(0 100%, 0 4px, 4px 0, calc(100% - 12px) 0, 100% 100%); }
-  .card p { font-size:14.5px; color:var(--ink-60); margin:6px 0 0; }
 
-  /* math table */
-  table { width:100%; border-collapse:collapse; margin:22px 0 8px; font-size:14.5px; }
-  th { font:500 10.5px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60); text-align:left; padding:8px 12px; border-bottom:1.5px solid var(--ink); }
+  table { width:100%; border-collapse:collapse; margin:22px 0 6px; font-size:14px; }
+  th { font:500 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-60); text-align:left; padding:8px 12px; border-bottom:1.5px solid var(--ink); }
   td { padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
-  td.num { font-family:var(--mono); font-size:13.5px; white-space:nowrap; }
+  td.num { font-family:var(--mono); font-size:13px; white-space:nowrap; }
   tr.total td { font-weight:700; border-bottom:none; background:var(--petrol-tint); }
 
-  /* ============ WORKFLOW DIAGRAM ============ */
+  /* workflow */
   .flow-scroll { overflow-x:auto; padding:8px 2px 2px; }
-  .flow { display:flex; align-items:stretch; gap:0; min-width:900px; }
+  .flow { display:flex; align-items:stretch; min-width:900px; }
   .stage { flex:1; position:relative; }
   .stage + .stage { margin-left:26px; }
   .stage + .stage::before { content:""; position:absolute; left:-20px; top:50%; width:14px; height:2px; background:var(--ink); }
@@ -92,241 +98,264 @@
   .loop .line::before { content:""; position:absolute; left:-1px; top:-5px;
     border-right:7px solid var(--petrol); border-top:4px solid transparent; border-bottom:4px solid transparent; }
 
-  .detail { border:1.5px solid var(--ink); background:var(--paper); margin-top:28px; }
-  .detail-head { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;
-                 padding:18px 26px 0; }
-  .detail-head h3 { font-size:22px; }
+  .detail { border:1.5px solid var(--ink); background:var(--paper); margin-top:26px; }
+  .detail-head { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; padding:18px 26px 0; }
+  .detail-head h3 { font-size:21px; }
   .detail-head .mono { font-size:11px; letter-spacing:.08em; color:var(--ink-60); text-transform:uppercase; }
-  .detail-body { display:grid; grid-template-columns:1.15fr .85fr; gap:0 36px; padding:10px 26px 24px; }
+  .detail-body { display:grid; grid-template-columns:1.15fr .85fr; gap:0 36px; padding:6px 26px 22px; }
   @media (max-width:760px){ .detail-body { grid-template-columns:1fr; } }
   .detail h4 { font:500 10.5px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-60); margin:16px 0 8px; }
-  .detail p, .detail li { font-size:14.5px; color:var(--ink-60); }
-  .detail p strong, .detail li strong { color:var(--ink); }
+  .detail p, .detail li { font-size:14px; color:var(--ink-60); }
   .detail ul { padding-left:18px; margin:6px 0; }
+  .detail li { margin:6px 0; }
   .proofbox { background:var(--panel); border:1px solid var(--line); padding:14px 18px; margin-top:16px; }
   .proofbox .mono { font-size:11px; color:var(--petrol-deep); letter-spacing:.1em; text-transform:uppercase; }
   .proofbox p { margin:6px 0 0; font-size:13.5px; }
 
-  /* layers */
-  .layers { margin-top:28px; }
-  .layer { display:grid; grid-template-columns:200px 1fr; gap:20px; border:1px solid var(--line); border-bottom:none; padding:16px 22px; background:var(--paper); }
+  .layers { margin-top:26px; }
+  .layer { display:grid; grid-template-columns:180px 1fr; gap:20px; border:1px solid var(--line); border-bottom:none; padding:13px 20px; background:var(--paper); }
   .layer:last-child { border-bottom:1px solid var(--line); }
   .layer:nth-child(odd) { background:var(--panel); }
   .layer .l-name { font:500 11px/1.5 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--petrol-deep); }
   .layer p { margin:0; font-size:14px; color:var(--ink-60); max-width:none; }
-  @media (max-width:640px){ .layer { grid-template-columns:1fr; gap:6px; } }
+  @media (max-width:640px){ .layer { grid-template-columns:1fr; gap:4px; } }
 
-  /* signals */
   details.sig { border:1px solid var(--line); border-left:3px solid var(--petrol); margin-bottom:8px; background:var(--paper); }
-  details.sig summary { display:flex; gap:16px; align-items:baseline; padding:13px 18px; cursor:pointer; list-style:none; }
+  details.sig summary { display:flex; gap:16px; align-items:baseline; padding:12px 18px; cursor:pointer; list-style:none; }
   details.sig summary::-webkit-details-marker { display:none; }
   details.sig .sid { font:500 11px/1 var(--mono); color:var(--petrol); letter-spacing:.08em; flex:none; width:30px; }
   details.sig b { font-size:15px; }
-  details.sig .why { font-size:12px; color:var(--ink-60); margin-left:auto; text-align:right; max-width:40%; }
+  details.sig .why { font-size:12px; color:var(--ink-60); margin-left:auto; text-align:right; max-width:42%; }
   @media (max-width:640px){ details.sig .why { display:none; } }
-  details.sig .sig-body { padding:0 18px 16px 64px; font-size:14px; color:var(--ink-60); }
-  .tier-label { font:500 10.5px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-60); margin:26px 0 12px; }
+  details.sig .sig-body { padding:0 18px 14px 64px; font-size:13.5px; color:var(--ink-60); }
+  .tier-label { font:500 10.5px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-60); margin:24px 0 12px; }
 
-  /* timeline */
-  .tl { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:30px; }
+  .tl { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:28px; }
   @media (max-width:860px){ .tl { grid-template-columns:1fr; } }
-  .ph { border:1px solid var(--line); background:var(--paper); padding:36px 16px 16px; position:relative; }
+  .ph { border:1px solid var(--line); background:var(--paper); padding:36px 15px 14px; position:relative; }
   .ph .card-tab { background:var(--ink); color:var(--paper); }
   .ph b { display:block; font-size:14px; margin-bottom:6px; }
   .ph p { font-size:12.5px; color:var(--ink-60); margin:0 0 10px; }
-  .ph .exit { font:400 11px/1.5 var(--mono); color:var(--petrol-deep); border-top:1px solid var(--line); padding-top:8px; }
+  .ph .exit { font:400 10.5px/1.5 var(--mono); color:var(--petrol-deep); border-top:1px solid var(--line); padding-top:8px; }
 
-  /* proof */
-  .links { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:26px; }
+  .links { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:24px; }
   @media (max-width:760px){ .links { grid-template-columns:1fr; } }
-  .linkcard { border:1.5px solid var(--ink); padding:18px 20px; display:block; text-decoration:none; color:var(--ink); background:var(--paper); }
+  .linkcard { border:1.5px solid var(--ink); padding:16px 18px; display:block; text-decoration:none; color:var(--ink); background:var(--paper); }
   .linkcard:hover { background:var(--panel); }
-  .linkcard .mono { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--petrol); }
-  .linkcard b { display:block; font-size:16px; margin:6px 0 4px; }
-  .linkcard span { font-size:13px; color:var(--ink-60); }
-  .email-demo { border:1px solid var(--line); background:var(--panel); padding:20px 24px; margin-top:26px; max-width:680px; font-size:14.5px; }
+  .linkcard .mono { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--petrol); }
+  .linkcard b { display:block; font-size:15.5px; margin:6px 0 4px; }
+  .linkcard span { font-size:12.5px; color:var(--ink-60); }
+  .email-demo { border:1px solid var(--line); background:var(--panel); padding:18px 22px; margin-top:24px; max-width:640px; font-size:14px; }
   .email-demo .subj { font-weight:700; margin-bottom:10px; }
-  .email-demo .from { font:400 11px/1.6 var(--mono); color:var(--ink-60); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:8px; }
+  .email-demo .from { font:400 10.5px/1.6 var(--mono); color:var(--ink-60); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:8px; }
+  .email-demo p { margin:0 0 10px; }
 
-  .next { background:var(--ink); color:#EAF2EF; padding:26px 30px; margin-top:40px; }
+  .next { background:var(--ink); color:#EAF2EF; padding:22px 28px; margin-top:36px; }
   .next b { color:#fff; }
   .next .mono { color:#9DB8B0; font-size:11px; letter-spacing:.12em; text-transform:uppercase; display:block; margin-bottom:8px; }
 
-  footer { padding:36px 0 64px; color:var(--ink-35); font:400 11px/1.8 var(--mono); letter-spacing:.05em; text-transform:uppercase; }
+  footer { padding:32px 0 56px; color:var(--ink-35); font:400 10.5px/1.8 var(--mono); letter-spacing:.05em; text-transform:uppercase; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
   .stage button:focus-visible, a:focus-visible, details.sig summary:focus-visible { outline:2px solid var(--petrol); outline-offset:2px; }
 </style>
 </head>
 <body>
 
+<nav><div class="wrap">
+  <span class="brand">ArchivoX Signal Engine</span>
+  <a href="#math">01 Math</a>
+  <a href="#signals">02 Signals</a>
+  <a href="#engine">03 Engine</a>
+  <a href="#proof">04 Proof</a>
+  <a href="#blueprint">05 Blueprint</a>
+  <a href="#plan">06 Plan</a>
+</div></nav>
+
 <div class="wrap hero">
   <div class="tab">CASE STUDY · GTM ENGINEER · SALESPLAYBOOK</div>
-  <h1>ArchivoX doesn't have a<br>volume problem.<br>It has a timing problem.</h1>
-  <p class="lede">The DACH market for enterprise archiving on complex ERP estates is roughly <strong>4,000 to 6,000 accounts</strong>. You don't double pipeline by sequencing more names into a finite market. You double it by <strong>monitoring 100% of that market for buying windows</strong> and showing up within days of a trigger, with outreach that proves you did the work.</p>
-  <p class="lede" style="margin-top:14px">So instead of describing that engine, I built it. It has been running unattended every morning since.</p>
+  <h1>Catch every buying<br>window<em>.</em> Double<br>the pipeline<em>.</em></h1>
+  <p class="lede">ArchivoX sells SAP archiving into a market of roughly <strong>5,000 DACH accounts</strong>. In a market this finite, pipeline doubles through <strong>timing</strong>: know the day an account enters its buying window, and arrive first with something useful.</p>
+  <p class="lede" style="margin-top:12px">For this case study I built that engine. <strong>It has run unattended every morning since.</strong></p>
   <div class="kpis">
     <div class="kpi"><b>25</b><span>qualified signals, week one</span></div>
     <div class="kpi"><b>~$0.10</b><span>per researched, drafted, routed signal</span></div>
-    <div class="kpi"><b>6-8h → minutes</b><span>SDR research per day (case brief) vs engine</span></div>
-    <div class="kpi"><b class="live">live</b><span>daily autonomous runs, committed to GitHub</span></div>
+    <div class="kpi"><b>6-8h → min</b><span>SDR research per day, before vs after</span></div>
+    <div class="kpi"><b class="live">live</b><span>daily autonomous runs on GitHub</span></div>
   </div>
-  <p class="hero-meta" style="margin-top:16px">Silas Schüttel · silas@automatework.de · all artifacts inspectable: <a href="https://github.com/silas-automatework/archivox-signal-engine">repository</a> · <a href="https://silas-automatework.github.io/archivox-signal-engine/">live cockpit</a></p>
+  <p class="hero-meta" style="margin-top:14px">Silas Schüttel · silas@automatework.de · <a href="https://github.com/silas-automatework/archivox-signal-engine">repository</a> · <a href="https://silas-automatework.github.io/archivox-signal-engine/">live cockpit</a></p>
 </div>
 
-<section>
+<section id="math">
   <div class="wrap">
     <div class="eyebrow">01 · GTM Reasoning</div>
-    <h2>Work backwards from €8M, forwards from 300 mails</h2>
-    <p class="lede">A realistic benchmark for generic cold outbound in comparable enterprise cases is roughly <strong>300 mails per booked meeting</strong>. Decomposed at 3 to 4 touches per prospect, that is 80 to 100 prospects per meeting, about 1% prospect-to-meeting. Start there and the case decides itself:</p>
+    <h2>The math starts at 300 mails per meeting</h2>
+    <p class="lede">Generic cold outbound in comparable enterprise cases books one meeting per ~300 mails, about 1% of prospects. Two consequences decide the case:</p>
 
-    <div class="duo" style="margin-top:24px">
-      <div class="card tabbed"><div class="card-tab">THE VOLUME MATH CANNOT CLOSE</div>
-        <h3>72,000 mails into a finite market</h3>
-        <p>€4M incremental pipeline needs ~20 meetings per month; at 300:1 that is ~72,000 mails per year. Grant every account 3 relevant personas and the entire addressable pool is ~15,000 people: at 3 to 4 touches per sequence, every relevant person in the whole market runs through a full cold sequence every ~9 months, indefinitely, because the target renews annually. And mailboxes inside an account are not independent lottery tickets: the dominant failure reason (no active project) hits everyone at the company at once, so meetings scale with accounts in a buying window, not with contacts touched. In a market this finite and this community-dense (DSAG, shared SIs), volume doesn't just underperform. It burns the asset every future quarter depends on.</p>
+    <div class="duo">
+      <div class="card tabbed"><div class="card-tab">VOLUME BURNS THE MARKET</div>
+        <ul class="tight">
+          <li><strong>~20 meetings/mo</strong> needed for €4M → at 300:1 that is <strong>~72,000 mails/yr</strong></li>
+          <li>The whole market holds ~15,000 relevant people (3 personas × 5,000 accounts) → <strong>every one of them in a cold sequence every 9 months, forever</strong></li>
+          <li>Contacts in one account share the same "no active project" → <strong>meetings scale with accounts in a window</strong>, extra mailboxes add mails only</li>
+        </ul>
       </div>
-      <div class="card tabbed"><div class="card-tab">WHAT THE ENGINE CHANGES</div>
-        <h3>Four stacked uplifts per mail</h3>
-        <p>Right timing (an open, deadline-driven buying window), right person (account-to-people stage), evidence-grounded relevance (their program, named), and a low-friction give instead of a meeting ask. Each lever is individually unremarkable; stacked, an ~8x uplift over the 1% baseline for the hot tier is the working assumption, and it is a measured number by month 3, not a belief.</p>
+      <div class="card tabbed"><div class="card-tab">TIMING RAISES YIELD PER MAIL</div>
+        <ul class="tight">
+          <li><strong>Open buying window</strong> (evidenced, this week) removes the biggest failure cause before sending</li>
+          <li><strong>Right person</strong> · <strong>evidence-grounded relevance</strong> · <strong>a give with a yes/no ask</strong></li>
+          <li>Stacked working hypothesis: <strong>~8x baseline</strong> for the hot tier, ~3x for the scaled tier · measured from month 3</li>
+        </ul>
       </div>
     </div>
 
     <table>
-      <tr><th>Tier</th><th>Motion</th><th class="num">Accounts / mo</th><th class="num">Acct→meeting</th><th class="num">vs baseline</th><th class="num">Meetings</th></tr>
-      <tr><td class="num">A</td><td>Hot signal · multi-touch 1:1 (mail + bump + LinkedIn), human-approved</td><td class="num">~100</td><td class="num">~10%</td><td class="num">~8x</td><td class="num">~10</td></tr>
-      <tr><td class="num">B</td><td>Fit + weaker signal · automated personalized sequence</td><td class="num">~250</td><td class="num">~4%</td><td class="num">~3x</td><td class="num">~10</td></tr>
-      <tr class="total"><td colspan="3">× 37% meeting→opp × €70k ACV</td><td class="num" colspan="2">≈ 7.5 opps / mo</td><td class="num">≈ €520k / mo</td></tr>
+      <tr><th>Tier</th><th>Motion</th><th class="num">Accts/mo</th><th class="num">Acct→mtg</th><th class="num">vs base</th><th class="num">Meetings</th></tr>
+      <tr><td class="num">A</td><td>Hot signal · multi-touch 1:1, human-approved</td><td class="num">~100</td><td class="num">~10%</td><td class="num">~8x</td><td class="num">~10</td></tr>
+      <tr><td class="num">B</td><td>Fit + weaker signal · automated sequence</td><td class="num">~250</td><td class="num">~4%</td><td class="num">~3x</td><td class="num">~10</td></tr>
+      <tr class="total"><td colspan="3">× 37% meeting→opp × €70k ACV</td><td class="num" colspan="2">≈ 7.5 opps/mo</td><td class="num">≈ €520k/mo</td></tr>
     </table>
-    <p class="muted" style="font-size:13.5px"><strong>Sensitivity, honestly:</strong> if the stacked uplift only reaches 3x across both tiers, the engine books ~12 meetings and ~€310k/mo. The gap to €450k then closes with the levers volume can never touch: ArchivoX's existing SDRs calling the hot queue with the brief in hand (they get 6 hours of their day back for exactly this), expansion signals on the customer base, and inbound engagement routed into the same queue. At target rates the model covers the requirement with ~15% buffer. Every rate is a dashboard metric from week one.</p>
-    <p class="muted" style="font-size:13.5px"><strong>And the second-order effect volume never gets:</strong> meetings created inside a deadline-driven window qualify and close at above-average rates in a PoC-driven motion. The buyer already has the problem, the budget logic and the deadline. Same pipeline euro, more revenue behind it.</p>
+    <ul class="tight" style="max-width:760px">
+      <li><strong>Sensitivity:</strong> at only 3x across both tiers → ~€310k/mo. The gap closes with levers volume lacks: the existing SDRs call the hot queue (they get 6h/day back for exactly this), expansion signals, inbound routed into the same queue.</li>
+      <li><strong>Second-order effect:</strong> meetings inside a deadline-driven window close above average in a PoC-led motion. Same pipeline euro, more revenue behind it.</li>
+    </ul>
   </div>
 </section>
 
-<section>
+<section id="signals">
   <div class="wrap">
     <div class="eyebrow">02 · The Signal Thesis</div>
-    <h2>Every DACH ECC customer is in a forced migration window</h2>
-    <p class="lede">SAP ECC mainstream maintenance ends 2027 (extended 2030). Archiving before migration cuts the HANA footprint and migration cost; decommissioning after is a mandatory workstream. That is a detectable, budgeted, deadline-driven "why now" for exactly ArchivoX's offer, and it became Signal S1.</p>
+    <h2>Every ECC customer faces a deadline</h2>
+    <p class="lede">SAP ends ECC mainstream maintenance in 2027 (2030 extended). Archiving before migration cuts the HANA bill; decommissioning after is mandatory. Detectable, budgeted, deadline-driven: <strong>Signal S1</strong>.</p>
 
     <div class="tier-label">Tier 1 · buying window open, act within days</div>
     <details class="sig" open>
-      <summary><span class="sid">S1</span><b>ERP / S4 transformation project</b><span class="why">job postings, German trade press, SI announcements</span></summary>
-      <div class="sig-body">Companies hiring their own S/4 project leads are inside the window. Detection: StepStone/Indeed monitoring on six German queries. This is the signal the built component runs on, and week one proved the thesis: 75 companies in a single 7-day window.</div>
+      <summary><span class="sid">S1</span><b>ERP / S4 transformation project</b><span class="why">job postings, trade press, SI announcements</span></summary>
+      <div class="sig-body">Companies hiring their own S/4 project leads are inside the window and saying so publicly. The built component runs on this signal: 75 companies in one 7-day window.</div>
     </details>
     <details class="sig">
-      <summary><span class="sid">S2</span><b>New CIO / Head of IT / Head of SAP</b><span class="why">LinkedIn alerts, job-change enrichment</span></summary>
-      <div class="sig-body">New leaders review legacy contracts and the modernization backlog in their first 90 days. Same watcher interface, different source.</div>
+      <summary><span class="sid">S2</span><b>New CIO / Head of IT / Head of SAP</b><span class="why">LinkedIn alerts, job-change data</span></summary>
+      <div class="sig-body">New leaders review legacy contracts in their first 90 days. Same watcher interface, different source.</div>
     </details>
     <details class="sig">
       <summary><span class="sid">S3</span><b>M&amp;A, carve-out, divestiture</b><span class="why">Handelsregister, Bundesanzeiger, M&amp;A feeds</span></summary>
-      <div class="sig-body">System separation makes legacy archiving and decommissioning legally unavoidable.</div>
+      <div class="sig-body">System separation makes legacy archiving and decommissioning unavoidable.</div>
     </details>
     <details class="sig">
-      <summary><span class="sid">S4</span><b>Compliance and audit events</b><span class="why">e-invoicing waves, GoBD, NIS2, regulators</span></summary>
-      <div class="sig-body">Retention and archiving questions get forced onto the agenda by external deadlines.</div>
+      <summary><span class="sid">S4</span><b>Compliance and audit events</b><span class="why">e-invoicing waves, GoBD, NIS2</span></summary>
+      <div class="sig-body">External deadlines force the retention question onto the agenda.</div>
     </details>
     <details class="sig">
-      <summary><span class="sid">S5</span><b>Incumbent ECM distress</b><span class="why">vendor EOL/pricing news, postings naming the product</span></summary>
+      <summary><span class="sid">S5</span><b>Incumbent ECM distress</b><span class="why">vendor EOL and pricing news</span></summary>
       <div class="sig-body">Displacement windows for the challenger motion and the 40-50% cost story.</div>
     </details>
-    <div class="tier-label">Tier 2/3 · propensity &amp; engagement</div>
-    <p class="muted" style="font-size:14px">S6 datacenter exits · S7 SAP Basis/ILM hiring patterns · S8 tech stack composition · S9 web intent (Dealfront, DACH-native) · S10 marketing engagement routed to outbound instead of dying in nurture. Most of these live in German-language sources that US-centric intent tools miss.</p>
-    <p class="muted" style="font-size:14px"><strong>Signal archaeology</strong> keeps this honest: week 1 of the engagement maps the last 20-30 closed-won deals to which signals were detectable beforehand, so signal priority is derived from data, not opinion.</p>
+    <p class="muted" style="font-size:13.5px;margin-top:20px"><strong>Tier 2/3:</strong> datacenter exits · SAP Basis/ILM hiring · tech stack · web intent (Dealfront) · marketing engagement routed to outbound. Most live in German-language sources. <strong>Signal archaeology</strong> (week 1): map the last 20-30 closed-won deals to detectable signals, so priority comes from data.</p>
   </div>
 </section>
 
-<section id="workflow">
+<section id="engine">
   <div class="wrap">
     <div class="eyebrow">03 · The Engine, Built</div>
-    <h2>One signal's journey through the workflow</h2>
-    <p class="lede">This is the component I actually built (Deliverable C), running daily. <strong>Click any stage</strong> to see what happens there, the thinking behind it, and the real result from production.</p>
+    <h2>One signal's journey</h2>
+    <p class="lede">Deliverable C, built and running daily. <strong>Click a stage:</strong> what happens, why this way, and the production result.</p>
 
     <div class="flow-scroll">
       <div class="flow" id="flow"></div>
       <div class="rails">
-        <div class="rail" style="flex:4.2"><b>Evidence contract, enforced in code:</b> every company claim traces to a captured source URL · verbatim quotes only · violations reject</div>
-        <div class="rail" style="flex:1.6"><b>Human gate:</b> nothing is ever sent without approval</div>
+        <div class="rail" style="flex:4.2"><b>Evidence contract, enforced in code:</b> every company claim traces to a captured source · verbatim quotes only · violations reject</div>
+        <div class="rail" style="flex:1.6"><b>Human gate:</b> sending always requires approval</div>
       </div>
-      <div class="loop"><span>feedback</span><div class="line"></div><span>outcomes per signal type re-weight the scoring · opener A/B measured by reply rate</span></div>
+      <div class="loop"><span>feedback</span><div class="line"></div><span>outcomes re-weight scoring · opener A/B measured by reply rate</span></div>
     </div>
 
     <div class="detail" id="detail"></div>
   </div>
 </section>
 
-<section>
+<section id="proof">
   <div class="wrap">
-    <div class="eyebrow">04 · Proof, Not Promises</div>
-    <h2>Week-one results from the running engine</h2>
+    <div class="eyebrow">04 · Proof</div>
+    <h2>Week-one results, inspectable</h2>
     <div class="duo" style="margin-top:8px">
       <div class="card tabbed"><div class="card-tab">FUNNEL · FIRST 7-DAY WINDOW</div>
         <h3>150 postings → 25 signals</h3>
-        <p>139 unique postings, 75 companies. Classification removed consultancies, vendors, staffing agencies, and the subtle case: end users with generic SAP roles but no transformation context. What survived reads like the ICP textbook: a truck manufacturer's finance transformation, a transit operator hiring its own S/4 sub-project leads, a paper group standardizing on S/4.</p>
+        <ul class="tight">
+          <li>139 unique postings, 75 companies</li>
+          <li>Filtered out: consultancies, vendors, staffing, and end users lacking transformation context</li>
+          <li>What survived: a truck maker's finance program, a transit operator's own S/4 project leads, a paper group on S/4</li>
+        </ul>
       </div>
       <div class="card tabbed"><div class="card-tab">COST · FULL LLM PIPELINE</div>
         <h3>~$2 for the whole week</h3>
-        <p>Classification, briefs, one-page magnets, people matching. A fully researched, drafted, routed signal costs about ten cents. The case-study SDRs spend six to eight hours a day producing less than this, which is the entire capacity-reallocation argument in one number.</p>
+        <ul class="tight">
+          <li>Classification, briefs, magnets, people matching included</li>
+          <li>~$0.10 per fully researched, drafted, routed signal</li>
+          <li>The case's SDRs spend 6-8h/day producing less</li>
+        </ul>
       </div>
     </div>
 
     <div class="email-demo">
       <div class="from">DRAFT · TIER A · TEMPLATE + EVIDENCE SLOTS · VARIANT: QUESTION/OWNERSHIP</div>
       <div class="subj">Datenaltlast vor dem S/4-Cutover bei QIAGEN</div>
-      <p style="margin:0 0 10px">Hallo Herr H.,</p>
-      <p style="margin:0 0 10px">welches Team verantwortet im QIAbase-Programm bei Ihnen die Entscheidung zu Altdaten und alten Dokumenten?</p>
-      <p style="margin:0 0 10px">Bei Biotechnologieunternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.</p>
-      <p style="margin:0 0 10px">Wir haben für QIAGEN eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.</p>
+      <p>Hallo Herr H.,</p>
+      <p>welches Team verantwortet im QIAbase-Programm bei Ihnen die Entscheidung zu Altdaten und alten Dokumenten?</p>
+      <p>Bei Biotechnologieunternehmen liegen erfahrungsgemäß 40 bis 60 Prozent der ECC-Datenbestände außerhalb der laufenden Nutzung. Wandern sie ungefiltert ins S/4-Sizing, kostet das im HANA-Footprint schnell einen sechsstelligen Betrag pro Jahr.</p>
+      <p>Wir haben für QIAGEN eine kurze Potenzial-Einschätzung vorbereitet: welche Datenklassen sich vor der Migration archivieren oder stilllegen lassen und was das im Sizing typischerweise spart. Eine Seite, in zwei Minuten gelesen.</p>
       <p style="margin:0">Soll ich sie Ihnen schicken? Ein kurzes Ja genügt.</p>
     </div>
-    <p class="muted" style="font-size:13.5px;max-width:680px">The offered one-pager is not a hollow promise: the engine <a href="https://silas-automatework.github.io/archivox-signal-engine/magnets/qiagen.html">generates it per account</a>, with savings ranges computed by a deterministic benchmark model in code. The LLM writes prose; it is structurally unable to invent a number.</p>
+    <p class="muted" style="font-size:13px;max-width:640px">The offered one-pager exists: <a href="https://silas-automatework.github.io/archivox-signal-engine/magnets/qiagen.html">the engine generates it per account</a>, savings ranges computed by a benchmark model in code. The LLM writes prose; the numbers come from arithmetic.</p>
 
     <div class="links">
       <a class="linkcard" href="https://github.com/silas-automatework/archivox-signal-engine">
         <span class="mono">GitHub · Public</span><b>The repository</b>
-        <span>Full source, 33 tests, CI, design decisions, and a commit history written partly by the scheduled runs themselves.</span>
+        <span>Source, 33 tests, CI, decisions. The daily runs write part of the commit history themselves.</span>
       </a>
       <a class="linkcard" href="https://silas-automatework.github.io/archivox-signal-engine/">
         <span class="mono">Live · GitHub Pages</span><b>The signal cockpit</b>
-        <span>25 qualified signals with briefs, evidence, contact hypotheses and drafts. Person data redacted in public artifacts.</span>
+        <span>25 signals with briefs, evidence, contacts, drafts. Person data redacted in public artifacts.</span>
       </a>
       <a class="linkcard" href="https://github.com/silas-automatework/archivox-signal-engine/blob/main/docs/decisions.md">
         <span class="mono">Docs · Decisions</span><b>The thinking</b>
-        <span>Eight recorded decisions with honest trade-offs, from "code-first vs Clay" to "why the numbers never come from the LLM".</span>
+        <span>Eight recorded decisions with trade-offs, from "code vs Clay" to "numbers come from code".</span>
       </a>
     </div>
   </div>
 </section>
 
-<section>
+<section id="blueprint">
   <div class="wrap">
     <div class="eyebrow">05 · Beyond the Cog</div>
     <h2>The full engine is five layers</h2>
-    <p class="lede">The built component is layers 1 to 4 in miniature for one signal type. The engagement scales it across the taxonomy without changing the architecture.</p>
+    <p class="lede">The built component is layers 1 to 4 in miniature, for one signal type. The engagement scales it across the taxonomy on the same architecture.</p>
     <div class="layers">
-      <div class="layer"><div class="l-name">L5 · Feedback</div><p>Signal→meeting→opp conversion per signal type. Kill weak signals, scale strong ones. CRO dashboard: pipeline by signal, cost per SQL, SDR time saved.</p></div>
-      <div class="layer"><div class="l-name">L4 · Activation</div><p>Message-based: Tier A human-approved 1:1 email + LinkedIn, Tier B automated sequences on warmed domains, Tier C nurture. Phone stays an optional client-side lever for ArchivoX's existing SDRs.</p></div>
-      <div class="layer"><div class="l-name">L3 · Scoring &amp; Routing</div><p>Fit × signal (type weight, recency decay, evidence confidence) → tier, owner, SLA. Suppression reads both CRMs so no customer or open opp is ever touched: the only hard cross-CRM requirement, and it is read-only, therefore cheap. Writes go to one CRM: HubSpot, already in ArchivoX's stack.</p></div>
-      <div class="layer"><div class="l-name">L2 · Signal Detection</div><p>Code watchers for German sources no tool covers (job boards, Bundesanzeiger, registers) plus Dealfront/Echobot for DACH-native triggers and web intent. Everything normalizes to one signal_event shape.</p></div>
-      <div class="layer"><div class="l-name">L1 · Account Universe</div><p>The full DACH TAM (~5k accounts) with fit scores, tech stack and persisted contacts. Built from ArchivoX's own CRMs first, then Dealfront. The system of intelligence between market and CRM: signals and people are reused, never re-researched.</p></div>
+      <div class="layer"><div class="l-name">L5 · Feedback</div><p>Conversion per signal type → kill or scale. CRO dashboard: pipeline by signal, cost per SQL, SDR time saved.</p></div>
+      <div class="layer"><div class="l-name">L4 · Activation</div><p>Tier A human-approved 1:1 + LinkedIn · Tier B sequences on warmed domains · Tier C nurture · phone as optional SDR lever.</p></div>
+      <div class="layer"><div class="l-name">L3 · Scoring &amp; Routing</div><p>Fit × signal → tier, owner, SLA. Both CRMs feed suppression read-only; writes go to HubSpot, already in the stack.</p></div>
+      <div class="layer"><div class="l-name">L2 · Signal Detection</div><p>Code watchers for German sources (job boards, registers) + Dealfront triggers. Everything normalizes to one signal_event.</p></div>
+      <div class="layer"><div class="l-name">L1 · Account Universe</div><p>Full TAM (~5k) with fit scores and persisted contacts. Built from ArchivoX's own CRMs first, then Dealfront.</p></div>
     </div>
-    <p class="muted" style="font-size:13.5px;margin-top:18px"><strong>Deliberately not built:</strong> no CRM merge (flagged to the CRO as a separate workstream), no custom sequencing, no UI beyond the cockpit. The engine is the brain between market and CRM, nothing more. In DACH, legal reality shapes the motion rather than footnoting it: UWG §7 pushes Tier A toward individual, evidence-anchored 1:1 messages at low volume, which is exactly the motion that converts in enterprise anyway.</p>
+    <ul class="tight" style="max-width:760px;margin-top:16px">
+      <li><strong>Deliberately out of scope:</strong> CRM consolidation (flagged to the CRO as its own workstream), custom sequencing, extra UI. The engine is the brain between market and CRM.</li>
+      <li><strong>DACH legal reality shapes the motion:</strong> UWG §7 pushes Tier A toward individual, evidence-anchored 1:1 messages at low volume, which is also the motion that converts in enterprise.</li>
+    </ul>
   </div>
 </section>
 
-<section>
+<section id="plan">
   <div class="wrap">
     <div class="eyebrow">06 · Deliverable A</div>
     <h2>From cog to engine in six months</h2>
     <div class="tl">
-      <div class="ph"><div class="card-tab">PHASE 0 · WK 1-2</div><b>Discovery &amp; signal archaeology</b><p>Map last 20-30 closed-won deals to detectable signals. CRM audit, ICP workshop with the 4 sellers, deliverability setup.</p><div class="exit">EXIT: signal matrix signed off, domains warming</div></div>
-      <div class="ph"><div class="card-tab">PHASE 1 · WK 3-6</div><b>Foundation + MVP</b><p>Account universe built and scored, suppression live against both CRMs, S1 + S2 end-to-end. This phase is what you just saw built.</p><div class="exit">EXIT: 10+ Tier-A briefs/week, first meetings</div></div>
+      <div class="ph"><div class="card-tab">PHASE 0 · WK 1-2</div><b>Discovery &amp; signal archaeology</b><p>Closed-won deals mapped to detectable signals. CRM audit, ICP workshop, deliverability setup.</p><div class="exit">EXIT: signal matrix signed off, domains warming</div></div>
+      <div class="ph"><div class="card-tab">PHASE 1 · WK 3-6</div><b>Foundation + MVP</b><p>Account universe scored, suppression live, S1 + S2 end-to-end. This phase is what you just saw built.</p><div class="exit">EXIT: 10+ Tier-A briefs/week, first meetings</div></div>
       <div class="ph"><div class="card-tab">PHASE 2 · MO 2-3</div><b>Expand &amp; instrument</b><p>Signals S3-S6, web intent, Tier B sequences, routing SLAs, dashboard v1.</p><div class="exit">EXIT: 15+ meetings/mo, research ≤2h/day</div></div>
-      <div class="ph"><div class="card-tab">PHASE 3 · MO 4-5</div><b>Optimize</b><p>Conversion feedback per signal type, kill/scale decisions, opener A/B read-out, expansion play on the customer base.</p><div class="exit">EXIT: €400-500k qualified pipeline/mo</div></div>
+      <div class="ph"><div class="card-tab">PHASE 3 · MO 4-5</div><b>Optimize</b><p>Feedback per signal type, opener A/B read-out, expansion play on the customer base.</p><div class="exit">EXIT: €400-500k qualified pipeline/mo</div></div>
       <div class="ph"><div class="card-tab">PHASE 4 · MO 6</div><b>Industrialize</b><p>Runbooks, enablement, handover. Roadmap: partner signals, DSAG events, verticals.</p><div class="exit">EXIT: engine runs on &lt;0.5 FTE ops</div></div>
     </div>
 
     <div class="next">
       <span class="mono">Why this maps to SalesPlaybook</span>
-      <b>"Generate qualified pipeline with AI &amp; process, not people."</b> That is SalesPlaybook's own sentence, and it is this engine's spec: message-based, zero added headcount, HubSpot as the system of engagement, AI with a human gate wherever trust is at stake. Every client engagement leaves behind reusable parts: watchers, the evidence contract, routing patterns, the template library.
+      <b>"Generate qualified pipeline with AI &amp; process, not people."</b> SalesPlaybook's own sentence is this engine's spec: message-based, zero added headcount, HubSpot as system of engagement, a human gate wherever trust is at stake. Every engagement leaves reusable parts behind: watchers, the evidence contract, routing patterns, templates.
     </div>
   </div>
 </section>
@@ -341,88 +370,88 @@
 <script>
 const STAGES = [
   {
-    id:"watch", tab:"STAGE 1", name:"Watch", short:"German job boards, six S1 queries, daily 06:00",
+    id:"watch", tab:"STAGE 1", name:"Watch", short:"German job boards, six queries, daily 06:00",
     title:"Watch the market, every morning",
     meta:"APIFY · 6 QUERIES · CRON 06:00 · <$0.30/DAY",
-    what:`<p>A scheduled watcher pulls German job postings for six S1 queries ("S/4HANA Migration", "SAP ECC Ablösung", "SAP Archivierung", "SAP ILM", ...). Each posting is normalized, company names get matching keys (legal suffixes stripped, umlauts handled), and URL-level dedupe plus a 30-day signal bucket keep re-posts from becoming re-outreach.</p>`,
+    what:`<p>A scheduled watcher pulls German job postings for six S1 queries. Postings are normalized, company names get matching keys, URL dedupe and a 30-day signal bucket stop re-posts from becoming re-outreach.</p>`,
     why:`<ul>
-      <li><strong>Why job postings first:</strong> a company hiring its own S/4 project lead is inside the buying window and telling the world, in German, on StepStone. US-centric intent tools don't read there.</li>
-      <li><strong>Why code, not credits:</strong> monitoring a full TAM is an always-on daemon workload. Credit-metered tools price per row exactly where this engine works hardest. Every stage still speaks JSON/CSV, so a Clay table can replace any single piece.</li>
-      <li><strong>Why fail-hard:</strong> the first scheduled run went green while every query silently 400ed. Now the watcher throws when all queries fail. Silence must never look like success.</li>
+      <li><strong>Job postings first:</strong> a company hiring its own S/4 project lead is in the window and saying so publicly, in German, where US intent tools rarely look.</li>
+      <li><strong>Code over credits:</strong> TAM monitoring is an always-on workload; per-row pricing punishes exactly that. Every stage still reads/writes plain data, so Clay or n8n can replace any piece.</li>
+      <li><strong>Fail hard:</strong> when every query errors, the run turns red. Silence must never look like success.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p>First 7-day window: <strong>150 postings, 139 unique, 75 companies</strong>. Runs daily via GitHub Actions since; each morning commits its artifacts to the repo.</p>`
+    proof:`<span class="mono">Production result</span><p>First 7-day window: <strong>150 postings, 139 unique, 75 companies</strong>. Committed daily by GitHub Actions since.</p>`
   },
   {
     id:"classify", tab:"STAGE 2", name:"Classify", short:"End user in the window vs consultancy noise",
-    title:"Qualification is the moat, not the scraping",
+    title:"Qualification is the moat",
     meta:"GPT-5.4-MINI · EXA ESCALATION · ~$0.002/COMPANY",
-    what:`<p>An LLM classifies each company from the posting evidence: is this an end user running its own SAP estate, or a consultancy, software vendor, staffing agency? And does the posting show a real transformation context? Uncertain verdicts escalate: the engine fetches two sources about the company via Exa and re-classifies on captured evidence only.</p>`,
+    what:`<p>An LLM classifies each company from the posting evidence: end user vs consultancy, vendor, staffing. And: does the posting show a real transformation context? Uncertain cases get two web sources fetched and re-judged, on captured evidence only.</p>`,
     why:`<ul>
-      <li><strong>Why this stage exists:</strong> job-posting scraping is common; everyone does it. The raw list contained adesso, Tieto, KPMG, SAP SE itself and executive search firms. Unfiltered, that is a junk queue that burns SDR trust in the system within a week.</li>
-      <li><strong>The subtle cut:</strong> end users with generic SAP admin roles but no transformation context are rejected too. A sparkling wine producer running SAP is not a signal; a transit operator hiring an S/4 sub-project lead is.</li>
-      <li><strong>Why escalation, not browsing:</strong> the model never browses. It sees only material the engine captured and stored, so every judgment is reproducible.</li>
+      <li><strong>Scraping is common; the filter is the value.</strong> The raw list held adesso, KPMG, SAP SE itself. Unfiltered, SDRs stop trusting the queue within a week.</li>
+      <li><strong>The subtle cut:</strong> an end user with a generic SAP admin role and zero transformation context is filtered too.</li>
+      <li><strong>Escalation over browsing:</strong> the model only sees material the engine captured, so every verdict is reproducible.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p><strong>75 companies → 25 qualified signals</strong>, 4 escalated lookups, 79 calls, $0.18. The filtered-out list is in the report too: no silent drops, everything auditable.</p>`
+    proof:`<span class="mono">Production result</span><p><strong>75 companies → 25 qualified signals</strong>, 79 calls, $0.18. The filtered-out list ships in the report: no silent drops.</p>`
   },
   {
     id:"people", tab:"STAGE 3", name:"People", short:"Account → people, persisted and reused",
     title:"From account to the right person",
     meta:"EXA LINKEDIN + LLM MATCH · PERSISTED CONTACTS",
-    what:`<p>For each qualified account the engine searches LinkedIn via Exa for the roles the brief hypothesizes (CIO, Head of SAP, Enterprise Architect), and an LLM validates matches, restricted to URLs that were actually in the results. Contacts persist keyed by company: a company that re-signals in three months reuses its people instead of re-researching them.</p>`,
+    what:`<p>Per qualified account, LinkedIn search via Exa for the roles the brief hypothesizes; an LLM validates matches, restricted to URLs actually returned. Contacts persist by company and get reused when the account signals again.</p>`,
     why:`<ul>
-      <li><strong>Why account-then-people:</strong> people-first search drowns in namesakes and consultants. Account context makes the match decidable.</li>
-      <li><strong>Why hypotheses, not certainties:</strong> every contact carries a confidence score and stays labeled a hypothesis until a human works it. Email addresses stay stubbed here; production plugs a verification waterfall into the same interface.</li>
-      <li><strong>Why persistence matters:</strong> this table is the seed of the client's account intelligence layer, the asset that compounds across quarters.</li>
+      <li><strong>Account first:</strong> people-first search drowns in namesakes and consultants; account context makes matches decidable.</li>
+      <li><strong>Hypotheses with confidence scores</strong>, worked by a human. Email enrichment stays a clean interface for the production waterfall.</li>
+      <li><strong>The contacts table compounds:</strong> it becomes the client's account-intelligence asset across quarters.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p><strong>77 contact hypotheses across 25 companies</strong>, including the named S/4 project lead at a Berlin utility and a truck manufacturer's group CIO. Public artifacts show initials + role only.</p>`
+    proof:`<span class="mono">Production result</span><p><strong>77 contact hypotheses across 25 companies</strong>, including a utility's named S/4 project lead and a truck maker's group CIO.</p>`
   },
   {
     id:"brief", tab:"STAGE 4", name:"Brief", short:"The 90-second dossier, evidence-enforced",
     title:"Replace the 45-minute research block",
     meta:"GPT-5.4 · EVIDENCE CONTRACT · VALIDATOR + RETRY",
-    what:`<p>Each signal becomes a structured brief: why-now hypothesis, verbatim signal quote, stakeholder hypotheses, company-specific angles, honest flags. A code validator enforces the evidence contract: the quote must be a character-level substring of captured evidence, URLs outside the evidence set reject, violations trigger one corrective retry and are flagged if they persist.</p>`,
+    what:`<p>Each signal becomes a structured brief: why-now, verbatim quote, stakeholder hypotheses, evidence-anchored angles, honest flags. A code validator enforces the contract; violations retry once, then get flagged.</p>`,
     why:`<ul>
-      <li><strong>Why enforced in code, not prompts:</strong> prompts ask; validators guarantee. Hallucinated personalization is the fastest way to burn enterprise trust, so the system makes it structurally impossible rather than unlikely.</li>
-      <li><strong>It caught a real bug on day one:</strong> StepStone snippets carried search-highlighting HTML, so verbatim quotes failed. Without the validator, that would have shipped into customer-facing mails unnoticed.</li>
-      <li><strong>Why angles must anchor:</strong> generic value props are forbidden as angles. Each one must reference a named program, role, timeline or industry document class. Thin evidence yields fewer angles instead of padded ones.</li>
+      <li><strong>Validators guarantee what prompts request.</strong> Hallucinated personalization burns enterprise trust, so it is made structurally impossible.</li>
+      <li><strong>Day-one catch:</strong> the validator exposed HTML markup polluting scraped snippets before it could reach a customer-facing mail.</li>
+      <li><strong>Angles must anchor</strong> to a named program, role or industry document class. Thin evidence yields fewer angles, never padded ones.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p><strong>25/25 briefs pass the contract.</strong> An SDR reads one in 90 seconds; the flags are honest enough to say when the evidence is thin.</p>`
+    proof:`<span class="mono">Production result</span><p><strong>25/25 briefs pass the contract.</strong> An SDR reads one in 90 seconds, flags included.</p>`
   },
   {
     id:"magnet", tab:"STAGE 5", name:"Magnet", short:"The engine manufactures the give",
-    title:"Personalized asset, deterministic numbers",
+    title:"Personalized asset, computed numbers",
     meta:"BENCHMARK MODEL IN CODE · LLM WRITES PROSE ONLY",
-    what:`<p>Per account, the engine generates a one-page "S/4-Datenaltlast-Check": situation, explicitly labeled benchmark assumptions, three industry-specific levers, tool-level first checks the client's own SAP team can run (DB02, SE16H). The headline ranges (archivable TB, 3-year savings in EUR, migration scope reduction) come from a size-class model computed in code.</p>`,
+    what:`<p>Per account, a one-page "S/4-Datenaltlast-Check": situation, labeled assumptions, three industry-specific levers, tool-level checks the client's own team can run. Headline ranges come from a size-class model in code.</p>`,
     why:`<ul>
-      <li><strong>Why a give at all:</strong> the DACH cold-email market is saturated. A meeting ask converts poorly; a prepared, concrete, personalized asset with a yes/no question converts. Standard setups personalize the email; this engine manufactures the thing the email promises.</li>
-      <li><strong>Why the LLM never writes numbers:</strong> every document calculates identically and every range is defensible in front of a CFO. The model is structurally unable to invent a savings figure.</li>
-      <li><strong>Why "checks without us":</strong> giving the SAP Basis team steps they can run internally builds the trust a cold sender otherwise never gets.</li>
+      <li><strong>A give converts where a meeting ask stalls.</strong> Standard setups personalize the mail; this engine manufactures the thing the mail promises.</li>
+      <li><strong>Numbers from arithmetic:</strong> every document calculates identically and survives a CFO's scrutiny. The model writes prose only.</li>
+      <li><strong>"Checks without us"</strong> gives the SAP team something to run internally, which builds the trust a cold sender otherwise lacks.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p>25 documents generated at ~2 cents each. <a href="https://silas-automatework.github.io/archivox-signal-engine/magnets/qiagen.html">See the QIAGEN one</a>: 70,000 to 505,000 € over three years, assumptions in the footer.</p>`
+    proof:`<span class="mono">Production result</span><p>25 documents at ~2 cents each. <a href="https://silas-automatework.github.io/archivox-signal-engine/magnets/qiagen.html">See the QIAGEN one</a>: 70,000 to 505,000 € over three years.</p>`
   },
   {
     id:"draft", tab:"STAGE 6", name:"Draft", short:"Template + slots, A/B by construction",
-    title:"The mail: one question, one give, one yes",
+    title:"One question, one give, one yes",
     meta:"FIXED TEMPLATE · 3 LLM SLOTS · DETERMINISTIC A/B",
-    what:`<p>The email skeleton, value paragraph and CTA are fixed and reviewed once. The LLM fills three evidence-anchored slots: company short name, industry category, and the opener. Recipients get a personal salutation. The CTA offers the prepared one-pager and asks for a plain yes. Signals alternate deterministically between a question opener and a statement opener, exported as a variant tag.</p>`,
+    what:`<p>Skeleton, value paragraph and CTA are fixed and reviewed once. The LLM fills three evidence-anchored slots. Personal salutation, prepared one-pager as the offer, a plain yes as the ask. Signals alternate deterministically between question and statement openers.</p>`,
     why:`<ul>
-      <li><strong>Why template-first:</strong> free generation means reviewing every mail; slots mean reviewing every template change. Brand control at scale.</li>
-      <li><strong>Why no discovery narration:</strong> "ich habe gesehen, dass Sie suchen" is the scraped-signal tell every IT lead recognizes in 2026. The validator rejects it. Naming their program IS the proof of research; narrating the finding is noise.</li>
-      <li><strong>Why deterministic A/B:</strong> the question "does a question opener plus a yes/no CTA create competing asks?" is a hypothesis. The engine assigns variants 50/50 by signal id and lets reply rates answer it. Prompt examples were removed entirely after the model cloned them verbatim; diversity is guaranteed by construction, not hoped for.</li>
+      <li><strong>Template-first:</strong> review effort drops from every mail to every template change.</li>
+      <li><strong>Zero discovery narration:</strong> "ich habe gesehen, dass Sie suchen" is the scraped-signal tell; the validator rejects it. Naming their program is the proof.</li>
+      <li><strong>Deterministic A/B:</strong> whether a question opener competes with the CTA is measured by reply rate. Variants are assigned by signal id; diversity is guaranteed by construction.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p>See the QIAGEN draft below this diagram. Every mail renders from the same reviewed skeleton; drafts are never sent by the system.</p>`
+    proof:`<span class="mono">Production result</span><p>The QIAGEN draft below this diagram. Every mail renders from the same reviewed skeleton; sending stays human.</p>`
   },
   {
     id:"route", tab:"STAGE 7", name:"Route", short:"Into HubSpot, where the SDRs live",
     title:"Land where the work happens",
     meta:"HUBSPOT PRIVATE APP · IDEMPOTENT · 48H SLA",
-    what:`<p>Each signal lands in HubSpot: company upsert with five engine-owned properties (signal type, strength, detected date, opener variant, industry), the brief as a note, a follow-up task with 48-hour SLA carrying the drafted mail in its body, and the contact hypotheses. Priority HIGH from strength 0.9. Re-runs are idempotent; routed signals are marked and never duplicated.</p>`,
+    what:`<p>Company upsert with five engine-owned properties, the brief as a note, a 48h-SLA task carrying the drafted mail, contacts attached. Priority HIGH from strength 0.9. Re-runs stay idempotent.</p>`,
     why:`<ul>
-      <li><strong>Why HubSpot as system of engagement:</strong> ArchivoX already runs it, sequences live there natively, and the two-CRM problem must not block the engine. The other CRM feeds suppression read-only, and consolidation is flagged to the CRO as a separate workstream.</li>
-      <li><strong>Why a task, not an auto-send:</strong> the SDR becomes an editor and closer, not a researcher. The human gate is a design feature: trust is the scarce resource in a finite market.</li>
-      <li><strong>Why the engine creates its own schema:</strong> hubspot:setup provisions the custom properties via API. Client onboarding is a command, not a clickpath document.</li>
+      <li><strong>HubSpot as system of engagement:</strong> already in ArchivoX's stack; the second CRM feeds suppression read-only. Consolidation is its own workstream.</li>
+      <li><strong>A task, never an auto-send:</strong> the SDR becomes editor and closer. The human gate protects the scarcest asset: market trust.</li>
+      <li><strong>Self-provisioning schema:</strong> onboarding a client portal is one command.</li>
     </ul>`,
-    proof:`<span class="mono">Production result</span><p><strong>25 companies, 25 notes, 25 tasks, 61 contacts</strong> written into a live portal, built against HubSpot's new 2025.2 developer platform.</p>`
+    proof:`<span class="mono">Production result</span><p><strong>25 companies, 25 notes, 25 tasks, 61 contacts</strong> in a live portal, built on HubSpot's 2025.2 developer platform.</p>`
   }
 ];
 
