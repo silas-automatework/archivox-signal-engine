@@ -89,12 +89,25 @@ public artifacts: see [docs/decisions.md](docs/decisions.md).
 The case-study SDRs spend 6 to 8 hours per day on research. This engine
 delivers the researched, drafted, routed signal for a dime.
 
-## Privacy
+## Personal data (GDPR by design)
 
-Companies are detected from public job postings. Person-level data (names,
-LinkedIn URLs) is used for internal routing only; all artifacts committed to
-this repository are person-redacted (`REDACT_PEOPLE=1`, initials + role).
-Emails are drafts by design; nothing is ever sent without human approval.
+The companies in this repository are real and stay visible: they come from
+public job postings, and their buying signals are the point of the case study.
+Person-level data is handled differently, on purpose:
+
+- **Public artifacts are person-redacted.** Everything committed here
+  (exports, cockpit, reports) shows initials + role only, no names, no
+  LinkedIn URLs (`REDACT_PEOPLE=1`). Using public professional data to route
+  outreach internally is a legitimate-interest case; republishing a compiled
+  list of named people on the open internet is not. The repository history
+  was rewritten before publishing to hold this line retroactively.
+- **Full person data lives only where it belongs:** in private processing
+  state (the workflow's cache) and in the CRM, the system built to hold it.
+- **Nothing is ever sent.** Emails exist as drafts inside CRM tasks; sending
+  requires a human decision. The engine has no send path at all.
+
+This mirrors the engine's own trust thesis: in a finite market, how you treat
+data is part of the product. See [docs/decisions.md](docs/decisions.md) #7.
 
 ---
 
