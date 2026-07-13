@@ -13,7 +13,9 @@ name: Daily Signal Watch
 
 on:
   schedule:
-    - cron: "0 4 * * *" # 06:00 CET
+    # Off-peak minute on purpose: round-hour crons queue behind everyone
+    # else's and fire hours late. 03:47 UTC ≈ 05:47 CEST.
+    - cron: "47 3 * * *"
   workflow_dispatch:
     inputs:
       days:
