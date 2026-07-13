@@ -28,7 +28,7 @@ function renderRunLog(store: Store): string {
       const pct = Math.round((d.new_signals / maxSignals) * 100);
       return `<tr>
         <td class="mono-cell">${esc(d.day)}</td>
-        <td class="mono-cell num">${d.fetched}</td>
+        <td class="mono-cell num">${d.fetched}${d.capped_queries ? ` <span class="dim-log" title="Query-Limit erreicht, vermutlich weitere Postings vorhanden">(Limit)</span>` : ""}</td>
         <td class="mono-cell num"><span class="logbar" style="--w:${pct}%"></span>+${d.new_signals}</td>
         <td class="mono-cell num">+${d.new_contacts}</td>
         <td class="mono-cell num">$${costFor(d.day).toFixed(2)}</td>

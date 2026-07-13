@@ -17,10 +17,12 @@ export function writeDailyReport(store: Store, stats: WatcherRunStats[], sinceIs
   lines.push("");
   lines.push(`## Run stats`);
   lines.push("");
-  lines.push(`| Watcher | Queries | Fetched | New | Duplicates |`);
-  lines.push(`|---|---|---|---|---|`);
+  lines.push(`| Watcher | Queries | Fetched | New | Duplicates | Cap hits |`);
+  lines.push(`|---|---|---|---|---|---|`);
   for (const s of stats) {
-    lines.push(`| ${s.watcher} | ${s.queries} | ${s.fetched} | ${s.inserted} | ${s.duplicates} |`);
+    lines.push(
+      `| ${s.watcher} | ${s.queries} | ${s.fetched} | ${s.inserted} | ${s.duplicates} | ${s.cappedQueries ? `${s.cappedQueries} (more postings likely existed)` : "0"} |`
+    );
   }
   lines.push("");
   lines.push(`## Companies with signal-candidate postings (${companies.length})`);

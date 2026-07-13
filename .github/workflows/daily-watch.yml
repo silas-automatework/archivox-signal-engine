@@ -52,7 +52,7 @@ jobs:
           key: engine-db-${{ github.run_id }}
           restore-keys: engine-db-
       - name: Watch job boards
-        run: npx tsx src/cli.ts watch --days "$DAYS" --max-items 25
+        run: npx tsx src/cli.ts watch --days "$DAYS" --max-items 50
       - name: Classify signals
         run: npx tsx src/cli.ts classify --max 120
       - name: Generate briefs

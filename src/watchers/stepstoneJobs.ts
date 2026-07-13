@@ -76,14 +76,16 @@ export const stepstoneJobsWatcher: Watcher = {
         query: string;
         items: StepstoneItem[];
       }[];
-      return fixture.flatMap((f) =>
+      const observations = fixture.flatMap((f) =>
         f.items.map((i) => toObservation(i, f.query)).filter((o): o is RawObservation => o !== null)
       );
+      return { observations, cappedQueries: 0 };
     }
 
     const token = requireEnv("APIFY_API_KEY");
     const all: RawObservation[] = [];
     let failedQueries = 0;
+    let cappedQueries = 0;
 
     // The actor only accepts these age-facet values.
     const allowed = [1, 3, 7];
@@ -104,7 +106,9 @@ export const stepstoneJobsWatcher: Watcher = {
         const datasetId = await waitForRun(token, runId);
         const items = await fetchDatasetItems(token, datasetId);
         const obs = items.map((i) => toObservation(i, query)).filter((o): o is RawObservation => o !== null);
-        console.log(`${items.length} items, ${obs.length} usable`);
+        const capped = items.length >= maxItemsPerQuery;
+        if (capped) cappedQueries++;
+        console.log(`${items.length} items, ${obs.length} usable${capped ? " · CAP HIT, more likely available" : ""}`);
         all.push(...obs);
       } catch (err) {
         failedQueries++;
@@ -116,6 +120,6 @@ export const stepstoneJobsWatcher: Watcher = {
     if (failedQueries === S1_JOB_QUERIES.length) {
       throw new Error(`stepstone_jobs: all ${failedQueries} queries failed`);
     }
-    return all;
+    return { observations: all, cappedQueries };
   },
 };

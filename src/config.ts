@@ -15,8 +15,8 @@ export const S1_JOB_QUERIES: string[] = [
 export const STEPSTONE_ACTOR = "memo23~stepstone-search-cheerio-ppr";
 
 export const DEFAULTS = {
-  /** Cost guard: hard cap on items per query per run. */
-  maxItemsPerQuery: 25,
+  /** Cost guard: hard cap on items per query per run. Cap hits are reported, never silent. */
+  maxItemsPerQuery: 50,
   /** Daily watcher looks back 7 days by default; overlap is handled by dedupe. */
   postedWithinDays: 7,
 };

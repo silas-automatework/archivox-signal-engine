@@ -21,11 +21,19 @@ export interface WatcherRunStats {
   fetched: number;
   inserted: number;
   duplicates: number;
+  /** Queries that returned exactly the per-query cap: more postings likely existed. */
+  cappedQueries: number;
   startedAt: string;
   finishedAt: string;
 }
 
+export interface WatcherResult {
+  observations: RawObservation[];
+  /** Queries that hit the per-query item cap. */
+  cappedQueries: number;
+}
+
 export interface Watcher {
   name: string;
-  run(opts: { maxItemsPerQuery: number; postedWithinDays: number; demo: boolean }): Promise<RawObservation[]>;
+  run(opts: { maxItemsPerQuery: number; postedWithinDays: number; demo: boolean }): Promise<WatcherResult>;
 }

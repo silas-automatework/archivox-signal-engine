@@ -1,12 +1,12 @@
-# Signal Watch Report 2026-07-10
+# Signal Watch Report 2026-07-13
 
 Candidate signal: S1 (ERP/S4 transformation) via German job postings.
 
 ## Run stats
 
-| Watcher | Queries | Fetched | New | Duplicates |
-|---|---|---|---|---|
-| stepstone_jobs | 0 | 3 | 3 | 0 |
+| Watcher | Queries | Fetched | New | Duplicates | Cap hits |
+|---|---|---|---|---|---|
+| stepstone_jobs | 0 | 3 | 3 | 0 | 0 |
 
 ## Companies with signal-candidate postings (3)
 

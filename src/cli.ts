@@ -32,7 +32,7 @@ async function watch() {
   for (const watcher of WATCHERS) {
     const startedAt = new Date().toISOString();
     console.log(`Running watcher: ${watcher.name} (demo=${demo}, days=${postedWithinDays}, max/query=${maxItemsPerQuery})`);
-    const obs = await watcher.run({ maxItemsPerQuery, postedWithinDays, demo });
+    const { observations: obs, cappedQueries } = await watcher.run({ maxItemsPerQuery, postedWithinDays, demo });
     const { inserted, duplicates } = store.insertObservations(obs);
     const stats: WatcherRunStats = {
       watcher: watcher.name,
@@ -40,12 +40,13 @@ async function watch() {
       fetched: obs.length,
       inserted,
       duplicates,
+      cappedQueries,
       startedAt,
       finishedAt: new Date().toISOString(),
     };
     store.logRun(stats);
     allStats.push(stats);
-    console.log(`  fetched=${obs.length} new=${inserted} duplicates=${duplicates}`);
+    console.log(`  fetched=${obs.length} new=${inserted} duplicates=${duplicates}${cappedQueries ? ` · CAP HIT on ${cappedQueries} queries` : ""}`);
   }
 
   const reportPath = writeDailyReport(store, allStats, sinceIso, demo);
@@ -63,6 +64,7 @@ async function report() {
     fetched: r.fetched,
     inserted: r.inserted,
     duplicates: r.duplicates,
+    cappedQueries: (r as any).capped_queries ?? 0,
     startedAt: r.started_at,
     finishedAt: r.finished_at,
   }));

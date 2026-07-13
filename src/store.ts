@@ -23,6 +23,11 @@ export class Store {
     } catch {
       // column already exists
     }
+    try {
+      this.db.exec(`ALTER TABLE watcher_runs ADD COLUMN capped_queries INTEGER NOT NULL DEFAULT 0`);
+    } catch {
+      // column already exists
+    }
   }
 
   private migrate() {
@@ -163,11 +168,12 @@ export class Store {
     fetched: number;
     inserted: number;
     duplicates: number;
+    cappedQueries: number;
   }) {
     this.db
       .prepare(
-        `INSERT INTO watcher_runs (watcher, started_at, finished_at, queries, fetched, inserted, duplicates)
-         VALUES (@watcher, @startedAt, @finishedAt, @queries, @fetched, @inserted, @duplicates)`
+        `INSERT INTO watcher_runs (watcher, started_at, finished_at, queries, fetched, inserted, duplicates, capped_queries)
+         VALUES (@watcher, @startedAt, @finishedAt, @queries, @fetched, @inserted, @duplicates, @cappedQueries)`
       )
       .run(r);
   }
@@ -494,6 +500,7 @@ export class Store {
     new_signals: number;
     new_companies: string;
     new_contacts: number;
+    capped_queries: number;
   }> {
     return this.db
       .prepare(
@@ -507,7 +514,8 @@ export class Store {
            COALESCE((SELECT SUM(inserted) FROM watcher_runs w WHERE substr(w.started_at,1,10) = d.day), 0) AS inserted,
            (SELECT COUNT(*) FROM signal_events s WHERE substr(s.created_at,1,10) = d.day) AS new_signals,
            COALESCE((SELECT GROUP_CONCAT(company_raw, ', ') FROM signal_events s WHERE substr(s.created_at,1,10) = d.day), '') AS new_companies,
-           (SELECT COUNT(*) FROM contacts c WHERE substr(c.first_seen,1,10) = d.day) AS new_contacts
+           (SELECT COUNT(*) FROM contacts c WHERE substr(c.first_seen,1,10) = d.day) AS new_contacts,
+           COALESCE((SELECT SUM(capped_queries) FROM watcher_runs w WHERE substr(w.started_at,1,10) = d.day), 0) AS capped_queries
          FROM days d ORDER BY d.day DESC`
       )
       .all() as any;
